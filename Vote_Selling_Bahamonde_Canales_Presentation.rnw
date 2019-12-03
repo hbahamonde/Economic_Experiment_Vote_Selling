@@ -243,15 +243,21 @@
 
 
 
+\section{Formal Model}
+\subsection{Formal Model}
+
+\begin{frame}{Formal Model}
+
+\end{frame}
+
+
+
 \section{Experimental Design}
 \subsection{Experimental Design}
 
 \begin{frame}{Experimental Design}
 
-\begin{figure}[H]
-\includegraphics[scale=.7, center]{Experimental_Flow_Figure.pdf}
-\caption{{\bf Experimental Flow of the List Design.\label{experimental:design:fig}}\\\hspace{\textwidth} {\bf Note}: This figure shows the flow of the list experiment. Notice that (1) the order in which experimental subjects answered both the direct question and the list experiment was randomized, (2) there are two treatments, one with a selling price of \$100 (``low'') and one with a selling price of \$500 (``high'').}\centering
-\end{figure}
+test
 \end{frame}
 
 
