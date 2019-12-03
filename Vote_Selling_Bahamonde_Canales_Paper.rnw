@@ -212,7 +212,7 @@ options(scipen = 99999999999)
 \input{abstract.txt}\unskip
 \end{abstract}
 
-\hspace*{1.3cm}{\bf Please consider downloading the last version of the paper} \href{https://github.com/hbahamonde/Inequality_State_Capacities/raw/master/Bahamonde_Trasberg.pdf}{\texttt{{\color{red}here}}}.
+\hspace*{1.3cm}{\bf Please consider downloading the last version of the paper} \href{https://github.com/hbahamonde/Economic_Experiment_Vote_Selling/raw/master/Vote_Selling_Bahamonde_Canales_Paper.pdf}{\texttt{{\color{red}here}}}.
 
 \providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1} % keywords.  
 \keywords{clientelism; vote-buying; vote-selling; experimental economics; formal modeling.}
@@ -229,7 +229,8 @@ options(scipen = 99999999999)
 
 
 \section{Introduction}
-Nice introduction here.
+
+Nice introduction here. This is my edition.
 
 \section{The Model}
 We consider an electorate of $n$ citizens which have to elect a leader to implement a common policy $\gamma$ from the set $\Gamma=\{1,2,...,100\}$. Each citizen $i$ has an ideal point $x_i$ that is an iid draw from an uniform distribution over $\Gamma$. The payoff of citizen $i$  when the policy $\gamma$ is implemented is given by $u(D,x_i,\gamma)=D-\vert x_i-\gamma \vert$, where $D$ represents \textcolor{red}{completar acá}. This payoff can be incremented by transferences from parties to the voter.
