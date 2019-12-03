@@ -1,0 +1,432 @@
+\documentclass[onesided]{article}\usepackage[]{graphicx}\usepackage[]{color}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage[T1]{fontenc}
+\linespread{1.5} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,columnsep=20pt]{geometry} % Document margins
+%\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+% to ignore texts: good for thank messages and paper submissions.
+      % \fbox{\phantom{This text will be invisible too, but a box will be printed arround it.}}
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage[]{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancybox, fancyvrb, calc}
+\usepackage[svgnames]{xcolor}
+\usepackage{epigraph}
+
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{graphics}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{rotating}
+\usepackage{paracol}
+\usepackage{textcomp}
+\usepackage[export]{adjustbox}
+\usepackage{afterpage}
+\usepackage{filecontents}
+\usepackage{color}
+\usepackage{latexsym}
+\usepackage{lscape}       %\begin{landscape} and \end{landscape}
+\usepackage{wasysym}
+\usepackage{dashrule}
+
+\usepackage{framed}
+\usepackage{tree-dvips}
+\usepackage{pgffor}
+\usepackage[]{authblk}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage[latin1]{inputenc}
+\usepackage{hyperref}     %desactivar para link rojos
+\usepackage{graphicx}
+\usepackage{dcolumn} % for R tables
+\usepackage{multirow} % For multirow in tables
+\usepackage{pifont}
+\usepackage{listings}
+
+
+
+
+% hypothesis / theorem package begin
+\usepackage{amsthm}
+\usepackage{thmtools}
+\declaretheoremstyle[
+spaceabove=6pt, spacebelow=6pt,
+headfont=\normalfont\bfseries,
+notefont=\mdseries, notebraces={(}{)},
+bodyfont=\normalfont,
+postheadspace=0.6em,
+headpunct=:
+]{mystyle}
+\declaretheorem[style=mystyle, name=Hypothesis, preheadhook={\renewcommand{\thehyp}{H\textsubscript{\arabic{hyp}}}}]{hyp}
+
+\usepackage{cleveref}
+\crefname{hyp}{hypothesis}{hypotheses}
+\Crefname{hyp}{Hypothesis}{Hypotheses}
+% hypothesis / theorem package end
+
+
+%----------------------------------------------------------------------------------------
+% Other ADDS-ON
+%----------------------------------------------------------------------------------------
+
+% independence symbol \independent
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+
+
+
+
+
+
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat's bookmarks
+    pdftoolbar=true,        % show Acrobat's toolbar?
+    pdfmenubar=true,        % show Acrobat's menu?
+    pdffitwindow=true,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfcreator={Creator},   % creator of the document
+    pdfproducer={Producer}, % producer of the document
+    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=Maroon,          % color of internal links (change box color with linkbordercolor)
+    citecolor=Maroon,        % color of links to bibliography
+    filecolor=Maroon,      % color of file links
+    urlcolor=Maroon           % color of external links
+}
+
+%\usepackage[nodayofweek,level]{datetime} % to have date within text
+
+\newcommand{\LETT}[3][]{\lettrine[lines=4,loversize=.2,#1]{\smash{#2}}{#3}} % letrine customization
+
+
+
+% comments on margin
+  % Select what to do with todonotes: 
+  % \usepackage[disable]{todonotes} % notes not showed
+  \usepackage[draft]{todonotes}   % notes showed
+  % usage: \todo{This is a note at margin}
+
+\usepackage{cooltooltips}
+
+%%% bib begin
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=authoryear,dashed=false,doi=false,isbn=false,url=false,arxiv=false]{biblatex}
+%\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{Bahamonde_Trasberg.bib} 
+% USAGES
+%% use \textcite to cite normal
+%% \parencite to cite in parentheses
+%% \footcite to cite in footnote
+%% the default can be modified in autocite=FOO, footnote, for ex. 
+%%% bib end
+
+
+% DOCUMENT ID
+
+
+
+% TITLE SECTION
+
+\title{\vspace{-15mm}\fontsize{18pt}{7pt}\selectfont\textbf{\input{title.txt}\unskip}} % Article title
+
+
+\author[1]{
+
+\textsc{H\'ector Bahamonde}
+\thanks{\href{mailto:hector.bahamonde@uoh.cl}{hector.bahamonde@uoh.cl}; \href{http://www.hectorbahamonde.com}{\texttt{www.HectorBahamonde.com}}.}}
+
+
+
+\author[2]{
+
+\textsc{Andrea Canales}
+\thanks{\href{mailto:andrea.canales@uoh.cl}{andrea.canales@uoh.cl}; 
+\href{https://www.uoh.cl}{\texttt{website}}. \\
+Thank you paragraph.}}
+
+
+\affil[1]{Assistant Professor, O$'$Higgins University (Chile)}
+\affil[2]{Postdoctoral Fellow, O$'$Higgins University (Chile)}
+
+
+\date{\today}
+
+%----------------------------------------------------------------------------------------
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+% Sweave2knitr("Bahamonde_Trasberg.rnw")
+\pagenumbering{gobble} 
+
+
+\setcounter{hyp}{0} % sets hypothesis counter to 1
+
+\maketitle % Insert title
+
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% loading knitr package
+
+
+
+% end knitr stuff
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{abstract}
+\input{abstract.txt}\unskip
+\end{abstract}
+
+\hspace*{1.3cm}{\bf Please consider downloading the last version of the paper} \href{https://github.com/hbahamonde/Inequality_State_Capacities/raw/master/Bahamonde_Trasberg.pdf}{\texttt{{\color{red}here}}}.
+
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1} % keywords.  
+\keywords{clientelism; vote-buying; vote-selling; experimental economics; formal modeling.}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CONTENT (write the paper below)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+\section{Introduction}
+Nice introduction here.
+
+\section{The Model}
+We consider an electorate of $n$ citizens which have to elect a leader to implement a common policy $\gamma$ from the set $\Gamma=\{1,2,...,100\}$. Each citizen $i$ has an ideal point $x_i$ that is an iid draw from an uniform distribution over $\Gamma$. The payoff of citizen $i$  when the policy $\gamma$ is implemented is given by $u(D,x_i,\gamma)=D-\vert x_i-\gamma \vert$, where $D$ represents \textcolor{red}{completar acá}. This payoff can be incremented by transferences from parties to the voter.
+
+In this election there are two candidates, one from the left party and other from to the right party. The left (right) candidate represent a policy $\gamma_L$ ($\gamma_R$) which is an iid draw from an uniform distribution over $\{1,...,50\}$ ($\{51,...,100\}$). The location of this policy give us the number of citizens $n_L$ that eventually prefer the left party candidate, and $n_R$ citizens that prefer right party candidate ($n_L+n_R=n$).
+
+In this setting, both party can negotiate with one of this $n$ citizens. This citizen is randomly selected from the total population $n$.  Observe that, the higher the $ n $, the lower the representation in the election of this voter, while if $n$ is smaller, negotiating with this voter may be more attractive to political parties. We assume that each candidate has a budget ($B$) that they can use to buy votes. If a party decides not to negotiate with the voter or the voter does no accept the payment, this budget remains on the payoff of the party. The profits of party $i$ is given by,
+\begin{align*}
+  \pi_i(W,e_i,s_i)=W\cdot e_i+(1-s_i\cdot a_j )\cdot B
+\end{align*}
+where $W$ ($W\geq B$) is a constant that represents how much each party values to win the election, $e_i=1$ if party i wins the election and 0 otherwise,  $s_i$ is the fraction of $B$ that the party offers to the citizen $j$ who can accept the offer ($a_j=1$) or not ($a_j=0$). We study two versions of this party-citizen interaction: one where both parties can make simultaneous offers to the voter and he decides which offer accept (vote buying case), and other in which the voter can make private offers to each party , and the party decides if to pay or not the offer (vote selling case).
+
+The timing of the game is as follows: at the beginning of the game $n$ citizens and two candidates are randomly located on their ideal point: citizens  along $\Gamma$, the left candidate along $\{1,...,50\}$ and the right on $\{51,...,100\}$. This location is public information as well the budget $B$, the number of citizens ($n$), and supporters of each party ($n_L$ and $n_R$). Then the timing depends on the case. On the vote-buying case, each party simultaneously decides if make an offer to the voter. If a party decides to negotiate with the voter, privately sends him the offer. Then the voter decides if take or not the offer, or which one accept if he receives two offers. If he takes up an offer, he should vote  for this candidate. On the vote-selling case, the voter may privately proposes a certain amount to each party in exchange for his vote, the parties decide if to pay or not the offer, and then the voter decides which one to accept. In this case, the voter can ask to one or both parties, and each proposal might be different.
+
+\subsection{Equilibrium in Vote-Buying Case}
+ On this case, both parties can offer certain amount on exchange for political support. Note that the parties only have incentives to negotiate with the voter if he has the pivotal vote, it means $ \vert n_L -n_R \vert \leq 1 $ and the voter ($i$) supports to ex-ante winner of the election ($i\in max\{n_L,n_R\}$) . The voter prefers the party which is closer to his ideal point, if both parties are located at the same distance, the voter is indifferent. Denote by $i^*\in \{L,R\}$ the preferred party of the voter, and $-i^*$ the other party. 
+ 
+ Note that, naturally, both parties want to make different bids. If the voter is the pivotal, the less prefer party has incentives to offer a certain amount $m_{-i^*}$ such that the voter has more utility voting by him than to the opposite party, that is:
+\begin{align*}
+    m_{-i^*} &\geq \left( D-\vert x_{i^*}-\gamma_{i^*} \vert \right) - \left( D-\vert x_{i^*}-\gamma_{-i^*} \vert \right)\\
+     &=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert . 
+\end{align*}
+   The parties expect to win the election but have a limited budget, more precisely they want to win the election at minimum cost. If the party $-i^*$ offers  the voter $m_{-i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$, he is indifferent between vote for the party $i^*$ or $-i^*$. The offers $m_{i^*}=0$ and $m_{-i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$ are the minimum bid that may give led to each party the winning of the election, letting indifferent to the pivotal voter between the two political options. This voter indifference gives rise to two possible Nash equilibria.
+    In one equilibrium, the voter reject the offer and vote for $i^*$. On the other equilibrium, the voter accepts the offer and the elected party is $-i^*$. If individuals are utility maximizers, they would effectively be indifferent between these two equilibria. However, if we frequently observe that voters reject offers, this would give us light that the players have other motivations. For example, more politicized players may be more likely to reject offers from the less preferred party.
+  
+
+ 
+ 
+\subsection{Equilibrium in Vote-Selling Case}
+
+On the case that the voter can set the price of his vote, he may negotiate with one or both parties setting the price that he is willing to embrace in order to support a political option. In the instance that the voter has to set the offer, he has incentives to set the maximum offer that each party can pay, in our model this is $B$. When the voter is pivotal, he may change his vote to the party $-i^*$ only if the budget is enough big to compensate that he loose voting for his less prefer policy, that is, $B> \vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$. When the voter decide to negotiate with both parties and both accept to pay the price set by him, he has to select just one offer and vote for this candidate. Thus, in equilibrium, the voter set his offer in $B$ for each party, and then they decide if to pay it or not. Finally, the voter decides which offer accept, if both parties are willing to pay $B$, he will prefer his ex-ante option, it means $i^*$. It is important to highlight that, in this latter case the vote-selling is not effective to the party side, because the negotiation do not change the result of the political election.  When a party win the election accepting to pay the voter, its payoff is $\pi_i(W,1,1)=W$, and the loser party obtains $\pi_i(W,0,0)=B$. If the pivotal voter decide negotiate with both political forces, the parties $i^*$ and $-i^*$ have to decide if accept to pay $B$ to the voter or not, this strategic situation is represented by\footnote{This situation is considering that, if both parties accept to pay the price set by the voter, he prefers the party $i^*$.} ,
+
+
+\begin{center}
+
+\begin{tabular}{ll|c|c|}
+     & \multicolumn{1}{c}{}& \multicolumn{2}{c}{\textbf{$-i^*$}}  \\
+     &\multicolumn{1}{c}{} &\multicolumn{1}{c}{Accept} & \multicolumn{1}{c}{Reject} \\
+     \cline{3-4}
+    \multirow{ 2}{*}{$i^*$} & Accept & $W$ , $B$ & $W$ , $B$ \\
+      \cline{3-4}
+     & Reject & $B$ , $W$ & $W+B$ , $B$ \\
+      \cline{3-4}
+\end{tabular}
+\end{center}
+
+We can observe that there exist an unique equilibrium where both parties are willing to pay $B$ to the voter.
+
+
+\section{Experimental Design}
+
+The experiment was conducted at Centre for Experimental Social Sciences (CESS) of Universidad de Santiago. A total of XX student participated on XX sessions of XX participants. Each session lasting about XX hours. 
+
+
+
+
+
+\clearpage
+\newpage
+\pagenumbering{roman}
+\setcounter{page}{1}
+\printbibliography
+\clearpage
+\newpage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% WORD COUNT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\newpage
+\pagenumbering{gobble}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in paste0("{}package:"{}, package): NAs introduced by coercion to integer range}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in paste(nof2, "{}.tex"{}, sep = "{}"{}): NAs introduced by coercion to integer range}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in paste("{}system('texcount -inc -incbib -total -sum "{}, noftex, "{}', intern=TRUE)"{}, : NAs introduced by coercion to integer range}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in prettyNum(.Internal(format(x, trim, digits, nsmall, width, 3L, : NAs introduced by coercion to integer range}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in paste0("{}[0-9]\{"{}, big.interval + 1L, "{},\}"{}): NAs introduced by coercion to integer range}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in paste0("{}[0-9]\{"{}, big.interval + 1L, "{},\}"{}): NAs introduced by coercion to integer range}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in FUN(X[[i]], ...): NAs introduced by coercion to integer range}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in paste0("{}([0-9]\{"{}, big.interval, "{}\})\textbackslash{}\textbackslash{}B"{}): NAs introduced by coercion to integer range}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in paste0("{}([0-9]\{"{}, big.interval, "{}\})\textbackslash{}\textbackslash{}B"{}): NAs introduced by coercion to integer range}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in FUN(X[[i]], ...): NAs introduced by coercion to integer range}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in paste0("{}\textbackslash{}\textbackslash{}1"{}, revStr(big.mark)): NAs introduced by coercion to integer range}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in FUN(X[[i]], ...): NAs introduced by coercion to integer range}}
+
+{\ttfamily\noindent\color{warningcolor}{\#\# Warning in paste0(B., c(decimal.mark, "{}"{})[iN + 1L], A.): NAs introduced by coercion to integer range}}\end{kframe}
+\end{knitrout}
+
+
+\begin{center}
+\vspace*{\stretch{1}}
+\dotfill
+\dotfill {\huge {\bf Word count}: 1,617} \dotfill
+\dotfill
+\vspace*{\stretch{1}}
+\end{center}
+
+\clearpage
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% WORD COUNT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Online Appendix
+%\newpage
+%\section{Online Appendix}
+%\pagenumbering{Roman}
+%\setcounter{page}{1}
+
+
+
+%% reset tables and figures counter
+%\setcounter{table}{0}
+%\renewcommand{\thetable}{OA\arabic{table}}
+%\setcounter{figure}{0}
+%\renewcommand{\thefigure}{OA\arabic{figure}}
+
+
+% HERE
+% PUT TABLE HERE
+%% label should be tab:unit:root:tests
+
+
+%\section{Appendix}
+%\pagenumbering{roman}
+%\setcounter{page}{1}
+%\newpage
+
+
+
+\end{document}
+
+
+
+
+
+

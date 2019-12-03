@@ -1,0 +1,9 @@
+[0] Config.pm:302> INFO - This is Biber 2.11
+[0] Config.pm:305> INFO - Logfile is 'Vote_Selling_Bahamonde_Canales_Paper.blg'
+[151] biber-darwin:313> INFO - === Tue Dec  3, 2019, 15:13:57
+[435] Biber.pm:371> INFO - Reading 'Vote_Selling_Bahamonde_Canales_Paper.bcf'
+[545] Biber.pm:857> INFO - Found 0 citekeys in bib section 0
+[551] Utils.pm:193> WARN - The file 'Vote_Selling_Bahamonde_Canales_Paper.bcf' does not contain any citations!
+[559] bbl.pm:617> INFO - Writing 'Vote_Selling_Bahamonde_Canales_Paper.bbl' with encoding 'latin1'
+[559] bbl.pm:720> INFO - Output to Vote_Selling_Bahamonde_Canales_Paper.bbl
+[560] Biber.pm:110> INFO - WARNINGS: 1
