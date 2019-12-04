@@ -275,3 +275,7 @@ TSWLatexianTemp*
 # Makeindex log files
 *.lpz
 .Rhistory
+
+*.xml
+
+*.gz
