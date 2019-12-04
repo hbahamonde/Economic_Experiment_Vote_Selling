@@ -138,7 +138,7 @@ headpunct=:
 \usepackage{csquotes}
 \usepackage[backend=biber,style=authoryear,dashed=false,doi=false,isbn=false,url=false,arxiv=false]{biblatex}
 %\DeclareLanguageMapping{american}{american-apa}
-\addbibresource{Bahamonde_Trasberg.bib} 
+\addbibresource{Vote_Selling_Bahamonde_Canales.bib} 
 % USAGES
 %% use \textcite to cite normal
 %% \parencite to cite in parentheses
@@ -168,7 +168,7 @@ headpunct=:
 \textsc{Andrea Canales}
 \thanks{\href{mailto:andrea.canales@uoh.cl}{andrea.canales@uoh.cl}; 
 \href{https://www.uoh.cl}{\texttt{website}}. \\
-Thank you paragraph.}}
+We thank O'Higgins University for funding this project, and the participants of the colloquium at the Centre for Experimental Social Sciences (CESS) at Universidad de Santiago. Javiera Tobar, Cristopher Reyes and Bastian Garrido provided excellent research assistance.}}
 
 
 \affil[1]{Assistant Professor, O$'$Higgins University (Chile)}
@@ -180,8 +180,6 @@ Thank you paragraph.}}
 %----------------------------------------------------------------------------------------
 
 \begin{document}
-%\SweaveOpts{concordance=TRUE}
-% Sweave2knitr("Bahamonde_Trasberg.rnw")
 \pagenumbering{gobble} 
 
 
@@ -195,13 +193,8 @@ Thank you paragraph.}}
 %----------------------------------------------------------------------------------------
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% loading knitr package
-<<setup, include=FALSE, cache=FALSE>>=
-if (!require("pacman")) install.packages("pacman"); library(pacman)
-p_load(knitr)
+% begin knitr stuff
 
-options(scipen = 99999999999)
-@
 
 
 % end knitr stuff
@@ -233,35 +226,44 @@ options(scipen = 99999999999)
 Nice introduction here. This is my edition.
 
 \section{The Model}
-We consider an electorate of $n$ citizens which have to elect a leader to implement a common policy $\gamma$ from the set $\Gamma=\{1,2,...,100\}$. Each citizen $i$ has an ideal point $x_i$ that is an iid draw from an uniform distribution over $\Gamma$. The payoff of citizen $i$  when the policy $\gamma$ is implemented is given by $u(D,x_i,\gamma)=D-\vert x_i-\gamma \vert$, where $D$ represents \textcolor{red}{completar acá}. This payoff can be incremented by transferences from parties to the voter.
+We consider an electorate of $n$ voters. Voters vote for a leader to implement a common policy $\gamma$ from the set $\Gamma=\{1,2,...,100\}$. Each citizen $i$ has an ideal point $x_i$ which is an \emph{iid} draw from an uniform distribution $\Gamma$. When policy $\gamma$ is implemented, payoffs of citizen $i$ are given by $u(D,x_i,\gamma)=D-\vert x_i-\gamma \vert$, where $D$ represents \textcolor{red}{completar ac\'a}. This payoff can be incremented by transferences from both parties to voter $i$.
 
-In this election there are two candidates, one from the left party and other from to the right party. The left (right) candidate represent a policy $\gamma_L$ ($\gamma_R$) which is an iid draw from an uniform distribution over $\{1,...,50\}$ ($\{51,...,100\}$). The location of this policy give us the number of citizens $n_L$ that eventually prefer the left party candidate, and $n_R$ citizens that prefer right party candidate ($n_L+n_R=n$).
+In this election, there are two candidates. One ``left-wing'' party and one ``right-wing'' party. The left-wing (right-wing) candidate represents a policy $\gamma_L$ ($\gamma_R$) which is an \emph{iid} draw from an uniform distribution over $\{1,...,50\}$ ($\{51,...,100\}$). The location of this policy give us the number of voters $n_L$ leaning towards the left-wing candidate, while the number of voters leaning towards the right-wing party is given by $n_L+n_R=n$. While we consider that voters are attached to an ideological continuum, we do so with the sole purpose of modeling preferences. Ultimately, experimental subjects are not told anything about ideology. They only observe that there are a number of ``points'' associated with the victory of party A or party B. In this sense, voters lean (``ideologically'') towards the party that gives them more points.\todo{Andre: check re-wording. Does it still make sense?}
 
-In this setting, both party can negotiate with one of this $n$ citizens. This citizen is randomly selected from the total population $n$.  Observe that, the higher the $ n $, the lower the representation in the election of this voter, while if $n$ is smaller, negotiating with this voter may be more attractive to political parties. We assume that each candidate has a budget ($B$) that they can use to buy votes. If a party decides not to negotiate with the voter or the voter does no accept the payment, this budget remains on the payoff of the party. The profits of party $i$ is given by,
+Moving forward, both parties negotiate with only one of these $n$ voters. That voter is randomly selected from the total population $n$. Observe that the higher the $n$, the lower the representation in the election of this voter. That is, a larger $n$ necessarily implies that every individual electoral choice matters less. {\color{red}However, if $n$ is small, negotiating with this voter may be more attractive to political parties}.\todo{por que? no lo hace mas caro? (dictador)}We assume that each candidate has a budget ($B$) that they can use to buy votes. If a party decides not to negotiate with the voter (or the voter does no accept the offer), the party keeps this budget. The profits of party $i$ is given by,
+
 \begin{align*}
   \pi_i(W,e_i,s_i)=W\cdot e_i+(1-s_i\cdot a_j )\cdot B
 \end{align*}
-where $W$ ($W\geq B$) is a constant that represents how much each party values to win the election, $e_i=1$ if party i wins the election and 0 otherwise,  $s_i$ is the fraction of $B$ that the party offers to the citizen $j$ who can accept the offer ($a_j=1$) or not ($a_j=0$). We study two versions of this party-citizen interaction: one where both parties can make simultaneous offers to the voter and he decides which offer accept (vote buying case), and other in which the voter can make private offers to each party , and the party decides if to pay or not the offer (vote selling case).
 
-The timing of the game is as follows: at the beginning of the game $n$ citizens and two candidates are randomly located on their ideal point: citizens  along $\Gamma$, the left candidate along $\{1,...,50\}$ and the right on $\{51,...,100\}$. This location is public information as well the budget $B$, the number of citizens ($n$), and supporters of each party ($n_L$ and $n_R$). Then the timing depends on the case. On the vote-buying case, each party simultaneously decides if make an offer to the voter. If a party decides to negotiate with the voter, privately sends him the offer. Then the voter decides if take or not the offer, or which one accept if he receives two offers. If he takes up an offer, he should vote  for this candidate. On the vote-selling case, the voter may privately proposes a certain amount to each party in exchange for his vote, the parties decide if to pay or not the offer, and then the voter decides which one to accept. In this case, the voter can ask to one or both parties, and each proposal might be different.
+where $W$ ($W\geq B$) is a constant that represents how much each party values winning the election, $e_i=1$ if party $i$ wins the election, 0 otherwise,  $s_i$ is the fraction of $B$ that the party offers to voter $j$ who can accept the offer ($a_j=1$) or not ($a_j=0$). We study two versions of this party-voter interaction. One is where both parties make simultaneous offers to the voter, and she decides whether to accept the offer (vote-buying case). Another one is where the voter can make private\todo{por que private?} offers to both parties, and then the party decides if to pay or not for that voter's vote (vote-selling case).
+
+The timing of the game is as follows: at the beginning of the game $n$ voters and two political parties are randomly located on their respective ideal points: voters along $\Gamma$, the ``left-wing'' candidate along $\{1,...,50\}$, and the ``right-wing'' candidate on $\{51,...,100\}$. All locations are public information, as well as {\color{red}every party's budget} $B$\todo{es asi?}, the total number of voters ($n$) and the number of supporters of each party ($n_L$ and $n_R$). What follows then, depends on the specific game. On the vote-buying case, each party simultaneously decides if making an offer to the voter. If a party decides to negotiate with the voter, privately offers him to buy his vote (i.e. accept the offer and vote for the party). Then the voter decides if to take the offer, or which one accept if he receives two offers. If he accepts an offer, he should vote for that candidate.\footnote{It is important to consider that to simplify the game (and the experiment), accepting the offer necessarily implies compliance. That is, accepting the offer means voting for the party the voter accepted the offer from. We leave for future research the case where the voter may defect.} On the vote-selling case, the voter may privately propose a certain amount to each party in exchange for her vote. Then the parties decide if to pay or not the offer. The voter then decides which one to accept, if any. In this case, the voter offers to one or both parties, and each proposed amount might be different.
 
 \subsection{Equilibrium in Vote-Buying Case}
- On this case, both parties can offer certain amount on exchange for political support. Note that the parties only have incentives to negotiate with the voter if he has the pivotal vote, it means $ \vert n_L -n_R \vert \leq 1 $ and the voter ($i$) supports to ex-ante winner of the election ($i\in max\{n_L,n_R\}$) . The voter prefers the party which is closer to his ideal point, if both parties are located at the same distance, the voter is indifferent. Denote by $i^*\in \{L,R\}$ the preferred party of the voter, and $-i^*$ the other party. 
+
+In this case, both parties can offer certain amount in exchange for electoral support. Note that parties only have incentives to negotiate with the voter if he is the median voter\todo{cambie pivotal por mediano}. That means that $\vert n_L -n_R \vert \leq 1$, {\color{red}and that the voter $i$ supports to ex-ante winner of the election}\todo{no entiendo} ($i\in max\{n_L,n_R\}$). The voter prefers the party closer to her ideal point. If both parties are located at the same distance, the voter is indifferent. Denote by $i^*\in \{L,R\}$ the preferred party of the voter, and $-i^*$ the other party. 
  
- Note that, naturally, both parties want to make different bids. If the voter is the pivotal, the less prefer party has incentives to offer a certain amount $m_{-i^*}$ such that the voter has more utility voting by him than to the opposite party, that is:
+ Note that, naturally, both parties want to make different offers. If the voter is the median one, the less preferred party has incentives to offer him a certain amount $m_{-i^*}$ such that the he perceives more utility voting for that party rather than voting for the opposite party\todo{Andre: check re-wording}, that is:
+
 \begin{align*}
     m_{-i^*} &\geq \left( D-\vert x_{i^*}-\gamma_{i^*} \vert \right) - \left( D-\vert x_{i^*}-\gamma_{-i^*} \vert \right)\\
      &=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert . 
 \end{align*}
-   The parties expect to win the election but have a limited budget, more precisely they want to win the election at minimum cost. If the party $-i^*$ offers  the voter $m_{-i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$, he is indifferent between vote for the party $i^*$ or $-i^*$. The offers $m_{i^*}=0$ and $m_{-i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$ are the minimum bid that may give led to each party the winning of the election, letting indifferent to the pivotal voter between the two political options. This voter indifference gives rise to two possible Nash equilibria.
-    In one equilibrium, the voter reject the offer and vote for $i^*$. On the other equilibrium, the voter accepts the offer and the elected party is $-i^*$. If individuals are utility maximizers, they would effectively be indifferent between these two equilibria. However, if we frequently observe that voters reject offers, this would give us light that the players have other motivations. For example, more politicized players may be more likely to reject offers from the less preferred party.
+
+
+Parties expect winning the election but have limited budgets. Hence, they want to win the election at a minimum cost. If party $-i^*$ offers the voter $m_{-i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$, he will be indifferent between voting for party $i^*$ or party $-i^*$. Both offers $m_{i^*}=0$ and $m_{-i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$ are the minimum amount, but enough to make the median voter indifferent between both political parties. {\color{red}Indifference gives the party some electoral advantage of winning of the election}\todo{andre: check re wording. Pero aqui habria que explicar como es que se mueve de la indif hacia la eleccion}. Voter indifference gives two possible Nash equilibria.
+
+In one equilibrium the voter rejects the offer and votes for $i^*$. In the other equilibrium, the voter accepts the offer and the elected party is $-i^*$.\todo{no queda claro quien hace la oferta, o da lo mismo?} If individuals are utility maximizers, they should be indifferent between these two equilibria. {\color{red}However, if we frequently observe that voters reject offers, this would give us some light that the players have other motivations. For example, more politicized players may be more likely to reject offers from the less preferred party}.\todo{te parece ver los datos primero?}
   
 
  
  
 \subsection{Equilibrium in Vote-Selling Case}
 
-On the case that the voter can set the price of his vote, he may negotiate with one or both parties setting the price that he is willing to embrace in order to support a political option. In the instance that the voter has to set the offer, he has incentives to set the maximum offer that each party can pay, in our model this is $B$. When the voter is pivotal, he may change his vote to the party $-i^*$ only if the budget is enough big to compensate that he loose voting for his less prefer policy, that is, $B> \vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$. When the voter decide to negotiate with both parties and both accept to pay the price set by him, he has to select just one offer and vote for this candidate. Thus, in equilibrium, the voter set his offer in $B$ for each party, and then they decide if to pay it or not. Finally, the voter decides which offer accept, if both parties are willing to pay $B$, he will prefer his ex-ante option, it means $i^*$. It is important to highlight that, in this latter case the vote-selling is not effective to the party side, because the negotiation do not change the result of the political election.  When a party win the election accepting to pay the voter, its payoff is $\pi_i(W,1,1)=W$, and the loser party obtains $\pi_i(W,0,0)=B$. If the pivotal voter decide negotiate with both political forces, the parties $i^*$ and $-i^*$ have to decide if accept to pay $B$ to the voter or not, this strategic situation is represented by\footnote{This situation is considering that, if both parties accept to pay the price set by the voter, he prefers the party $i^*$.} ,
+In the case that the voter can set the a price of his vote, he may negotiate with one or both parties setting the price that he is willing to accept in exchanging of voting for that party. In this setting, the voter has incentives to set the highest price each party can pay. In our model this is given by $B$ ({\color{red}which is public knowledge})\todo{verdad?}. When the voter is located at the median, he may swing towards party $-i^*$ only if the budget is big enough to compensate what he looses when voting for his less prefer policy ($B> \vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$). When the voter decides to negotiate with both parties, and both accept to pay the price set by him, he chooses one offer, voting for his preferred political party $i^*$. 
+
+Since the parties-voter negotiation does not change the electoral outcome, vote-selling is not efficient to parties. When a party wins the election due to vote-selling, the party's payoff is $\pi_i(W,1,1)=W$, while the loser party obtains $\pi_i(W,0,0)=B$. If the median voter decides to negotiate with both political forces, parties $i^*$ and $-i^*$ have to decide if accept to pay $B$ to the voter. This strategic situation is represented as follows,\footnote{This situation is considering that, if both parties accept to pay the price set by the voter, he prefers the party $i^*$.}
 
 
 \begin{center}
@@ -277,12 +279,34 @@ On the case that the voter can set the price of his vote, he may negotiate with 
 \end{tabular}
 \end{center}
 
-We can observe that there exist an unique equilibrium where both parties are willing to pay $B$ to the voter.
+Thus, we can observe that there exists an unique equilibrium where both parties are willing to pay $B$ to the voter.
 
 
 \section{Experimental Design}
 
-The experiment was conducted at Centre for Experimental Social Sciences (CESS) of Universidad de Santiago. A total of XX student participated on XX sessions of XX participants. Each session lasting about XX hours. 
+Following our theoretical formalizations, a lab economic experiment was performed. The experiment was conducted at O'Higgins University and Centre for Experimental Social Sciences (CESS) of \emph{Universidad de Santiago}, Chile. {\color{red}summary statistics here}. 
+
+The experiment has two parts, with four stages each. The first part is the vote-buying portion. During the first stage, participants are assigned a role at random. They can be either \emph{party A}, \emph{party B}, or \emph{voter}. Voters are assigned at random an ``ideological'' position. That is, voters may receive a certain amount of points (given at random) depending on whether party A or B wins the election. For instance, if party A wins election, the voter receives 2.400 points, whereas if party B wins the election, the voter receives 200 points. In this sense, the voter is ``ideologically'' closer to party A. During the first stage, both parties receive different endowments too. The idea is to reflect the fact that some parties are wealthier than others. Note that voters receive zero endowments. The clientelism literature is consistent in that both poor ({\color{red}cite here}) and rich voters are prone to receive clientelist offerings. 
+
+\begin{figure}[H]
+\includegraphics[scale=.7, center]{Experimental_Flow_Figure.pdf}
+\caption{{\bf Experimental Flow.\label{experimental:design:fig}}\\\hspace{\textwidth} {\bf Note}: Note here.}\centering
+\end{figure}
+
+
+
+
+During the second stage of the first part, parties decide whether to go out and buy votes by making clientelist offerings. Experimental subjects playing the party role enter an amount of points, which ranges from zero to the maximum assigned budget. \todo{es asi? O ellos tienen que poner ``no quiero oferta''?} In the third stage voters evaluate whether to take that offer or not. They are also told that accepting the offer necessarily implies voting for that party (no defecting). In this regard, the third and fourth stage are in reality one stage.
+
+The second part is the vote-selling portion of the experiment. This part is run during the same experimental session, but loading a separate \texttt{Ztree} program. Right after the first part is completed, experimental subjects are then asked to continue with the study. The part is exactly the same, except that this time voters are first-players: they get to offer parties an amount of points, and then, parties get to decide whether to take or reject that offer. 
+
+The experimental currency 
+
+
+
+
+
+
 
 
 
@@ -358,10 +382,6 @@ count <- comma(as.numeric(count)) # add comma
 %\setcounter{figure}{0}
 %\renewcommand{\thefigure}{OA\arabic{figure}}
 
-
-% HERE
-% PUT TABLE HERE
-%% label should be tab:unit:root:tests
 
 
 %\section{Appendix}
