@@ -223,7 +223,27 @@ We thank O'Higgins University for funding this project, and the participants of 
 
 \section{Introduction}
 
-Nice introduction here. This is my edition.
+% agreement: income
+Scholars mostly agree on the positive correlation between poverty and clientelism \parencite{Calvo2004,Weitz-shapiro,Kitschelt2000,Kitschelt2015}.\footnote{Following \textcite[316]{Nichter2014}, clientelist vote-buying is defined as ``the distribution of rewards to individuals or small groups during elections in contingent exchange for vote choices.''} Since the poor derive more utility from immediate transfers than the uncertain returns associated with future policy packages, clientelist political parties only target the poor (\textcite{Brusco2004,Stokes:2013cj}). Indeed, \textcite[12]{Weitz-Shapiro:2014aa} explained that ``[a]lmost universally, scholars of clientelism treat and analyze [this] practice as an exchange between politicians and their poor clients.'' 
+
+% challenge: income
+This agreement has recently been challenged \parencite[55]{Hicken2007}. \textcite{Gonzalez-Ocantos2012} and \textcite[]{Holland2015} found that income had little or no effect on vote-buying. For instance, \textcite[32]{Szwarcberg2013} ``challenges the assumption [that brokers] with access to material benefits will always distribute goods to low-income voters in exchange for electoral support.'' In fact, \textcite{Bahamonde2018} explains that non-poor individuals can be targeted when they are sufficiently noticeable, increasing compliance. He explains that wealthy houses in very poor neighborhoods in Brazil can be targeted too.
+
+% the lit has failed
+While there are important agreements, the literature has failed to provide a convincing answer to the following question: \emph{Who do parties target? Swing or core voters? Why?} These questions have historically haunted the literature. In fact, \textcite[14]{Carlin2015} states that ``our knowledge of who parties target remains incomplete.'' On the one hand, \textcite{Cox1986} explain that since constituencies are well-known, they allocate resources to core voters. On the other hand, \textcite{Stokes2005} argues that since allocating resources to individuals who \emph{ex-ante}vote for the party is a waste, parties target swing voters (similarly, see \textcite{Zarazaga2015a,Gallego2014}). Yet, \textcite[p7]{Zarazaga2015a} asserts that both ``[q]ualitative and quantitative evidence mainly shows that party machines reward their own supporters,'' not swing voters.
+
+
+
+
+% multiplicidad de approaches.
+Instead, the clientelism literature has seen a proliferation of tangential answers. While all of them are contributions, they do not really tackle the afore mentioned question. \textcite{Dixit1996} explain that parties both swing and core voters, but that depends on a number of factors. \todo{add something}. \textcite{Nichter2008} (turnout-buying) is another very important contribution. Unfortunately, it deviates from the question by increasing the complexity on the varieties of clientelism. Similarly, \textcite[7]{Zarazaga2015a} introduces yet another category (conditional supporters) who ``will vote for the party machine only as long as unexpected events do not persuade them to do otherwise''
+
+
+% this paper's contribution
+The paper seeks to contribute to this issue by incorporating both structural and individual factors that foster clientelism in the same theory.
+
+
+
 
 \section{The Model}
 We consider an electorate of $n$ voters. Voters vote for a leader to implement a common policy $\gamma$ from the set $\Gamma=\{1,2,...,100\}$. Each citizen $i$ has an ideal point $x_i$ which is an \emph{iid} draw from an uniform distribution $\Gamma$. When policy $\gamma$ is implemented, payoffs of citizen $i$ are given by $u(D,x_i,\gamma)=D-\vert x_i-\gamma \vert$, where $D$ represents \textcolor{red}{completar ac\'a}. This payoff can be incremented by transferences from both parties to voter $i$.
