@@ -252,15 +252,241 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Experimental Design}
+
+
 \subsection{Experimental Design}
+
+
 
 \begin{frame}{Experimental Design}
 
-test
+Parts:
+  \begin{enumerate}
+    \item Vote-buying: parties are first players (get out and buy votes, if needed).
+    \item Vote-selling: voters are first players (get out and sell votes, if needed).
+  \end{enumerate}
+
+For both parts (VB, VS), the following stages:
+  \begin{enumerate}
+    \item Random assignments: role (P, V), ``ideology,'' ``party endowments.''
+    \item buying/selling {\bf offers}.
+    \item buying/selling choice {\bf choices}.
+    \item Election.
+  \end{enumerate}
+
 \end{frame}
 
 
+
+\begin{frame}{Experimental Flow}
+\includegraphics[scale=1, center]{Experimental_Flow_Figure.pdf}
+\end{frame}
+
+
+\begin{frame}{Caveats}
+ \begin{itemize}
+    \item Ideology: voters ``lean'' towards a party based on the amount of points received if party wins the election.\\
+    \scriptsize{{\bf Not really ``ideology.''}}
+    \item Party endowments: while both parties (A, B) receive the same amount, the \underline{relative} purchasing power of them is randomized indirectly (by randomizing the spatial party-voter distance). {\color{red}{\bf Parties face different vote-buying costs depending on party-voter distance.}}
+    \item {\bf Relative importance of voter is randomized}. Voters are told they represent $\frac{1}{3}$ or $\frac{1}{5}$of voters. It mimics ``block voting.'' This is public knowledge.
+  \end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Comparative Statics: Ideology}
+ \begin{itemize}
+    \item Downsian paradigm is unidimensional: left-right continuum (policy-oriented).
+    \item We add some more complexity: non-policy factors (vote-selling is not policy-oriented).
+    \item Research question: {\bf What's the tipping point at which voters stop caring about ideology, and start selling their votes?}
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Comparative Statics: Competitiveness}
+ \begin{itemize}
+    \item Competitive authoritarian regimes (Levitsky and Way 2010) survive not due to electoral fraud.
+    \item They survive because of the incumbent's capacity to mobilize a large mass of supporters, discouraging likely opposers (Magaloni 2008).
+    \item Research question: 
+      \begin{enumerate}
+        \item {\bf At which point do likely opposers feel \underline{encouraged} and start buying votes?}
+        \item {\bf At which point do likely opposers feel \underline{discouraged} and abandon the electoral race, not buying votes?}
+      \end{enumerate}
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Comparative Statics: Endowments}
+ \begin{itemize}
+    \item Literature won't give a definitive answer: Parties with more resources buy votes at higher prices (Bahamonde 2018) or not (Szwarcberg (2013).
+    \item Research question: {\bf Do parties with more resources engage in vote-buying?}
+    \item \scriptsize{\emph{Remember caveat: not ``really'' randomized. Proxy.}}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Comparative Statics: Targeting}
+ \begin{itemize}
+    \item Literature won't give a definitive answer: since it's cheaper, parties target own supporters (Cox and McCubbins), or parties target unlikely voters, otherwise, it's a waste (Stokes).
+    \item Research question: {\bf Who do political parties target? Swing voters or core supporters?}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Comparative Statics: Sequence}
+ \begin{itemize}
+    \item Does being the first one in making an offer (buying/selling votes) matter? When? How?
+  \end{itemize}
+\end{frame}
 
 
 
