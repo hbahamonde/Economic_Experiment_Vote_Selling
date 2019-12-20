@@ -39,6 +39,9 @@ dat <- transform(dat, dist.part.mas.cercano = pmin(dat$'Distancia.Votante.Partid
 # dist.part.mas.lejano
 dat <- transform(dat, dist.part.mas.lejano = pmax(dat$'Distancia.Votante.Partido.A', dat$'Distancia.Votante.Partido.B'))
 
+# generate varianle to see what offer accepts the voter, if any
+## If accepts party A's offer
+ifelse(is.targeted = 1 & )
 
 ############################## 
 # Question 1: Who do Parties target to? Core supporters? Swing voters?
@@ -178,6 +181,10 @@ ggplot(data = core.swinger.pp.sum, aes(x = presup.partido, y = mean.pp)) + geom_
 ############################## 
 
 # Data partitioning: only subjects with dat$is.targeted == 1
+is.targeted.d = dat[dat$is.targeted == 1,]
+
+# Stage 1: dat$vende
+# Stage 2: 
 
 # Remember: "Oferta que acepta el votante" [0 si acepto oferta del partido A, 1 si acepto oferta del partido B, 2 ninguna oferta. * OJO cuando no recibe oferta, tb es 0 (reemplazar ese valor por un NA). ]
 
