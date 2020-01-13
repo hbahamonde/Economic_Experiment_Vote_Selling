@@ -267,17 +267,17 @@
 \begin{itemize}
 	\item $n$ voters, each citizen $i$ has an ideal point $x_i$ which is an \emph{iid} draw from an uniform distribution $\Gamma=\{1,2,...,100\}$.
 	\item When policy $\gamma$ is implemented, payoffs of citizen $i$ are given by $u(D,x_i,\gamma)=D-\vert x_i-\gamma \vert$.
-	\item Two candidates, one ``left-wing'' party and one ``right-wing'' party, which represents a policy which is an \emph{iid} draw from an uniform distribution over $\gamma_L \in \{1,...,50\}$ ($\gamma_R \in \{51,...,100\}$) .
-	\item There are $n_L$ supporters of ``left-wing'' party and $n_R$ of ``right-wing'' party.
-	\item Both parties negotiate with only one of these $n$ voters, which is randomly selected from the total population.
+	\item Two candidates (``left-wing'' and ``right-wing''). Each represents a policy which is an \emph{iid} draw from an uniform distribution over $\gamma_L \in \{1,...,50\}$ ($\gamma_R \in \{51,...,100\}$) .
+	\item There are $n_L$ voters.
+	\item Both parties negotiate with only one of these $n$ voters who are randomly selected from the total population.
 \end{itemize}
 \end{frame}
 
 
 \begin{frame}{The Model}
 \begin{itemize}
-\item Each candidate has a budget ($B$) that they can use to buy votes	.
-\item The profits of party $i$ is given by,
+\item Each candidate has a budget ($B$) that they can use to buy votes.
+\item Profits of party $i$ are given by, {\color{red} notacion: pero i eran los votantes?}
 
 \begin{align*}
   \pi_i(W,e_i,s_i)=W\cdot e_i+(1-s_i\cdot a_j )\cdot B
@@ -294,15 +294,15 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 	\item \textbf{Vote-buying Case}
 	\begin{itemize}
 	\item Each party simultaneously decides if making an offer to the voter.
-	\item The voter he voter decides if to take the offer, or which one accept if he receives two offers.
-	\item Voting is realized, if the voter accept an offer he should vote for this party.
+	\item The voter decides if to take the offer (or which one, if there are two offers).
+	\item Voter casts a ballot; if the voter accepts a party's offer, he should vote for that party.
 	\end{itemize}
 		\item \textbf{Vote-selling Case}
 		\begin{itemize}
-	\item The voter may privately propose a certain amount to each party in exchange for his vote.
-	\item The parties decide if to pay or not the offer.
-	\item The voter then decides which one to accept, if any.
-	\item  Voting is realized, if the voter accept an offer he should vote for this party.
+	\item Voter may privately proposes a certain amount to each party in exchange for his vote.
+	\item Parties decide if to pay or not the offer.
+	\item Voter decides which one to accept, if any.
+  \item Voter casts a ballot; if the voter accepts a party's offer, he should vote for that party.
 	\end{itemize}
 
 \end{itemize}
@@ -327,11 +327,11 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 
 \begin{frame}{Equilibrium in Vote-Buying Case}
 \begin{itemize}
-	\item Parties want to win the election at a minimum cost then, in equilibrium $m^*_{i^*}=0$ and $m^*_{-i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$.
-	\item The pivotal voter indifferent between both political parties.
-	\item Two Nash Equilibrium,
+	\item Parties want to win the election at a minimum cost, in equilibrium $m^*_{i^*}=0$ and $m^*_{-i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$.
+	\item The pivotal voter is indifferent between both political parties.
+	\item Two Nash Equilibria,
 	\begin{itemize}
-	\item $\{(m^*_{i^*},m^*_{-i^*}), \text{Accept offer } -i^*\}$
+	\item $\{(m^*_{i^*},m^*_{-i^*}), \text{Accept offer} -i^*\}$
 	\item $\{(m^*_{i^*},m^*_{-i^*}), \text{Reject offer} -i^*\}$
 	\end{itemize}
 \end{itemize}	
@@ -340,8 +340,8 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 
 \begin{frame}{Equilibrium in Vote-Selling Case}
 	\begin{itemize}
-		\item The voter has incentives to set the highest price each party can pay, this is given by $B$.
-		\item The voter may swing towards party $-i^*$ only if the budget is big enough to compensate what he looses when voting for his less prefer policy ($B> \vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$).
+		\item The voter has incentives to set the highest price each party can pay (this is given by $B$).
+		\item The voter may swing towards party $-i^*$ only if budget is large enough to compensate for looses if voting for his less prefer policy ($B> \vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$).
 		\item Note that if both parties accept to pay $B$ to the voter, he will accept the offer of $i^*$.
 		
 	\end{itemize}
@@ -364,7 +364,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 \end{tabular}
 \end{center}
 \vspace{0.8cm}
-\item Nash Equilibrium: $\{(B,B), (\text{Accept}, \text{Accept}), \text{Accept offer } i^* \}$
+\item Nash Equilibria: $\{(B,B), (\text{Accept}, \text{Accept}), \text{Accept offer } i^* \}$
 	\end{itemize}
 \end{frame}
 
