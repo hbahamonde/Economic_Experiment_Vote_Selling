@@ -291,7 +291,7 @@
 \begin{itemize}
 	\item $n$ voters, each citizen $i$ has an ideal point $x_i$ which is an \emph{iid} draw from an uniform distribution $\Gamma=\{1,2,...,100\}$.
 	\item When policy $\gamma$ is implemented, payoffs of citizen $i$ are given by $u(D,x_i,\gamma)=D-\vert x_i-\gamma \vert$.
-	\item Two candidates (``left-wing'' and ``right-wing''). Each represents a policy which is an \emph{iid} draw from an uniform distribution over $\gamma_L \in \{1,...,50\}$ ($\gamma_R \in \{51,...,100\}$) .
+	\item Two candidates (``left-wing'' and ``right-wing''). Each represents a policy which is an \emph{iid} draw from an uniform distribution over $\gamma_L \in \{1,...,50\}$ ($\gamma_R \in \{51,...,100\}$).
 	\item There are $n_L$ voters.
 	\item Both parties negotiate with only one of these $n$ voters who are randomly selected from the total population.
 \end{itemize}
@@ -313,6 +313,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 \end{frame}
 
 \begin{frame}{The Model}
+\scalebox{0.7}{
 \vspace{-1cm}
 \begin{tikzpicture}
    \draw (0,0) -- (10,0);
@@ -368,6 +369,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 	\draw[dashed] (5.5,0)--(5.5,-3);
 }
 \end{tikzpicture}
+}
 \onslide<8->{
 \begin{align*}
  \pi_i(W,e_i,s_i)=W\cdot e_i+(1-s_i\cdot a_j )\cdot B
@@ -528,7 +530,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 
 \begin{frame}{Comparative Statics: Endowments}
  \begin{itemize}
-    \item Literature won't give a definitive answer: Parties with more resources buy votes at higher prices {\scriptsize(Bahamonde, 2018)} or not {\scriptsize(Szwarcberg, 2013}.
+    \item Literature won't give a definitive answer: Parties with more resources buy votes at higher prices {\scriptsize(Bahamonde, 2018)} or not {\scriptsize(Szwarcberg, 2013)}.
     \item Research question: {\bf Do wealthier parties buy more votes?}
     \item \scriptsize{\emph{Remember caveat: not ``really'' randomized. Proxy.}}
       \item[$\star$] {\scriptsize Relative party purchasing power varies according to party-voter spatial distance}.
