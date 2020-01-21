@@ -291,7 +291,7 @@
 \begin{itemize}
 	\item $n$ voters, each citizen $i$ has an ideal point $x_i$ which is an \emph{iid} draw from an uniform distribution $\Gamma=\{1,2,...,100\}$.
 	\item When policy $\gamma$ is implemented, payoffs of citizen $i$ are given by $u(D,x_i,\gamma)=D-\vert x_i-\gamma \vert$.
-	\item Two candidates (``left-wing'' and ``right-wing''). Each represents a policy which is an \emph{iid} draw from an uniform distribution over $\gamma_L \in \{1,...,50\}$ ($\gamma_R \in \{51,...,100\}$) .
+	\item Two candidates (``left-wing'' and ``right-wing''). Each represents a policy which is an \emph{iid} draw from an uniform distribution over $\gamma_L \in \{1,...,50\}$ ($\gamma_R \in \{51,...,100\}$).
 	\item There are $n_L$ voters.
 	\item Both parties negotiate with only one of these $n$ voters who are randomly selected from the total population.
 \end{itemize}
