@@ -313,6 +313,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 \end{frame}
 
 \begin{frame}{The Model}
+\scalebox{0.7}{
 \vspace{-1cm}
 \begin{tikzpicture}
    \draw (0,0) -- (10,0);
@@ -368,6 +369,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 	\draw[dashed] (5.5,0)--(5.5,-3);
 }
 \end{tikzpicture}
+}
 \onslide<8->{
 \begin{align*}
  \pi_i(W,e_i,s_i)=W\cdot e_i+(1-s_i\cdot a_j )\cdot B
