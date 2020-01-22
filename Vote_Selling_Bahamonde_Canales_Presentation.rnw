@@ -1,5 +1,5 @@
 \RequirePackage{atbegshi}
-\documentclass[compress,aspectratio=169]{beamer} % aspectratio=169
+\documentclass[compress,aspectratio=169,xcolor={dvipsnames}]{beamer} % aspectratio=169
 %\usepackage[svgnames]{xcolor}
 
 % % % % % % % % % % % % % % %
@@ -8,8 +8,12 @@
 \usepackage{graphicx}       % Use pdf, png, jpg, or eps with pdflatex; use eps in DVI mode
 \usepackage{dcolumn} % this pack is neccesary to build nicer columns with texreg--dont remove it.
 \usepackage[export]{adjustbox}
-
+\usepackage{xcolor}
 \usepackage{amssymb,amsmath}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.11}
+\usepgfplotslibrary{fillbetween}
 
 %\usepackage{tipx}
 %\usepackage{tikz}
@@ -218,13 +222,6 @@
 
 
 \begin{document}
-
-
-
-
-
-
-
 % % % % % % % % % % % % % % %
 %           CONTENT
 % % % % % % % % % % % % % % %
@@ -268,7 +265,10 @@
 \subsection{The Model}
 
 \begin{frame}{Downs (1957)}
-
+\centering
+%\pgfmathdeclarefunction{gauss}{2}{%
+  %\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+ % }
 \begin{tikzpicture}
    \draw (0,0) -- (10,0);
    \draw (0,2pt)--(0,-2pt)node[below]{$0$};
@@ -283,9 +283,28 @@
    \onslide<4>
    {\draw (9,2pt)--(9,-2pt)node[below]{$x$};
    }
-      
+   % \onslide<5> 
+    %{
+%}; 
 \end{tikzpicture}    
 \end{frame}
+
+\begin{frame}{Downs (1957)}
+\centering
+\begin{tikzpicture}[scale=1.5]
+\begin{axis}[axis lines=none, xtick=\empty, ytick=\empty,xmin=0,xmax=10,ymax=1,domain=0:10,
+          restrict y to domain=0:1]
+\addplot[blue,samples=100,domain=0:6]  {1/2*exp((-(x-5)^2)/2)} ;
+\addplot[blue,fill=blue,fill opacity=0.05,samples=100,domain=2:6]  {1/2*exp((-(x-5)^2)/2)} \closedcycle;
+\addplot[red,fill=red,fill opacity=0.05,samples=100,domain=6:10]  {1/2*exp((-(x-5)^2)/2)} \closedcycle;;
+\addplot[black,samples=100,domain=0:10]  {0} node[above]{};
+\node  at (axis cs: 4, -0.025) {\small{$p_L$}};
+\node  at (axis cs: 8, -0.025) {\small{$p_R$}};
+%\addplot[blue,domain=1/2^6:10,samples=100]  {log2(x)} node[above left] {$y=\log_2(x)$};
+\end{axis}
+\end{tikzpicture}
+\end{frame}
+
 
 \begin{frame}{The Model}
 \begin{itemize}
@@ -313,9 +332,9 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 \end{frame}
 
 \begin{frame}{The Model}
-\scalebox{0.7}{
-\vspace{-1cm}
-\begin{tikzpicture}
+\centering
+\vspace{1cm}
+\begin{tikzpicture}[scale=0.8]
    \draw (0,0) -- (10,0);
    \draw (0,2pt)--(0,-2pt)node[below]{$0$};
    \draw (10,2pt)--(10,-2pt)node[below]{$100$};  
@@ -369,13 +388,14 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 	\draw[dashed] (5.5,0)--(5.5,-3);
 }
 \end{tikzpicture}
-}
+
+
 \onslide<8->{
 \begin{align*}
  \pi_i(W,e_i,s_i)=W\cdot e_i+(1-s_i\cdot a_j )\cdot B
 \end{align*}
-
 }
+
 
 \end{frame}
 
