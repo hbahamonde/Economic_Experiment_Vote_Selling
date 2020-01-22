@@ -249,7 +249,7 @@
     \item The clientelism literature has focused primarily on vote-\emph{buying} (parties buying votes in exchange of electoral support).
     \item Unfortunately, we are rather ignorants about vote-\emph{sellers}.% Who are they?
     %\item Moreover, we do not know the micro-dynamics of the transaction itself.
-    \item[$\star$] {\bf Supply and demand story}: Do parties target likely voters? Why? At what price? Under what conditions sellers their votes?
+    \item[$\star$] {\bf Supply and demand story}: Do parties target likely voters? Why? At what price? Under what conditions do sellers sell their votes?
   \end{itemize}
 \end{frame}
 
