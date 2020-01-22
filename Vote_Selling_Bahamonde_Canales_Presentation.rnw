@@ -246,7 +246,7 @@
     \item The clientelism literature has focused primarily on vote-\emph{buying} (parties buying votes in exchange of electoral support).
     \item Unfortunately, we are rather ignorants about vote-\emph{sellers}.% Who are they?
     %\item Moreover, we do not know the micro-dynamics of the transaction itself.
-    \item[$\star$] {\bf Supply and demand story}: Do parties target likely voters? Why? At what price? Under what conditions sellers their votes?
+    \item[$\star$] {\bf Supply and demand story}: Do parties target likely voters? Why? At what price? Under what conditions do sellers sell their votes?
   \end{itemize}
 \end{frame}
 
@@ -551,6 +551,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 \begin{frame}{Comparative Statics: Endowments}
  \begin{itemize}
     \item Literature won't give a definitive answer: Parties with more resources buy votes at higher prices {\scriptsize(Bahamonde, 2018)} or not {\scriptsize(Szwarcberg, 2013)}.
+    \item {\bf Ultimately}, the question is: Does \emph{expensive clientelism} exist?
     \item Research question: {\bf Do wealthier parties buy more votes?}
     \item \scriptsize{\emph{Remember caveat: not ``really'' randomized. Proxy.}}
       \item[$\star$] {\scriptsize Relative party purchasing power varies according to party-voter spatial distance}.
