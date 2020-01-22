@@ -1,5 +1,5 @@
 \RequirePackage{atbegshi}
-\documentclass[compress,aspectratio=169,xcolor={dvipsnames}]{beamer} % aspectratio=169
+\documentclass[compress,aspectratio=169]{beamer} % aspectratio=169
 %\usepackage[svgnames]{xcolor}
 
 % % % % % % % % % % % % % % %
@@ -8,7 +8,7 @@
 \usepackage{graphicx}       % Use pdf, png, jpg, or eps with pdflatex; use eps in DVI mode
 \usepackage{dcolumn} % this pack is neccesary to build nicer columns with texreg--dont remove it.
 \usepackage[export]{adjustbox}
-\usepackage{xcolor}
+\usepackage{xcolor}[dvipsnames]
 \usepackage{amssymb,amsmath}
 
 \usepackage{pgfplots}
