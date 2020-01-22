@@ -531,6 +531,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 \begin{frame}{Comparative Statics: Endowments}
  \begin{itemize}
     \item Literature won't give a definitive answer: Parties with more resources buy votes at higher prices {\scriptsize(Bahamonde, 2018)} or not {\scriptsize(Szwarcberg, 2013)}.
+    \item {\bf Ultimately}, the question is: Does \emph{expensive clientelism} exist?
     \item Research question: {\bf Do wealthier parties buy more votes?}
     \item \scriptsize{\emph{Remember caveat: not ``really'' randomized. Proxy.}}
       \item[$\star$] {\scriptsize Relative party purchasing power varies according to party-voter spatial distance}.
