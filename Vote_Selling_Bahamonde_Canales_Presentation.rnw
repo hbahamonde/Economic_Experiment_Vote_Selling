@@ -211,7 +211,7 @@
 %           DOCUMENT ID
 % % % % % % % % % % % % % % %
 
-\title{\input{title.txt}\unskip}
+\title{The Political Economy of Vote-Selling and Vote-Buying} % \input{title.txt}\unskip
 
 \author[shortname]{H\'ector Bahamonde \textsuperscript{1} \and Andrea Canales \inst{1}}
 \institute[shortinst]{\textsuperscript{1} O$'$Higgins University}
