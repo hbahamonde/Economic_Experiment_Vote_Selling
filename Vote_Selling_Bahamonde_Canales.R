@@ -8,13 +8,89 @@ rm(list=ls())
 
 # Load the data
 if (!require("pacman")) install.packages("pacman"); library(pacman) 
-p_load(readxl)
+p_load(readxl,tibble)
 
-setwd("./Economic_Experiment_Vote_Selling")
+setwd("./research/Economic_Experiment_Vote_Selling")
 dir = getwd() # set dir
 setwd(dir) # set dir
-dat <-read_excel(paste(dir, "/data/Edit/dat.xlsx", sep="")) # read data
+dat <-read_excel(paste(dir, "/data/data.xlsx", sep="")) # read data
 names(dat) <- sub(" ", ".", names(dat))
+
+# keeping vars
+"participant.id_in_session" 
+"participant.code"
+"participant._current_app_name" 
+"participant.payoff" 
+"session.code"
+
+
+
+
+
+"vote_b.1.player.votanteOpartido" 
+"vote_b.1.player.tipoAoB"  
+"vote_b.1.player.nuevotipoAoB"
+"vote_b.1.player.p_oferta_choice" 
+"vote_b.1.player.p_oferta_amount"             
+"vote_b.1.player.p_oferta_acepta"             
+"vote_b.1.player.win_lose"                    
+"vote_b.1.player.puntos"  
+"vote_b.1.player.payoff"  
+"vote_b.1.group.id_in_subsession"
+"vote_b.1.group.presupuesto"   
+"vote_b.1.group.n_votantes"
+"vote_b.1.group.partido_elegido" 
+"vote_b.1.group.tipo_votante" 
+"vote_b.1.group.n_votantes_A"                 
+"vote_b.1.group.n_votantes_B"  
+"vote_b.1.group.ubicacion_pA"                 
+"vote_b.1.group.ubicacion_pB"   
+"vote_b.1.group.pje_win_cA"                   
+"vote_b.1.group.pje_win_cB"  
+
+
+"vote_b.2.player.votanteOpartido"             
+"vote_b.2.player.tipoAoB"                     
+"vote_b.2.player.nuevotipoAoB"                
+"vote_b.2.player.p_oferta_choice"             
+"vote_b.2.player.p_oferta_amount"             
+"vote_b.2.player.p_oferta_acepta"             
+"vote_b.2.player.win_lose"                    
+"vote_b.2.player.puntos"    
+"vote_b.2.player.payoff" 
+"vote_b.2.group.id_in_subsession"
+"vote_b.2.group.presupuesto" 
+"vote_b.2.group.n_votantes" 
+"vote_b.2.group.partido_elegido" 
+"vote_b.2.group.tipo_votante"                 
+"vote_b.2.group.n_votantes_A"                 
+"vote_b.2.group.n_votantes_B"     
+"vote_b.2.group.ubicacion_pA"                 
+"vote_b.2.group.ubicacion_pB"                 
+"vote_b.2.group.pje_win_cA"                   
+"vote_b.2.group.pje_win_cB"    
+
+
+"vote_b.3.player.votanteOpartido"             
+"vote_b.3.player.tipoAoB"                     
+"vote_b.3.player.nuevotipoAoB"                
+"vote_b.3.player.p_oferta_choice"             
+"vote_b.3.player.p_oferta_amount"             
+"vote_b.3.player.p_oferta_acepta"             
+"vote_b.3.player.win_lose"                    
+"vote_b.3.player.puntos"    
+"vote_b.3.player.payoff" 
+"vote_b.3.group.id_in_subsession"
+"vote_b.3.group.presupuesto" 
+"vote_b.3.group.n_votantes" 
+"vote_b.3.group.partido_elegido" 
+"vote_b.3.group.tipo_votante"                 
+"vote_b.3.group.n_votantes_A"                 
+"vote_b.3.group.n_votantes_B"     
+"vote_b.3.group.ubicacion_pA"                 
+"vote_b.3.group.ubicacion_pB"                 
+"vote_b.3.group.pje_win_cA"                   
+"vote_b.3.group.pje_win_cB"     
 
 
 ################################################ 
