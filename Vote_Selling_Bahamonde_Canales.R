@@ -4,19 +4,14 @@
 cat("\014")
 rm(list=ls())
 
-
-
 # Load the data
 if (!require("pacman")) install.packages("pacman"); library(pacman) 
-p_load(readxl,tibble)
-
-setwd("./research/Economic_Experiment_Vote_Selling")
-dir = getwd() # set dir
-setwd(dir) # set dir
-dat <-read_excel(paste(dir, "/data/data.xlsx", sep="")) # read data
-names(dat) <- sub(" ", ".", names(dat))
+p_load(rio,tibble)
+dat <- rio::import("https://github.com/hbahamonde/Economic_Experiment_Vote_Selling/raw/master/data/data.xlsx")
 
 # keeping vars
+
+
 "participant.id_in_session" 
 "participant.code"
 "participant._current_app_name" 
@@ -90,7 +85,28 @@ names(dat) <- sub(" ", ".", names(dat))
 "vote_b.3.group.ubicacion_pA"                 
 "vote_b.3.group.ubicacion_pB"                 
 "vote_b.3.group.pje_win_cA"                   
-"vote_b.3.group.pje_win_cB"     
+"vote_b.3.group.pje_win_cB"  
+
+
+"vote_s.1.player.votanteOpartido" 
+"vote_s.1.player.tipoAoB"  
+"vote_s.1.player.p_oferta_choice_A" 
+"vote_s.1.player.p_oferta_choice_B"           
+"vote_s.1.player.p_oferta_amount_A"           
+"vote_s.1.player.p_oferta_amount_B" 
+
+columna 163^
+
+
+"survey.1.player.q3"  # gender
+"survey.1.player.q4" # ??
+"survey.1.player.q4"                          
+"survey.1.player.q5"                          
+"survey.1.player.q6"                          
+"survey.1.player.q7"                          
+"survey.1.player.q8"                          
+"survey.1.player.q9"                          
+"survey.1.player.q10"  
 
 
 ################################################ 
