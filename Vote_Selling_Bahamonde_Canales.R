@@ -9,109 +9,256 @@ if (!require("pacman")) install.packages("pacman"); library(pacman)
 p_load(rio,tibble)
 dat <- rio::import("https://github.com/hbahamonde/Economic_Experiment_Vote_Selling/raw/master/data/data.xlsx")
 
+# dropping obs
+# drop if payoff is 0
+dat <- subset(dat, participant.payoff > 0 )
+
+
 # keeping vars
 
-
-"participant.id_in_session" 
-"participant.code"
-"participant._current_app_name" 
-"participant.payoff" 
-"session.code"
-
-
+## ID VARS
+id.vars = c(
+        "participant.code",
+        "session.code",
+        "participant.payoff"
+        )
 
 
+## VOTE BUYING VARS
+v.buying.vars = c(
+        "vote_b.1.player.votanteOpartido" ,
+        # "vote_b.1.player.tipoAoB",
+        # "vote_b.1.player.nuevotipoAoB",
+        # "vote_b.1.player.p_oferta_choice" ,
+        "vote_b.1.player.p_oferta_amount",
+        "vote_b.1.player.p_oferta_acepta",
+        # "vote_b.1.player.win_lose",
+        # "vote_b.1.player.puntos",
+        # "vote_b.1.player.payoff",
+        # "vote_b.1.group.id_in_subsession",
+        "vote_b.1.group.presupuesto",
+        # "vote_b.1.group.n_votantes",
+        # "vote_b.1.group.partido_elegido" ,
+        # "vote_b.1.group.tipo_votante" ,
+        "vote_b.1.group.n_votantes_A",
+        "vote_b.1.group.n_votantes_B"  ,
+        "vote_b.1.group.ubicacion_pA",
+        "vote_b.1.group.ubicacion_pB"   ,
+        "vote_b.1.group.pje_win_cA",
+        "vote_b.1.group.pje_win_cB"  ,
+        "vote_b.2.player.votanteOpartido",
+        # "vote_b.2.player.tipoAoB",
+        # "vote_b.2.player.nuevotipoAoB",
+        "vote_b.2.player.p_oferta_choice",
+        "vote_b.2.player.p_oferta_amount",
+        "vote_b.2.player.p_oferta_acepta",
+        # "vote_b.2.player.win_lose",
+        # "vote_b.2.player.puntos",
+        # "vote_b.2.player.payoff" ,
+        # "vote_b.2.group.id_in_subsession",
+        "vote_b.2.group.presupuesto" ,
+        # "vote_b.2.group.n_votantes" ,
+        # "vote_b.2.group.partido_elegido" ,
+        # "vote_b.2.group.tipo_votante",
+        "vote_b.2.group.n_votantes_A",
+        "vote_b.2.group.n_votantes_B",
+        "vote_b.2.group.ubicacion_pA",
+        "vote_b.2.group.ubicacion_pB",
+        "vote_b.2.group.pje_win_cA",
+        "vote_b.2.group.pje_win_cB",
+        "vote_b.3.player.votanteOpartido",
+        # "vote_b.3.player.tipoAoB",
+        # "vote_b.3.player.nuevotipoAoB",
+        "vote_b.3.player.p_oferta_choice",
+        "vote_b.3.player.p_oferta_amount",
+        "vote_b.3.player.p_oferta_acepta",
+        # "vote_b.3.player.win_lose",
+        # "vote_b.3.player.puntos",
+        # "vote_b.3.player.payoff" ,
+        # "vote_b.3.group.id_in_subsession",
+        "vote_b.3.group.presupuesto" ,
+        # "vote_b.3.group.n_votantes" ,
+        # "vote_b.3.group.partido_elegido" ,
+        # "vote_b.3.group.tipo_votante",
+        "vote_b.3.group.n_votantes_A",
+        "vote_b.3.group.n_votantes_B",
+        "vote_b.3.group.ubicacion_pA",
+        "vote_b.3.group.ubicacion_pB",
+        "vote_b.3.group.pje_win_cA",
+        "vote_b.3.group.pje_win_cB")
 
-"vote_b.1.player.votanteOpartido" 
-"vote_b.1.player.tipoAoB"  
-"vote_b.1.player.nuevotipoAoB"
-"vote_b.1.player.p_oferta_choice" 
-"vote_b.1.player.p_oferta_amount"             
-"vote_b.1.player.p_oferta_acepta"             
-"vote_b.1.player.win_lose"                    
-"vote_b.1.player.puntos"  
-"vote_b.1.player.payoff"  
-"vote_b.1.group.id_in_subsession"
-"vote_b.1.group.presupuesto"   
-"vote_b.1.group.n_votantes"
-"vote_b.1.group.partido_elegido" 
-"vote_b.1.group.tipo_votante" 
-"vote_b.1.group.n_votantes_A"                 
-"vote_b.1.group.n_votantes_B"  
-"vote_b.1.group.ubicacion_pA"                 
-"vote_b.1.group.ubicacion_pB"   
-"vote_b.1.group.pje_win_cA"                   
-"vote_b.1.group.pje_win_cB"  
+## VOTE SELLING VARS
+v.selling.vars = c(
+        "vote_s.1.player.votanteOpartido",
+        "vote_s.1.player.tipoAoB",
+        "vote_s.1.player.p_oferta_choice_A",
+        "vote_s.1.player.p_oferta_choice_B",
+        "vote_s.1.player.p_oferta_amount_A",
+        "vote_s.1.player.p_oferta_amount_B",
+        "vote_s.1.player.win_lose",
+        "vote_s.1.player.win_losev",
+        "vote_s.1.player.puntos",
+        "vote_s.1.player.payoff",
+        "vote_s.1.group.presupuesto",
+        "vote_s.1.group.n_votantes",
+        "vote_s.1.group.partido_elegido",
+        "vote_s.1.group.tipo_votante",
+        "vote_s.1.group.ubicacion_pA",
+        "vote_s.1.group.ubicacion_pB",
+        "vote_s.1.group.pje_win_cA",
+        "vote_s.1.group.pje_win_cB",
+        "vote_s.2.player.votanteOpartido",
+        "vote_s.2.player.tipoAoB",
+        "vote_s.2.player.p_oferta_choice_A",
+        "vote_s.2.player.p_oferta_choice_B",
+        "vote_s.2.player.p_oferta_amount_A",
+        "vote_s.2.player.p_oferta_amount_B",
+        "vote_s.2.player.win_lose",
+        "vote_s.2.player.win_losev",
+        "vote_s.2.player.puntos",
+        "vote_s.2.player.payoff",
+        "vote_s.2.group.presupuesto",
+        "vote_s.2.group.n_votantes",
+        "vote_s.2.group.partido_elegido",
+        "vote_s.2.group.tipo_votante",
+        "vote_s.2.group.ubicacion_pA",
+        "vote_s.2.group.ubicacion_pB",
+        "vote_s.2.group.pje_win_cA",
+        "vote_s.2.group.pje_win_cB",
+        "vote_s.3.player.votanteOpartido",
+        "vote_s.3.player.tipoAoB",
+        "vote_s.3.player.p_oferta_choice_A",
+        "vote_s.3.player.p_oferta_choice_B",
+        "vote_s.3.player.p_oferta_amount_A",
+        "vote_s.3.player.p_oferta_amount_B",
+        "vote_s.3.player.win_lose",
+        "vote_s.3.player.win_losev",
+        "vote_s.3.player.puntos",
+        "vote_s.3.player.payoff",
+        "vote_s.3.group.presupuesto",
+        "vote_s.3.group.n_votantes",
+        "vote_s.3.group.partido_elegido",
+        "vote_s.3.group.tipo_votante",
+        "vote_s.3.group.ubicacion_pA",
+        "vote_s.3.group.ubicacion_pB",
+        "vote_s.3.group.pje_win_cA",
+        "vote_s.3.group.pje_win_cB")
 
 
-"vote_b.2.player.votanteOpartido"             
-"vote_b.2.player.tipoAoB"                     
-"vote_b.2.player.nuevotipoAoB"                
-"vote_b.2.player.p_oferta_choice"             
-"vote_b.2.player.p_oferta_amount"             
-"vote_b.2.player.p_oferta_acepta"             
-"vote_b.2.player.win_lose"                    
-"vote_b.2.player.puntos"    
-"vote_b.2.player.payoff" 
-"vote_b.2.group.id_in_subsession"
-"vote_b.2.group.presupuesto" 
-"vote_b.2.group.n_votantes" 
-"vote_b.2.group.partido_elegido" 
-"vote_b.2.group.tipo_votante"                 
-"vote_b.2.group.n_votantes_A"                 
-"vote_b.2.group.n_votantes_B"     
-"vote_b.2.group.ubicacion_pA"                 
-"vote_b.2.group.ubicacion_pB"                 
-"vote_b.2.group.pje_win_cA"                   
-"vote_b.2.group.pje_win_cB"    
+# SOCIO-DEMO VARS
+socio.dem.vars = c(
+        "survey.1.player.q3",
+        "survey.1.player.q4" ,
+        "survey.1.player.q6",
+        "survey.1.player.q7",
+        "survey.1.player.q8",
+        "survey.1.player.q9",
+        "survey.1.player.q10")
 
-
-"vote_b.3.player.votanteOpartido"             
-"vote_b.3.player.tipoAoB"                     
-"vote_b.3.player.nuevotipoAoB"                
-"vote_b.3.player.p_oferta_choice"             
-"vote_b.3.player.p_oferta_amount"             
-"vote_b.3.player.p_oferta_acepta"             
-"vote_b.3.player.win_lose"                    
-"vote_b.3.player.puntos"    
-"vote_b.3.player.payoff" 
-"vote_b.3.group.id_in_subsession"
-"vote_b.3.group.presupuesto" 
-"vote_b.3.group.n_votantes" 
-"vote_b.3.group.partido_elegido" 
-"vote_b.3.group.tipo_votante"                 
-"vote_b.3.group.n_votantes_A"                 
-"vote_b.3.group.n_votantes_B"     
-"vote_b.3.group.ubicacion_pA"                 
-"vote_b.3.group.ubicacion_pB"                 
-"vote_b.3.group.pje_win_cA"                   
-"vote_b.3.group.pje_win_cB"  
-
-
-"vote_s.1.player.votanteOpartido" 
-"vote_s.1.player.tipoAoB"  
-"vote_s.1.player.p_oferta_choice_A" 
-"vote_s.1.player.p_oferta_choice_B"           
-"vote_s.1.player.p_oferta_amount_A"           
-"vote_s.1.player.p_oferta_amount_B" 
-
-columna 163^
-
-
+# litle codebooking
 "survey.1.player.q3"  # gender
-"survey.1.player.q4" # ??
-"survey.1.player.q4"                          
-"survey.1.player.q5"                          
-"survey.1.player.q6"                          
-"survey.1.player.q7"                          
-"survey.1.player.q8"                          
-"survey.1.player.q9"                          
-"survey.1.player.q10"  
+"survey.1.player.q4" # Salario:  (1=Les alcanza bien y pueden ahorrar, 2=Les alcanza justo y sin grandes dificultades, 3=No les alcanza y tienen dificultades, 4=No les alcanza y tienen grandes dificultades)
+"survey.1.player.q5" # Ingresos: (1= Menos de $288.800, 2= Entre $288.801 - $312.001, 3=Entre $312.002 - $361.002, 4= Entre $361.003 - $410.003, 5=Entre $410.004 - $459.004, 6=Entre $459.005 - $558.005, 7= Entre $558.006 - $657.006, 8=Entre $657.007 - $756.007, 9= Entre $756.008 - $1.005.008, 10= Más de $1.005.008)                         
+"survey.1.player.q6" # Simpatiza con partido político 1=sí, 2=no
+"survey.1.player.q7" # Qué partido? (1=Partido Socialista de Chile, 2= Unión Demócrata Independiente, 3= Renovación Nacional, 4=Partido Demócrata Cristiano, 5= Partido Comunistica de Chile, 6= Revolución Democrática, 7= Evolución Política, 8= Otro, 9=No me siento representado)                         
+"survey.1.player.q8" # Escala tendencia política (1=izq a 10=derecha)
+"survey.1.player.q9" # Voto ultima elección 1=sí, 0=no)                    
+"survey.1.player.q10" # Piensa votar proxima elección 1=sí, 0=no
+
+
+
+
+
 
 
 ################################################ 
 # ************** VOTE BUYING DATA **************
 ################################################ 
+
+# subsetting vars
+v.buying.dat = dat[c(id.vars, v.buying.vars, socio.dem.vars)]
+# dropping obs that dont belong to the vote buying exp
+v.buying.dat <- subset(v.buying.dat, !is.na(vote_b.1.player.votanteOpartido))
+# gen variable that marks party's offer
+v.buying.dat$v.b.offer = ifelse(v.buying.dat$vote_b.1.player.p_oferta_acepta==1, "Party A", ifelse(v.buying.dat$vote_b.1.player.p_oferta_acepta==2, "Party B", NA))
+# gen var that marks if the party's offer was accepted
+
+
+
+## HERE!!!!!! need to fix this variable that marks if the offer was accepted
+v.buying.dat$v.b.offer.accepted = ifelse(
+        v.buying.dat$vote_b.1.player.votanteOpartido=="Partido A" & 
+        v.buying.dat$v.b.offer=="Party A", 1, 
+        ifelse(v.buying.dat$vote_b.1.player.votanteOpartido=="Partido B" & 
+                       v.buying.dat$v.b.offer=="Party B", 1, 0))        
+        
+# dropping obs that are voters
+
+
+# v.buying.dat <- subset(v.buying.dat, vote_b.1.player.votanteOpartido!="votantes")
+
+# Game 1
+
+v.buying.dat.1 = data.frame(
+        v.buying.dat$participant.code,
+        v.buying.dat$session.code, 
+        v.buying.dat$participant.payoff,
+        v.buying.dat$vote_b.1.player.votanteOpartido, 
+        v.buying.dat$vote_b.1.player.p_oferta_amount, 
+        v.buying.dat$vote_b.1.player.p_oferta_acepta,
+        v.buying.dat$vote_b.1.group.presupuesto, 
+        v.buying.dat$vote_b.1.group.n_votantes_A,
+        v.buying.dat$vote_b.1.group.n_votantes_B, 
+        v.buying.dat$vote_b.1.group.ubicacion_pA, 
+        v.buying.dat$vote_b.1.group.ubicacion_pB, 
+        v.buying.dat$vote_b.1.group.pje_win_cA, 
+        v.buying.dat$vote_b.1.group.pje_win_cB
+)
+
+
+v.buying.dat.1$vote.intention = ifelse(
+        v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido A", 
+        v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_A, 
+        ifelse(v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido B", 
+               v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_B, 
+               NA)
+)
+
+
+v.buying.dat.1$vote.intention = ifelse(
+        v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido A", 
+        v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_A, 
+        ifelse(v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido B", 
+               v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_B, 
+               NA)
+        )
+
+v.buying.dat.1$ideo.distance = ifelse(
+        v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido A", 
+        v.buying.dat.1$v.buying.dat.vote_b.1.group.ubicacion_pA, 
+        ifelse(v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido B", v.buying.dat.1$v.buying.dat.vote_b.1.group.ubicacion_pB, 
+               NA)
+        )
+
+v.buying.dat.1$ideo.distance = ifelse(
+        v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido A", 
+        v.buying.dat.1$v.buying.dat.vote_b.1.group.pje_win_cA, 
+        ifelse(v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido B", 
+               v.buying.dat.1$v.buying.dat.vote_b.1.group.pje_win_cB, 
+               NA)
+        )
+
+v.buying.dat.1 = v.buying.dat.1[
+        c("v.buying.dat.participant.code",
+          "v.buying.dat.session.code",
+          "v.buying.dat.participant.payoff",
+          "v.buying.dat.vote_b.1.player.votanteOpartido",
+          "vote.intention",
+          "ideo.distance",
+          "ideo.distance"
+          )
+        ]
+
 
 
 ############################## 
