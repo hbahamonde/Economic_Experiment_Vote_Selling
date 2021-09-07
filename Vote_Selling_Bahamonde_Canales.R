@@ -179,34 +179,49 @@ socio.dem.vars = c(
 v.buying.dat = dat[c(id.vars, v.buying.vars, socio.dem.vars)]
 # dropping obs that dont belong to the vote buying exp
 v.buying.dat <- subset(v.buying.dat, !is.na(vote_b.1.player.votanteOpartido))
-# gen variable that marks party's offer
-v.buying.dat$v.b.offer = ifelse(v.buying.dat$vote_b.1.player.p_oferta_acepta==1, "Party A", ifelse(v.buying.dat$vote_b.1.player.p_oferta_acepta==2, "Party B", NA))
-# gen var that marks if the party's offer was accepted
+
+# gen var that marks if what offer was taken by voter, if any (game 1)
+p_load(dplyr,tidyverse)
+v.buying.dat <- v.buying.dat %>% dplyr::group_by(session.code,vote_b.1.group.ubicacion_pA,vote_b.1.group.ubicacion_pB) %>%
+        mutate(value_tmp = vote_b.1.player.p_oferta_acepta)%>%
+        fill(value_tmp)
+v.buying.dat$offer.taken.b.1 = ifelse(v.buying.dat$vote_b.1.player.votanteOpartido=="Partido A" & v.buying.dat$value_tmp==1, 1, 
+                                 ifelse(v.buying.dat$vote_b.1.player.votanteOpartido=="Partido B" & v.buying.dat$value_tmp==2, 1, 0))
+v.buying.dat$offer.taken.b.1[is.na(v.buying.dat$offer.taken.b.1 )] <- 0
+
+# gen var that marks if what offer was taken by voter, if any (game 2)
+p_load(dplyr,tidyverse)
+v.buying.dat <- v.buying.dat %>% dplyr::group_by(session.code,vote_b.2.group.ubicacion_pA,vote_b.2.group.ubicacion_pB) %>%
+        mutate(value_tmp = vote_b.2.player.p_oferta_acepta)%>%
+        fill(value_tmp)
+v.buying.dat$offer.taken.b.2 = ifelse(v.buying.dat$vote_b.2.player.votanteOpartido=="Partido A" & v.buying.dat$value_tmp==1, 1, 
+                                      ifelse(v.buying.dat$vote_b.2.player.votanteOpartido=="Partido B" & v.buying.dat$value_tmp==2, 1, 0))
+v.buying.dat$offer.taken.b.2[is.na(v.buying.dat$offer.taken.b.2 )] <- 0
 
 
+# gen var that marks if what offer was taken by voter, if any (game 3)
+p_load(dplyr,tidyverse)
+v.buying.dat <- v.buying.dat %>% dplyr::group_by(session.code,vote_b.3.group.ubicacion_pA,vote_b.3.group.ubicacion_pB) %>%
+        mutate(value_tmp = vote_b.3.player.p_oferta_acepta)%>%
+        fill(value_tmp)
+v.buying.dat$offer.taken.b.3 = ifelse(v.buying.dat$vote_b.3.player.votanteOpartido=="Partido A" & v.buying.dat$value_tmp==1, 1, 
+                                      ifelse(v.buying.dat$vote_b.3.player.votanteOpartido=="Partido B" & v.buying.dat$value_tmp==2, 1, 0))
+v.buying.dat$offer.taken.b.3[is.na(v.buying.dat$offer.taken.b.3 )] <- 0
 
-## HERE!!!!!! need to fix this variable that marks if the offer was accepted
-v.buying.dat$v.b.offer.accepted = ifelse(
-        v.buying.dat$vote_b.1.player.votanteOpartido=="Partido A" & 
-        v.buying.dat$v.b.offer=="Party A", 1, 
-        ifelse(v.buying.dat$vote_b.1.player.votanteOpartido=="Partido B" & 
-                       v.buying.dat$v.b.offer=="Party B", 1, 0))        
-        
-# dropping obs that are voters
 
-
-# v.buying.dat <- subset(v.buying.dat, vote_b.1.player.votanteOpartido!="votantes")
+# dropping rows that are voters
+v.buying.dat <- subset(v.buying.dat, vote_b.1.player.votanteOpartido!="votantes")
 
 # Game 1
-
 v.buying.dat.1 = data.frame(
         v.buying.dat$participant.code,
         v.buying.dat$session.code, 
-        v.buying.dat$participant.payoff,
         v.buying.dat$vote_b.1.player.votanteOpartido, 
-        v.buying.dat$vote_b.1.player.p_oferta_amount, 
-        v.buying.dat$vote_b.1.player.p_oferta_acepta,
+        v.buying.dat$participant.payoff,
         v.buying.dat$vote_b.1.group.presupuesto, 
+        v.buying.dat$vote_b.1.player.p_oferta_amount, 
+        #v.buying.dat$vote_b.1.player.p_oferta_acepta,
+        v.buying.dat$offer.taken.b.1,
         v.buying.dat$vote_b.1.group.n_votantes_A,
         v.buying.dat$vote_b.1.group.n_votantes_B, 
         v.buying.dat$vote_b.1.group.ubicacion_pA, 
@@ -225,14 +240,6 @@ v.buying.dat.1$vote.intention = ifelse(
 )
 
 
-v.buying.dat.1$vote.intention = ifelse(
-        v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido A", 
-        v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_A, 
-        ifelse(v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido B", 
-               v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_B, 
-               NA)
-        )
-
 v.buying.dat.1$ideo.distance = ifelse(
         v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido A", 
         v.buying.dat.1$v.buying.dat.vote_b.1.group.ubicacion_pA, 
@@ -240,24 +247,24 @@ v.buying.dat.1$ideo.distance = ifelse(
                NA)
         )
 
-v.buying.dat.1$ideo.distance = ifelse(
+v.buying.dat.1$voters.elect.payoff = ifelse(
         v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido A", 
         v.buying.dat.1$v.buying.dat.vote_b.1.group.pje_win_cA, 
-        ifelse(v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido B", 
-               v.buying.dat.1$v.buying.dat.vote_b.1.group.pje_win_cB, 
+        ifelse(v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido B", v.buying.dat.1$v.buying.dat.vote_b.1.group.pje_win_cB, 
                NA)
-        )
+)
 
-v.buying.dat.1 = v.buying.dat.1[
-        c("v.buying.dat.participant.code",
-          "v.buying.dat.session.code",
-          "v.buying.dat.participant.payoff",
-          "v.buying.dat.vote_b.1.player.votanteOpartido",
-          "vote.intention",
-          "ideo.distance",
-          "ideo.distance"
-          )
-        ]
+
+
+v.buying.dat.1 = subset(v.buying.dat.1, select = -c(
+        v.buying.dat.vote_b.1.group.n_votantes_A,
+        v.buying.dat.vote_b.1.group.n_votantes_B,
+        v.buying.dat.vote_b.1.group.ubicacion_pA,
+        v.buying.dat.vote_b.1.group.ubicacion_pB,
+        v.buying.dat.vote_b.1.group.pje_win_cA,
+        v.buying.dat.vote_b.1.group.pje_win_cB
+        
+) )
 
 
 
