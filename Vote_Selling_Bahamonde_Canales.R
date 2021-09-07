@@ -165,10 +165,23 @@ socio.dem.vars = c(
 "survey.1.player.q9" # Voto ultima elección 1=sí, 0=no)                    
 "survey.1.player.q10" # Piensa votar proxima elección 1=sí, 0=no
 
+# ID df
+dat.v.b.ID = dat[c(id.vars, socio.dem.vars)]
+names(dat.v.b.ID) <- c(
+        "participant.code",
+        "session.code",
+        "participant.payoff",
+        "gender", # "survey.1.player.q3",
+        "salary.enough", # "survey.1.player.q4",
+        "party.like", #"survey.1.player.q6", 
+        "party.id", #"survey.1.player.q7",
+        "left.right", #"survey.1.player.q8",
+        "vote.last.election", #"survey.1.player.q9",
+        "vote.next.election" #"survey.1.player.q10"
+        )
 
-
-
-
+# remove some columns
+dat.v.b.ID = subset(dat.v.b.ID, select = -c(session.code, participant.payoff))
 
 
 ################################################ 
@@ -211,6 +224,8 @@ v.buying.dat$offer.taken.b.3[is.na(v.buying.dat$offer.taken.b.3 )] <- 0
 
 # dropping rows that are voters
 v.buying.dat <- subset(v.buying.dat, vote_b.1.player.votanteOpartido!="votantes")
+v.buying.dat <- subset(v.buying.dat, vote_b.2.player.votanteOpartido!="votantes")
+v.buying.dat <- subset(v.buying.dat, vote_b.3.player.votanteOpartido!="votantes")
 
 # Game 1
 v.buying.dat.1 = data.frame(
@@ -266,200 +281,214 @@ v.buying.dat.1 = subset(v.buying.dat.1, select = -c(
         
 ) )
 
+# change names
+colnames(v.buying.dat.1) <- c("participant.code",
+                            "session.code",
+                            "player.votanteOpartido",
+                            "participant.payoff",
+                            "group.presupuesto",
+                            "player.p_oferta_amount",
+                            "offer.taken.b.1",
+                            "vote.intention",
+                            "ideo.distance",
+                            "voters.elect.payoff")
 
 
-############################## 
-# Generating Variables
-############################## 
-
-# Generate var to see if party targets: Question 1
-p_load(dplyr)
-dat <- data.frame(dat %>% group_by(Period,Group) %>% mutate(is.targeted = as.numeric(ifelse(Elección == 1 & 'Oferta.que.acepta.el.votante'!= 2,"0","1"))))
-
-# Generate var to see if voter accepts party's/ies offer (Question 2)
-dat$vende = as.numeric(ifelse(dat$'Oferta.que.acepta.el.votante'!= 2 & dat$is.targeted == 1,"1","0"))
-
-# dist.part.mas.cercano
-dat <- transform(dat, dist.part.mas.cercano = pmin(dat$'Distancia.Votante.Partido.A', dat$'Distancia.Votante.Partido.B'))
-
-# dist.part.mas.lejano
-dat <- transform(dat, dist.part.mas.lejano = pmax(dat$'Distancia.Votante.Partido.A', dat$'Distancia.Votante.Partido.B'))
-
-# generate varianle to see what offer accepts the voter, if any
-## If accepts party A's offer
-ifelse(is.targeted = 1 & )
-
-############################## 
-# Question 1: Who do Parties target to? Core supporters? Swing voters?
-############################## 
-
-# Data partitioning: solo "Votante"
-core.swinger.d = dat[dat$'Voto.Participante' == "Votante",]
-
-# Bayesian Model
-## 1. Install Clang (clang-8.0.0.pkg) and GNU Fortran (gfortran-6.1.pkg.dmg) from the CRAN tools directory (http://cran.r-project.org/bin/macosx/tools/)
-## 2. Now install JAGS version 4.3.0 (JAGS-4.3.0.dmg) from Martyn Plummer's repository (http://sourceforge.net/projects/mcmc-jags/files/JAGS/).
-## 3. Start the Terminal and type jags to see if you receive the message: Welcome to JAGS 4.3.0.
-## 4. Open R and install the packages R2jags, coda, R2WinBUGS, lattice, and rjags, by typing install.packages(c("R2jags", "coda", "R2WinBUGS", "lattice", "rjags"))
-
-# Possible ID's: 
-## (1) distancia partido-votante
-## (2) competencia partidaria (3's o 5's).
-## (3) Party's budget
-
-# DV
-## dat$is.targeted
-
-
-# model (sourced from https://github.com/jkarreth/Bayes/blob/master/mlm.state.instructions.R)
-is.targeted.mod <- function() {
-        for (i in 1:n){
-                y[i] ~dbern(p[i]) ## Bernoulli distribution of y_i, and p[i] is latent probability 
-                logit(p[i]) <- mu[i] ## Logit link function
-                mu[i] <- 
-                        b.dist.cercano*dist.cercano[i] + 
-                        b.dist.lejano*dist.lejano[i] + 
-                        b.cantidad.votantes*cantidad.votantes[i] + 
-                        b.presup.partido*presup.partido[i]
-        }
-        b.dist.cercano ~ dnorm (0, .01)
-        b.dist.lejano ~ dnorm (0, .01)
-        b.cantidad.votantes ~ dnorm (0, .01)
-        b.presup.partido ~ dnorm (0, .01)
-}
-
-# declare DV
-y <- core.swinger.d$is.targeted
-# declare IV's
-dist.cercano <- core.swinger.d$dist.part.mas.cercano
-dist.lejano <- core.swinger.d$dist.part.mas.lejano
-cantidad.votantes <- core.swinger.d$Cantidad.en.el.grupo
-presup.partido <- core.swinger.d$Presupuesto.Partido
-# declare n
-# declare others
-n.chains = 4 # 4
-n.iter   = 200000 # 200000
-n.burnin = 5000 # 5000
-# declare data
-core.swinger.d.jags <- list(y = y, 
-                            dist.cercano = dist.cercano,
-                            dist.lejano = dist.lejano, 
-                            cantidad.votantes = cantidad.votantes, 
-                            presup.partido = presup.partido,
-                            n = length(y)
-                            )
-
-
-# Monitor the following
-is.targeted.mod.params = c("b.dist.cercano", "b.dist.lejano", "b.cantidad.votantes", "b.presup.partido", "p")
-# run the model
-p_load(R2jags, coda, R2WinBUGS, lattice, rjags)
-set.seed(123)
-core.swinger.d.jags.fit <- jags(
-        data=core.swinger.d.jags,
-        parameters.to.save = is.targeted.mod.params,
-        inits=NULL,
-        n.chains=n.chains,
-        n.iter=n.iter,
-        n.burnin=n.burnin, 
-        model.file=is.targeted.mod,
-        progress.bar = "none"
+# Game 2
+v.buying.dat.2 = data.frame(
+        v.buying.dat$participant.code,
+        v.buying.dat$session.code, 
+        v.buying.dat$vote_b.2.player.votanteOpartido, 
+        v.buying.dat$participant.payoff,
+        v.buying.dat$vote_b.2.group.presupuesto, 
+        v.buying.dat$vote_b.2.player.p_oferta_amount, 
+        #v.buying.dat$vote_b.2.player.p_oferta_acepta,
+        v.buying.dat$offer.taken.b.2,
+        v.buying.dat$vote_b.2.group.n_votantes_A,
+        v.buying.dat$vote_b.2.group.n_votantes_B, 
+        v.buying.dat$vote_b.2.group.ubicacion_pA, 
+        v.buying.dat$vote_b.2.group.ubicacion_pB, 
+        v.buying.dat$vote_b.2.group.pje_win_cA, 
+        v.buying.dat$vote_b.2.group.pje_win_cB
 )
 
 
-plot(core.swinger.d.jags.fit)
-
-p_load(BayesPostEst)
-mcmcCoefPlot(core.swinger.d.jags.fit, pars = NULL, pointest = "mean", ci = 0.95, hpdi = FALSE, sort = FALSE, plot = TRUE)
-
-# table 1 (for paper)
-mcmcReg(core.swinger.d.jags.fit)
-
-# table 2 (quick table for analyses)
-p_load(devtools)
-source_url("https://raw.githubusercontent.com/jkarreth/JKmisc/master/mcmctab.R")
-mcmctab(as.mcmc(core.swinger.d.jags.fit))
+v.buying.dat.2$vote.intention = ifelse(
+        v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="Partido A", 
+        v.buying.dat.2$v.buying.dat.vote_b.2.group.n_votantes_A, 
+        ifelse(v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="Partido B", 
+               v.buying.dat.2$v.buying.dat.vote_b.2.group.n_votantes_B, 
+               NA)
+)
 
 
+v.buying.dat.2$ideo.distance = ifelse(
+        v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="Partido A", 
+        v.buying.dat.2$v.buying.dat.vote_b.2.group.ubicacion_pA, 
+        ifelse(v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="Partido B", v.buying.dat.2$v.buying.dat.vote_b.2.group.ubicacion_pB, 
+               NA)
+)
+
+v.buying.dat.2$voters.elect.payoff = ifelse(
+        v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="Partido A", 
+        v.buying.dat.2$v.buying.dat.vote_b.2.group.pje_win_cA, 
+        ifelse(v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="Partido B", v.buying.dat.2$v.buying.dat.vote_b.2.group.pje_win_cB, 
+               NA)
+)
 
 
-# ROC Curve
-# p_load(ggmcmc)
-# swiss.p.gg <- ggs(as.mcmc(core.swinger.d.jags.fit), family = "p")
-# swiss.p.gg2 <- swiss.p.gg[with(swiss.p.gg, order(Chain, nchar(as.character(Parameter)))), ]
-# ggs_rocplot(swiss.p.gg2, outcome = core.swinger.d$is.targeted)
+
+v.buying.dat.2 = subset(v.buying.dat.2, select = -c(
+        v.buying.dat.vote_b.2.group.n_votantes_A,
+        v.buying.dat.vote_b.2.group.n_votantes_B,
+        v.buying.dat.vote_b.2.group.ubicacion_pA,
+        v.buying.dat.vote_b.2.group.ubicacion_pB,
+        v.buying.dat.vote_b.2.group.pje_win_cA,
+        v.buying.dat.vote_b.2.group.pje_win_cB
+        
+) )
+
+# change names
+colnames(v.buying.dat.2) <- c("participant.code",
+                              "session.code",
+                              "player.votanteOpartido",
+                              "participant.payoff",
+                              "group.presupuesto",
+                              "player.p_oferta_amount",
+                              "offer.taken.b.1",
+                              "vote.intention",
+                              "ideo.distance",
+                              "voters.elect.payoff")
+
+
+# Game 3
+v.buying.dat.3 = data.frame(
+        v.buying.dat$participant.code,
+        v.buying.dat$session.code, 
+        v.buying.dat$vote_b.3.player.votanteOpartido, 
+        v.buying.dat$participant.payoff,
+        v.buying.dat$vote_b.3.group.presupuesto, 
+        v.buying.dat$vote_b.3.player.p_oferta_amount, 
+        #v.buying.dat$vote_b.3.player.p_oferta_acepta,
+        v.buying.dat$offer.taken.b.3,
+        v.buying.dat$vote_b.3.group.n_votantes_A,
+        v.buying.dat$vote_b.3.group.n_votantes_B, 
+        v.buying.dat$vote_b.3.group.ubicacion_pA, 
+        v.buying.dat$vote_b.3.group.ubicacion_pB, 
+        v.buying.dat$vote_b.3.group.pje_win_cA, 
+        v.buying.dat$vote_b.3.group.pje_win_cB
+)
+
+
+v.buying.dat.3$vote.intention = ifelse(
+        v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="Partido A", 
+        v.buying.dat.3$v.buying.dat.vote_b.3.group.n_votantes_A, 
+        ifelse(v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="Partido B", 
+               v.buying.dat.3$v.buying.dat.vote_b.3.group.n_votantes_B, 
+               NA)
+)
+
+
+v.buying.dat.3$ideo.distance = ifelse(
+        v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="Partido A", 
+        v.buying.dat.3$v.buying.dat.vote_b.3.group.ubicacion_pA, 
+        ifelse(v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="Partido B", v.buying.dat.3$v.buying.dat.vote_b.3.group.ubicacion_pB, 
+               NA)
+)
+
+v.buying.dat.3$voters.elect.payoff = ifelse(
+        v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="Partido A", 
+        v.buying.dat.3$v.buying.dat.vote_b.3.group.pje_win_cA, 
+        ifelse(v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="Partido B", v.buying.dat.3$v.buying.dat.vote_b.3.group.pje_win_cB, 
+               NA)
+)
 
 
 
-# Predicted Prob's
-core.swinger.sim.dat <- as.matrix(data.frame(constant = 1, 
-                                             cantidad.votantes = median(core.swinger.d$Cantidad.en.el.grupo), 
-                                             dist.cercano = median(core.swinger.d$dist.part.mas.cercano), 
-                                             dist.lejano = median(core.swinger.d$dist.part.mas.lejano), 
-                                             presup.partido = seq(
-                                                     from = min(core.swinger.d$Presupuesto.Partido), 
-                                                     to = max(core.swinger.d$Presupuesto.Partido), by = 20)
-                                             ))
+v.buying.dat.3 = subset(v.buying.dat.3, select = -c(
+        v.buying.dat.vote_b.3.group.n_votantes_A,
+        v.buying.dat.vote_b.3.group.n_votantes_B,
+        v.buying.dat.vote_b.3.group.ubicacion_pA,
+        v.buying.dat.vote_b.3.group.ubicacion_pB,
+        v.buying.dat.vote_b.3.group.pje_win_cA,
+        v.buying.dat.vote_b.3.group.pje_win_cB
+        
+) )
 
-core.swinger.coefs <- as.matrix(as.mcmc(core.swinger.d.jags.fit))[, c(1:ncol(core.swinger.sim.dat))] 
-
-Xb <- t(core.swinger.sim.dat %*% t(core.swinger.coefs))
-
-core.swinger.pp <- exp(Xb) / (1 + exp(Xb))
-
-p_load(reshape2,dplyr)
-
-core.swinger.pp <- melt(core.swinger.pp, varnames = c("Iteration", "presup.partido"))
-
-core.swinger.pp$presup.partido <- core.swinger.pp$presup.partido + min(core.swinger.d.jags$presup.partido) - 1
-
-core.swinger.pp.sum <- summarise(group_by(core.swinger.pp, presup.partido), 
-                                 mean.pp = mean(value), 
-                                 lower.pp = quantile(value, probs = c(0.05), na.rm = T), 
-                                 upper.pp = quantile(value, probs = c(0.95),  na.rm = T)
-                                 )
+# change names
+colnames(v.buying.dat.3) <- c("participant.code",
+                              "session.code",
+                              "player.votanteOpartido",
+                              "participant.payoff",
+                              "group.presupuesto",
+                              "player.p_oferta_amount",
+                              "offer.taken.b.1",
+                              "vote.intention",
+                              "ideo.distance",
+                              "voters.elect.payoff")
 
 
-ggplot(data = core.swinger.pp.sum, aes(x = presup.partido, y = mean.pp)) + geom_ribbon(aes(ymin = lower.pp, ymax = upper.pp), alpha = 0.2) + geom_line() + theme_bw() + ylab("Pr(Voted)")
+
+# Stack up 3 games
+dat.v.b = data.frame(rbind(v.buying.dat.1,v.buying.dat.2,v.buying.dat.3))
+
+# Merging with ID df
+dat.v.b = merge(dat.v.b, dat.v.b.ID, by=c("participant.code"))
+
+# renaming
+colnames(dat.v.b) <- c(
+        "participant.code",
+        "session.code",
+        "role",
+        "payoff",
+        "budget",
+        "offer.made",
+        "offer.taken",
+        "vote.intention",
+        "ideo.distance",
+        "voters.elect.payoff",
+        "gender",
+        "salary.enough",
+        "party.like",
+        "party.id",
+        "left.right",
+        "vote.last.election",
+        "vote.next.election"
+        )
+        
+        
+
+
+######################################################################### 
+# ************** M      O       D       E       L       S **************
+#########################################################################
+
+# HERE
+## add voters, and study them anyways. dynamics are different. 
+## it doesnt alter the question of vote-buying
+
+summary(lm(offer.made ~ 
+                   budget + 
+                   vote.intention + 
+                   ideo.distance + 
+                   voters.elect.payoff, 
+           data = dat.v.b))
+
+
+summary(lm(offer.taken ~ 
+                   budget + 
+                   vote.intention + 
+                   ideo.distance + 
+                   voters.elect.payoff, 
+           data = dat.v.b))
+
+
 
 ############################## 
+# Question 1: Who do Parties target to? Core supporters? Swing voters?
 # Question 2: When do voters decide to take Partie's offer?
-############################## 
-
-# Data partitioning: only subjects with dat$is.targeted == 1
-is.targeted.d = dat[dat$is.targeted == 1,]
-
-# Stage 1: dat$vende
-# Stage 2: 
-
-# Remember: "Oferta que acepta el votante" [0 si acepto oferta del partido A, 1 si acepto oferta del partido B, 2 ninguna oferta. * OJO cuando no recibe oferta, tb es 0 (reemplazar ese valor por un NA). ]
-
-# DV:
-## dat$vende
-
-
-
-
-
-
-
-############################## 
 # Question 3: What does determine the vote-buying price?
 ############################## 
-
-# Data partitioning: possible spliting the data into Pa and Pb, separately.
-## Oferta Partido A
-## Oferta Partido B
-
-
-# Possible DV:
-## Oferta Partido A
-## Oferta Partido B
-
-# Possible IV:
-## Cantidad en el grupo
-## Distancia Votante Partido A/B
-## Presupuesto Partido
 
 
 
