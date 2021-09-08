@@ -318,6 +318,7 @@ v.buying.dat.2 = data.frame(
         v.buying.dat$vote_b.2.group.n_votantes_B, 
         v.buying.dat$vote_b.2.group.ubicacion_pA, 
         v.buying.dat$vote_b.2.group.ubicacion_pB, 
+        v.buying.dat$voter.ideology.b.2,
         v.buying.dat$vote_b.2.group.pje_win_cA, 
         v.buying.dat$vote_b.2.group.pje_win_cB
 )
@@ -336,7 +337,7 @@ v.buying.dat.2$ideo.distance = ifelse(
         v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="Partido A", 
         v.buying.dat.2$v.buying.dat.vote_b.2.group.ubicacion_pA, 
         ifelse(v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="Partido B", v.buying.dat.2$v.buying.dat.vote_b.2.group.ubicacion_pB, 
-               NA)
+               ifelse(v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="votantes", v.buying.dat$voter.ideology.b.2, NA ))
 )
 
 v.buying.dat.2$voters.elect.payoff = ifelse(
@@ -354,7 +355,8 @@ v.buying.dat.2 = subset(v.buying.dat.2, select = -c(
         v.buying.dat.vote_b.2.group.ubicacion_pA,
         v.buying.dat.vote_b.2.group.ubicacion_pB,
         v.buying.dat.vote_b.2.group.pje_win_cA,
-        v.buying.dat.vote_b.2.group.pje_win_cB
+        v.buying.dat.vote_b.2.group.pje_win_cB,
+        v.buying.dat.voter.ideology.b.2
         
 ) )
 
@@ -378,7 +380,7 @@ v.buying.dat.3 = data.frame(
         v.buying.dat$session.code, 
         v.buying.dat$vote_b.3.player.votanteOpartido, 
         v.buying.dat$participant.payoff,
-        v.buying.dat$vote_b.2.player.puntos,
+        v.buying.dat$vote_b.3.player.puntos,
         v.buying.dat$vote_b.3.group.presupuesto, 
         v.buying.dat$vote_b.3.player.p_oferta_amount, 
         #v.buying.dat$vote_b.3.player.p_oferta_acepta,
@@ -387,6 +389,7 @@ v.buying.dat.3 = data.frame(
         v.buying.dat$vote_b.3.group.n_votantes_B, 
         v.buying.dat$vote_b.3.group.ubicacion_pA, 
         v.buying.dat$vote_b.3.group.ubicacion_pB, 
+        v.buying.dat$voter.ideology.b.3,
         v.buying.dat$vote_b.3.group.pje_win_cA, 
         v.buying.dat$vote_b.3.group.pje_win_cB
 )
@@ -405,7 +408,7 @@ v.buying.dat.3$ideo.distance = ifelse(
         v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="Partido A", 
         v.buying.dat.3$v.buying.dat.vote_b.3.group.ubicacion_pA, 
         ifelse(v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="Partido B", v.buying.dat.3$v.buying.dat.vote_b.3.group.ubicacion_pB, 
-               NA)
+               ifelse(v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="votantes", v.buying.dat$voter.ideology.b.3, NA ))
 )
 
 v.buying.dat.3$voters.elect.payoff = ifelse(
@@ -423,7 +426,8 @@ v.buying.dat.3 = subset(v.buying.dat.3, select = -c(
         v.buying.dat.vote_b.3.group.ubicacion_pA,
         v.buying.dat.vote_b.3.group.ubicacion_pB,
         v.buying.dat.vote_b.3.group.pje_win_cA,
-        v.buying.dat.vote_b.3.group.pje_win_cB
+        v.buying.dat.vote_b.3.group.pje_win_cB,
+        v.buying.dat.voter.ideology.b.3
         
 ) )
 
@@ -470,7 +474,10 @@ colnames(dat.v.b) <- c(
         "vote.next.election"
         )
         
-        
+# voters don't make offers, so it's NA for them.
+dat.v.b$offer.made[dat.v.b$role=="votantes"] <- NA
+
+
 
 
 ######################################################################### 
