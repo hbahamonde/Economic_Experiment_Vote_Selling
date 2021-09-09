@@ -495,24 +495,72 @@ dat.v.b$offer.made[dat.v.b$role=="votantes"] <- NA
 # ************** M      O       D       E       L       S **************
 #########################################################################
 
-# HERE
-## add voters, and study them anyways. dynamics are different. 
-## it doesnt alter the question of vote-buying
 
-summary(lm(offer.made ~ 
-                   budget + 
-                   vote.intention + 
-                   ideo.distance + 
-                   voters.elect.payoff, 
-           data = dat.v.b))
+#########################################################################
+# function that does clustered SEs
+vcovCluster <- function(
+        model,
+        cluster
+)
+{
+        require(sandwich)
+        require(lmtest)
+        if(nrow(model.matrix(model))!=length(cluster)){
+                stop("check your data: cluster variable has different N than model")
+        }
+        M <- length(unique(cluster))
+        N <- length(cluster)           
+        K <- model$rank   
+        if(M<50){
+                warning("Fewer than 50 clusters, variances may be unreliable (could try block bootstrap instead).")
+        }
+        dfc <- (M/(M - 1)) * ((N - 1)/(N - K))
+        uj  <- apply(estfun(model), 2, function(x) tapply(x, cluster, sum));
+        rcse.cov <- dfc * sandwich(model, meat = crossprod(uj)/N)
+        return(rcse.cov)
+}
+
+if (!require("pacman")) install.packages("pacman"); library(pacman) 
+p_load(lmtest,sandwich,msm)
+#########################################################################
 
 
-summary(lm(offer.taken ~ 
-                   budget + 
-                   vote.intention + 
-                   ideo.distance + 
-                   voters.elect.payoff, 
-           data = dat.v.b))
+
+m1 = lm(offer.made ~ 
+                budget + 
+                vote.intention + 
+                payoff +
+                ideo.distance,
+        #voters.elect.payoff, 
+        data = dat.v.b[dat.v.b$role != "votantes",])
+
+coeftest(m1, vcov = vcovCluster(m1, cluster = dat.v.b[dat.v.b$role != "votantes",]$participant.code))
+
+
+
+m2 = glm(offer.taken ~ 
+                 budget +
+                 vote.intention +
+                 offer.made +
+                 #payoff +
+                ideo.distance + 
+                voters.elect.payoff, 
+        data = dat.v.b[dat.v.b$role != "votantes",], family = binomial(link = "logit"))
+
+options(scipen=9999999) # turn off sci not
+coeftest(m2, vcov = vcovCluster(m2, cluster = dat.v.b[dat.v.b$role != "votantes",]$participant.code))
+
+
+m3 = glm(swing.voter ~ 
+                 budget +
+                 ideo.distance,
+         #offer.made +
+                      #payoff +
+              data = dat.v.b[dat.v.b$role == "votantes",], family = binomial(link = "logit"))
+
+
+options(scipen=9999999) # turn off sci not
+coeftest(m3, vcov = vcovCluster(m3, cluster = dat.v.b[dat.v.b$role == "votantes",]$participant.code))
 
 
 
