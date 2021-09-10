@@ -488,7 +488,34 @@ colnames(dat.v.b) <- c(
 # voters don't make offers, so it's NA for them.
 dat.v.b$offer.made[dat.v.b$role=="votantes"] <- NA
 
+# offer made NA now is 0
+dat.v.b$offer.made[is.na(dat.v.b$offer.made)] <- 0
 
+# "calculates" the offer made to the voter
+p_load(dplyr)
+dat.v.b = dat.v.b %>% group_by(session.code,budget) %>% mutate(x_max = max(offer.made, na.rm = T))
+dat.v.b$offer.made.voter = ifelse(dat.v.b$role=="votantes", dat.v.b$x_max, NA)
+dat.v.b = subset(dat.v.b, select = -c(x_max))
+
+# change in payoff
+dat.v.b = dat.v.b %>%
+        group_by(participant.code) %>%
+        mutate(points.cumul.delta = points.cumul - lag(points.cumul))
+
+# transforming vars.
+dat.v.b$role = as.factor(dat.v.b$role)
+dat.v.b$participant.code = as.factor(dat.v.b$participant.code)
+dat.v.b$swing.voter = as.numeric(dat.v.b$swing.voter)
+dat.v.b$payoff = as.numeric(dat.v.b$payoff)
+dat.v.b$points.cumul = as.numeric(dat.v.b$points.cumul)
+dat.v.b$budget = as.numeric(dat.v.b$budget)
+dat.v.b$offer.made = as.numeric(dat.v.b$offer.made)
+dat.v.b$offer.taken = as.numeric(dat.v.b$offer.taken)
+dat.v.b$vote.intention = as.numeric(dat.v.b$vote.intention)
+dat.v.b$ideo.distance = as.numeric(dat.v.b$ideo.distance)
+dat.v.b$voters.elect.payoff = as.numeric(dat.v.b$voters.elect.payoff)
+dat.v.b$voters.elect.payoff = as.numeric(dat.v.b$voters.elect.payoff)
+dat.v.b$points.cumul.delta = as.numeric(dat.v.b$points.cumul.delta)
 
 
 ######################################################################### 
@@ -529,9 +556,9 @@ p_load(lmtest,sandwich,msm)
 m1 = lm(offer.made ~ 
                 budget + 
                 vote.intention + 
-                payoff +
+                # payoff +
+                # voters.elect.payoff +
                 ideo.distance,
-        #voters.elect.payoff, 
         data = dat.v.b[dat.v.b$role != "votantes",])
 
 coeftest(m1, vcov = vcovCluster(m1, cluster = dat.v.b[dat.v.b$role != "votantes",]$participant.code))
@@ -553,14 +580,78 @@ coeftest(m2, vcov = vcovCluster(m2, cluster = dat.v.b[dat.v.b$role != "votantes"
 
 m3 = glm(swing.voter ~ 
                  budget +
+                 offer.made.voter +
                  ideo.distance,
          #offer.made +
                       #payoff +
-              data = dat.v.b[dat.v.b$role == "votantes",], family = binomial(link = "logit"))
+              data = dat.v.b, family = binomial(link = "logit"))
 
 
 options(scipen=9999999) # turn off sci not
-coeftest(m3, vcov = vcovCluster(m3, cluster = dat.v.b[dat.v.b$role == "votantes",]$participant.code))
+summary(m3)
+
+p_load(effects)
+plot(predictorEffects(m3))
+
+
+
+m4 = lm(offer.made ~ 
+                budget + 
+                points.cumul.delta +
+                #points.cumul +
+                participant.code +
+                vote.intention,
+                #ideo.distance,
+        data = dat.v.b)
+
+summary(m4)
+
+
+m5 = lm(offer.made ~ 
+                budget + 
+                #points.cumul.delta +
+                points.cumul +
+                participant.code +
+                vote.intention,
+        #ideo.distance,
+        data = dat.v.b)
+
+summary(m5)
+
+m6 = glm(offer.taken ~ 
+                 budget + 
+                 points.cumul.delta +
+                 participant.code +
+                 vote.intention,
+         data = dat.v.b, family = binomial(link = "logit"))
+
+
+options(scipen=9999999) # turn off sci not
+summary(m6)
+p_load(effects)
+plot(predictorEffects(m6, "points.cumul.delta"))
+
+
+
+
+
+m7 = glm(offer.taken ~ 
+                 budget + 
+                 #points.cumul.delta +
+                 points.cumul +
+                 participant.code +
+                 vote.intention,
+         #ideo.distance,
+         data = dat.v.b, family = binomial(link = "logit"))
+
+
+options(scipen=9999999) # turn off sci not
+summary(m7)
+p_load(effects)
+plot(predictorEffects(m7, "points.cumul"))
+
+
+
 
 
 
