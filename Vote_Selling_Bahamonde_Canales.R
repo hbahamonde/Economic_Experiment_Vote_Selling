@@ -525,7 +525,7 @@ dat.v.b$points.cumul.delta = as.numeric(dat.v.b$points.cumul.delta)
 # ***** Q      U       E       S       T       I       O       N       S *********
 ##################################################################################
 
-
+## WASTE MANAGEMENT: VOTE BUYING IN THE LAB
 ## Q1: most parties try to buy, but most of their offers are discarded by voters
 
 ## plot
