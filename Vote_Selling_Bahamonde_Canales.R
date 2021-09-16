@@ -502,6 +502,9 @@ dat.v.b = dat.v.b %>%
         group_by(participant.code) %>%
         mutate(points.cumul.delta = points.cumul - lag(points.cumul))
 
+# offer.made Dummy
+dat.v.b$offer.made.d = ifelse(dat.v.b$offer.made > 0, 1, 0)
+
 # transforming vars.
 dat.v.b$role = as.factor(dat.v.b$role)
 dat.v.b$participant.code = as.factor(dat.v.b$participant.code)
@@ -516,6 +519,23 @@ dat.v.b$ideo.distance = as.numeric(dat.v.b$ideo.distance)
 dat.v.b$voters.elect.payoff = as.numeric(dat.v.b$voters.elect.payoff)
 dat.v.b$voters.elect.payoff = as.numeric(dat.v.b$voters.elect.payoff)
 dat.v.b$points.cumul.delta = as.numeric(dat.v.b$points.cumul.delta)
+
+
+################################################################################## 
+# ***** Q      U       E       S       T       I       O       N       S *********
+##################################################################################
+
+
+## Q1: most parties try to buy, but most of their offers are discarded by voters
+
+## plot
+p_load(lattice) # most parties offer something
+lattice::histogram(as.factor(dat.v.b[dat.v.b$role != "votantes",]$offer.made.d))
+
+## plot
+p_load(lattice) # but most offer are discarded by voters, why?
+lattice::histogram(as.factor(dat.v.b$offer.taken))
+
 
 
 ######################################################################### 
