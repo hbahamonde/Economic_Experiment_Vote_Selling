@@ -11,10 +11,7 @@ dat <- rio::import("https://github.com/hbahamonde/Economic_Experiment_Vote_Selli
 
 # dropping obs
 # drop if payoff is 0
-dat <- subset(dat, participant.payoff > 0 )
-
-
-# keeping vars
+dat <- subset(dat, participant.payoff > 0)
 
 ## ID VARS
 id.vars = c(
@@ -195,31 +192,21 @@ v.buying.dat <- subset(v.buying.dat, !is.na(vote_b.1.player.votanteOpartido))
 
 # gen var that marks if what offer was taken by voter, if any (game 1)
 p_load(dplyr,tidyverse)
-v.buying.dat <- v.buying.dat %>% dplyr::group_by(session.code,vote_b.1.group.ubicacion_pA,vote_b.1.group.ubicacion_pB) %>%
-        mutate(value_tmp = vote_b.1.player.p_oferta_acepta)%>%
-        fill(value_tmp)
-v.buying.dat$offer.taken.b.1 = ifelse(v.buying.dat$vote_b.1.player.votanteOpartido=="Partido A" & v.buying.dat$value_tmp==1, 1, 
-                                 ifelse(v.buying.dat$vote_b.1.player.votanteOpartido=="Partido B" & v.buying.dat$value_tmp==2, 1, 0))
-v.buying.dat$offer.taken.b.1[is.na(v.buying.dat$offer.taken.b.1 )] <- 0
+v.buying.dat <- v.buying.dat %>% dplyr::group_by(session.code,vote_b.1.group.ubicacion_pA,vote_b.1.group.ubicacion_pB) %>% mutate(value_tmp = vote_b.1.player.p_oferta_acepta) %>% fill(value_tmp)
+#v.buying.dat$value_tmp[is.na(v.buying.dat$value_tmp)] <- 0
+v.buying.dat$offer.taken.b.1 = ifelse(v.buying.dat$vote_b.1.player.votanteOpartido!="votantes", NA, v.buying.dat$value_tmp)
 
 # gen var that marks if what offer was taken by voter, if any (game 2)
 p_load(dplyr,tidyverse)
-v.buying.dat <- v.buying.dat %>% dplyr::group_by(session.code,vote_b.2.group.ubicacion_pA,vote_b.2.group.ubicacion_pB) %>%
-        mutate(value_tmp = vote_b.2.player.p_oferta_acepta)%>%
-        fill(value_tmp)
-v.buying.dat$offer.taken.b.2 = ifelse(v.buying.dat$vote_b.2.player.votanteOpartido=="Partido A" & v.buying.dat$value_tmp==1, 1, 
-                                      ifelse(v.buying.dat$vote_b.2.player.votanteOpartido=="Partido B" & v.buying.dat$value_tmp==2, 1, 0))
-v.buying.dat$offer.taken.b.2[is.na(v.buying.dat$offer.taken.b.2 )] <- 0
-
+v.buying.dat <- v.buying.dat %>% dplyr::group_by(session.code,vote_b.2.group.ubicacion_pA,vote_b.2.group.ubicacion_pB) %>% mutate(value_tmp = vote_b.2.player.p_oferta_acepta) %>% fill(value_tmp)
+#v.buying.dat$value_tmp[is.na(v.buying.dat$value_tmp)] <- 0
+v.buying.dat$offer.taken.b.2 = ifelse(v.buying.dat$vote_b.2.player.votanteOpartido!="votantes", NA, v.buying.dat$value_tmp)
 
 # gen var that marks if what offer was taken by voter, if any (game 3)
 p_load(dplyr,tidyverse)
-v.buying.dat <- v.buying.dat %>% dplyr::group_by(session.code,vote_b.3.group.ubicacion_pA,vote_b.3.group.ubicacion_pB) %>%
-        mutate(value_tmp = vote_b.3.player.p_oferta_acepta)%>%
-        fill(value_tmp)
-v.buying.dat$offer.taken.b.3 = ifelse(v.buying.dat$vote_b.3.player.votanteOpartido=="Partido A" & v.buying.dat$value_tmp==1, 1, 
-                                      ifelse(v.buying.dat$vote_b.3.player.votanteOpartido=="Partido B" & v.buying.dat$value_tmp==2, 1, 0))
-v.buying.dat$offer.taken.b.3[is.na(v.buying.dat$offer.taken.b.3 )] <- 0
+v.buying.dat <- v.buying.dat %>% dplyr::group_by(session.code,vote_b.3.group.ubicacion_pA,vote_b.3.group.ubicacion_pB) %>% mutate(value_tmp = vote_b.3.player.p_oferta_acepta) %>% fill(value_tmp)
+#v.buying.dat$value_tmp[is.na(v.buying.dat$value_tmp)] <- 0
+v.buying.dat$offer.taken.b.3 = ifelse(v.buying.dat$vote_b.3.player.votanteOpartido!="votantes", NA, v.buying.dat$value_tmp)
 
 # voter's ideological position
 v.buying.dat$voter.ideology.b.1 = ifelse(v.buying.dat$vote_b.1.player.votanteOpartido != "votantes", NA, v.buying.dat$vote_b.1.group.tipo_votante)
@@ -354,8 +341,6 @@ v.buying.dat.2$voters.elect.payoff = ifelse(
                NA)
 )
 
-
-
 v.buying.dat.2 = subset(v.buying.dat.2, select = -c(
         v.buying.dat.vote_b.2.group.n_votantes_A,
         v.buying.dat.vote_b.2.group.n_votantes_B,
@@ -487,9 +472,8 @@ colnames(dat.v.b) <- c(
         
 # voters don't make offers, so it's NA for them.
 dat.v.b$offer.made[dat.v.b$role=="votantes"] <- NA
-
 # offer made NA now is 0
-dat.v.b$offer.made[is.na(dat.v.b$offer.made)] <- 0
+#dat.v.b$offer.made[is.na(dat.v.b$offer.made)] <- 0
 
 # "calculates" the offer made to the voter
 p_load(dplyr)
@@ -503,7 +487,13 @@ dat.v.b = dat.v.b %>%
         mutate(points.cumul.delta = points.cumul - lag(points.cumul))
 
 # offer.made Dummy
-dat.v.b$offer.made.d = ifelse(dat.v.b$offer.made > 0, 1, 0)
+dat.v.b$offer.made.d = ifelse(dat.v.b$offer.made.voter > 0, 1, 0)
+dat.v.b$offer.made.d[dat.v.b$role!="votantes"] <- NA
+
+# offer.taken Dummy
+dat.v.b$offer.taken.d = ifelse(dat.v.b$offer.taken > 0, 1, 0)
+dat.v.b$offer.taken.d[dat.v.b$role!="votantes"] <- NA
+
 
 # transforming vars.
 dat.v.b$role = as.factor(dat.v.b$role)
@@ -520,21 +510,41 @@ dat.v.b$voters.elect.payoff = as.numeric(dat.v.b$voters.elect.payoff)
 dat.v.b$voters.elect.payoff = as.numeric(dat.v.b$voters.elect.payoff)
 dat.v.b$points.cumul.delta = as.numeric(dat.v.b$points.cumul.delta)
 
+dat.v.b = dat.v.b %>% select(participant.code,
+                             session.code,
+                             role,
+                             offer.made,
+                             offer.made.voter,
+                             offer.made.d,
+                             offer.taken,
+                             offer.taken.d,
+                             swing.voter,
+                             points.cumul,
+                             points.cumul.delta,
+                             payoff, 
+                             everything())
+
+
+
+
 
 ################################################################################## 
 # ***** Q      U       E       S       T       I       O       N       S *********
 ##################################################################################
 
-## WASTE MANAGEMENT: VOTE BUYING IN THE LAB
-## Q1: most parties try to buy, but most of their offers are discarded by voters
-
 ## plot
 p_load(lattice) # most parties offer something
-lattice::histogram(as.factor(dat.v.b[dat.v.b$role != "votantes",]$offer.made.d))
+lattice::histogram(as.factor(dat.v.b$offer.made.d))
 
 ## plot
-p_load(lattice) # but most offer are discarded by voters, why?
-lattice::histogram(as.factor(dat.v.b$offer.taken))
+p_load(lattice) # 
+lattice::histogram(dat.v.b$offer.made)
+
+
+lattice::histogram(dat.v.b$offer.made[dat.v.b$vote.intention==2])
+
+
+plot(dat.v.b$offer.made, dat.v.b$ideo.distance)
 
 
 
