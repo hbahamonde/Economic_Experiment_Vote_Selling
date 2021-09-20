@@ -26,7 +26,7 @@ v.buying.vars = c(
         "vote_b.1.player.votanteOpartido" ,
         "vote_b.1.player.tipoAoB",
         "vote_b.1.player.nuevotipoAoB",
-        # "vote_b.1.player.p_oferta_choice" ,
+        "vote_b.1.player.p_oferta_choice" ,
         "vote_b.1.player.p_oferta_amount",
         "vote_b.1.player.p_oferta_acepta",
         # "vote_b.1.player.win_lose",
@@ -153,14 +153,14 @@ socio.dem.vars = c(
         "survey.1.player.q10")
 
 # litle codebooking
-"survey.1.player.q3"  # gender
-"survey.1.player.q4" # Salario:  (1=Les alcanza bien y pueden ahorrar, 2=Les alcanza justo y sin grandes dificultades, 3=No les alcanza y tienen dificultades, 4=No les alcanza y tienen grandes dificultades)
-"survey.1.player.q5" # Ingresos: (1= Menos de $288.800, 2= Entre $288.801 - $312.001, 3=Entre $312.002 - $361.002, 4= Entre $361.003 - $410.003, 5=Entre $410.004 - $459.004, 6=Entre $459.005 - $558.005, 7= Entre $558.006 - $657.006, 8=Entre $657.007 - $756.007, 9= Entre $756.008 - $1.005.008, 10= Más de $1.005.008)                         
-"survey.1.player.q6" # Simpatiza con partido político 1=sí, 2=no
-"survey.1.player.q7" # Qué partido? (1=Partido Socialista de Chile, 2= Unión Demócrata Independiente, 3= Renovación Nacional, 4=Partido Demócrata Cristiano, 5= Partido Comunistica de Chile, 6= Revolución Democrática, 7= Evolución Política, 8= Otro, 9=No me siento representado)                         
-"survey.1.player.q8" # Escala tendencia política (1=izq a 10=derecha)
-"survey.1.player.q9" # Voto ultima elección 1=sí, 0=no)                    
-"survey.1.player.q10" # Piensa votar proxima elección 1=sí, 0=no
+# "survey.1.player.q3"  # gender
+# "survey.1.player.q4" # Salario:  (1=Les alcanza bien y pueden ahorrar, 2=Les alcanza justo y sin grandes dificultades, 3=No les alcanza y tienen dificultades, 4=No les alcanza y tienen grandes dificultades)
+# "survey.1.player.q5" # Ingresos: (1= Menos de $288.800, 2= Entre $288.801 - $312.001, 3=Entre $312.002 - $361.002, 4= Entre $361.003 - $410.003, 5=Entre $410.004 - $459.004, 6=Entre $459.005 - $558.005, 7= Entre $558.006 - $657.006, 8=Entre $657.007 - $756.007, 9= Entre $756.008 - $1.005.008, 10= Más de $1.005.008)                         
+# "survey.1.player.q6" # Simpatiza con partido político 1=sí, 2=no
+# "survey.1.player.q7" # Qué partido? (1=Partido Socialista de Chile, 2= Unión Demócrata Independiente, 3= Renovación Nacional, 4=Partido Demócrata Cristiano, 5= Partido Comunistica de Chile, 6= Revolución Democrática, 7= Evolución Política, 8= Otro, 9=No me siento representado)                         
+# "survey.1.player.q8" # Escala tendencia política (1=izq a 10=derecha)
+# "survey.1.player.q9" # Voto ultima elección 1=sí, 0=no)                    
+# "survey.1.player.q10" # Piensa votar proxima elección 1=sí, 0=no
 
 # ID df
 dat.v.b.ID = dat[c(id.vars, socio.dem.vars)]
@@ -189,6 +189,11 @@ dat.v.b.ID = subset(dat.v.b.ID, select = -c(session.code, participant.payoff))
 v.buying.dat = dat[c(id.vars, v.buying.vars, socio.dem.vars)]
 # dropping obs that dont belong to the vote buying exp
 v.buying.dat <- subset(v.buying.dat, !is.na(vote_b.1.player.votanteOpartido))
+
+# party ID before offer (voter)
+v.buying.dat$party.id.before.voter.b.1 = v.buying.dat$vote_b.1.player.tipoAoB
+v.buying.dat$party.id.before.voter.b.2 = v.buying.dat$vote_b.2.player.tipoAoB
+v.buying.dat$party.id.before.voter.b.3 = v.buying.dat$vote_b.3.player.tipoAoB
 
 # gen var that marks if what offer was taken by voter, if any (game 1)
 p_load(dplyr,tidyverse)
@@ -228,6 +233,7 @@ v.buying.dat.1 = data.frame(
         v.buying.dat$participant.code,
         v.buying.dat$session.code, 
         v.buying.dat$vote_b.1.player.votanteOpartido,
+        v.buying.dat$party.id.before.voter.b.1,
         v.buying.dat$swing.voter.b.1,
         v.buying.dat$participant.payoff,
         v.buying.dat$vote_b.1.player.puntos,
@@ -285,12 +291,13 @@ v.buying.dat.1 = subset(v.buying.dat.1, select = -c(
 colnames(v.buying.dat.1) <- c("participant.code",
                               "session.code",
                               "player.votanteOpartido",
+                              "party.id.before.voter",
                               "swing.voter",
                               "participant.payoff",
                               "points.this.round",
                               "group.presupuesto",
                               "player.p_oferta_amount",
-                              "offer.taken.voter.b.1",
+                              "offer.taken.voter",
                               "vote.intention",
                               "ideo.distance",
                               "voters.elect.payoff")
@@ -301,6 +308,7 @@ v.buying.dat.2 = data.frame(
         v.buying.dat$participant.code,
         v.buying.dat$session.code, 
         v.buying.dat$vote_b.2.player.votanteOpartido,
+        v.buying.dat$party.id.before.voter.b.2,
         v.buying.dat$swing.voter.b.2,
         v.buying.dat$participant.payoff,
         v.buying.dat$vote_b.2.player.puntos,
@@ -356,15 +364,17 @@ v.buying.dat.2 = subset(v.buying.dat.2, select = -c(
 colnames(v.buying.dat.2) <- c("participant.code",
                               "session.code",
                               "player.votanteOpartido",
+                              "party.id.before.voter",
                               "swing.voter",
                               "participant.payoff",
                               "points.this.round",
                               "group.presupuesto",
                               "player.p_oferta_amount",
-                              "offer.taken.voter.b.1",
+                              "offer.taken.voter",
                               "vote.intention",
                               "ideo.distance",
                               "voters.elect.payoff")
+
 
 
 # Game 3
@@ -372,6 +382,7 @@ v.buying.dat.3 = data.frame(
         v.buying.dat$participant.code,
         v.buying.dat$session.code, 
         v.buying.dat$vote_b.3.player.votanteOpartido,
+        v.buying.dat$party.id.before.voter.b.3,
         v.buying.dat$swing.voter.b.3,
         v.buying.dat$participant.payoff,
         v.buying.dat$vote_b.3.player.puntos,
@@ -429,15 +440,17 @@ v.buying.dat.3 = subset(v.buying.dat.3, select = -c(
 colnames(v.buying.dat.3) <- c("participant.code",
                               "session.code",
                               "player.votanteOpartido",
+                              "party.id.before.voter",
                               "swing.voter",
                               "participant.payoff",
                               "points.this.round",
                               "group.presupuesto",
                               "player.p_oferta_amount",
-                              "offer.taken.voter.b.1",
+                              "offer.taken.voter",
                               "vote.intention",
                               "ideo.distance",
                               "voters.elect.payoff")
+
 
 
 
@@ -452,6 +465,7 @@ colnames(dat.v.b) <- c(
         "participant.code",
         "session.code",
         "role",
+        "party.id.before.voter",
         "swing.voter",
         "payoff",
         "points.cumul",
@@ -498,6 +512,14 @@ dat.v.b$offer.made.party.d[dat.v.b$role=="votantes"] <- NA
 dat.v.b$offer.taken.voter.d = ifelse(dat.v.b$offer.taken.voter > 0, 1, 0)
 dat.v.b$offer.taken.voter.d[dat.v.b$role!="votantes"] <- NA
 
+# party ID after offer
+dat.v.b$party.id.after.voter = ifelse(
+        dat.v.b$party.id.before.voter=="A" & dat.v.b$swing.voter == 1, "B",
+        ifelse(dat.v.b$party.id.before.voter=="B" & dat.v.b$swing.voter == 1, "A", 
+               ifelse(dat.v.b$swing.voter == 0, dat.v.b$party.id.before.voter, NA)
+               )
+        )
+
 
 # transforming vars.
 dat.v.b$role = as.factor(dat.v.b$role)
@@ -522,13 +544,15 @@ dat.v.b = dat.v.b %>% select(session.code,
                              participant.code,
                              round,
                              role,
+                             party.id.before.voter,
+                             party.id.after.voter,
+                             swing.voter,
                              offer.made.party,
                              offer.made.party.d,
                              offer.made.voter,
                              offer.made.voter.d,
                              offer.taken.voter,
                              offer.taken.voter.d,
-                             swing.voter,
                              points.cumul,
                              points.cumul.delta,
                              payoff, 
@@ -543,18 +567,21 @@ dat.v.b = dat.v.b %>% select(session.code,
 ##################################################################################
 
 ## plot
-p_load(lattice) # most parties offer something
-lattice::histogram(as.factor(dat.v.b$offer.made.d))
+p_load(lattice) # most parties offer something: conditions?
+lattice::histogram(as.factor(dat.v.b$offer.made.party.d))
 
 ## plot
-p_load(lattice) # 
-lattice::histogram(dat.v.b$offer.made)
+p_load(lattice) # all voters accept offer
+lattice::histogram(as.factor(dat.v.b$offer.taken.voter.d))
+
+## plot
+p_load(lattice) # however, not all voters become swing voters
+## first impressions: most vote-buying offers come from the same party (as they would HATE to loose)
+## it's not the opposing party the one that buys more: winning it's great, but losing is the WORST
+lattice::histogram(as.factor(dat.v.b$swing.voter))
 
 
-lattice::histogram(dat.v.b$offer.made[dat.v.b$vote.intention==2])
 
-
-plot(dat.v.b$offer.made, dat.v.b$ideo.distance)
 
 
 
@@ -610,9 +637,9 @@ m2 = glm(offer.taken ~
                  vote.intention +
                  offer.made +
                  #payoff +
-                ideo.distance + 
-                voters.elect.payoff, 
-        data = dat.v.b[dat.v.b$role != "votantes",], family = binomial(link = "logit"))
+                 ideo.distance + 
+                 voters.elect.payoff, 
+         data = dat.v.b[dat.v.b$role != "votantes",], family = binomial(link = "logit"))
 
 options(scipen=9999999) # turn off sci not
 coeftest(m2, vcov = vcovCluster(m2, cluster = dat.v.b[dat.v.b$role != "votantes",]$participant.code))
@@ -623,8 +650,8 @@ m3 = glm(swing.voter ~
                  offer.made.voter +
                  ideo.distance,
          #offer.made +
-                      #payoff +
-              data = dat.v.b, family = binomial(link = "logit"))
+         #payoff +
+         data = dat.v.b, family = binomial(link = "logit"))
 
 
 options(scipen=9999999) # turn off sci not
@@ -641,7 +668,7 @@ m4 = lm(offer.made ~
                 #points.cumul +
                 participant.code +
                 vote.intention,
-                #ideo.distance,
+        #ideo.distance,
         data = dat.v.b)
 
 summary(m4)
