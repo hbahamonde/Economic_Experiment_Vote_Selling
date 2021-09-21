@@ -805,7 +805,7 @@ plot(predictorEffects(m7, "points.cumul"))
 p_load(lattice)
 lattice::histogram(dat.v.b$vote.intention)
 
-formula.m8 = as.formula(offer.made.party ~ vote.intention + )
+formula.m8 = as.formula(offer.made.party ~ vote.intention + points.cumul.delta)
 
 #m8 = lm(offer.made.party ~ points.cumul.delta, d = dat.v.b)
 m8 = lm(formula.m8, d = dat.v.b)
