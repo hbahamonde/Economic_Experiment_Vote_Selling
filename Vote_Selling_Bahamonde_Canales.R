@@ -229,44 +229,6 @@ v.buying.dat$swing.voter.b.3 = ifelse(v.buying.dat$vote_b.3.player.tipoAoB != v.
 # v.buying.dat <- subset(v.buying.dat, vote_b.3.player.votanteOpartido!="votantes")
 
 
-# HERE characterizing offer type of party
-d = data.frame(
-        v.buying.dat$participant.code,
-        v.buying.dat$session.code,
-        v.buying.dat$vote_b.1.group.ubicacion_pA,
-        v.buying.dat$vote_b.1.group.ubicacion_pB,
-        v.buying.dat$vote_b.1.player.votanteOpartido,
-        v.buying.dat$vote_b.1.player.tipoAoB,
-        as.factor(v.buying.dat$offer.type.party)
-)
-
-d$offer.type.party = ifelse(v.buying.dat$vote_b.1.player.votanteOpartido == "Partido A" &
-                                    v.buying.dat$vote_b.1.player.p_oferta_choice == 1, "A",
-                            ifelse(v.buying.dat$vote_b.1.player.votanteOpartido == "Partido B" &
-                                           v.buying.dat$vote_b.1.player.p_oferta_choice == 1, "B", NA
-                            )
-)
-
-
-d = d %>%
-        group_by(v.buying.dat.session.code, v.buying.dat.vote_b.1.group.ubicacion_pA,v.buying.dat.vote_b.1.group.ubicacion_pB) %>%
-        mutate(unique_types = n_distinct(as.factor.v.buying.dat.offer.type.party., na.rm = T))
-
-
-
-
-
-# here
-d = d %>%
-        group_by(v.buying.dat.session.code, v.buying.dat.vote_b.1.group.ubicacion_pA,v.buying.dat.vote_b.1.group.ubicacion_pB) %>%
-        dplyr::filter(unique_types == 1)  %>%
-        mutate(value_tmp = offer.type.party) %>% 
-        fill(value_tmp, .direction = "downup")
-        
-        
-        
-        
-
 # Game 1
 v.buying.dat.1 = data.frame(
         v.buying.dat$participant.code,
@@ -596,6 +558,69 @@ dat.v.b = dat.v.b %>% select(session.code,
                              points.cumul.delta,
                              payoff, 
                              everything())
+
+
+
+
+
+
+
+
+
+
+# HERE characterizing offer type of party
+
+offer.type.party = ifelse(v.buying.dat$vote_b.1.player.votanteOpartido == "Partido A" &
+                                    v.buying.dat$vote_b.1.player.p_oferta_choice == 1, "A",
+                            ifelse(v.buying.dat$vote_b.1.player.votanteOpartido == "Partido B" &
+                                           v.buying.dat$vote_b.1.player.p_oferta_choice == 1, "B", NA
+                            )
+)
+
+
+d = data.frame(
+        v.buying.dat$participant.code,
+        v.buying.dat$session.code,
+        v.buying.dat$vote_b.1.group.ubicacion_pA,
+        v.buying.dat$vote_b.1.group.ubicacion_pB,
+        v.buying.dat$vote_b.1.player.votanteOpartido,
+        v.buying.dat$vote_b.1.player.tipoAoB,
+        as.factor(offer.type.party)
+)
+
+p_load(dplyr)
+d = d %>%
+        group_by(v.buying.dat.session.code, v.buying.dat.vote_b.1.group.ubicacion_pA,v.buying.dat.vote_b.1.group.ubicacion_pB) %>%
+        mutate(n.offers.made.to.voter = n_distinct(as.factor.offer.type.party., na.rm = T))
+
+
+
+
+
+# here
+p_load(dplyr)
+d = d %>%
+        group_by(v.buying.dat.session.code, v.buying.dat.vote_b.1.group.ubicacion_pA,v.buying.dat.vote_b.1.group.ubicacion_pB) %>%
+        #dplyr::filter(unique_types == 1, .preserve = FALSE)  %>%
+        #subset(unique_types == 1) %>%
+        mutate(offer.party.type = as.factor.offer.type.party.) %>% 
+        fill(offer.party.type, .direction = "downup")
+
+d$offer.party.type = as.character(d$offer.party.type)
+d$offer.party.type[d$n.offers.made.to.voter == 2] <- "AB"
+d$offer.party.type = as.factor(d$offer.party.type)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
