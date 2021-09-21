@@ -660,6 +660,11 @@ p_load(lattice) # however, not all voters become swing voters
 ## it's not the opposing party the one that buys more: winning it's great, but losing is the WORST
 lattice::histogram(as.factor(dat.v.b$swing.voter))
 
+## plot
+plot(dat.v.b$offer.party.type)
+## most offers come from situations where both parties attempt to buy 
+## since the dataset is relational, values across subtypes (parties and voters) are the same.
+
 
 ######################################################################### 
 # ************** M      O       D       E       L       S **************
@@ -795,6 +800,28 @@ plot(predictorEffects(m7, "points.cumul"))
 
 
 
+
+##### Vote Intention: Risk of Losing the Election
+p_load(lattice)
+lattice::histogram(dat.v.b$vote.intention)
+
+formula.m8 = as.formula(offer.made.party ~ vote.intention + )
+
+#m8 = lm(offer.made.party ~ points.cumul.delta, d = dat.v.b)
+m8 = lm(formula.m8, d = dat.v.b)
+#m8 = lm(offer.made.party ~ ideo.distance, d = dat.v.b)
+
+# m8 = glm(offer.made.party.d ~ points.cumul.delta + as.factor(participant.code), d = dat.v.b, family = binomial(link = "logit"))
+summary(m8)
+plot(effects::allEffects(m8))
+
+
+p_load(plm)
+plm.8 <- plm(formula.m8, data = dat.v.b,
+             index = "participant.code", 
+             model = "within") # "pooling", "within", "between", "random" "fd", or "ht"
+summary(plm.8)
+texreg::screenreg(plm.8)
 
 
 
