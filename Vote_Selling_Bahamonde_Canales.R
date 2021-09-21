@@ -808,7 +808,7 @@ lattice::histogram(dat.v.b$vote.intention)
 formula.m8 = as.formula(offer.made.party ~ vote.intention + points.cumul.delta)
 
 #m8 = lm(offer.made.party ~ points.cumul.delta, d = dat.v.b)
-m8 = lm(formula.m8, d = dat.v.b)
+m8 = lm(offer.made.party ~ vote.intention + points.cumul.delta, d = dat.v.b)
 #m8 = lm(offer.made.party ~ ideo.distance, d = dat.v.b)
 
 # m8 = glm(offer.made.party.d ~ points.cumul.delta + as.factor(participant.code), d = dat.v.b, family = binomial(link = "logit"))
@@ -817,11 +817,19 @@ plot(effects::allEffects(m8))
 
 
 p_load(plm)
+# https://cran.r-project.org/web/packages/plm/vignettes/A_plmPackage.html
 plm.8 <- plm(formula.m8, data = dat.v.b,
              index = "participant.code", 
              model = "within") # "pooling", "within", "between", "random" "fd", or "ht"
 summary(plm.8)
 texreg::screenreg(plm.8)
+
+
+coplot(offer.made.party ~ round|participant.code, type="b", data=dat.v.b)
+dat.v.b.p = pdata.frame(dat.v.b, index=c("participant.code","round"), drop.index=TRUE, row.names=TRUE)
+plm.8 = plm(offer.made.party ~ vote.intention + points.cumul.delta, data = dat.v.b.p, model = "within")
+summary(plm.8)
+punions$p <- as.vector(plm:::predict.plm(plm.8))
 
 
 
