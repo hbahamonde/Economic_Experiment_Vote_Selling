@@ -535,33 +535,37 @@ colnames(v.buying.dat.3) <- c("participant.code",
 # Stack up 3 games
 dat.v.b = data.frame(rbind(v.buying.dat.1,v.buying.dat.2,v.buying.dat.3))
 
+# round count
+p_load(dplyr)
+dat.v.b = dat.v.b %>% group_by(participant.code) %>% mutate(round = row_number())
+
 # Merging with ID df
 dat.v.b = merge(dat.v.b, dat.v.b.ID, by=c("participant.code"))
 
 # renaming
-colnames(dat.v.b) <- c(
-        "participant.code",
-        "session.code",
-        "role",
-        "party.id.before.voter",
-        "offer.party.type" ,
-        "swing.voter",
-        "payoff",
-        "points.cumul",
-        "budget",
-        "offer.made.party",
-        "offer.taken.voter",
-        "vote.intention",
-        "ideo.distance",
-        "voters.elect.payoff",
-        "gender",
-        "salary.enough",
-        "party.like",
-        "party.id",
-        "left.right",
-        "vote.last.election",
-        "vote.next.election"
-)
+colnames(dat.v.b)[colnames(dat.v.b)=="participant.code"] <- "participant.code"
+colnames(dat.v.b)[colnames(dat.v.b)=="session.code"] <- "session.code"
+colnames(dat.v.b)[colnames(dat.v.b)=="player.votanteOpartido"] <- "role"
+colnames(dat.v.b)[colnames(dat.v.b)=="party.id.before.voter"] <- "party.id.before.voter"
+colnames(dat.v.b)[colnames(dat.v.b)=="offer.party.type"] <- "offer.party.type" 
+colnames(dat.v.b)[colnames(dat.v.b)=="swing.voter"] <- "swing.voter"
+colnames(dat.v.b)[colnames(dat.v.b)=="participant.payoff"] <- "payoff"
+colnames(dat.v.b)[colnames(dat.v.b)=="points.this.round"] <- "points.cumul"
+colnames(dat.v.b)[colnames(dat.v.b)=="group.presupuesto"] <- "budget"
+colnames(dat.v.b)[colnames(dat.v.b)=="player.p_oferta_amount"] <- "offer.made.party"
+colnames(dat.v.b)[colnames(dat.v.b)=="offer.taken.voter"] <- "offer.taken.voter"
+colnames(dat.v.b)[colnames(dat.v.b)=="vote.intention"] <- "vote.intention"
+colnames(dat.v.b)[colnames(dat.v.b)=="ideo.distance"] <- "ideo.distance"
+colnames(dat.v.b)[colnames(dat.v.b)=="voters.elect.payoff"] <- "voters.elect.payoff"
+colnames(dat.v.b)[colnames(dat.v.b)=="round"] <- "round"
+colnames(dat.v.b)[colnames(dat.v.b)=="gender"] <- "gender"
+colnames(dat.v.b)[colnames(dat.v.b)=="salary.enough"] <- "salary.enough"
+colnames(dat.v.b)[colnames(dat.v.b)=="party.like"] <- "party.like"
+colnames(dat.v.b)[colnames(dat.v.b)=="party.id"] <- "party.id"
+colnames(dat.v.b)[colnames(dat.v.b)=="left.right"] <- "left.right"
+colnames(dat.v.b)[colnames(dat.v.b)=="vote.last.election"] <- "vote.last.election"
+colnames(dat.v.b)[colnames(dat.v.b)=="vote.next.election"] <-  "vote.next.election"
+
 
 # voters don't make offers, so it's NA for them.
 dat.v.b$offer.made.party[dat.v.b$role=="votantes"] <- NA
@@ -617,10 +621,6 @@ dat.v.b$ideo.distance = as.numeric(dat.v.b$ideo.distance)
 dat.v.b$voters.elect.payoff = as.numeric(dat.v.b$voters.elect.payoff)
 dat.v.b$voters.elect.payoff = as.numeric(dat.v.b$voters.elect.payoff)
 dat.v.b$points.cumul.delta = as.numeric(dat.v.b$points.cumul.delta)
-
-# round count
-p_load(dplyr)
-dat.v.b = dat.v.b %>% group_by(participant.code) %>% mutate(round = row_number())
 
 dat.v.b = dat.v.b %>% select(session.code,
                              participant.code,
