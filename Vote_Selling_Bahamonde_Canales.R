@@ -304,22 +304,6 @@ v.buying.dat$offer.party.type.b.3[v.buying.dat$n.offers.made.to.voter == 2] <- "
 v.buying.dat$offer.party.type.b.3 = v.buying.dat$offer.party.type.b.3 %>% replace_na("None")
 v.buying.dat$offer.party.type.b.3 = as.factor(v.buying.dat$offer.party.type.b.3)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Game 1
 v.buying.dat.1 = data.frame(
         v.buying.dat$participant.code,
@@ -471,8 +455,6 @@ colnames(v.buying.dat.2) <- c("participant.code",
                               "ideo.distance",
                               "voters.elect.payoff")
 
-
-
 # Game 3
 v.buying.dat.3 = data.frame(
         v.buying.dat$participant.code,
@@ -550,8 +532,6 @@ colnames(v.buying.dat.3) <- c("participant.code",
                               "voters.elect.payoff")
 
 
-
-
 # Stack up 3 games
 dat.v.b = data.frame(rbind(v.buying.dat.1,v.buying.dat.2,v.buying.dat.3))
 
@@ -590,9 +570,8 @@ dat.v.b$offer.made.party[dat.v.b$role=="votantes"] <- NA
 
 # "calculates" the offer made to the voter
 p_load(dplyr)
-dat.v.b = dat.v.b %>% group_by(session.code,budget) %>% mutate(x_max = max(offer.made.party, na.rm = T))
-dat.v.b$offer.made.voter = ifelse(dat.v.b$role=="votantes", dat.v.b$x_max, NA)
-dat.v.b = subset(dat.v.b, select = -c(x_max))
+dat.v.b = dat.v.b %>% group_by(session.code,budget) %>% mutate(offer.made.voter = sum(offer.made.party, na.rm = T))
+dat.v.b$offer.made.voter = ifelse(dat.v.b$role=="votantes", dat.v.b$offer.made.voter, NA)
 
 # change in payoff
 dat.v.b = dat.v.b %>%
@@ -610,6 +589,10 @@ dat.v.b$offer.made.party.d[dat.v.b$role=="votantes"] <- NA
 # offer.taken.voter Dummy
 dat.v.b$offer.taken.voter.d = ifelse(dat.v.b$offer.taken.voter > 0, 1, 0)
 dat.v.b$offer.taken.voter.d[dat.v.b$role!="votantes"] <- NA
+
+# as factor offer.taken.voter
+dat.v.b$offer.taken.voter = as.factor(dat.v.b$offer.taken.voter)
+levels(dat.v.b$offer.taken.voter) <- c("A", "B", "Pending")
 
 # party ID after offer
 dat.v.b$party.id.after.voter = ifelse(
