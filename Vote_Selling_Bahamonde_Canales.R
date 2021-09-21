@@ -818,6 +818,8 @@ plot(effects::allEffects(m8))
 
 p_load(plm)
 # https://cran.r-project.org/web/packages/plm/vignettes/A_plmPackage.html
+# https://stats.stackexchange.com/questions/147350/computing-the-predicted-value-from-a-panel-data-model-with-the-plm-r-package
+# https://cran.r-project.org/web/packages/prediction/prediction.pdf
 plm.8 <- plm(formula.m8, data = dat.v.b,
              index = "participant.code", 
              model = "within") # "pooling", "within", "between", "random" "fd", or "ht"
@@ -825,12 +827,41 @@ summary(plm.8)
 texreg::screenreg(plm.8)
 
 
-coplot(offer.made.party ~ round|participant.code, type="b", data=dat.v.b)
+dat.v.b.parties = dat.v.b %>% filter(role != "votantes") 
+coplot(offer.made.party ~ round|participant.code, type="b", data=dat.v.b.parties)
+
+
+dat.v.b %>%
+        group_by(participant.code) %>%
+        summarise(offer.made.party.m = mean(offer.made.party)) %>%
+        left_join(dat.v.b) %>%
+        ggplot(data = ., 
+               aes(x = reorder(as.character(participant.code), participant.code), y = offer.made.party)) +
+        geom_point() +
+        geom_line(aes(x = participant.code, y = offer.made.party.m), col = "blue") +
+        labs(x = "Participant", y = "Offer Made")
+
+
 dat.v.b.p = pdata.frame(dat.v.b, index=c("participant.code","round"), drop.index=TRUE, row.names=TRUE)
 plm.8 = plm(offer.made.party ~ vote.intention + points.cumul.delta, data = dat.v.b.p, model = "within")
 summary(plm.8)
-punions$p <- as.vector(plm:::predict.plm(plm.8))
 
+plmtest(plm.8, effect="individual", type="kw")
+
+as.vector(fixef(plm.8))
+dat.v.b.p$test = as.vector(plm:::predict.plm(plm.8))
+
+
+ggplot(data=dat.v.b, aes(x=factor(vote.intention), y=offer.made.party)) +
+        geom_bar(stat="identity", position=position_dodge()) +
+        #scale_fill_brewer(palette="Paired")+
+        theme_minimal()
+
+ggplot(dat.v.b, aes(x=offer.made.party, color=factor(vote.intention))) +
+        geom_histogram(fill="white", position="dodge")
+
+
+lattice::histogram(dat.v.b$offer.made.party[dat.v.b$vote.intention==2])
 
 
 ############################## 
