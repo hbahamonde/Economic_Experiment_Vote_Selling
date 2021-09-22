@@ -704,22 +704,13 @@ plot(predictorEffects(m3))
 
 # https://stackoverflow.com/questions/49161198/predicted-probability-plot-with-robust-errors-for-logit-model
 p_load(ggeffects)
-
 plot(ggeffects::ggpredict(
         model=m3,
         terms="offer.made.voter [all]", 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0"
         )
-)
-
-
-# Plot predictions
-ggplot2::ggplot(data=pred.dta, 
-                ggplot2::aes(x=x, y=predicted))+
-        ggplot2::geom_line()+
-        ggplot2::geom_errorbar(ggplot2::aes(ymin=conf.low, ymax=conf.high), width=.1) 
-
+     )
 
 
 ## OFFER TYPE: competitive.offers.party
