@@ -680,63 +680,46 @@ plot(dat.v.b$offer.party.type[dat.v.b$party.id.before.voter=="B"])
 # ************** M      O       D       E       L       S **************
 #########################################################################
 
-
-#########################################################################
-# function that does clustered SEs
-vcovCluster <- function(
-        model,
-        cluster
-)
-{
-        require(sandwich)
-        require(lmtest)
-        if(nrow(model.matrix(model))!=length(cluster)){
-                stop("check your data: cluster variable has different N than model")
-        }
-        M <- length(unique(cluster))
-        N <- length(cluster)           
-        K <- model$rank   
-        if(M<50){
-                warning("Fewer than 50 clusters, variances may be unreliable (could try block bootstrap instead).")
-        }
-        dfc <- (M/(M - 1)) * ((N - 1)/(N - K))
-        uj  <- apply(estfun(model), 2, function(x) tapply(x, cluster, sum));
-        rcse.cov <- dfc * sandwich(model, meat = crossprod(uj)/N)
-        return(rcse.cov)
-}
-
-if (!require("pacman")) install.packages("pacman"); library(pacman) 
-p_load(lmtest,sandwich,msm)
-#########################################################################
+# for clustered std errors
+p_load(sandwich,lmtest)
 
 ## SWING VOTER
+m3.d = dat.v.b %>% select(swing.voter, offer.made.voter, participant.code) %>% drop_na()
 m3 = glm(swing.voter ~ 
                  offer.made.voter,# +
                  #participant.code,# + 
                  #ideo.distance,
-         data = dat.v.b, family = binomial(link = "logit")
+         data = m3.d, family = binomial(link = "logit")
          )
 
 
 options(scipen=9999999) # turn off sci not
-summary(m3)
+p_load(texreg)
+screenreg(m3)
+coeftest(m3, vcov. = vcovCL(m3, cluster = m3.d$participant.code, type = "HC0"))
+coefci(m3, level = 0.95, vcov. = vcovCL(m3, cluster = m3.d$participant.code, type = "HC0"))
 p_load(effects)
 plot(predictorEffects(m3))
 
 
-## OFFER MADE
-m4 = lm(offer.made.party ~ 
-                #budget + 
-                points.cumul.delta +
-                #points.cumul +
-                participant.code,
-                #vote.intention,
-        #ideo.distance,
-        data = dat.v.b)
+# https://stackoverflow.com/questions/49161198/predicted-probability-plot-with-robust-errors-for-logit-model
+p_load(ggeffects)
 
-summary(m4)
-p_load(effects)
-plot(predictorEffects(m4))
+plot(ggeffects::ggpredict(
+        model=m3,
+        terms="offer.made.voter [all]", 
+        vcov.fun = "vcovHC", 
+        vcov.type = "HC0"
+        )
+)
+
+
+# Plot predictions
+ggplot2::ggplot(data=pred.dta, 
+                ggplot2::aes(x=x, y=predicted))+
+        ggplot2::geom_line()+
+        ggplot2::geom_errorbar(ggplot2::aes(ymin=conf.low, ymax=conf.high), width=.1) 
+
 
 
 ## OFFER TYPE: competitive.offers.party
