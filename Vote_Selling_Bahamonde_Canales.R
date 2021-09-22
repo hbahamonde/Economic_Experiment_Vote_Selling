@@ -606,6 +606,9 @@ dat.v.b$party.id.after.voter = ifelse(
                )
         )
 
+# competitive.offers
+dat.v.b$competitive.offers.party = ifelse(dat.v.b$offer.party.type=="AB", 1, 0)
+dat.v.b$competitive.offers.party[dat.v.b$role=="votantes"] <- NA # if voter, is NA (this var is only for parties)
 
 # transforming vars.
 dat.v.b$role = as.factor(dat.v.b$role)
@@ -616,6 +619,7 @@ dat.v.b$points.cumul = as.numeric(dat.v.b$points.cumul)
 dat.v.b$budget = as.numeric(dat.v.b$budget)
 dat.v.b$offer.made.voter = as.numeric(dat.v.b$offer.made.voter)
 dat.v.b$offer.taken.voter = as.numeric(dat.v.b$offer.taken.voter)
+dat.v.b$offer.party.type = relevel(dat.v.b$offer.party.type, ref = "None")
 dat.v.b$vote.intention = as.numeric(dat.v.b$vote.intention)
 dat.v.b$ideo.distance = as.numeric(dat.v.b$ideo.distance)
 dat.v.b$voters.elect.payoff = as.numeric(dat.v.b$voters.elect.payoff)
@@ -665,6 +669,12 @@ plot(dat.v.b$offer.party.type)
 ## most offers come from situations where both parties attempt to buy 
 ## since the dataset is relational, values across subtypes (parties and voters) are the same.
 
+## plot
+plot(dat.v.b$offer.party.type[dat.v.b$party.id.before.voter=="A"])
+plot(dat.v.b$offer.party.type[dat.v.b$party.id.before.voter=="B"])
+## for voters A and B, parties in almost the same proportion aim at buying votes,
+## most of the times, at the same time.
+
 
 ######################################################################### 
 # ************** M      O       D       E       L       S **************
@@ -699,105 +709,55 @@ if (!require("pacman")) install.packages("pacman"); library(pacman)
 p_load(lmtest,sandwich,msm)
 #########################################################################
 
-
-
-m1 = lm(offer.made ~ 
-                budget + 
-                vote.intention + 
-                # payoff +
-                # voters.elect.payoff +
-                ideo.distance,
-        data = dat.v.b[dat.v.b$role != "votantes",])
-
-coeftest(m1, vcov = vcovCluster(m1, cluster = dat.v.b[dat.v.b$role != "votantes",]$participant.code))
-
-
-
-m2 = glm(offer.taken ~ 
-                 budget +
-                 vote.intention +
-                 offer.made +
-                 #payoff +
-                 ideo.distance + 
-                 voters.elect.payoff, 
-         data = dat.v.b[dat.v.b$role != "votantes",], family = binomial(link = "logit"))
-
-options(scipen=9999999) # turn off sci not
-coeftest(m2, vcov = vcovCluster(m2, cluster = dat.v.b[dat.v.b$role != "votantes",]$participant.code))
-
-
+## SWING VOTER
 m3 = glm(swing.voter ~ 
-                 budget +
-                 offer.made.voter +
-                 ideo.distance,
-         #offer.made +
-         #payoff +
-         data = dat.v.b, family = binomial(link = "logit"))
+                 offer.made.voter,# +
+                 #participant.code,# + 
+                 #ideo.distance,
+         data = dat.v.b, family = binomial(link = "logit")
+         )
 
 
 options(scipen=9999999) # turn off sci not
 summary(m3)
-
 p_load(effects)
 plot(predictorEffects(m3))
 
 
-
-m4 = lm(offer.made ~ 
-                budget + 
+## OFFER MADE
+m4 = lm(offer.made.party ~ 
+                #budget + 
                 points.cumul.delta +
                 #points.cumul +
-                participant.code +
-                vote.intention,
+                participant.code,
+                #vote.intention,
         #ideo.distance,
         data = dat.v.b)
 
 summary(m4)
+p_load(effects)
+plot(predictorEffects(m4))
 
 
-m5 = lm(offer.made ~ 
-                budget + 
-                #points.cumul.delta +
+## OFFER TYPE: competitive.offers.party
+m5 = glm(competitive.offers.party ~ 
+                #budget + 
+                points.cumul.delta +
                 points.cumul +
-                participant.code +
-                vote.intention,
+                # participant.code +
+        vote.intention,
         #ideo.distance,
-        data = dat.v.b)
+        data = dat.v.b, 
+        family = binomial(link = "logit")
+        )
 
 summary(m5)
-
-m6 = glm(offer.taken ~ 
-                 budget + 
-                 points.cumul.delta +
-                 participant.code +
-                 vote.intention,
-         data = dat.v.b, family = binomial(link = "logit"))
-
-
-options(scipen=9999999) # turn off sci not
-summary(m6)
 p_load(effects)
-plot(predictorEffects(m6, "points.cumul.delta"))
-
-
-
-
-
-m7 = glm(offer.taken ~ 
-                 budget + 
-                 #points.cumul.delta +
-                 points.cumul +
-                 participant.code +
-                 vote.intention,
-         #ideo.distance,
-         data = dat.v.b, family = binomial(link = "logit"))
-
-
-options(scipen=9999999) # turn off sci not
-summary(m7)
-p_load(effects)
-plot(predictorEffects(m7, "points.cumul"))
-
+plot(predictorEffects(m5))
+## Comments: 
+## 1. Competitive Offers are more likely when lost previous game at t-1
+## 2. Competitive Offers are more likely when I have accumulated enough wealth along the game
+## 3. Competitive Offers are NOT related to the perception of risk (vote.intention)
 
 
 
