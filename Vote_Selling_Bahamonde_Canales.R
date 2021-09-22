@@ -683,6 +683,8 @@ plot(dat.v.b$offer.party.type[dat.v.b$party.id.before.voter=="B"])
 # for clustered std errors
 p_load(sandwich,lmtest)
 
+
+#########################################################################
 ## SWING VOTER
 m3.d = dat.v.b %>% select(swing.voter, offer.made.voter, participant.code) %>% drop_na()
 m3 = glm(swing.voter ~ 
@@ -712,7 +714,7 @@ plot(ggeffects::ggpredict(
         )
      )
 
-
+#########################################################################
 ## OFFER TYPE: competitive.offers.party
 m5 = glm(competitive.offers.party ~ 
                 #budget + 
@@ -735,31 +737,74 @@ plot(predictorEffects(m5))
 #### Dropped variable "points.cumul"
 
 
+
+p_load(ggeffects)
+plot(ggeffects::ggpredict(
+        model=m5,
+        terms=c("points.cumul.delta [all]"), 
+        vcov.fun = "vcovHC", 
+        vcov.type = "HC0"
+)
+)
+
+p_load(ggeffects)
+plot(ggeffects::ggpredict(
+        model=m5,
+        terms=c("vote.intention [all]"), 
+        vcov.fun = "vcovHC", 
+        vcov.type = "HC0"
+)
+)
+
+
+
+
+#########################################################################
 ##### Vote Intention: Risk of Losing the Election
 p_load(lattice)
 lattice::histogram(dat.v.b$vote.intention)
 
 formula.m8 = as.formula(offer.made.party ~ vote.intention + points.cumul.delta)
 
-#m8 = lm(offer.made.party ~ points.cumul.delta, d = dat.v.b)
-m8 = lm(formula.m8, d = dat.v.b)
-#m8 = lm(offer.made.party ~ ideo.distance, d = dat.v.b)
 
-# m8 = glm(offer.made.party.d ~ points.cumul.delta + as.factor(participant.code), d = dat.v.b, family = binomial(link = "logit"))
+m8.d = dat.v.b %>% select(offer.made.party, vote.intention, points.cumul.delta, participant.code) %>% drop_na()
+
+
+m8 = lm(offer.made.party ~ vote.intention + points.cumul.delta + participant.code, m8.d)
+coeftest(m8, vcov. = vcovCL(m8, cluster = m8.d$participant.code, type = "HC0"))
+
+p_load(ggeffects)
+plot(ggeffects::ggpredict(
+        model=m8,
+        terms=c("vote.intention [all]"), 
+        vcov.fun = "vcovHC", 
+        vcov.type = "HC0"
+        )
+     )
+
+p_load(ggeffects)
+plot(ggeffects::ggpredict(
+        model=m8,
+        terms=c("points.cumul.delta [all]"), 
+        vcov.fun = "vcovHC", 
+        vcov.type = "HC0"
+        )
+     )
+
 summary(m8)
-plot(effects::allEffects(m8))
+texreg::screenreg(
+        list(m8, m3, m5),
+        omit.coef = "participant"
+        )
 
 
-p_load(plm)
-# https://cran.r-project.org/web/packages/plm/vignettes/A_plmPackage.html
-# https://stats.stackexchange.com/questions/147350/computing-the-predicted-value-from-a-panel-data-model-with-the-plm-r-package
-# https://cran.r-project.org/web/packages/prediction/prediction.pdf
-plm.8 <- plm(formula.m8, data = dat.v.b,
-             index = "participant.code", 
-             model = "within") # "pooling", "within", "between", "random" "fd", or "ht"
-summary(plm.8)
-texreg::screenreg(plm.8)
-plot(effects::allEffects(plm.8))
+
+
+
+
+
+
+
 
 
 
@@ -778,26 +823,8 @@ dat.v.b %>%
         labs(x = "Participant", y = "Offer Made")
 
 
-dat.v.b.p = pdata.frame(dat.v.b, index=c("participant.code","round"), drop.index=TRUE, row.names=TRUE)
-plm.8 = plm(offer.made.party ~ vote.intention + points.cumul.delta, data = dat.v.b.p, model = "within")
-summary(plm.8)
-
-plmtest(plm.8, effect="individual", type="kw")
-
-as.vector(fixef(plm.8))
-dat.v.b.p$test = as.vector(plm:::predict.plm(plm.8))
 
 
-ggplot(data=dat.v.b, aes(x=factor(vote.intention), y=offer.made.party)) +
-        geom_bar(stat="identity", position=position_dodge()) +
-        #scale_fill_brewer(palette="Paired")+
-        theme_minimal()
-
-ggplot(dat.v.b, aes(x=offer.made.party, color=factor(vote.intention))) +
-        geom_histogram(fill="white", position="dodge")
-
-
-lattice::histogram(dat.v.b$offer.made.party[dat.v.b$vote.intention==2])
 
 
 ############################## 
