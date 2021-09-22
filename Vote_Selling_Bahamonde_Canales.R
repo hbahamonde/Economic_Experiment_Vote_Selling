@@ -324,17 +324,30 @@ v.buying.dat.1 = data.frame(
         v.buying.dat$vote_b.1.group.ubicacion_pB, 
         v.buying.dat$voter.ideology.b.1,
         v.buying.dat$vote_b.1.group.pje_win_cA, 
-        v.buying.dat$vote_b.1.group.pje_win_cB
+        v.buying.dat$vote_b.1.group.pje_win_cB,
+        v.buying.dat$vote_b.1.player.tipoAoB
 )
 
 
-v.buying.dat.1$vote.intention = ifelse(
+v.buying.dat.1$vote.intention.party = ifelse(
         v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido A", 
         v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_A, 
         ifelse(v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido B", 
                v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_B, 
                NA)
 )
+
+
+# HERE vote.intention.voter.before.offer
+## FALTA JUEGO 2 y # y comprobar.
+v.buying.dat.1$vote.intention.party = ifelse(
+        v.buying.dat.1$v.buying.dat.vote_b.1.player.tipoAoB=="A", 
+        v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_A, 
+        ifelse(v.buying.dat.1$v.buying.dat.vote_b.1.player.tipoAoB=="B", 
+               v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_B, 
+               NA)
+)
+
 
 
 v.buying.dat.1$ideo.distance = ifelse(
@@ -376,7 +389,7 @@ colnames(v.buying.dat.1) <- c("participant.code",
                               "group.presupuesto",
                               "player.p_oferta_amount",
                               "offer.taken.voter",
-                              "vote.intention",
+                              "vote.intention.party",
                               "ideo.distance",
                               "voters.elect.payoff")
 
@@ -405,7 +418,7 @@ v.buying.dat.2 = data.frame(
 )
 
 
-v.buying.dat.2$vote.intention = ifelse(
+v.buying.dat.2$vote.intention.party = ifelse(
         v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="Partido A", 
         v.buying.dat.2$v.buying.dat.vote_b.2.group.n_votantes_A, 
         ifelse(v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="Partido B", 
@@ -451,7 +464,7 @@ colnames(v.buying.dat.2) <- c("participant.code",
                               "group.presupuesto",
                               "player.p_oferta_amount",
                               "offer.taken.voter",
-                              "vote.intention",
+                              "vote.intention.party",
                               "ideo.distance",
                               "voters.elect.payoff")
 
@@ -479,7 +492,7 @@ v.buying.dat.3 = data.frame(
 )
 
 
-v.buying.dat.3$vote.intention = ifelse(
+v.buying.dat.3$vote.intention.party = ifelse(
         v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="Partido A", 
         v.buying.dat.3$v.buying.dat.vote_b.3.group.n_votantes_A, 
         ifelse(v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="Partido B", 
@@ -527,7 +540,7 @@ colnames(v.buying.dat.3) <- c("participant.code",
                               "group.presupuesto",
                               "player.p_oferta_amount",
                               "offer.taken.voter",
-                              "vote.intention",
+                              "vote.intention.party",
                               "ideo.distance",
                               "voters.elect.payoff")
 
@@ -554,7 +567,7 @@ colnames(dat.v.b)[colnames(dat.v.b)=="points.this.round"] <- "points.cumul"
 colnames(dat.v.b)[colnames(dat.v.b)=="group.presupuesto"] <- "budget"
 colnames(dat.v.b)[colnames(dat.v.b)=="player.p_oferta_amount"] <- "offer.made.party"
 colnames(dat.v.b)[colnames(dat.v.b)=="offer.taken.voter"] <- "offer.taken.voter"
-colnames(dat.v.b)[colnames(dat.v.b)=="vote.intention"] <- "vote.intention"
+colnames(dat.v.b)[colnames(dat.v.b)=="vote.intention.party"] <- "vote.intention.party"
 colnames(dat.v.b)[colnames(dat.v.b)=="ideo.distance"] <- "ideo.distance"
 colnames(dat.v.b)[colnames(dat.v.b)=="voters.elect.payoff"] <- "voters.elect.payoff"
 colnames(dat.v.b)[colnames(dat.v.b)=="round"] <- "round"
@@ -603,8 +616,8 @@ dat.v.b$party.id.after.voter = ifelse(
         dat.v.b$party.id.before.voter=="A" & dat.v.b$swing.voter == 1, "B",
         ifelse(dat.v.b$party.id.before.voter=="B" & dat.v.b$swing.voter == 1, "A", 
                ifelse(dat.v.b$swing.voter == 0, dat.v.b$party.id.before.voter, NA)
-               )
         )
+)
 
 # competitive.offers
 dat.v.b$competitive.offers.party = ifelse(dat.v.b$offer.party.type=="AB", 1, 0)
@@ -620,7 +633,7 @@ dat.v.b$budget = as.numeric(dat.v.b$budget)
 dat.v.b$offer.made.voter = as.numeric(dat.v.b$offer.made.voter)
 dat.v.b$offer.taken.voter = as.numeric(dat.v.b$offer.taken.voter)
 dat.v.b$offer.party.type = relevel(dat.v.b$offer.party.type, ref = "None")
-dat.v.b$vote.intention = as.numeric(dat.v.b$vote.intention)
+dat.v.b$vote.intention.party = as.numeric(dat.v.b$vote.intention.party)
 dat.v.b$ideo.distance = as.numeric(dat.v.b$ideo.distance)
 dat.v.b$voters.elect.payoff = as.numeric(dat.v.b$voters.elect.payoff)
 dat.v.b$voters.elect.payoff = as.numeric(dat.v.b$voters.elect.payoff)
@@ -686,13 +699,10 @@ p_load(sandwich,lmtest)
 
 #########################################################################
 ## SWING VOTER
-m3.d = dat.v.b %>% select(swing.voter, offer.made.voter, participant.code) %>% drop_na()
-m3 = glm(swing.voter ~ 
-                 offer.made.voter,# +
-                 #participant.code,# + 
-                 #ideo.distance,
+m3.d = dat.v.b %>% select(swing.voter, offer.made.voter, participant.code, ideo.distance) %>% drop_na()
+m3 = glm(swing.voter ~ offer.made.voter + ideo.distance, 
          data = m3.d, family = binomial(link = "logit")
-         )
+)
 
 
 options(scipen=9999999) # turn off sci not
@@ -711,21 +721,21 @@ plot(ggeffects::ggpredict(
         terms="offer.made.voter [all]", 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0"
-        )
-     )
+)
+)
 
 #########################################################################
 ## OFFER TYPE: competitive.offers.party
 m5 = glm(competitive.offers.party ~ 
-                #budget + 
-                points.cumul.delta +
-                #points.cumul +
-                # participant.code +
-        vote.intention,
-        #ideo.distance,
-        data = dat.v.b, 
-        family = binomial(link = "logit")
-        )
+                 #budget + 
+                 points.cumul.delta +
+                 #points.cumul +
+                 # participant.code +
+                 vote.intention.party,
+         #ideo.distance,
+         data = dat.v.b, 
+         family = binomial(link = "logit")
+)
 
 summary(m5)
 p_load(effects)
@@ -733,7 +743,7 @@ plot(predictorEffects(m5))
 ## Comments: 
 ## 1. Competitive Offers are more likely when lost previous game at t-1
 ## 2. Competitive Offers are more likely when I have accumulated enough wealth along the game
-## 3. Competitive Offers are NOT related to the perception of risk (vote.intention)
+## 3. Competitive Offers are NOT related to the perception of risk (vote.intention.party)
 #### Dropped variable "points.cumul"
 
 
@@ -750,7 +760,7 @@ plot(ggeffects::ggpredict(
 p_load(ggeffects)
 plot(ggeffects::ggpredict(
         model=m5,
-        terms=c("vote.intention [all]"), 
+        terms=c("vote.intention.party [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0"
 )
@@ -762,25 +772,25 @@ plot(ggeffects::ggpredict(
 #########################################################################
 ##### Vote Intention: Risk of Losing the Election
 p_load(lattice)
-lattice::histogram(dat.v.b$vote.intention)
+lattice::histogram(dat.v.b$vote.intention.party)
 
-formula.m8 = as.formula(offer.made.party ~ vote.intention + points.cumul.delta)
-
-
-m8.d = dat.v.b %>% select(offer.made.party, vote.intention, points.cumul.delta, participant.code) %>% drop_na()
+formula.m8 = as.formula(offer.made.party ~ vote.intention.party + points.cumul.delta)
 
 
-m8 = lm(offer.made.party ~ vote.intention + points.cumul.delta + participant.code, m8.d)
+m8.d = dat.v.b %>% select(offer.made.party, vote.intention.party, points.cumul.delta, participant.code) %>% drop_na()
+
+
+m8 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + participant.code, m8.d)
 coeftest(m8, vcov. = vcovCL(m8, cluster = m8.d$participant.code, type = "HC0"))
 
 p_load(ggeffects)
 plot(ggeffects::ggpredict(
         model=m8,
-        terms=c("vote.intention [all]"), 
+        terms=c("vote.intention.party [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0"
-        )
-     )
+)
+)
 
 p_load(ggeffects)
 plot(ggeffects::ggpredict(
@@ -788,14 +798,14 @@ plot(ggeffects::ggpredict(
         terms=c("points.cumul.delta [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0"
-        )
-     )
+)
+)
 
 summary(m8)
 texreg::screenreg(
         list(m8, m3, m5),
         omit.coef = "participant"
-        )
+)
 
 
 
