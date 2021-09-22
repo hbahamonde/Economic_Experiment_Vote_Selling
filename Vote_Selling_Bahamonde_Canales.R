@@ -743,7 +743,7 @@ plot(predictorEffects(m4))
 m5 = glm(competitive.offers.party ~ 
                 #budget + 
                 points.cumul.delta +
-                points.cumul +
+                #points.cumul +
                 # participant.code +
         vote.intention,
         #ideo.distance,
@@ -758,7 +758,7 @@ plot(predictorEffects(m5))
 ## 1. Competitive Offers are more likely when lost previous game at t-1
 ## 2. Competitive Offers are more likely when I have accumulated enough wealth along the game
 ## 3. Competitive Offers are NOT related to the perception of risk (vote.intention)
-
+#### Dropped variable "points.cumul"
 
 
 ##### Vote Intention: Risk of Losing the Election
@@ -768,7 +768,7 @@ lattice::histogram(dat.v.b$vote.intention)
 formula.m8 = as.formula(offer.made.party ~ vote.intention + points.cumul.delta)
 
 #m8 = lm(offer.made.party ~ points.cumul.delta, d = dat.v.b)
-m8 = lm(offer.made.party ~ vote.intention + points.cumul.delta, d = dat.v.b)
+m8 = lm(formula.m8, d = dat.v.b)
 #m8 = lm(offer.made.party ~ ideo.distance, d = dat.v.b)
 
 # m8 = glm(offer.made.party.d ~ points.cumul.delta + as.factor(participant.code), d = dat.v.b, family = binomial(link = "logit"))
@@ -785,6 +785,8 @@ plm.8 <- plm(formula.m8, data = dat.v.b,
              model = "within") # "pooling", "within", "between", "random" "fd", or "ht"
 summary(plm.8)
 texreg::screenreg(plm.8)
+plot(effects::allEffects(plm.8))
+
 
 
 dat.v.b.parties = dat.v.b %>% filter(role != "votantes") 
