@@ -713,8 +713,8 @@ p_load(sandwich,lmtest)
 
 #########################################################################
 ## SWING VOTER
-m3.d = dat.v.b %>% select(swing.voter, offer.made.voter, participant.code, ideo.distance) %>% drop_na()
-m3 = glm(swing.voter ~ offer.made.voter + ideo.distance, 
+m3.d = dat.v.b %>% select(swing.voter, offer.made.voter, participant.code, ideo.distance, vote.intention.voter.before.offer) %>% drop_na()
+m3 = glm(swing.voter ~ offer.made.voter + vote.intention.voter.before.offer, 
          data = m3.d, family = binomial(link = "logit")
 )
 
