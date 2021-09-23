@@ -716,15 +716,15 @@ p_load(sandwich,lmtest)
 #########################################################################
 
 # Subsetting Data
-m1.d = dat.v.b %>% select(offer.made.party, vote.intention.party, points.cumul.delta, participant.code, ideo.distance, budget) %>% drop_na()
+m1.d = dat.v.b %>% select(offer.made.party, vote.intention.party, points.cumul.delta, ideo.distance, budget, participant.code) %>% drop_na()
 
 # Model (with participant FEs)
-m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + participant.code + ideo.distance + budget, m1.d)
+m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance + budget + participant.code, m1.d)
 
 # Clustered Std Errors and Model info
-m1.clst.std.err = as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,2])[1:4]
-m1.clst.t.test = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,3])[1:4])
-m1.clst.p.value = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,4])[1:4])
+m1.clst.std.err = as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,2])[1:5]
+m1.clst.t.test = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,3])[1:5])
+m1.clst.p.value = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,4])[1:5])
 custom.model.names.m1 = "Amount of Vote-Buying Offer"
 
 # mientras mas he perdido, mas ofrezco 
@@ -746,43 +746,54 @@ m1.p2 = plot(ggeffects::ggpredict(
         terms=c("vote.intention.party [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0")) + 
-        labs(x = "Number of Subject's Party Supporters", 
+        labs(x = bquote("Number of Party Supporters"[t]), 
              y = "", #"Amount of Vote-Buying Offer", 
              title = ""# "Predicted Values of Vote-Buying Offer"
              )
 
-
-plot(ggeffects::ggpredict(
+# no importa la distancia ideologica
+p_load(ggeffects)
+m1.p3 = plot(ggeffects::ggpredict(
         model=m1,
         terms=c("ideo.distance [all]"), 
         vcov.fun = "vcovHC", 
-        vcov.type = "HC0"))
+        vcov.type = "HC0")) + 
+        labs(x = bquote("Ideological Distance between Party and Voter"[t]), 
+             y = "", #"Amount of Vote-Buying Offer", 
+             title = ""# "Predicted Values of Vote-Buying Offer"
+        )
 
-plot(ggeffects::ggpredict(
+
+# no importa el budget del partido
+p_load(ggeffects)
+m1.p4 = plot(ggeffects::ggpredict(
         model=m1,
         terms=c("budget [all]"), 
         vcov.fun = "vcovHC", 
-        vcov.type = "HC0"))
+        vcov.type = "HC0")) + 
+        labs(x = bquote("Party's Budget"[t]) , 
+             y = "", #"Amount of Vote-Buying Offer", 
+             title = ""# "Predicted Values of Vote-Buying Offer"
+        )
+
 
 #########################################################################
 ##### Competitive Offers Model
 #########################################################################
 
 m2 = glm(competitive.offers.party ~ 
-                 budget + 
                  points.cumul.delta +
-                 #points.cumul +
-                 # participant.code +
-                 #vote.intention.party,
-         ideo.distance,
+                 budget + 
+                 #vote.intention.party + 
+                 ideo.distance,
          data = dat.v.b, 
          family = binomial(link = "logit")
          )
 
 # Clustered Std Errors and Model info
-m2.clst.std.err = as.numeric(coeftest(m2, vcov. = vcovCL(m2, cluster = dat.v.b$participant.code, type = "HC0"))[,2])[1:3]
-m2.clst.t.test = c(as.numeric(coeftest(m2, vcov. = vcovCL(m2, cluster = dat.v.b$participant.code, type = "HC0"))[,3])[1:3])
-m2.clst.p.value = c(as.numeric(coeftest(m2, vcov. = vcovCL(m2, cluster = dat.v.b$participant.code, type = "HC0"))[,4])[1:3])
+m2.clst.std.err = as.numeric(coeftest(m2, vcov. = vcovCL(m2, cluster = dat.v.b$participant.code, type = "HC0"))[,2])[1:4]
+m2.clst.t.test = c(as.numeric(coeftest(m2, vcov. = vcovCL(m2, cluster = dat.v.b$participant.code, type = "HC0"))[,3])[1:4])
+m2.clst.p.value = c(as.numeric(coeftest(m2, vcov. = vcovCL(m2, cluster = dat.v.b$participant.code, type = "HC0"))[,4])[1:4])
 custom.model.names.m2 = "Competitive Vote-Buying Offer"
 
 
@@ -802,51 +813,42 @@ m2.p1 = plot(ggeffects::ggpredict(
         vcov.fun = "vcovHC", 
         vcov.type = "HC0")) + 
         labs(x = bquote("Experimental Points"[t-1]), 
-             y = "Competitive Vote-Buying Offer", 
-             title = "Predicted Probabilities of Competitive Vote-Buying Offers"
+             y = "Risky Vote-Buying Offer", 
+             title = "Predicted Probabilities of Risky Vote-Buying Offers"
              )
 
 p_load(ggeffects)
 m2.p2 = plot(ggeffects::ggpredict(
         model=m2,
-        terms=c("vote.intention.party [all]"), 
+        terms=c("ideo.distance [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0")) + 
-        labs(x = "Number of Subject's Party Supporters", 
+        labs(x = bquote("Ideological Distance between Party and Voter"[t]), 
              y = "", 
              title = ""
              )
 
 
 
-plot(ggeffects::ggpredict(
-        model=m2,
-        terms=c("ideo.distance [all]"), 
-        vcov.fun = "vcovHC", 
-        vcov.type = "HC0")) + 
-        labs(x = "Number of Subject's Party Supporters", 
-             y = "", 
-             title = ""
-        )
-
-plot(ggeffects::ggpredict(
+p_load(ggeffects)
+m2.p3 = plot(ggeffects::ggpredict(
         model=m2,
         terms=c("budget [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0")) + 
-        labs(x = "Number of Subject's Party Supporters", 
+        labs(x = bquote("Party's Budget"[t]) , 
              y = "", 
              title = ""
-        )
+             )
 
-
+# Why not include vote.intention.party, it's because it's a measure of risk (same as the dependent variable in model 2.)
 
 
 
 ## Plots
 p_load(patchwork)
-m1.all.plots = m1.p1|m1.p2
-m2.all.plots = m2.p1|m2.p2
+m1.all.plots = m1.p1|m1.p2|m1.p3|m1.p4
+m2.all.plots = m2.p1|m2.p2|m2.p3
 
 
 
@@ -862,7 +864,7 @@ texreg::screenreg(
         override.pvalues = list(c(m1.clst.p.value,rep(0.0, length(unique(m1.d$participant.code))-1)), m2.clst.p.value),
         custom.header = list( "OLS" = 1, "Logit" = 2),
         stars = c(0.001, 0.01, 0.05, 0.1),
-        custom.note = "%stars. Robust standard errors in parentheses. OLS model with fixed effects."
+        custom.note = "%stars. Robust standard errors in parentheses. OLS model with fixed effects (parameteres omitted)."
 )
 
 

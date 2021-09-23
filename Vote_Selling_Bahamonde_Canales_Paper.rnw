@@ -159,7 +159,7 @@ headpunct=:
 \author[1]{
 
 \textsc{H\'ector Bahamonde}
-\thanks{\href{mailto:hector.bahamonde@uoh.cl}{hector.bahamonde@uoh.cl}; \href{http://www.hectorbahamonde.com}{\texttt{www.HectorBahamonde.com}}.}}
+\thanks{\href{mailto:hibano@utu.fi}{hibano@utu.fi}; \href{http://www.hectorbahamonde.com}{\texttt{www.HectorBahamonde.com}}.}}
 
 
 
@@ -171,8 +171,8 @@ headpunct=:
 We thank O'Higgins University for funding this project, and the participants of the colloquium at the Centre for Experimental Social Sciences (CESS) at Universidad de Santiago. Javiera Tobar, Cristopher Reyes and Bastian Garrido provided excellent research assistance.}}
 
 
-\affil[1]{Assistant Professor, O$'$Higgins University (Chile)}
-\affil[2]{Postdoctoral Fellow, O$'$Higgins University (Chile)}
+\affil[1]{Senior Researcher, University of Turku, Finland}
+\affil[2]{Postdoctoral Fellow, O$'$Higgins University, Chile}
 
 
 \date{\today}
