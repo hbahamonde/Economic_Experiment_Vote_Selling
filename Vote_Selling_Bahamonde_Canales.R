@@ -727,37 +727,31 @@ m1.clst.t.test = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$par
 m1.clst.p.value = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,4])[1:3])
 custom.model.names.m1 = "Amount of Vote-Buying Offer"
 
-# mientras mas votos a favor tengo, mas ofrezco
-p_load(ggeffects)
-plot(ggeffects::ggpredict(
-        model=m1,
-        terms=c("vote.intention.party [all]"), 
-        vcov.fun = "vcovHC", 
-        vcov.type = "HC0"
-        )
-     )
-
 # mientras mas he perdido, mas ofrezco 
 p_load(ggeffects)
-plot(ggeffects::ggpredict(
+m1.p1 = plot(ggeffects::ggpredict(
         model=m1,
         terms=c("points.cumul.delta [all]"), 
         vcov.fun = "vcovHC", 
-        vcov.type = "HC0"
+        vcov.type = "HC0")
+     ) + labs(
+             x = bquote("Experimental Points"[t-1]), 
+             y = "", 
+             title = ""
+     )
+
+# mientras mas votos a favor tengo, mas ofrezco
+p_load(ggeffects)
+m1.p2 = plot(ggeffects::ggpredict(
+        model=m1,
+        terms=c("vote.intention.party [all]"), 
+        vcov.fun = "vcovHC", 
+        vcov.type = "HC0")
+) + labs(
+        x = "Number of Subject's Party Supporters", 
+        y = "Amount of Vote-Buying Offer", 
+        title = "Predicted Values of Vote-Buying Offer"
 )
-)
-
-
-texreg::screenreg(
-        list(m1, m2),
-        custom.model.names = c(custom.model.names.m1,custom.model.names.m2),
-        custom.coef.names = NULL,
-        #override.se = list(m1.clst.std.err, m2.clst.std.err),
-        override.se = list(c(m1.clst.std.err), c(m2.clst.std.err)),
-        omit.coef = "participant"
-        #override.pvalues = list(m1.clst.p.value, m2.clst.p.value)
-        )
-
 
 #########################################################################
 ##### Competitive Offers Model
@@ -766,7 +760,7 @@ texreg::screenreg(
 m2 = glm(competitive.offers.party ~ 
                  #budget + 
                  points.cumul.delta +
-                 points.cumul +
+                 #points.cumul +
                  # participant.code +
                  vote.intention.party,
          #ideo.distance,
@@ -790,60 +784,68 @@ custom.model.names.m2 = "Competitive Vote-Buying Offer"
 ## 3. Competitive Offers are NOT related to the imemdiate perception of risk (vote.intention.party)
 
 
-p_load(sandwich,lmtest)
-test = coeftest(m2, vcov. = vcovCL(m2, cluster = dat.v.b$participant.code, type = "HC0"))
-as.numeric(test[,2])
-
-
 p_load(ggeffects)
-dev.off()
 m2.p1 = plot(ggeffects::ggpredict(
         model=m2,
         terms=c("points.cumul.delta [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0"
-)
-) + labs(
+        )) + labs(
         x = bquote("Experimental Points"[t-1]), 
         y = "Competitive Vote-Buying Offer", 
         title = "Predicted Probabilities of Competitive Vote-Buying Offers"
-)
+        )
 
 p_load(ggeffects)
-dev.off()
 m2.p2 = plot(ggeffects::ggpredict(
-        model=m2,
-        terms=c("points.cumul [all]"), 
-        vcov.fun = "vcovHC", 
-        vcov.type = "HC0")
-) + labs(
-        x = bquote("Cumulated Experimental Points"[t]), 
-        y = "", 
-        title = ""
-)
-
-
-p_load(ggeffects)
-dev.off()
-m2.p3 = plot(ggeffects::ggpredict(
         model=m2,
         terms=c("vote.intention.party [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0"
-)
-) + labs(
-        x = "Subject's Party Electoral Support", 
-        y = "", 
-        title = ""
-)
+)) + 
+        labs(x = "Number of Subject's Party Supporters", 
+             y = "", 
+             title = ""
+        )
+
+p_load(ggeffects)
+m2.p3 = plot(ggeffects::ggpredict(
+        model=m2,
+        terms=c("points.cumul [all]"), 
+        vcov.fun = "vcovHC", 
+        vcov.type = "HC0")) + 
+        labs(
+                x = bquote("Cumulated Experimental Points"[t]), 
+                y = "", 
+                title = ""
+                )
 
 
+
+
+
+
+## Plots
 p_load(patchwork)
-m2.p1|m2.p2|m2.p3
+m1.all.plots = m1.p1|m1.p2
+m2.all.plots = m2.p1|m2.p2#|m2.p3
 
 
 
 
+## Reg Table
+p_load(texreg)
+texreg::screenreg(
+        list(m1, m2),
+        custom.model.names = c(custom.model.names.m1,custom.model.names.m2),
+        #custom.coef.names = NULL,
+        omit.coef = "participant",
+        override.se = list(c(m1.clst.t.test,rep(0.0, length(unique(m1.d$participant.code))-1)), c(m2.clst.std.err)),
+        override.pvalues = list(c(m1.clst.p.value,rep(0.0, length(unique(m1.d$participant.code))-1)), m2.clst.p.value),
+        custom.header = list( "OLS" = 1, "Logit" = 2),
+        stars = c(0.001, 0.01, 0.05, 0.1),
+        custom.note = "%stars. Robust standard errors in parentheses. OLS model with fixed effects."
+)
 
 
 
