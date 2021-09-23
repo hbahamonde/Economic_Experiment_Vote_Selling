@@ -722,6 +722,7 @@ m3 = glm(swing.voter ~ vote.intention.voter.before.offer + points.cumul.delta + 
 options(scipen=9999999) # turn off sci not
 p_load(texreg)
 screenreg(m3)
+p_load(sandwich,lmtest)
 coeftest(m3, vcov. = vcovCL(m3, cluster = m3.d$participant.code, type = "HC0"))
 coefci(m3, level = 0.95, vcov. = vcovCL(m3, cluster = m3.d$participant.code, type = "HC0"))
 p_load(effects)
@@ -752,48 +753,64 @@ m5 = glm(competitive.offers.party ~
 )
 
 summary(m5)
-p_load(effects)
-plot(predictorEffects(m5))
+# p_load(effects)
+# plot(predictorEffects(m5))
 ## Comments: 
 ## 1. Competitive Offers are more likely when lost previous game at t-1
 ## 2. Competitive Offers are more likely when I have accumulated enough wealth throughout the game
 ## 3. Competitive Offers are NOT related to the imemdiate perception of risk (vote.intention.party)
 
 
+p_load(sandwich,lmtest)
+test = coeftest(m5, vcov. = vcovCL(m5, cluster = dat.v.b$participant.code, type = "HC0"))
+as.numeric(test[,2])
+
 
 p_load(ggeffects)
 dev.off()
-plot(ggeffects::ggpredict(
+m5.p1 = plot(ggeffects::ggpredict(
         model=m5,
         terms=c("points.cumul.delta [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0"
         )
+     ) + labs(
+             x = bquote("Experimental Points"[t-1]), 
+             y = "Competitive Vote-Buying Offer", 
+             title = "Predicted Probabilities of Competitive Vote-Buying Offers"
      )
-
 
 p_load(ggeffects)
 dev.off()
-plot(ggeffects::ggpredict(
+m5.p2 = plot(ggeffects::ggpredict(
         model=m5,
         terms=c("points.cumul [all]"), 
         vcov.fun = "vcovHC", 
-        vcov.type = "HC0"
-        )
-     )
+        vcov.type = "HC0")
+     ) + labs(
+             x = bquote("Cumulated Experimental Points"[t]), 
+             y = "", 
+             title = ""
+             )
+     
 
 p_load(ggeffects)
 dev.off()
-plot(ggeffects::ggpredict(
+m5.p3 = plot(ggeffects::ggpredict(
         model=m5,
         terms=c("vote.intention.party [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0"
         )
+     ) + labs(
+             x = "Subject's Party Electoral Support", 
+             y = "", 
+             title = ""
      )
 
 
-
+p_load(patchwork)
+m5.p1|m5.p2|m5.p3
 
 #########################################################################
 ##### Vote Intention: Risk of Losing the Election
@@ -834,7 +851,7 @@ summary(m8)
 texreg::screenreg(
         list(m8, m3, m5),
         omit.coef = "participant"
-)
+        )
 
 
 
