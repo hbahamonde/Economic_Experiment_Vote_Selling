@@ -713,10 +713,10 @@ p_load(sandwich,lmtest)
 
 #########################################################################
 ## SWING VOTER
-m3.d = dat.v.b %>% select(swing.voter, offer.made.voter, participant.code, ideo.distance, vote.intention.voter.before.offer) %>% drop_na()
-m3 = glm(swing.voter ~ offer.made.voter + vote.intention.voter.before.offer, 
+m3.d = dat.v.b %>% select(swing.voter, offer.made.voter, participant.code, ideo.distance, vote.intention.voter.before.offer, points.cumul.delta) %>% drop_na()
+m3 = glm(swing.voter ~ vote.intention.voter.before.offer + points.cumul.delta + offer.made.voter, 
          data = m3.d, family = binomial(link = "logit")
-)
+         )
 
 
 options(scipen=9999999) # turn off sci not
@@ -743,7 +743,7 @@ plot(ggeffects::ggpredict(
 m5 = glm(competitive.offers.party ~ 
                  #budget + 
                  points.cumul.delta +
-                 #points.cumul +
+                 points.cumul +
                  # participant.code +
                  vote.intention.party,
          #ideo.distance,
@@ -756,29 +756,41 @@ p_load(effects)
 plot(predictorEffects(m5))
 ## Comments: 
 ## 1. Competitive Offers are more likely when lost previous game at t-1
-## 2. Competitive Offers are more likely when I have accumulated enough wealth along the game
-## 3. Competitive Offers are NOT related to the perception of risk (vote.intention.party)
-#### Dropped variable "points.cumul"
+## 2. Competitive Offers are more likely when I have accumulated enough wealth throughout the game
+## 3. Competitive Offers are NOT related to the imemdiate perception of risk (vote.intention.party)
 
 
 
 p_load(ggeffects)
+dev.off()
 plot(ggeffects::ggpredict(
         model=m5,
         terms=c("points.cumul.delta [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0"
-)
-)
+        )
+     )
+
 
 p_load(ggeffects)
+dev.off()
+plot(ggeffects::ggpredict(
+        model=m5,
+        terms=c("points.cumul [all]"), 
+        vcov.fun = "vcovHC", 
+        vcov.type = "HC0"
+        )
+     )
+
+p_load(ggeffects)
+dev.off()
 plot(ggeffects::ggpredict(
         model=m5,
         terms=c("vote.intention.party [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0"
-)
-)
+        )
+     )
 
 
 
@@ -797,23 +809,26 @@ m8.d = dat.v.b %>% select(offer.made.party, vote.intention.party, points.cumul.d
 m8 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + participant.code, m8.d)
 coeftest(m8, vcov. = vcovCL(m8, cluster = m8.d$participant.code, type = "HC0"))
 
+# mientras mas votos a favor tengo, mas ofrezco
 p_load(ggeffects)
 plot(ggeffects::ggpredict(
         model=m8,
         terms=c("vote.intention.party [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0"
-)
-)
+        )
+     )
 
+# mientras mas he perdido, mas ofrezco 
 p_load(ggeffects)
 plot(ggeffects::ggpredict(
         model=m8,
         terms=c("points.cumul.delta [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0"
-)
-)
+        )
+     )
+
 
 summary(m8)
 texreg::screenreg(
@@ -832,30 +847,8 @@ texreg::screenreg(
 
 
 
-dat.v.b.parties = dat.v.b %>% filter(role != "votantes") 
-coplot(offer.made.party ~ round|participant.code, type="b", data=dat.v.b.parties)
 
 
-dat.v.b %>%
-        group_by(participant.code) %>%
-        summarise(offer.made.party.m = mean(offer.made.party)) %>%
-        left_join(dat.v.b) %>%
-        ggplot(data = ., 
-               aes(x = reorder(as.character(participant.code), participant.code), y = offer.made.party)) +
-        geom_point() +
-        geom_line(aes(x = participant.code, y = offer.made.party.m), col = "blue") +
-        labs(x = "Participant", y = "Offer Made")
-
-
-
-
-
-
-############################## 
-# Question 1: Who do Parties target to? Core supporters? Swing voters?
-# Question 2: When do voters decide to take Partie's offer?
-# Question 3: What does determine the vote-buying price?
-############################## 
 
 
 
