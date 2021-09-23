@@ -789,8 +789,9 @@ m2.p1 = plot(ggeffects::ggpredict(
         model=m2,
         terms=c("points.cumul.delta [all]"), 
         vcov.fun = "vcovHC", 
-        vcov.type = "HC0"
-        )) + labs(
+        vcov.type = "HC0")
+        ) + 
+        labs(
         x = bquote("Experimental Points"[t-1]), 
         y = "Competitive Vote-Buying Offer", 
         title = "Predicted Probabilities of Competitive Vote-Buying Offers"
