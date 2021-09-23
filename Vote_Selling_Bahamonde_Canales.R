@@ -870,46 +870,31 @@ texreg::screenreg(
 
 
 ################################################ 
-# ************** SWING VOTER **************
+# ************** Summary Stats **************
 ################################################ 
 
-## SWING VOTER
-m3.d = dat.v.b %>% select(swing.voter, offer.made.voter, participant.code, ideo.distance, vote.intention.voter.before.offer, points.cumul.delta) %>% drop_na()
-m3 = glm(swing.voter ~ vote.intention.voter.before.offer + points.cumul.delta + offer.made.voter, 
-         data = m3.d, family = binomial(link = "logit")
-)
 
-
-options(scipen=9999999) # turn off sci not
-p_load(texreg)
-screenreg(m3)
-p_load(sandwich,lmtest)
-coeftest(m3, vcov. = vcovCL(m3, cluster = m3.d$participant.code, type = "HC0"))
-coefci(m3, level = 0.95, vcov. = vcovCL(m3, cluster = m3.d$participant.code, type = "HC0"))
-p_load(effects)
-plot(predictorEffects(m3))
-
-
-# https://stackoverflow.com/questions/49161198/predicted-probability-plot-with-robust-errors-for-logit-model
-p_load(ggeffects)
-plot(ggeffects::ggpredict(
-        model=m3,
-        terms="offer.made.voter [all]", 
-        vcov.fun = "vcovHC", 
-        vcov.type = "HC0"
-)
-)
+ggplot(dat.v.b, aes(x=salary.enough, color=role)) + geom_density()
 
 
 
-################################################ 
-# ************** VOTE SELLING DATA **************
-################################################ 
-
-# Question 1: WHen do voters sell? 
-
-## It's a two-stage process.
-### Heckman: STAGE 1 = vende [si/no] // STAGE 2: for the ones who decide to sell, do they take A's or B's offer?
 
 
+################
+#### ABSTRACT
+################
+
+## ---- abstract ----
+fileConn <- file ("abstract.txt")
+abstract.c = as.character(c("Except for a number of qualitative research, most quantitative papers consider vote buying as a binary variable; it happens or not. How much is a party willing to spend on a vote? This question is rather important since it speaks about the domains of risk in which a candidate makes that decision. From an analytical point of view, we introduce prospect theory to the study of clientelism as a valid framework to study decision making under risk. After formalizing a theory of vote buying and vote selling within the expected utility theory, we tested these claims in the lab by designing an economic experiment. The experiment was carefully designed to capture different domains of gains and losses. Exploiting these novel experimental data, we show that there exists wide support for prospect theory. As the analyses suggest, experimental subjects engage in more risky and expensive vote-buying as the domain shifts from one of gains to one of losses."))
+writeLines(abstract.c, fileConn)
+close(fileConn)
+## ----
+
+
+
+
+## ---- abstract.length ----
+abstract.c.l = sapply(strsplit(abstract.c, " "), length)
+## ----
 
