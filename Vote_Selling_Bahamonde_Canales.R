@@ -4,6 +4,7 @@
 cat("\014")
 rm(list=ls())
 
+## ---- loadings:d ----
 # Load the data
 if (!require("pacman")) install.packages("pacman"); library(pacman) 
 p_load(rio,tibble)
@@ -659,6 +660,7 @@ dat.v.b = dat.v.b %>% select(session.code,
                              party.id.before.voter,
                              vote.intention.voter.before.offer,
                              offer.party.type,
+                             competitive.offers.party,
                              party.id.after.voter,
                              swing.voter,
                              offer.made.party,
@@ -671,7 +673,7 @@ dat.v.b = dat.v.b %>% select(session.code,
                              points.cumul.delta,
                              payoff, 
                              everything())
-
+## ----
 
 ################################################################################## 
 # ***** Q      U       E       S       T       I       O       N       S *********
@@ -707,6 +709,8 @@ plot(dat.v.b$offer.party.type[dat.v.b$party.id.before.voter=="B"])
 # ************** M      O       D       E       L       S **************
 #########################################################################
 
+## ---- models:d ----
+
 # for clustered std errors
 p_load(sandwich,lmtest)
 
@@ -726,56 +730,6 @@ m1.clst.std.err = as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$part
 m1.clst.t.test = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,3])[1:5])
 m1.clst.p.value = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,4])[1:5])
 custom.model.names.m1 = "Amount of Vote-Buying Offer"
-
-# mientras mas he perdido, mas ofrezco 
-p_load(ggeffects)
-m1.p1 = plot(ggeffects::ggpredict(
-        model=m1,
-        terms=c("points.cumul.delta [all]"), 
-        vcov.fun = "vcovHC", 
-        vcov.type = "HC0")) + 
-        labs(x = bquote("Experimental Points"[t-1]), 
-             y = "Amount of Vote-Buying Offer", 
-             title = "Predicted Values of Vote-Buying Offer"
-             )
-
-# mientras mas votos a favor tengo, mas ofrezco
-p_load(ggeffects)
-m1.p2 = plot(ggeffects::ggpredict(
-        model=m1,
-        terms=c("vote.intention.party [all]"), 
-        vcov.fun = "vcovHC", 
-        vcov.type = "HC0")) + 
-        labs(x = bquote("Number of Party Supporters"[t]), 
-             y = "", #"Amount of Vote-Buying Offer", 
-             title = ""# "Predicted Values of Vote-Buying Offer"
-             )
-
-# no importa la distancia ideologica
-p_load(ggeffects)
-m1.p3 = plot(ggeffects::ggpredict(
-        model=m1,
-        terms=c("ideo.distance [all]"), 
-        vcov.fun = "vcovHC", 
-        vcov.type = "HC0")) + 
-        labs(x = bquote("Ideological Distance between Party and Voter"[t]), 
-             y = "", #"Amount of Vote-Buying Offer", 
-             title = ""# "Predicted Values of Vote-Buying Offer"
-        )
-
-
-# no importa el budget del partido
-p_load(ggeffects)
-m1.p4 = plot(ggeffects::ggpredict(
-        model=m1,
-        terms=c("budget [all]"), 
-        vcov.fun = "vcovHC", 
-        vcov.type = "HC0")) + 
-        labs(x = bquote("Party's Budget"[t]) , 
-             y = "", #"Amount of Vote-Buying Offer", 
-             title = ""# "Predicted Values of Vote-Buying Offer"
-        )
-
 
 #########################################################################
 ##### Competitive Offers Model
@@ -805,6 +759,74 @@ custom.model.names.m2 = "Competitive Vote-Buying Offer"
 ## 2. Competitive Offers are more likely when I have accumulated enough wealth throughout the game
 ## 3. Competitive Offers are NOT related to the imemdiate perception of risk (vote.intention.party)
 
+## Reg Table
+p_load(texreg)
+reg.table = texreg::texreg( # screenreg
+        list(m1, m2),
+        custom.model.names = c(custom.model.names.m1,custom.model.names.m2),
+        #custom.coef.names = NULL,
+        omit.coef = "participant",
+        override.se = list(c(m1.clst.t.test,rep(0.0, length(unique(m1.d$participant.code))-1)), c(m2.clst.std.err)),
+        override.pvalues = list(c(m1.clst.p.value,rep(0.0, length(unique(m1.d$participant.code))-1)), m2.clst.p.value),
+        custom.header = list( "OLS" = 1, "Logit" = 2),
+        stars = c(0.001, 0.01, 0.05, 0.1),
+        label = "reg:t",
+        float.pos="H",
+        custom.note = "%stars. Robust standard errors in parentheses. OLS model with fixed effects (parameteres omitted)."
+)
+## ----
+
+
+
+## ---- plots:d ----
+# mientras mas he perdido, mas ofrezco 
+p_load(ggeffects)
+m1.p1 = plot(ggeffects::ggpredict(
+        model=m1,
+        terms=c("points.cumul.delta [all]"), 
+        vcov.fun = "vcovHC", 
+        vcov.type = "HC0")) + 
+        labs(x = bquote("Experimental Points"[t-1]), 
+             y = "Amount of Vote-Buying Offer", 
+             title = "Predicted Values of Vote-Buying Offer"
+        )
+
+# mientras mas votos a favor tengo, mas ofrezco
+p_load(ggeffects)
+m1.p2 = plot(ggeffects::ggpredict(
+        model=m1,
+        terms=c("vote.intention.party [all]"), 
+        vcov.fun = "vcovHC", 
+        vcov.type = "HC0")) + 
+        labs(x = bquote("Number of Party Supporters"[t]), 
+             y = "", #"Amount of Vote-Buying Offer", 
+             title = ""# "Predicted Values of Vote-Buying Offer"
+        )
+
+# no importa la distancia ideologica
+p_load(ggeffects)
+m1.p3 = plot(ggeffects::ggpredict(
+        model=m1,
+        terms=c("ideo.distance [all]"), 
+        vcov.fun = "vcovHC", 
+        vcov.type = "HC0")) + 
+        labs(x = bquote("Ideological Distance between Party and Voter"[t]), 
+             y = "", #"Amount of Vote-Buying Offer", 
+             title = ""# "Predicted Values of Vote-Buying Offer"
+        )
+
+
+# no importa el budget del partido
+p_load(ggeffects)
+m1.p4 = plot(ggeffects::ggpredict(
+        model=m1,
+        terms=c("budget [all]"), 
+        vcov.fun = "vcovHC", 
+        vcov.type = "HC0")) + 
+        labs(x = bquote("Party's Budget"[t]) , 
+             y = "", #"Amount of Vote-Buying Offer", 
+             title = ""# "Predicted Values of Vote-Buying Offer"
+        )
 
 p_load(ggeffects)
 m2.p1 = plot(ggeffects::ggpredict(
@@ -828,8 +850,6 @@ m2.p2 = plot(ggeffects::ggpredict(
              title = ""
              )
 
-
-
 p_load(ggeffects)
 m2.p3 = plot(ggeffects::ggpredict(
         model=m2,
@@ -849,34 +869,43 @@ m2.p3 = plot(ggeffects::ggpredict(
 p_load(patchwork)
 m1.all.plots = m1.p1|m1.p2|m1.p3|m1.p4
 m2.all.plots = m2.p1|m2.p2|m2.p3
+## ---- 
 
+## ---- reg:table:t ----
+reg.table
+## ----
 
+## ---- plots:m1 ----
+m1.all.plots
+m1.all.plots.note <- paste(
+        "{\\bf Predicted Values of Vote-Buying Offer}",
+        "\\\\\\hspace{\\textwidth}", 
+        "{\\bf Note}: Based on estimates in \\autoref{reg:t} (OLS), the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1), avoid losses by over-securing electoral support even in favorable contexts (panel 2), do not consider ideological/spatial distance with respect to their constituencies nor do their take into account their own budgets when making decisions (panel 3 and 4).",
+        "\n")
+## ---- 
 
-
-## Reg Table
-p_load(texreg)
-texreg::screenreg(
-        list(m1, m2),
-        custom.model.names = c(custom.model.names.m1,custom.model.names.m2),
-        #custom.coef.names = NULL,
-        omit.coef = "participant",
-        override.se = list(c(m1.clst.t.test,rep(0.0, length(unique(m1.d$participant.code))-1)), c(m2.clst.std.err)),
-        override.pvalues = list(c(m1.clst.p.value,rep(0.0, length(unique(m1.d$participant.code))-1)), m2.clst.p.value),
-        custom.header = list( "OLS" = 1, "Logit" = 2),
-        stars = c(0.001, 0.01, 0.05, 0.1),
-        custom.note = "%stars. Robust standard errors in parentheses. OLS model with fixed effects (parameteres omitted)."
-)
-
-
+## ---- plots:m2 ----
+m2.all.plots
+## ---- 
 
 ################################################ 
 # ************** Summary Stats **************
 ################################################ 
 
+## ---- summary:stats:d ----
+p_load(ggpubr)
+summary.stats <- dat.v.b %>%  
+        mutate(male =  if_else(gender == "Hombre", 1, 0)) %>%
+        select(names(dat.v.b.ID), role, male, payoff) %>% 
+        group_by(role) %>%
+        distinct(participant.code, .keep_all = TRUE) %>% 
+        get_summary_stats(type = "common")
+## ----
 
-ggplot(dat.v.b, aes(x=salary.enough, color=role)) + geom_density()
-
-
+## ---- summary:stats:t ----
+p_load(xtable)
+xtable(summary.stats[order(summary.stats$variable),], caption = "Summary Statistics", align = rep("c",12))
+## ----
 
 
 

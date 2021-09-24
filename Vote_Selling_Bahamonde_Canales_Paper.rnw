@@ -210,6 +210,22 @@ options(scipen = 99999999999)
 
 @
 
+<<loadings:d, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = FALSE, cache=FALSE, eval=TRUE>>=
+
+@
+
+<<summary:stats:d, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = FALSE, cache=FALSE, eval=TRUE>>=
+
+@
+
+<<models:d, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = FALSE, cache=FALSE, eval=TRUE>>=
+
+@
+
+<<plots:d, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = FALSE, cache=FALSE, eval=TRUE>>=
+
+@
+
 <<abstract, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = FALSE, cache=FALSE, eval=TRUE>>=
 
 @
@@ -391,7 +407,30 @@ Our experimental design allows us to explore the tipping point at which voters s
 
 
 \section{Statistical Analyses}
-\todo{pending.}
+
+% summary:stats:t
+<<summary:stats:t, echo = FALSE, results='asis', warning = FALSE, message = F, cache=FALSE, include = TRUE>>=
+
+
+@
+
+
+
+
+% reg:table:t
+<<reg:table:t, echo = FALSE, results='asis', warning = FALSE, message = F, cache=FALSE, include = TRUE>>=
+
+
+@
+
+
+% plots:m1
+<<plots:m1, echo = FALSE, fig.pos='H', warning = FALSE, message = F, fig.cap=m1.all.plots.note, fig.align='center', fig.width=12, fig.height=5,dpi=10000,cache=FALSE, include = TRUE>>=
+
+
+@
+
+
 
 \section{Discussion}
 \todo{pending.}
