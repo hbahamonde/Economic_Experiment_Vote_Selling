@@ -424,15 +424,10 @@ Our experimental design allows us to explore the tipping point at which voters s
 @
 
 
-% plots:m1
-<<plots:m1, echo = FALSE, fig.pos='H', warning = FALSE, message = F, fig.cap=m1.all.plots.note, fig.align='center', fig.width=12, fig.height=5,dpi=10000,cache=FALSE, include = TRUE>>=
-
-
-@
-
 
 
 \section{Discussion}
+Discussion
 \todo{pending.}
 
 
@@ -457,8 +452,6 @@ Our experimental design allows us to explore the tipping point at which voters s
 % WORD COUNT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\newpage
-\pagenumbering{gobble}
 <<wordcount, echo=FALSE, cache=FALSE>>=
 library(knitr)
 
@@ -492,7 +485,6 @@ count <- comma(as.numeric(count)) # add comma
 \end{center}
 
 \clearpage
-\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % WORD COUNT

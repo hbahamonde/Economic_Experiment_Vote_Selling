@@ -779,8 +779,9 @@ reg.table = texreg::texreg( # screenreg
 
 
 ## ---- plots:d ----
-# mientras mas he perdido, mas ofrezco 
 p_load(ggeffects)
+
+# mientras mas he perdido, mas ofrezco 
 m1.p1 = plot(ggeffects::ggpredict(
         model=m1,
         terms=c("points.cumul.delta [all]"), 
@@ -792,7 +793,6 @@ m1.p1 = plot(ggeffects::ggpredict(
         )
 
 # mientras mas votos a favor tengo, mas ofrezco
-p_load(ggeffects)
 m1.p2 = plot(ggeffects::ggpredict(
         model=m1,
         terms=c("vote.intention.party [all]"), 
@@ -804,7 +804,6 @@ m1.p2 = plot(ggeffects::ggpredict(
         )
 
 # no importa la distancia ideologica
-p_load(ggeffects)
 m1.p3 = plot(ggeffects::ggpredict(
         model=m1,
         terms=c("ideo.distance [all]"), 
@@ -817,7 +816,6 @@ m1.p3 = plot(ggeffects::ggpredict(
 
 
 # no importa el budget del partido
-p_load(ggeffects)
 m1.p4 = plot(ggeffects::ggpredict(
         model=m1,
         terms=c("budget [all]"), 
@@ -828,7 +826,6 @@ m1.p4 = plot(ggeffects::ggpredict(
              title = ""# "Predicted Values of Vote-Buying Offer"
         )
 
-p_load(ggeffects)
 m2.p1 = plot(ggeffects::ggpredict(
         model=m2,
         terms=c("points.cumul.delta [all]"), 
@@ -839,7 +836,17 @@ m2.p1 = plot(ggeffects::ggpredict(
              title = "Predicted Probabilities of Risky Vote-Buying Offers"
              )
 
-p_load(ggeffects)
+
+test1 = data.frame(ggeffects::ggpredict(
+        model=m2,
+        terms=c("points.cumul.delta [all]"), 
+        vcov.fun = "vcovHC", 
+        vcov.type = "HC0"))
+
+p_load(ggplot2)
+plot = ggplot(test1) + geom_line(aes(y=predicted, x=x)) + geom_ribbon(aes(ymin=conf.low, ymax=conf.high, x=x), alpha = 0.3) 
+
+
 m2.p2 = plot(ggeffects::ggpredict(
         model=m2,
         terms=c("ideo.distance [all]"), 
@@ -850,10 +857,10 @@ m2.p2 = plot(ggeffects::ggpredict(
              title = ""
              )
 
-p_load(ggeffects)
 m2.p3 = plot(ggeffects::ggpredict(
         model=m2,
         terms=c("budget [all]"), 
+        device = cairo_eps,
         vcov.fun = "vcovHC", 
         vcov.type = "HC0")) + 
         labs(x = bquote("Party's Budget"[t]) , 
@@ -862,6 +869,9 @@ m2.p3 = plot(ggeffects::ggpredict(
              )
 
 # Why not include vote.intention.party, it's because it's a measure of risk (same as the dependent variable in model 2.)
+## ---- 
+
+
 
 
 
@@ -869,20 +879,23 @@ m2.p3 = plot(ggeffects::ggpredict(
 p_load(patchwork)
 m1.all.plots = m1.p1|m1.p2|m1.p3|m1.p4
 m2.all.plots = m2.p1|m2.p2|m2.p3
-## ---- 
 
 ## ---- reg:table:t ----
 reg.table
 ## ----
 
 ## ---- plots:m1 ----
-m1.all.plots
+plot
+## ---- 
+
+
 m1.all.plots.note <- paste(
         "{\\bf Predicted Values of Vote-Buying Offer}",
         "\\\\\\hspace{\\textwidth}", 
-        "{\\bf Note}: Based on estimates in \\autoref{reg:t} (OLS), the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1), avoid losses by over-securing electoral support even in favorable contexts (panel 2), do not consider ideological/spatial distance with respect to their constituencies nor do their take into account their own budgets when making decisions (panel 3 and 4).",
+        "{\\bf Note}: Based on the OLS estimates in \\autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1), avoid losses by over-securing electoral support even in favorable contexts (panel 2), do not consider ideological/spatial distance with respect to their constituencies nor do their take into account their own budgets when making decisions (panel 3 and 4).",
         "\n")
-## ---- 
+
+
 
 ## ---- plots:m2 ----
 m2.all.plots
