@@ -414,7 +414,7 @@ Our experimental design allows us to explore the tipping point at which voters s
 
 @
 
-
+Test 
 
 
 % reg:table:t
@@ -424,7 +424,16 @@ Our experimental design allows us to explore the tipping point at which voters s
 @
 
 
+Test 
 
+
+% plots:m1
+<<plots:m1:ok, echo = FALSE, fig.pos='h', warning = TRUE, message = F, fig.cap=m1.all.plots.note, fig.align='center', fig.width=10, fig.height=5,dpi=100,cache=FALSE, include = TRUE>>=
+
+
+@
+
+Test 
 
 \section{Discussion}
 Discussion

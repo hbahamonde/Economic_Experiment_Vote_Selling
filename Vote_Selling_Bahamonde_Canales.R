@@ -710,7 +710,6 @@ plot(dat.v.b$offer.party.type[dat.v.b$party.id.before.voter=="B"])
 #########################################################################
 
 ## ---- models:d ----
-
 # for clustered std errors
 p_load(sandwich,lmtest)
 
@@ -837,16 +836,6 @@ m2.p1 = plot(ggeffects::ggpredict(
              )
 
 
-test1 = data.frame(ggeffects::ggpredict(
-        model=m2,
-        terms=c("points.cumul.delta [all]"), 
-        vcov.fun = "vcovHC", 
-        vcov.type = "HC0"))
-
-p_load(ggplot2)
-plot = ggplot(test1) + geom_line(aes(y=predicted, x=x)) + geom_ribbon(aes(ymin=conf.low, ymax=conf.high, x=x), alpha = 0.3) 
-
-
 m2.p2 = plot(ggeffects::ggpredict(
         model=m2,
         terms=c("ideo.distance [all]"), 
@@ -884,16 +873,16 @@ m2.all.plots = m2.p1|m2.p2|m2.p3
 reg.table
 ## ----
 
-## ---- plots:m1 ----
-plot
-## ---- 
-
-
+## ---- plots:m1:ok ----
+plot(jitter(rnorm(100,0,1)))
 m1.all.plots.note <- paste(
         "{\\bf Predicted Values of Vote-Buying Offer}",
         "\\\\\\hspace{\\textwidth}", 
         "{\\bf Note}: Based on the OLS estimates in \\autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1), avoid losses by over-securing electoral support even in favorable contexts (panel 2), do not consider ideological/spatial distance with respect to their constituencies nor do their take into account their own budgets when making decisions (panel 3 and 4).",
         "\n")
+## ---- 
+
+
 
 
 
