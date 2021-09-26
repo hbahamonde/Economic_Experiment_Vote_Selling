@@ -428,7 +428,7 @@ Test
 
 
 % plots:m1
-<<plots:m1:ok, echo = FALSE, fig.pos='h', warning = TRUE, message = F, fig.cap=m1.all.plots.note, fig.align='center', fig.width=10, fig.height=5,dpi=100,cache=FALSE, include = TRUE>>=
+<<plots:m1:ok, echo = FALSE, fig.pos='h', warning = FALSE, message = F, fig.cap=m1.all.plots.note, fig.align='center', fig.width=4, fig.height=2,dpi=100,cache=FALSE, include = TRUE>>=
 
 
 @
@@ -461,7 +461,7 @@ Discussion
 % WORD COUNT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-<<wordcount, echo=FALSE, cache=FALSE>>=
+<<wordcount, echo=FALSE, cache=FALSE, warning = FALSE>>=
 library(knitr)
 
 comma <- function (x, ...) {

@@ -858,23 +858,30 @@ m2.p3 = plot(ggeffects::ggpredict(
              )
 
 # Why not include vote.intention.party, it's because it's a measure of risk (same as the dependent variable in model 2.)
+## Plots
+p_load(patchwork)
+library(ggplot2)
+data=head(mtcars, 30)
+m1.all.plots = ggplot(data, aes(x=wt, y=mpg)) +
+        geom_point() + # Show dots
+        geom_text(
+                label=rownames(data), 
+                nudge_x = 0.25, nudge_y = 0.25, 
+                check_overlap = T
+        )
+m2.all.plots = m2.p1|m2.p2|m2.p3
 ## ---- 
 
 
 
 
 
-## Plots
-p_load(patchwork)
-m1.all.plots = m1.p1|m1.p2|m1.p3|m1.p4
-m2.all.plots = m2.p1|m2.p2|m2.p3
-
 ## ---- reg:table:t ----
 reg.table
 ## ----
 
 ## ---- plots:m1:ok ----
-plot(jitter(rnorm(100,0,1)))
+m1.all.plots
 m1.all.plots.note <- paste(
         "{\\bf Predicted Values of Vote-Buying Offer}",
         "\\\\\\hspace{\\textwidth}", 
