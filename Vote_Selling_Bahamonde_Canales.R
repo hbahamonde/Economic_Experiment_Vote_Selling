@@ -711,8 +711,7 @@ plot(dat.v.b$offer.party.type[dat.v.b$party.id.before.voter=="B"])
 
 ## ---- models:d ----
 # for clustered std errors
-p_load(sandwich,lmtest)
-
+p_load(sandwich,lmtest,DAMisc,lattice,latticeExtra)
 
 #########################################################################
 ##### Amount Offered Model
@@ -776,54 +775,73 @@ reg.table = texreg::texreg( # screenreg
 ## ----
 
 
-
-## ---- plots:d ----
+## ---- plots:data ----
 p_load(ggeffects)
 
 # mientras mas he perdido, mas ofrezco 
-m1.p1 = plot(ggeffects::ggpredict(
+m1.p1.d = data.frame(ggeffects::ggpredict(
         model=m1,
         terms=c("points.cumul.delta [all]"), 
         vcov.fun = "vcovHC", 
-        vcov.type = "HC0")) + 
-        labs(x = bquote("Experimental Points"[t-1]), 
-             y = "Amount of Vote-Buying Offer", 
-             title = "Predicted Values of Vote-Buying Offer"
-        )
+        vcov.type = "HC0")
+        ); m1.p1.d$group = "points.cumul.delta"
 
 # mientras mas votos a favor tengo, mas ofrezco
-m1.p2 = plot(ggeffects::ggpredict(
+m1.p2.d = data.frame(ggeffects::ggpredict(
         model=m1,
         terms=c("vote.intention.party [all]"), 
         vcov.fun = "vcovHC", 
-        vcov.type = "HC0")) + 
-        labs(x = bquote("Number of Party Supporters"[t]), 
-             y = "", #"Amount of Vote-Buying Offer", 
-             title = ""# "Predicted Values of Vote-Buying Offer"
-        )
+        vcov.type = "HC0")
+        ); m1.p2.d$group = "vote.intention.party"
 
 # no importa la distancia ideologica
-m1.p3 = plot(ggeffects::ggpredict(
+m1.p3.d = data.frame(ggeffects::ggpredict(
         model=m1,
         terms=c("ideo.distance [all]"), 
         vcov.fun = "vcovHC", 
-        vcov.type = "HC0")) + 
-        labs(x = bquote("Ideological Distance between Party and Voter"[t]), 
-             y = "", #"Amount of Vote-Buying Offer", 
-             title = ""# "Predicted Values of Vote-Buying Offer"
-        )
-
+        vcov.type = "HC0")
+        ); m1.p3.d$group = "ideo.distance"
 
 # no importa el budget del partido
-m1.p4 = plot(ggeffects::ggpredict(
+m1.p4.d = data.frame(ggeffects::ggpredict(
         model=m1,
         terms=c("budget [all]"), 
         vcov.fun = "vcovHC", 
-        vcov.type = "HC0")) + 
-        labs(x = bquote("Party's Budget"[t]) , 
-             y = "", #"Amount of Vote-Buying Offer", 
-             title = ""# "Predicted Values of Vote-Buying Offer"
-        )
+        vcov.type = "HC0")
+        ); m1.p4.d$group = "budget"
+
+m1.p.d = data.frame(rbind(m1.p1.d,m1.p2.d,m1.p3.d,m1.p4.d))
+## ----
+
+
+#data = sample_n(m1.p1.d, 10)
+#write.csv(m1.p1.d, "data.csv", row.names = FALSE)
+
+data = data.frame(read.csv(url("https://raw.githubusercontent.com/hbahamonde/Economic_Experiment_Vote_Selling/master/data.csv")))
+
+library(lattice)
+library(latticeExtra)
+library(DAMisc)
+
+xyplot(predicted ~ x, 
+       scales=list(relation="free", rot=0),
+       data=data, 
+       aspect = 1,
+       xlab = "x", 
+       ylab = "y", 
+       lower=data$conf.low,
+       upper=data$conf.high,
+       panel = panel.ci, 
+       zl=F, 
+       prepanel=prepanel.ci)
+
+
+
+
+
+
+
+m1.p1.d
 
 m2.p1 = plot(ggeffects::ggpredict(
         model=m2,
@@ -833,7 +851,7 @@ m2.p1 = plot(ggeffects::ggpredict(
         labs(x = bquote("Experimental Points"[t-1]), 
              y = "Risky Vote-Buying Offer", 
              title = "Predicted Probabilities of Risky Vote-Buying Offers"
-             )
+        )
 
 
 m2.p2 = plot(ggeffects::ggpredict(
@@ -844,7 +862,7 @@ m2.p2 = plot(ggeffects::ggpredict(
         labs(x = bquote("Ideological Distance between Party and Voter"[t]), 
              y = "", 
              title = ""
-             )
+        )
 
 m2.p3 = plot(ggeffects::ggpredict(
         model=m2,
@@ -855,47 +873,63 @@ m2.p3 = plot(ggeffects::ggpredict(
         labs(x = bquote("Party's Budget"[t]) , 
              y = "", 
              title = ""
-             )
-
-# Why not include vote.intention.party, it's because it's a measure of risk (same as the dependent variable in model 2.)
-## Plots
-p_load(patchwork)
-library(ggplot2)
-data=head(mtcars, 30)
-m1.all.plots = ggplot(data, aes(x=wt, y=mpg)) +
-        geom_point() + # Show dots
-        geom_text(
-                label=rownames(data), 
-                nudge_x = 0.25, nudge_y = 0.25, 
-                check_overlap = T
         )
-m2.all.plots = m2.p1|m2.p2|m2.p3
-## ---- 
+
+
+xscale = extendrange(m1.p1.d$x)
+yscale <- extendrange(m1.p1.d$predicted)
+p_load(grid)
+viewport(layout.pos.col = 2, layout.pos.row = 2,
+         name = "plot", xscale = xscale, yscale = yscale)
+
+
+## ---- plots:data:2 ----
 
 
 
+xyplot(predicted ~ x | group, 
+       scales=list(relation="free", rot=0),
+       data=m1.p1.d, 
+       aspect = 1,
+       xlab = "x", 
+       ylab = "Predicted Vote-Buying Offer Made", 
+       lower=m1.p1.d$conf.low,
+       upper=m1.p1.d$conf.high,
+       panel = panel.ci, 
+       zl=F, 
+       prepanel=prepanel.ci)
+
+dev.print(pdf, 'test.pdf')
+## ----
+
+
+p_load(ggplot2,dplyr)
+m1.p1.d %>% 
+        ggplot(aes(x, predicted)) + 
+        geom_ribbon(aes(ymin = m1.p1.d$conf.low,
+                        ymax = m1.p1.d$conf.high),    # shadowing cnf intervals
+                    fill = "steelblue2") 
+
+
+
+
+m1.all.plots.note <- paste(
+        "{\\bf Predicted Values of Vote-Buying Offer}",
+        "\\\\\\hspace{\\textwidth}", 
+        "{\\bf Note}: Based on the OLS estimates in \\autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1), avoid losses by over-securing electoral support even in favorable contexts (panel 2), do not consider ideological/spatial distance with respect to their constituencies nor do their take into account their own budgets when making decisions (panel 3 and 4).",
+        "\n")
 
 
 ## ---- reg:table:t ----
 reg.table
 ## ----
 
-## ---- plots:m1:ok ----
-m1.all.plots
-m1.all.plots.note <- paste(
-        "{\\bf Predicted Values of Vote-Buying Offer}",
-        "\\\\\\hspace{\\textwidth}", 
-        "{\\bf Note}: Based on the OLS estimates in \\autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1), avoid losses by over-securing electoral support even in favorable contexts (panel 2), do not consider ideological/spatial distance with respect to their constituencies nor do their take into account their own budgets when making decisions (panel 3 and 4).",
-        "\n")
-## ---- 
 
 
 
 
 
-## ---- plots:m2 ----
-m2.all.plots
-## ---- 
+
 
 ################################################ 
 # ************** Summary Stats **************

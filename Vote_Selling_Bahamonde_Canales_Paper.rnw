@@ -222,7 +222,7 @@ options(scipen = 99999999999)
 
 @
 
-<<plots:d, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = FALSE, cache=FALSE, eval=TRUE>>=
+<<plots:data, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = FALSE, cache=FALSE, eval=TRUE>>=
 
 @
 
@@ -424,14 +424,36 @@ Test
 @
 
 
-Test 
 
+<<boring-plots, fig.width=4, fig.height=4, out.width='.4\\linewidth'>>=
 
-% plots:m1
-<<plots:m1:ok, echo = FALSE, fig.pos='h', warning = FALSE, message = F, fig.cap=m1.all.plots.note, fig.align='center', fig.width=4, fig.height=2,dpi=100,cache=FALSE, include = TRUE>>=
+data = data.frame(read.csv(url("https://raw.githubusercontent.com/hbahamonde/Economic_Experiment_Vote_Selling/master/data.csv")))
+
+library(lattice)
+library(latticeExtra)
+library(DAMisc)
+
+xyplot(predicted ~ x, 
+       scales=list(relation="free", rot=0),
+       data=data, 
+       aspect = 1,
+       xlab = "x", 
+       ylab = "y", 
+       lower=data$conf.low,
+       upper=data$conf.high,
+       panel = panel.ci, 
+       zl=F, 
+       prepanel=prepanel.ci)
 
 
 @
+
+
+
+
+
+
+
 
 Test 
 
