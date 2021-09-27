@@ -775,11 +775,13 @@ reg.table = texreg::texreg( # screenreg
 ## ----
 
 
-## ---- plots:data ----
+## ---- plots-data ----
+allglobal <- function() list2env(mget(ls(name = parent.frame()), envir = parent.frame()), envir = .GlobalEnv)
+
 p_load(ggeffects)
 
 # mientras mas he perdido, mas ofrezco 
-m1.p1.d = data.frame(ggeffects::ggpredict(
+m1.p1.d <<- data.frame(ggeffects::ggpredict(
         model=m1,
         terms=c("points.cumul.delta [all]"), 
         vcov.fun = "vcovHC", 
@@ -811,26 +813,30 @@ m1.p4.d = data.frame(ggeffects::ggpredict(
         ); m1.p4.d$group = "budget"
 
 m1.p.d = data.frame(rbind(m1.p1.d,m1.p2.d,m1.p3.d,m1.p4.d))
+write.csv(m1.p.d, "data_model_1.csv", row.names = FALSE)
+
+# data = data.frame(read.csv(url("https://raw.githubusercontent.com/hbahamonde/Economic_Experiment_Vote_Selling/master/data.csv")))
+#save(m1.p.d,file="m1_p1_d.Rda")
 ## ----
 
 
 #data = sample_n(m1.p1.d, 10)
 #write.csv(m1.p1.d, "data.csv", row.names = FALSE)
 
-data = data.frame(read.csv(url("https://raw.githubusercontent.com/hbahamonde/Economic_Experiment_Vote_Selling/master/data.csv")))
+data.model.1 = data.frame(read.csv(url("https://raw.githubusercontent.com/hbahamonde/Economic_Experiment_Vote_Selling/master/data_model_1.csv")))
 
 library(lattice)
 library(latticeExtra)
 library(DAMisc)
 
-xyplot(predicted ~ x, 
+xyplot(predicted ~ x | group, 
        scales=list(relation="free", rot=0),
-       data=data, 
+       data=data.model.1, 
        aspect = 1,
        xlab = "x", 
        ylab = "y", 
-       lower=data$conf.low,
-       upper=data$conf.high,
+       lower=data.model.1$conf.low,
+       upper=data.model.1$conf.high,
        panel = panel.ci, 
        zl=F, 
        prepanel=prepanel.ci)
@@ -876,39 +882,28 @@ m2.p3 = plot(ggeffects::ggpredict(
         )
 
 
-xscale = extendrange(m1.p1.d$x)
-yscale <- extendrange(m1.p1.d$predicted)
-p_load(grid)
-viewport(layout.pos.col = 2, layout.pos.row = 2,
-         name = "plot", xscale = xscale, yscale = yscale)
 
 
-## ---- plots:data:2 ----
 
+library(lattice)
+library(latticeExtra)
+library(DAMisc)
 
+load("/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/m1_p1_d.Rda")
+
+load("https://github.com/hbahamonde/Economic_Experiment_Vote_Selling/raw/master/m1_p1_d.Rda")
 
 xyplot(predicted ~ x | group, 
-       scales=list(relation="free", rot=0),
-       data=m1.p1.d, 
-       aspect = 1,
-       xlab = "x", 
-       ylab = "Predicted Vote-Buying Offer Made", 
-       lower=m1.p1.d$conf.low,
-       upper=m1.p1.d$conf.high,
-       panel = panel.ci, 
-       zl=F, 
-       prepanel=prepanel.ci)
-
-dev.print(pdf, 'test.pdf')
-## ----
-
-
-p_load(ggplot2,dplyr)
-m1.p1.d %>% 
-        ggplot(aes(x, predicted)) + 
-        geom_ribbon(aes(ymin = m1.p1.d$conf.low,
-                        ymax = m1.p1.d$conf.high),    # shadowing cnf intervals
-                    fill = "steelblue2") 
+              scales=list(relation="free", rot=0),
+              data=m1.p.d, 
+              aspect = 1,
+              xlab = "x", 
+              ylab = "y", 
+              lower=m1.p.d$conf.low,
+              upper=m1.p.d$conf.high,
+              panel = panel.ci, 
+              zl=F, 
+              prepanel=prepanel.ci)
 
 
 

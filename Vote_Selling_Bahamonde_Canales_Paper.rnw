@@ -222,9 +222,6 @@ options(scipen = 99999999999)
 
 @
 
-<<plots:data, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = FALSE, cache=FALSE, eval=TRUE>>=
-
-@
 
 <<abstract, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = FALSE, cache=FALSE, eval=TRUE>>=
 
@@ -424,27 +421,32 @@ Test
 @
 
 
+<<plots-data, echo=FALSE, warning=FALSE, message=FALSE, include = TRUE>>=
 
-<<boring-plots, fig.width=4, fig.height=4, out.width='.4\\linewidth'>>=
+@
 
-data = data.frame(read.csv(url("https://raw.githubusercontent.com/hbahamonde/Economic_Experiment_Vote_Selling/master/data.csv")))
+
+<<boring-plots-2, fig.width=4, fig.height=4, out.width='.4\\linewidth'>>=
+# data.model.1 = data.frame(read.csv(url("https://raw.githubusercontent.com/hbahamonde/Economic_Experiment_Vote_Selling/master/data_model_1.csv")))
+
+data.model.1 = read.csv("/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/data_model_1.csv")
+
 
 library(lattice)
 library(latticeExtra)
 library(DAMisc)
 
-xyplot(predicted ~ x, 
+xyplot(predicted ~ x | group, 
        scales=list(relation="free", rot=0),
-       data=data, 
+       data=data.model.1, 
        aspect = 1,
        xlab = "x", 
        ylab = "y", 
-       lower=data$conf.low,
-       upper=data$conf.high,
+       lower=data.model.1$conf.low,
+       upper=data.model.1$conf.high,
        panel = panel.ci, 
        zl=F, 
        prepanel=prepanel.ci)
-
 
 @
 
