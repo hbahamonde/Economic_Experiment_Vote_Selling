@@ -709,7 +709,7 @@ plot(dat.v.b$offer.party.type[dat.v.b$party.id.before.voter=="B"])
 # ************** M      O       D       E       L       S **************
 #########################################################################
 
-## ---- models:d ----
+## ---- models-d ----
 # for clustered std errors
 p_load(sandwich,lmtest,DAMisc,lattice,latticeExtra)
 
@@ -719,9 +719,11 @@ p_load(sandwich,lmtest,DAMisc,lattice,latticeExtra)
 
 # Subsetting Data
 m1.d = dat.v.b %>% select(offer.made.party, vote.intention.party, points.cumul.delta, ideo.distance, budget, participant.code) %>% drop_na()
+m1.d = as.data.frame(m1.d)
 
 # Model (with participant FEs)
 m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance + budget + participant.code, m1.d)
+
 
 # Clustered Std Errors and Model info
 m1.clst.std.err = as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,2])[1:5]
@@ -774,27 +776,77 @@ reg.table = texreg::texreg( # screenreg
 )
 ## ----
 
+# https://strengejacke.github.io/ggeffects/articles/practical_robustestimation.html
+## Predictions with cluster-robust standard errors
 
-## ---- plots-data ----
-allglobal <- function() list2env(mget(ls(name = parent.frame()), envir = parent.frame()), envir = .GlobalEnv)
+## ---- plots-data-32 ----
 
-p_load(ggeffects)
+#install.packages("estimatr")
+library(estimatr)
+library(margins)
+lmrout <- lm_robust(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance + budget, 
+                    data = m1.d, 
+                    se_type = "CR2",
+                    ci = TRUE,
+                    clusters = m1.d$participant.code)
+# https://rdrr.io/cran/estimatr/man/predict.lm_robust.html
+test = data.frame(
+        x= m1.d$points.cumul.delta,
+        y = lmrout$fitted.values,
+        lower = lmrout$conf.low,
+        upper = lmrout$conf.high
+        )
 
-# mientras mas he perdido, mas ofrezco 
-m1.p1.d <<- data.frame(ggeffects::ggpredict(
-        model=m1,
-        terms=c("points.cumul.delta [all]"), 
-        vcov.fun = "vcovHC", 
-        vcov.type = "HC0")
-        ); m1.p1.d$group = "points.cumul.delta"
 
-# mientras mas votos a favor tengo, mas ofrezco
+new_dat <- data.frame(
+        #vote.intention.party = seq(from = min(m1.d$vote.intention.party), to = max(m1.d$vote.intention.party), length.out = 100),
+        points.cumul.delta = seq(min(m1.d$points.cumul.delta), max(m1.d$points.cumul.delta), length.out = length(m1.d$offer.made.party)),
+        # ideo.distance = seq(min(m1.d$ideo.distance), max(m1.d$ideo.distance), length.out = 100),
+        # budget = seq(min(m1.d$budget), max(m1.d$budget), length.out = 100)
+        vote.intention.party = mean(m1.d$vote.intention.party),
+        ideo.distance = mean(m1.d$ideo.distance),
+        budget = mean(m1.d$budget),
+        offer.made.party = seq(from = min(m1.d$offer.made.party), to = max(m1.d$offer.made.party), length.out = length(m1.d$offer.made.party))
+        )
+points.cumul.delta.pred = as.data.frame(predict(
+        lmrout, 
+        newdata = new_dat, 
+        interval = "confidence"))
+
+
+points.cumul.delta.pred$x = m1.d$offer.made.party
+
+
+
+
+xyplot(fit.fit ~ x , 
+       scales=list(relation="free", rot=0),
+       data=points.cumul.delta.pred, 
+       aspect = 1,
+       xlab = "x", 
+       ylab = "y", 
+       lower=points.cumul.delta.pred$fit.lwr,
+       upper=points.cumul.delta.pred$fit.upr,
+       panel = panel.ci, 
+       zl=F, 
+       prepanel=prepanel.ci)
+
+xyplot(points.cumul.delta.pred$fit.fit, points.cumul.delta.pred$x)
+
+
+## ----
+
+
+
+
+
+#mientras mas votos a favor tengo, mas ofrezco
 m1.p2.d = data.frame(ggeffects::ggpredict(
         model=m1,
         terms=c("vote.intention.party [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0")
-        ); m1.p2.d$group = "vote.intention.party"
+); m1.p2.d$group = "vote.intention.party"
 
 # no importa la distancia ideologica
 m1.p3.d = data.frame(ggeffects::ggpredict(
@@ -802,7 +854,7 @@ m1.p3.d = data.frame(ggeffects::ggpredict(
         terms=c("ideo.distance [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0")
-        ); m1.p3.d$group = "ideo.distance"
+); m1.p3.d$group = "ideo.distance"
 
 # no importa el budget del partido
 m1.p4.d = data.frame(ggeffects::ggpredict(
@@ -810,14 +862,58 @@ m1.p4.d = data.frame(ggeffects::ggpredict(
         terms=c("budget [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0")
-        ); m1.p4.d$group = "budget"
+); m1.p4.d$group = "budget"
 
-m1.p.d = data.frame(rbind(m1.p1.d,m1.p2.d,m1.p3.d,m1.p4.d))
-write.csv(m1.p.d, "data_model_1.csv", row.names = FALSE)
+m1.p.d = as.data.frame(rbind(m1.p1.d,m1.p2.d,m1.p3.d,m1.p4.d))
+
+
+m1.p1.d2 <- data.frame(m1.p1.d2)
+write.csv2(m1.p1.d2, "data_model_1.csv")
 
 # data = data.frame(read.csv(url("https://raw.githubusercontent.com/hbahamonde/Economic_Experiment_Vote_Selling/master/data.csv")))
-#save(m1.p.d,file="m1_p1_d.Rda")
-## ----
+# save(m1.p.d,file="m1_p1_d.Rda")
+
+rm(list=ls())
+
+#data.model.1 = read.csv("/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/data_model_1.csv")
+load("/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/m1_p1_d.Rda")
+
+
+library(lattice)
+library(latticeExtra)
+library(DAMisc)
+
+xyplot(predicted ~ x | group, 
+       scales=list(relation="free", rot=0),
+       data=data.model.1, 
+       aspect = 1,
+       xlab = "x", 
+       ylab = "y", 
+       lower=data.model.1$conf.low,
+       upper=data.model.1$conf.high,
+       panel = panel.ci, 
+       zl=F, 
+       prepanel=prepanel.ci)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #data = sample_n(m1.p1.d, 10)
@@ -847,7 +943,6 @@ xyplot(predicted ~ x | group,
 
 
 
-m1.p1.d
 
 m2.p1 = plot(ggeffects::ggpredict(
         model=m2,

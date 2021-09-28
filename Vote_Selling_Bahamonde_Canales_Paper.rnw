@@ -196,7 +196,7 @@ Authors are listed in alphabetical order. We thank O'Higgins University for fund
 % loading knitr package
 
 <<echo=FALSE, cache=FALSE, warning = FALSE, message = F>>=
-read_chunk('/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/Vote_Selling_Bahamonde_Canales.R') # Hector path // MAC
+read_chunk('/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/Vote_Selling_Bahamonde_Canales.r') # Hector path // MAC
 # read_chunk('Vote_Selling_Bahamonde_Canales.R') % Andrea path
 
 @
@@ -218,7 +218,7 @@ options(scipen = 99999999999)
 
 @
 
-<<models:d, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = FALSE, cache=FALSE, eval=TRUE>>=
+<<models-d, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = TRUE, cache=FALSE, eval=TRUE>>=
 
 @
 
@@ -420,35 +420,16 @@ Test
 
 @
 
-
-<<plots-data, echo=FALSE, warning=FALSE, message=FALSE, include = TRUE>>=
-
-@
+<<plots-data-32, echo = FALSE, warning = FALSE, message = F, cache=FALSE, include = TRUE>>=
 
 
-<<boring-plots-2, fig.width=4, fig.height=4, out.width='.4\\linewidth'>>=
-# data.model.1 = data.frame(read.csv(url("https://raw.githubusercontent.com/hbahamonde/Economic_Experiment_Vote_Selling/master/data_model_1.csv")))
-
-data.model.1 = read.csv("/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/data_model_1.csv")
-
-
-library(lattice)
-library(latticeExtra)
-library(DAMisc)
-
-xyplot(predicted ~ x | group, 
-       scales=list(relation="free", rot=0),
-       data=data.model.1, 
-       aspect = 1,
-       xlab = "x", 
-       ylab = "y", 
-       lower=data.model.1$conf.low,
-       upper=data.model.1$conf.high,
-       panel = panel.ci, 
-       zl=F, 
-       prepanel=prepanel.ci)
 
 @
+
+
+
+
+
 
 
 
