@@ -779,47 +779,44 @@ reg.table = texreg::texreg( # screenreg
 # https://strengejacke.github.io/ggeffects/articles/practical_robustestimation.html
 ## Predictions with cluster-robust standard errors
 
-## ---- plots-data-32 ----
 
 #install.packages("estimatr")
-library(estimatr)
-library(margins)
-lmrout <- lm_robust(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance + budget, 
+p_load(estimatr, margins)
+lmrout <- lm_robust(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance + budget + participant.code, 
                     data = m1.d, 
                     se_type = "CR2",
                     ci = TRUE,
                     clusters = m1.d$participant.code)
 # https://rdrr.io/cran/estimatr/man/predict.lm_robust.html
-test = data.frame(
-        x= m1.d$points.cumul.delta,
-        y = lmrout$fitted.values,
-        lower = lmrout$conf.low,
-        upper = lmrout$conf.high
-        )
+
+library(ggeffects)
+plot(ggpredict(lmrout))
+
+predict(lmrout)
+
+new_dat <- with(m1.d, 
+                data.frame(
+                        vote.intention.party = mean(vote.intention.party, na.rm=TRUE),
+                        ideo.distance = mean(ideo.distance, na.rm=TRUE), 
+                        budget=mean(budget, na.rm=TRUE), 
+                        points.cumul.delta = seq(from = as.numeric(min(rownames(m1.d))), to = as.numeric(max(rownames(m1.d))), length.out = length(m1.d$offer.made.party)),
+                        participant.code = "1e6al4nh"
+                        )
+                )
 
 
-new_dat <- data.frame(
-        #vote.intention.party = seq(from = min(m1.d$vote.intention.party), to = max(m1.d$vote.intention.party), length.out = 100),
-        points.cumul.delta = seq(min(m1.d$points.cumul.delta), max(m1.d$points.cumul.delta), length.out = length(m1.d$offer.made.party)),
-        # ideo.distance = seq(min(m1.d$ideo.distance), max(m1.d$ideo.distance), length.out = 100),
-        # budget = seq(min(m1.d$budget), max(m1.d$budget), length.out = 100)
-        vote.intention.party = mean(m1.d$vote.intention.party),
-        ideo.distance = mean(m1.d$ideo.distance),
-        budget = mean(m1.d$budget),
-        offer.made.party = seq(from = min(m1.d$offer.made.party), to = max(m1.d$offer.made.party), length.out = length(m1.d$offer.made.party))
-        )
+
 points.cumul.delta.pred = as.data.frame(predict(
         lmrout, 
         newdata = new_dat, 
-        interval = "confidence"))
+        interval = "prediction"
+        ))
+
+x = seq(from = min(m1.d$points.cumul.delta), to = max(m1.d$points.cumul.delta), length.out = length(m1.d$offer.made.party))
+y = points.cumul.delta.pred$fit.fit
 
 
-points.cumul.delta.pred$x = m1.d$offer.made.party
-
-
-
-
-xyplot(fit.fit ~ x , 
+xyplot(fit.fit ~ x, 
        scales=list(relation="free", rot=0),
        data=points.cumul.delta.pred, 
        aspect = 1,
@@ -831,8 +828,9 @@ xyplot(fit.fit ~ x ,
        zl=F, 
        prepanel=prepanel.ci)
 
-xyplot(points.cumul.delta.pred$fit.fit, points.cumul.delta.pred$x)
 
+reorder <- order(m1.d$offer.made.party)
+plot(x[reorder], y[reorder], type = "p")
 
 ## ----
 
