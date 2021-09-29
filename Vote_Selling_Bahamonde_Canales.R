@@ -776,66 +776,16 @@ reg.table = texreg::texreg( # screenreg
 )
 ## ----
 
-# https://strengejacke.github.io/ggeffects/articles/practical_robustestimation.html
-## Predictions with cluster-robust standard errors
 
 
-#install.packages("estimatr")
-p_load(estimatr, margins)
-lmrout <- lm_robust(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance + budget + participant.code, 
-                    data = m1.d, 
-                    se_type = "CR2",
-                    ci = TRUE,
-                    clusters = m1.d$participant.code)
-# https://rdrr.io/cran/estimatr/man/predict.lm_robust.html
-
-library(ggeffects)
-plot(ggpredict(lmrout))
-
-predict(lmrout)
-
-new_dat <- with(m1.d, 
-                data.frame(
-                        vote.intention.party = mean(vote.intention.party, na.rm=TRUE),
-                        ideo.distance = mean(ideo.distance, na.rm=TRUE), 
-                        budget=mean(budget, na.rm=TRUE), 
-                        points.cumul.delta = seq(from = as.numeric(min(rownames(m1.d))), to = as.numeric(max(rownames(m1.d))), length.out = length(m1.d$offer.made.party)),
-                        participant.code = "1e6al4nh"
-                        )
-                )
-
-
-
-points.cumul.delta.pred = as.data.frame(predict(
-        lmrout, 
-        newdata = new_dat, 
-        interval = "prediction"
-        ))
-
-x = seq(from = min(m1.d$points.cumul.delta), to = max(m1.d$points.cumul.delta), length.out = length(m1.d$offer.made.party))
-y = points.cumul.delta.pred$fit.fit
-
-
-xyplot(fit.fit ~ x, 
-       scales=list(relation="free", rot=0),
-       data=points.cumul.delta.pred, 
-       aspect = 1,
-       xlab = "x", 
-       ylab = "y", 
-       lower=points.cumul.delta.pred$fit.lwr,
-       upper=points.cumul.delta.pred$fit.upr,
-       panel = panel.ci, 
-       zl=F, 
-       prepanel=prepanel.ci)
-
-
-reorder <- order(m1.d$offer.made.party)
-plot(x[reorder], y[reorder], type = "p")
-
-## ----
-
-
-
+## MODEL 1 PLOTS
+#mientras mas pierdo ayer, mas caro compro hoy
+m1.p1.d = data.frame(ggeffects::ggpredict(
+        model=m1,
+        terms=c("points.cumul.delta [all]"), 
+        vcov.fun = "vcovHC", 
+        vcov.type = "HC0")
+); m1.p1.d$group = "Points Cumul (delta)"
 
 
 #mientras mas votos a favor tengo, mas ofrezco
@@ -844,7 +794,7 @@ m1.p2.d = data.frame(ggeffects::ggpredict(
         terms=c("vote.intention.party [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0")
-); m1.p2.d$group = "vote.intention.party"
+); m1.p2.d$group = "Vote Share"
 
 # no importa la distancia ideologica
 m1.p3.d = data.frame(ggeffects::ggpredict(
@@ -852,7 +802,7 @@ m1.p3.d = data.frame(ggeffects::ggpredict(
         terms=c("ideo.distance [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0")
-); m1.p3.d$group = "ideo.distance"
+); m1.p3.d$group = "Spatial Distance (left-right)"
 
 # no importa el budget del partido
 m1.p4.d = data.frame(ggeffects::ggpredict(
@@ -860,152 +810,114 @@ m1.p4.d = data.frame(ggeffects::ggpredict(
         terms=c("budget [all]"), 
         vcov.fun = "vcovHC", 
         vcov.type = "HC0")
-); m1.p4.d$group = "budget"
+); m1.p4.d$group = "Party's Budget"
 
+# plot (export by hand)
 m1.p.d = as.data.frame(rbind(m1.p1.d,m1.p2.d,m1.p3.d,m1.p4.d))
 
-
-m1.p1.d2 <- data.frame(m1.p1.d2)
-write.csv2(m1.p1.d2, "data_model_1.csv")
-
-# data = data.frame(read.csv(url("https://raw.githubusercontent.com/hbahamonde/Economic_Experiment_Vote_Selling/master/data.csv")))
-# save(m1.p.d,file="m1_p1_d.Rda")
-
-rm(list=ls())
-
-#data.model.1 = read.csv("/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/data_model_1.csv")
-load("/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/m1_p1_d.Rda")
-
-
-library(lattice)
-library(latticeExtra)
-library(DAMisc)
-
-xyplot(predicted ~ x | group, 
+p_load(lattice, latticeExtra, DAMisc)
+m1plot = xyplot(predicted ~ x | group, 
        scales=list(relation="free", rot=0),
-       data=data.model.1, 
+       data=m1.p.d, 
        aspect = 1,
-       xlab = "x", 
-       ylab = "y", 
-       lower=data.model.1$conf.low,
-       upper=data.model.1$conf.high,
+       xlab = " ", 
+       ylab = "Amount of Vote-Buying Offer (points)", 
+       lower=m1.p.d$conf.low,
+       upper=m1.p.d$conf.high,
        panel = panel.ci, 
        zl=F, 
-       prepanel=prepanel.ci)
+       prepanel=prepanel.ci,
+       layout = c(4, 1) # columns, rows
+       )
+
+# saving plot
+png(filename="m1plot.png", 
+    type="cairo",
+    units="in", 
+    width=10, 
+    height=5, 
+    pointsize=10, 
+    res=1000)
+
+print(m1plot)
+dev.off()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#data = sample_n(m1.p1.d, 10)
-#write.csv(m1.p1.d, "data.csv", row.names = FALSE)
-
-data.model.1 = data.frame(read.csv(url("https://raw.githubusercontent.com/hbahamonde/Economic_Experiment_Vote_Selling/master/data_model_1.csv")))
-
-library(lattice)
-library(latticeExtra)
-library(DAMisc)
-
-xyplot(predicted ~ x | group, 
-       scales=list(relation="free", rot=0),
-       data=data.model.1, 
-       aspect = 1,
-       xlab = "x", 
-       ylab = "y", 
-       lower=data.model.1$conf.low,
-       upper=data.model.1$conf.high,
-       panel = panel.ci, 
-       zl=F, 
-       prepanel=prepanel.ci)
-
-
-
-
-
-
-
-
-m2.p1 = plot(ggeffects::ggpredict(
+## MODEL 2 PLOTS
+m2.p1.d = data.frame(ggeffects::ggpredict(
         model=m2,
         terms=c("points.cumul.delta [all]"), 
         vcov.fun = "vcovHC", 
-        vcov.type = "HC0")) + 
-        labs(x = bquote("Experimental Points"[t-1]), 
-             y = "Risky Vote-Buying Offer", 
-             title = "Predicted Probabilities of Risky Vote-Buying Offers"
-        )
+        vcov.type = "HC0")
+); m2.p1.d$group = "Points Cumul (delta)"
 
 
-m2.p2 = plot(ggeffects::ggpredict(
+m2.p2.d = data.frame(ggeffects::ggpredict(
         model=m2,
         terms=c("ideo.distance [all]"), 
         vcov.fun = "vcovHC", 
-        vcov.type = "HC0")) + 
-        labs(x = bquote("Ideological Distance between Party and Voter"[t]), 
-             y = "", 
-             title = ""
-        )
+        vcov.type = "HC0")
+); m2.p2.d$group = "Spatial Distance (left-right)"
 
-m2.p3 = plot(ggeffects::ggpredict(
+
+m2.p3.d = data.frame(ggeffects::ggpredict(
         model=m2,
         terms=c("budget [all]"), 
-        device = cairo_eps,
         vcov.fun = "vcovHC", 
-        vcov.type = "HC0")) + 
-        labs(x = bquote("Party's Budget"[t]) , 
-             y = "", 
-             title = ""
-        )
+        vcov.type = "HC0")
+); m2.p3.d$group = "Party's Budget"
+
+
+# plot (export by hand)
+m2.p.d = as.data.frame(rbind(m2.p1.d,m2.p2.d,m2.p3.d))
+
+p_load(lattice, latticeExtra, DAMisc)
+m2plot = xyplot(predicted ~ x | group, 
+                scales=list(relation="free", rot=0),
+                data=m2.p.d, 
+                aspect = 1,
+                xlab = " ", 
+                ylab = "Competitive Vote-Buying Offer", 
+                lower=m2.p.d$conf.low,
+                upper=m2.p.d$conf.high,
+                panel = panel.ci, 
+                zl=F, 
+                prepanel=prepanel.ci,
+                layout = c(3, 1) # columns, rows
+)
+
+# saving plot
+png(filename="m2plot.png", 
+    type="cairo",
+    units="in", 
+    width=8, 
+    height=5, 
+    pointsize=10, 
+    res=1000)
+
+print(m2plot)
+dev.off()
 
 
 
 
-
-library(lattice)
-library(latticeExtra)
-library(DAMisc)
-
-load("/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/m1_p1_d.Rda")
-
-load("https://github.com/hbahamonde/Economic_Experiment_Vote_Selling/raw/master/m1_p1_d.Rda")
-
-xyplot(predicted ~ x | group, 
-              scales=list(relation="free", rot=0),
-              data=m1.p.d, 
-              aspect = 1,
-              xlab = "x", 
-              ylab = "y", 
-              lower=m1.p.d$conf.low,
-              upper=m1.p.d$conf.high,
-              panel = panel.ci, 
-              zl=F, 
-              prepanel=prepanel.ci)
-
-
-
-
+## ---- models-plot-note ----
 m1.all.plots.note <- paste(
         "{\\bf Predicted Values of Vote-Buying Offer}",
         "\\\\\\hspace{\\textwidth}", 
         "{\\bf Note}: Based on the OLS estimates in \\autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1), avoid losses by over-securing electoral support even in favorable contexts (panel 2), do not consider ideological/spatial distance with respect to their constituencies nor do their take into account their own budgets when making decisions (panel 3 and 4).",
         "\n")
+
+m2.all.plots.note <- paste(
+        "{\\bf Predicted Values of Vote-Buying Offer}",
+        "\\\\\\hspace{\\textwidth}", 
+        "{\\bf Note}: Based on the MLE estimates in \\autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1), avoid losses by over-securing electoral support even in favorable contexts (panel 2), do not consider ideological/spatial distance with respect to their constituencies nor do their take into account their own budgets when making decisions (panel 3 and 4).",
+        "\n")
+## ----
+
+
+
+
 
 
 ## ---- reg:table:t ----
