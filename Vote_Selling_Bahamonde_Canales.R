@@ -776,6 +776,10 @@ reg.table = texreg::texreg( # screenreg
 )
 ## ----
 
+## ---- reg:table:t ----
+reg.table
+## ----
+
 
 
 ## MODEL 1 PLOTS
@@ -814,6 +818,9 @@ m1.p4.d = data.frame(ggeffects::ggpredict(
 
 # plot (export by hand)
 m1.p.d = as.data.frame(rbind(m1.p1.d,m1.p2.d,m1.p3.d,m1.p4.d))
+m1.p.d$group = as.factor(m1.p.d$group)
+m1.p.d$group <- relevel(m1.p.d$group, "Points Cumul (delta)")
+
 
 p_load(lattice, latticeExtra, DAMisc)
 m1plot = xyplot(predicted ~ x | group, 
@@ -834,7 +841,7 @@ m1plot = xyplot(predicted ~ x | group,
 png(filename="m1plot.png", 
     type="cairo",
     units="in", 
-    width=10, 
+    width=12, 
     height=5, 
     pointsize=10, 
     res=1000)
@@ -870,6 +877,8 @@ m2.p3.d = data.frame(ggeffects::ggpredict(
 
 # plot (export by hand)
 m2.p.d = as.data.frame(rbind(m2.p1.d,m2.p2.d,m2.p3.d))
+m2.p.d$group = as.factor(m2.p.d$group)
+m2.p.d$group <- relevel(m2.p.d$group, "Points Cumul (delta)")
 
 p_load(lattice, latticeExtra, DAMisc)
 m2plot = xyplot(predicted ~ x | group, 
@@ -884,7 +893,7 @@ m2plot = xyplot(predicted ~ x | group,
                 zl=F, 
                 prepanel=prepanel.ci,
                 layout = c(3, 1) # columns, rows
-)
+                )
 
 # saving plot
 png(filename="m2plot.png", 
@@ -897,37 +906,6 @@ png(filename="m2plot.png",
 
 print(m2plot)
 dev.off()
-
-
-
-
-## ---- models-plot-note ----
-m1.all.plots.note <- paste(
-        "{\\bf Predicted Values of Vote-Buying Offer}",
-        "\\\\\\hspace{\\textwidth}", 
-        "{\\bf Note}: Based on the OLS estimates in \\autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1), avoid losses by over-securing electoral support even in favorable contexts (panel 2), do not consider ideological/spatial distance with respect to their constituencies nor do their take into account their own budgets when making decisions (panel 3 and 4).",
-        "\n")
-
-m2.all.plots.note <- paste(
-        "{\\bf Predicted Values of Vote-Buying Offer}",
-        "\\\\\\hspace{\\textwidth}", 
-        "{\\bf Note}: Based on the MLE estimates in \\autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1), avoid losses by over-securing electoral support even in favorable contexts (panel 2), do not consider ideological/spatial distance with respect to their constituencies nor do their take into account their own budgets when making decisions (panel 3 and 4).",
-        "\n")
-## ----
-
-
-
-
-
-
-## ---- reg:table:t ----
-reg.table
-## ----
-
-
-
-
-
 
 
 

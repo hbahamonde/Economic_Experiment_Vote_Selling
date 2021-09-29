@@ -222,7 +222,6 @@ options(scipen = 99999999999)
 
 @
 
-
 <<abstract, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = FALSE, cache=FALSE, eval=TRUE>>=
 
 @
@@ -263,8 +262,6 @@ options(scipen = 99999999999)
 \setcounter{page}{1}
 
 
-
-% Except for a number of qualitative research, most quantitative papers consider vote buying as a binary variable; it happens or not. How much is a party willing to spend on a vote? This question is rather important since it speaks about the domains of risk in which a candidate makes that decision. From an analytical point of view, we introduce prospect theory to the study of clientelism as a valid framework to study decision making under risk. After formalizing a theory of vote buying and vote selling within the expected utility theory, we tested these claims in the lab by designing an economic experiment. The experiment was carefully designed to capture different domains of gains and losses. Exploiting these novel experimental data, we show that there exists wide support for prospect theory. As the analyses suggest, experimental subjects engage in more risky and expensive vote-buying as the domain shifts from one of gains to one of losses.
 
 % 1.1 Intro: Except for a number of qualitative research, most quantitative papers consider vote buying as a binary variable
     % 1.2 The question is important. The question of the price. Limitation of the vote-"buying" literature that won't consider the buying price. What are the conditions that increase or lower the vote-buying price?
@@ -420,20 +417,30 @@ Test
 
 @
 
-<<plots-data-32, echo = FALSE, warning = FALSE, message = F, cache=FALSE, include = TRUE>>=
+\begin{figure}[H]
+\includegraphics[scale=.6, center]{m1plot.png}
+\caption{{\bf Predicted Values of Vote-Buying Offer.\label{m1plot}}\hspace{\textwidth} {\bf Note}: Based on the OLS estimates in \autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1) and avoid losses by over-securing electoral support even in favorable contexts (panel 4). However, subjects do not consider their own budgets nor do their take into account ideological/spatial distance with respect to their constituencies when making decisions (panel 2 and 3).}\centering
+\end{figure}
 
 
 
-@
+\begin{figure}[H]
+\includegraphics[scale=.7, center]{m2plot.png}
+\caption{{\bf Predicted Values of Competitive Vote-Buying Offer.\label{m1plot}}\hspace{\textwidth} {\bf Note}: ``Competitive vote buying'' is when both parties try to buy someone's vote at the same time. Having all players complete information, this strategy is more expensive and uncertain. Based on the MLE estimates in \autoref{reg:t}, the figure shows the predicted values of whether parties engage in competitive vote buying strategies. Substantively, the figure shows that experimental subjects acting the ``party'' role engage in competitive vote buying when they try to recover losses in the short run by engaging in competitive vote buying (panel 1). However, subjects do not consider their own budgets nor their ideological/spatial distance with respect to their constituencies when making decisions (panel 3 and 4).}\centering
+\end{figure}
 
 
 
 
 
 
+abstract.c = as.character(c("
+Why do political parties buy votes? Most of the clientelism literature explains that parties facing electoral loses, particularly in contexts of uncertainty, derive electoral utilities out of vote buying. 
+
+By introducing prospect theory in the study of clientelism, we propose shifting the focus towards the study of risk perception
 
 
-
+Except for a number of qualitative research, most quantitative papers consider vote buying as a binary variable; it happens or not. How much is a party willing to spend on a vote? This question is rather important since it speaks about the domains of risk in which a candidate makes that decision. From an analytical point of view, we introduce prospect theory to the study of clientelism as a valid framework to study decision making under risk. After formalizing a theory of vote buying and vote selling within the expected utility theory, we tested these claims in the lab by designing an economic experiment. The experiment was carefully designed to capture different domains of gains and losses. Exploiting these novel experimental data, we show that there exists wide support for prospect theory. As the analyses suggest, experimental subjects engage in more risky and expensive vote-buying as the domain shifts from one of gains to one of losses."))
 
 
 
