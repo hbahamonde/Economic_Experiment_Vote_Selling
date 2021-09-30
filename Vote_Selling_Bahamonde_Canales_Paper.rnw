@@ -430,21 +430,6 @@ Test
 \end{figure}
 
 
-
-
-
-
-abstract.c = as.character(c("
-Why do political parties buy votes? Most of the clientelism literature explains that parties facing electoral loses, particularly in contexts of uncertainty, derive electoral utilities out of vote buying. 
-
-By introducing prospect theory in the study of clientelism, we propose shifting the focus towards the study of risk perception
-
-
-Except for a number of qualitative research, most quantitative papers consider vote buying as a binary variable; it happens or not. How much is a party willing to spend on a vote? This question is rather important since it speaks about the domains of risk in which a candidate makes that decision. From an analytical point of view, we introduce prospect theory to the study of clientelism as a valid framework to study decision making under risk. After formalizing a theory of vote buying and vote selling within the expected utility theory, we tested these claims in the lab by designing an economic experiment. The experiment was carefully designed to capture different domains of gains and losses. Exploiting these novel experimental data, we show that there exists wide support for prospect theory. As the analyses suggest, experimental subjects engage in more risky and expensive vote-buying as the domain shifts from one of gains to one of losses."))
-
-
-
-
 Test 
 
 \section{Discussion}
