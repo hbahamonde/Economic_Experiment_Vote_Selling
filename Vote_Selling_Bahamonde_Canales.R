@@ -925,7 +925,10 @@ summary.stats <- dat.v.b %>%
 
 ## ---- summary:stats:t ----
 p_load(xtable)
-xtable(summary.stats[order(summary.stats$variable),], caption = "Summary Statistics", align = rep("c",12))
+xtable(summary.stats[order(summary.stats$variable),], 
+       caption = "Summary Statistics", 
+       digits = 0,
+       align = rep("c",12))
 ## ----
 
 

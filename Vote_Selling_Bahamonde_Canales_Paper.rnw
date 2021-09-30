@@ -9,6 +9,7 @@
 \usepackage{booktabs} % Horizontal rules in tables
 \usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
 
+
 \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
 \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
 
@@ -263,45 +264,102 @@ options(scipen = 99999999999)
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-
-
-% 1.1 Intro: Except for a number of qualitative research, most quantitative papers consider vote buying as a binary variable
-    % 1.2 The question is important. The question of the price. Limitation of the vote-"buying" literature that won't consider the buying price. What are the conditions that increase or lower the vote-buying price?
-    % 1.3 This paper proceeds as follows
-% 2.1 Clientelism literature: focuses on utility maximization theory.
-    % 2.2 Limitations: find weird stuff.
-% 3.1 Prospect theory:
-% 4.1 A Formal Theory of Vote Buying and Vote Selling.
-% 5.1 Experimental design
-% 6.1 Statistical Analyses
-% 7.1 Discussion.
+% 1.1 Intro: Clientelism literature focuses on utility maximization theory.
+% 2.1 
+% 3.1 A Formal Theory of Vote Buying and Vote Selling.
+% 4.1 Experimental design
+% 5.1 Statistical Analyses
+% 6.1 Discussion.
 
 \newpage
 \section{Introduction}
 
+The clientelism literature focuses on utility maximization theory.
+
 % agreement: income
-Scholars mostly agree on the positive correlation between poverty and clientelism \parencite{Calvo2004,Weitz-shapiro,Kitschelt2000,Kitschelt2015}.\footnote{Following \textcite[316]{Nichter2014}, clientelist vote-buying is defined as ``the distribution of rewards to individuals or small groups during elections in contingent exchange for vote choices.''} Since the poor derive more utility from immediate transfers than the uncertain returns associated with future policy packages, clientelist political parties only target the poor (\textcite{Brusco2004,Stokes:2013cj}). Indeed, \textcite[12]{Weitz-Shapiro:2014aa} explained that ``[a]lmost universally, scholars of clientelism treat and analyze [this] practice as an exchange between politicians and their poor clients.'' 
+% Scholars mostly agree on the positive correlation between poverty and clientelism \parencite{Calvo2004,Weitz-shapiro,Kitschelt2000,Kitschelt2015}.\footnote{Following \textcite[316]{Nichter2014}, clientelist vote-buying is defined as ``the distribution of rewards to individuals or small groups during elections in contingent exchange for vote choices.''} Since the poor derive more utility from immediate transfers than the uncertain returns associated with future policy packages, clientelist political parties only target the poor (\textcite{Brusco2004,Stokes:2013cj}). Indeed, \textcite[12]{Weitz-Shapiro:2014aa} explained that ``[a]lmost universally, scholars of clientelism treat and analyze [this] practice as an exchange between politicians and their poor clients.'' 
 
 % challenge: income
-This agreement has recently been challenged \parencite[55]{Hicken2007}. \textcite{Gonzalez-Ocantos2012} and \textcite[]{Holland2015} found that income had little or no effect on vote-buying. For instance, \textcite[32]{Szwarcberg2013} ``challenges the assumption [that brokers] with access to material benefits will always distribute goods to low-income voters in exchange for electoral support.'' In fact, \textcite{Bahamonde2018} explains that non-poor individuals can be targeted when they are sufficiently noticeable, increasing compliance. He explains that wealthy houses in very poor neighborhoods in Brazil can be targeted too.
+% This agreement has recently been challenged \parencite[55]{Hicken2007}. \textcite{Gonzalez-Ocantos2012} and \textcite[]{Holland2015} found that income had little or no effect on vote-buying. For instance, \textcite[32]{Szwarcberg2013} ``challenges the assumption [that brokers] with access to material benefits will always distribute goods to low-income voters in exchange for electoral support.'' In fact, \textcite{Bahamonde2018} explains that non-poor individuals can be targeted when they are sufficiently noticeable, increasing compliance. He explains that wealthy houses in very poor neighborhoods in Brazil can be targeted too.
 
 % the lit has failed
-While there are important agreements, the literature has failed to provide a convincing answer to the following question: \emph{Who do parties target? Swing or core voters? Why?} These questions have historically haunted the literature. In fact, \textcite[14]{Carlin2015} states that ``our knowledge of who parties target remains incomplete.'' On the one hand, \textcite{Cox1986} explain that since constituencies are well-known, they allocate resources to core voters. On the other hand, \textcite{Stokes2005} argues that since allocating resources to individuals who \emph{ex-ante}vote for the party is a waste, parties target swing voters (similarly, see \textcite{Zarazaga2015a,Gallego2014}). Yet, \textcite[p7]{Zarazaga2015a} asserts that both ``[q]ualitative and quantitative evidence mainly shows that party machines reward their own supporters,'' not swing voters.
+% While there are important agreements, the literature has failed to provide a convincing answer to the following question: \emph{Who do parties target? Swing or core voters? Why?} These questions have historically haunted the literature. In fact, \textcite[14]{Carlin2015} states that ``our knowledge of who parties target remains incomplete.'' On the one hand, \textcite{Cox1986} explain that since constituencies are well-known, they allocate resources to core voters. On the other hand, \textcite{Stokes2005} argues that since allocating resources to individuals who \emph{ex-ante}vote for the party is a waste, parties target swing voters (similarly, see \textcite{Zarazaga2015a,Gallego2014}). Yet, \textcite[p7]{Zarazaga2015a} asserts that both ``[q]ualitative and quantitative evidence mainly shows that party machines reward their own supporters,'' not swing voters.
 
 
 
 
 % multiplicidad de approaches.
-Instead, the clientelism literature has seen a proliferation of tangential answers. While all of them are contributions, they do not really tackle the afore mentioned question. \textcite{Dixit1996} explain that parties both swing and core voters, but that depends on a number of factors. \todo{add something}. \textcite{Nichter2008} (turnout-buying) is another very important contribution. Unfortunately, it deviates from the question by increasing the complexity on the varieties of clientelism. Similarly, \textcite[7]{Zarazaga2015a} introduces yet another category (conditional supporters) who ``will vote for the party machine only as long as unexpected events do not persuade them to do otherwise''
+% Instead, the clientelism literature has seen a proliferation of tangential answers. While all of them are contributions, they do not really tackle the afore mentioned question. \textcite{Dixit1996} explain that parties both swing and core voters, but that depends on a number of factors. \todo{add something}. \textcite{Nichter2008} (turnout-buying) is another very important contribution. Unfortunately, it deviates from the question by increasing the complexity on the varieties of clientelism. Similarly, \textcite[7]{Zarazaga2015a} introduces yet another category (conditional supporters) who ``will vote for the party machine only as long as unexpected events do not persuade them to do otherwise''
 
 
 % this paper's contribution
-The paper seeks to contribute to this issue by incorporating both structural and individual factors that foster clientelism in the same theory.
+% The paper seeks to contribute to this issue by incorporating both structural and individual factors that foster clientelism in the same theory.
+
+\section{Prospect Theory and its Implications for Clientelism}
+
+working Ackert2006
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PROSPECT THEORY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% ``Kahneman1979 prospect theory, which provides a descriptive model of decision-making under risk.'' Ackert2006, 5
+
+% ``people derive utility from gains and losses in wealth, rather than from the absolute level of wealth'' Ackert2006, 5-6
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PRIOR LOSES OR GAINS (house money fx)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``While normative theory implores decision makers to only consider incremental outcomes, real decision makers are influenced by prior outcomes.'' Thaler1990, 643
+
+% ``How is risk-taking behavior affected by prior gains and losses? The question is quite general since decisions are rarely made in temporal isolation. Current'' Thaler1990, 643
+
+% ``While students of economics and decision theory are implored to concentrate only on incremental costs, it is well established that real decision makers are often influenced by historical or sunk costs''  Thaler1990, 643
+
+% ``We begin by recognizing that most decision makers are influenced by prior outcomes. Our goal then is to investigate how prior gains and losses affect choices.'' Thaler1990, 643
+
+% ``we find that under some circumstances a prior gain can increase subjects' willingness to accept gambles. This finding is labeled the \emph{house money effect'}. In contrast, prior losses can decrease the willingness to take risks. We also find that when decision makers have prior losses, outcomes which offer the opportunity to `break even' are especially attractive.''\footnote{Italics in original.} Thaler1990, 643-644
+
+% ``The location of the reference point, and the manner in which choice problems are coded and edited emerge as critical factors in the analysis of decisions'' Kahneman1979, 288
+
+% ``Our experimental results provide support for a house money effect. Traders' bids, price predictions, and market prices are influenced by the amount of money that is provided prior to trading.'' Ackert2006, 5
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Prospect theory and EU incosistencies
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{The Model}
+% ``No single alternative consistently organizes choices. Among the more important inconsistencies, we identify conditions generating systematic fanning in of indifference curves in the unit probability triangle, and find risk-loving over a number of gambles with all positive payoffs, in cases where prospect theory predicts risk aversion.'' Battalio1990, 25
+
+% ``Recent years have witnessed increasing dLssatisfaction with expected utility (EU) theory as a descriptive model of choice under uncertainty.'' Battalio1990, 25
+
+% ``Our overall conclusion is that none of the alternatives to expected utility theory considered here consistently organize the data, so we have a long way to go before having a complete descriptive model of choice under uncertainty.'' Battalio1990, 46
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% role of Experiments 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``Tversky1981 themselves recognize that their theory was developed for one-shot gambles [...] As Hirshleifer2001 1577 notes, translating evidence from psychology experiments to financial decision-making is not at all obvious.'' Ackert2006, 6 
+
+
+% ``In this paper we provide experimental evidence on behavior in a market setting as a guide for future theoretical work'' Ackert2006, 6 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Experiments invalidating EUT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``Experiments have identified a number of well-known violations of expected utility theory'' Battalio1990, 25
+
+% ``These alternatives to EU theory often hold quite different views of the behavioral processes underlying choice under uncertainty, and make a number of new predictions that have yet to be subject to thorough experimental investigation.'' Battalio1990, 25
+
+
+\section{Formal Model}
+
 We consider an electorate of $n$ voters. Voters vote for a leader to implement a common policy $\gamma$ from the set $\Gamma=\{1,2,...,100\}$. Each citizen $i$ has an ideal point $x_i$ which is an \emph{iid} draw from an uniform distribution $\Gamma$. When policy $\gamma$ is implemented, payoffs of citizen $i$ are given by $u(D,x_i,\gamma)=D-\vert x_i-\gamma \vert$, where $D$ represents \textcolor{red}{completar ac\'a}. This payoff can be incremented by transferences from both parties to voter $i$.
 
 In this election, there are two candidates. One ``left-wing'' party and one ``right-wing'' party. The left-wing (right-wing) candidate represents a policy $\gamma_L$ ($\gamma_R$) which is an \emph{iid} draw from an uniform distribution over $\{1,...,50\}$ ($\{51,...,100\}$). The location of this policy give us the number of voters $n_L$ leaning towards the left-wing candidate, while the number of voters leaning towards the right-wing party is given by $n_L+n_R=n$. While we consider that voters are attached to an ideological continuum, we do so with the sole purpose of modeling preferences---both formally and experimentally.\footnote{Ultimately, experimental subjects are not told anything about ideology. They only observe that there are a number of ``points'' associated with the victory of party A or party B. In this sense, voters lean (``ideologically'') towards the party that gives them more points.}
@@ -358,7 +416,7 @@ Thus, we can observe that there exists an unique equilibrium where both parties 
 
 \section{Experimental Design}
 
-Following our theoretical formalizations, a lab economic experiment was performed. The experiment was conducted at O'Higgins University and Centre for Experimental Social Sciences (CESS) of \emph{Universidad de Santiago}, Chile. Subjects received a minimum of \$5,000 Chilean pesos. The maximum depended on the quality of individual decisions. {\color{red}summary statistics here}. The basic flow is depicted in \autoref{experimental:design:fig}. 
+Building on the game theory model, a lab economic experiment was designed. The experiment was conducted at O'Higgins University and Centre for Experimental Social Sciences (CESS) of \emph{Universidad de Santiago}, Chile. Subjects received a minimum of \$5,000 Chilean pesos. The maximum depended on the quality of individual decisions. {\color{red}summary statistics here}. The basic flow is depicted in \autoref{experimental:design:fig}. 
 
 The experiment has two parts, with four stages each. The first part is the vote-buying portion. During the first stage, participants are assigned a role at random. They can be either \emph{party A}, \emph{party B}, or \emph{voter}. Voters are assigned at random an ``ideological'' position. That is, voters receive a certain amount of points (at random) depending on whether party A or B wins the election. For instance, if party A wins election, a voter might receive 2,400 points, whereas if party B wins the election, the voter might receive 200 points. It is in this sense that the voter is ``ideologically'' closer to party A. The substantive correlate is that voters perceive some utility when, for instance, their preferred fiscal policies are implemented. During the first stage, both parties receive different endowments too. The idea is to reflect the fact that some parties are wealthier than others. Note that voters receive zero endowments. The clientelism literature is consistent in that both poor and rich voters are prone to receive clientelist offerings \parencite{Bahamonde2018}. 
 
@@ -421,14 +479,16 @@ Test
 
 \begin{figure}[H]
 \includegraphics[scale=.6, center]{m1plot.png}
-\caption{{\bf Predicted Values of Vote-Buying Offer.\label{m1plot}}\hspace{\textwidth} {\bf Note}: Based on the OLS estimates in \autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1) and avoid losses by over-securing electoral support even in favorable contexts (panel 4). However, subjects do not consider their own budgets nor do their take into account ideological/spatial distance with respect to their constituencies when making decisions (panel 2 and 3).}\centering
+\caption{Predicted Values of Vote-Buying Offer.\label{m1plot}}
+\caption*{{\bf Note}: Based on the OLS estimates in \autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1) and avoid losses by over-securing electoral support even in favorable contexts (panel 4). However, subjects do not consider their own budgets nor do their take into account ideological/spatial distance with respect to their constituencies when making decisions (panel 2 and 3).}\centering
 \end{figure}
 
 
 
 \begin{figure}[H]
 \includegraphics[scale=.7, center]{m2plot.png}
-\caption{{\bf Predicted Values of Competitive Vote-Buying Offer.\label{m1plot}}\hspace{\textwidth} {\bf Note}: ``Competitive vote buying'' is when both parties try to buy someone's vote at the same time. Having all players complete information, this strategy is more expensive and uncertain. Based on the MLE estimates in \autoref{reg:t}, the figure shows the predicted values of whether parties engage in competitive vote buying strategies. Substantively, the figure shows that experimental subjects acting the ``party'' role engage in competitive vote buying when they try to recover losses in the short run by engaging in competitive vote buying (panel 1). However, subjects do not consider their own budgets nor their ideological/spatial distance with respect to their constituencies when making decisions (panel 3 and 4).}\centering
+\caption{Predicted Values of Competitive Vote-Buying Offer.\label{m1plot}}
+\caption*{{\bf Note}: ``Competitive vote buying'' is when both parties try to buy someone's vote at the same time. Having all players complete information, this strategy is more expensive and uncertain. Based on the MLE estimates in \autoref{reg:t}, the figure shows the predicted values of whether parties engage in competitive vote buying strategies. Substantively, the figure shows that experimental subjects acting the ``party'' role engage in competitive vote buying when they try to recover losses in the short run by engaging in competitive vote buying (panel 1). However, subjects do not consider their own budgets nor their ideological/spatial distance with respect to their constituencies when making decisions (panel 3 and 4).}\centering
 \end{figure}
 
 
