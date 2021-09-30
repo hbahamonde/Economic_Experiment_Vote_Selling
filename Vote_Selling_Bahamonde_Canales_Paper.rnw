@@ -234,22 +234,24 @@ options(scipen = 99999999999)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
+\newpage
 \begin{abstract}
 \input{abstract.txt}\unskip
 \end{abstract}
 
-\hspace*{5cm}{{\bf Abstract length}: \Sexpr{abstract.c.l} words}.
+
+\vspace*{0.3cm}
+\centerline{{\bf Abstract length}: \Sexpr{abstract.c.l} words}.
+\vspace*{0.3cm}
+
+\centerline{\bf Please consider downloading the last version of the paper \href{https://github.com/hbahamonde/Economic_Experiment_Vote_Selling/raw/master/Vote_Selling_Bahamonde_Canales_Paper.pdf}{\texttt{{\color{red}here}}}.}
+
+\vspace*{0.3cm}
+\centerline{\bf {\color{red}Rough draft PLEASE DO NOT CIRCULATE}}.
 
 
-\hspace*{1.3cm}{\bf Please consider downloading the last version of the paper} \href{https://github.com/hbahamonde/Economic_Experiment_Vote_Selling/raw/master/Vote_Selling_Bahamonde_Canales_Paper.pdf}{\texttt{{\color{red}here}}}.
-
-
-\hspace*{1.3cm}{\bf {\color{red}Rough draft PLEASE DO NOT CIRCULATE}}.
-
-
-\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1} % keywords.  
-\keywords{{\input{keywords.txt}\unskip}}
+\centerline{\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1} % keywords.  
+\keywords{{\input{keywords.txt}\unskip}}}
 
 
 
@@ -274,7 +276,7 @@ options(scipen = 99999999999)
 % 6.1 Statistical Analyses
 % 7.1 Discussion.
 
-
+\newpage
 \section{Introduction}
 
 % agreement: income
@@ -430,7 +432,13 @@ Test
 \end{figure}
 
 
-Test 
+
+
+
+
+
+
+ 
 
 \section{Discussion}
 Discussion
