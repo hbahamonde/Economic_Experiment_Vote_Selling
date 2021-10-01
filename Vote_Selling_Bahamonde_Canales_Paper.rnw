@@ -309,6 +309,28 @@ The clientelism literature focuses on utility maximization theory.
 %% PROSPECT THEORY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% decision-making process
+    
+    % ``In the domain of gains [...] the underweighting of probabilities works together with the concavity of the value function to undervalue the gamble relative to the certain outcome, and thus to encourage risk aversion. In the the domain of losses, the underweighting of probabilities [...] reduces the weights given to risky negative prospects [making] them less unattractive, and thus encouraging risk-seeking.'' Levy1992a, 183
+
+    %% Why parties buy votes when it's almost certain that they will win the election.
+        
+        % ``Thus the over overweighting (and perhaps the exaggeration) of small probabilities is one possible explanation for the appeal of long-shot gambling, and it also might reinforce the tendency for risk averse individuals to insure against rare but catastrophic losses'' Levy1992a, 184
+
+        % ``Loss aversion also helps to explain why states are more concerned to prevent a decline in their reputation or credibility than to increase it by a comparable amount'' Levy1992, 285
+
+        % ``future losses hurt more than future gains gratify'' Levy1992, 285
+
+% ``Prospect theory implies that the magnitudes of the losses need not be that large in order to induce risk-seeking behavior [...] even small losses appear to have significant consequences'' Levy1992, 297
+
+
+% ``the very fact of a loss is often more important than the magnitude of the loss and that large losses may not be that much worse than smaller losses'' Levy1992, 287
+
+
+% ``Prospect theory suggests another hypothesis as well: actors perceive themselves to be in the domain of losses more often than we would normally expect'' Levy1992 291
+
+
+% ``Prospect theory attempts to incorporate the observed violations utility into an alternative theory of risky choice'' Levy1992a, 179
 
 % ``Kahneman1979 prospect theory, which provides a descriptive model of decision-making under risk.'' Ackert2006, 5
 
@@ -316,7 +338,9 @@ The clientelism literature focuses on utility maximization theory.
 
 % ``Since its formulation by Kahneman1979, prospect theory has emerged as a leading alternative to expected utility as a theory under risk.'' Levy1992a, 171
 
-% ``Prospect theory posits that individuals evaluate outcomes to deviations from a reference point rather than with respect to net that their identification of this reference point is a critical variable, that they give more weight to losses than to comparable gains, and that they are generally averse with respect to gains and risk-acceptant with respect to loses''  Levy1992a, 171
+% ``Prospect theory posits that individuals evaluate outcomes to deviations from a reference point rather than with respect to net that their identification of this reference point is a critical variable, that they give more weight to losses than to comparable gains, and that they are generally averse with respect to gains and risk-acceptant with respect to losses''  Levy1992a, 171
+
+% ``there are a number of conceptual and methodological problems which must be overcome before hypotheses based on prospect theory can be constructed and tested against the empirical evidence'' Levy1992, 283-284
 
 
 
