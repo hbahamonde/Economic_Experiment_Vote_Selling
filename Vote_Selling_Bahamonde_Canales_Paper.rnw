@@ -295,9 +295,15 @@ The clientelism literature focuses on utility maximization theory.
 % this paper's contribution
 % The paper seeks to contribute to this issue by incorporating both structural and individual factors that foster clientelism in the same theory.
 
-\section{Prospect Theory and its Implications for Clientelism}
+\section{Prospect Theory and its Implications for Clientelism: When Losses Loom Larger than Gains}
 
-working Ackert2006
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% EXPECTED UTILITY THEORY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``The expected-utility principle asserts that individuals attempt to maximize expected utility in their choices between risky options: they weight the utilities of individual outcomes by their probabilities and choose the option with the highest weighted sum''  Levy1992a, 173
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PROSPECT THEORY
@@ -308,10 +314,20 @@ working Ackert2006
 
 % ``people derive utility from gains and losses in wealth, rather than from the absolute level of wealth'' Ackert2006, 5-6
 
+% ``Since its formulation by Kahneman1979, prospect theory has emerged as a leading alternative to expected utility as a theory under risk.'' Levy1992a, 171
+
+% ``Prospect theory posits that individuals evaluate outcomes to deviations from a reference point rather than with respect to net that their identification of this reference point is a critical variable, that they give more weight to losses than to comparable gains, and that they are generally averse with respect to gains and risk-acceptant with respect to loses''  Levy1992a, 171
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PRIOR LOSES OR GAINS (house money fx)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``reference point which is not equivalent to the status quo'' Levy1992a, 174
+
+% ``the carriers of value or utility are changes of wealth, rather than final asset positions that include current wealth'' Kahneman1979, 273
 
 % ``While normative theory implores decision makers to only consider incremental outcomes, real decision makers are influenced by prior outcomes.'' Thaler1990, 643
 
@@ -327,11 +343,24 @@ working Ackert2006
 
 % ``Our experimental results provide support for a house money effect. Traders' bids, price predictions, and market prices are influenced by the amount of money that is provided prior to trading.'' Ackert2006, 5
 
+% ``An initial loss can cause an increase in risk aversion such that prior losses reduce risk-taking behavior'' Ackert2006, 6
+
+% ``At first consideration Thaler1990's evidence may appear to contradict prospect theory because it suggests risk-seeking behavior after a windfall, whereas prospect theory suggests risk aversion in the domain of gains. However, a house money effect is not inconsistent with prospect theory because prospect theory was developed for one-shot gambles.'' Ackert2006, 6
+
+% ``Our results suggest that applying aspects of prospect theory to model dynamic financial market behavior is problematic [:] Our results can be interpreted as evidence that risk aversion decreases with found money.'' %% THIS IS OPPOSITE WITH WHAT I'VE GOT Ackert2006, 7
+
+% ``People appear to be less risk averse after a windfall of money'' Ackert2006, 15
+
+% ``negative information is more influential than comparable positive information'' Lau1985, 132
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Prospect theory and EU incosistencies
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``Expected-utility theory has dominated the analysis of decision-making under risk, both as a normative model of rational choice and a descriptive model of how people actually behave. But not all of its predictors appear to be fully consistent with observed behavior'' Levy1992a, 173
+
 
 % ``No single alternative consistently organizes choices. Among the more important inconsistencies, we identify conditions generating systematic fanning in of indifference curves in the unit probability triangle, and find risk-loving over a number of gambles with all positive payoffs, in cases where prospect theory predicts risk aversion.'' Battalio1990, 25
 
