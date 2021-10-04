@@ -305,12 +305,21 @@ The clientelism literature focuses on utility maximization theory.
 
 % ``The expected-utility principle asserts that individuals attempt to maximize expected utility in their choices between risky options: they weight the utilities of individual outcomes by their probabilities and choose the option with the highest weighted sum''  Levy1992a, 173
 
+% ``The expected-utility principle posits that actors try to maximize their expected by weighting the utility of each possible outcome of a given course of action by the probability of its occurrence, summing over all possible outcomes for each strategy, and selecting that strategy with the highest expected utility.'' Levy1997, 88
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PROSPECT THEORY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % decision-making process
+
+% ``Experimental evidence suggests that people tend to evaluate choices with respect to a reference point, overweight losses relative to comparable gains, engage in risk-averse behavior in choices among gains but risk-acceptant behavior in choices among losses, and respond to probabilities in a nonlinear manner.'' Levy1997, 87
+
+    % ``Risk-seeking in the domain of losses should led decision-makers to take \emph{disproportionate risks} to avoid certain losses, and risk aversion in the domain of gains should led decision-makers to be \emph{excessively eager} to secure certain gains.''\footnote{My emphases.} Levy1992, 299-300
     
+    %``individuals are often willing to tolerate a prospect which is significantly lower in expected value than an alternative in order to avoid a certain loss or secure a certain gain.''  Levy1992, 297
+
+
     % ``In the domain of gains [...] the underweighting of probabilities works together with the concavity of the value function to undervalue the gamble relative to the certain outcome, and thus to encourage risk aversion. In the the domain of losses, the underweighting of probabilities [...] reduces the weights given to risky negative prospects [making] them less unattractive, and thus encouraging risk-seeking.'' Levy1992a, 183
 
     %% Why parties buy votes when it's almost certain that they will win the election.
@@ -321,8 +330,12 @@ The clientelism literature focuses on utility maximization theory.
 
         % ``future losses hurt more than future gains gratify'' Levy1992, 285
 
+        % ``One implication of loss aversion is that people tend to value what they have more than comparable things they do not have, and that the disutility of relinquishing a good is greater than the utility of acquiring it.'' Levy1997, 89
+
 % ``Prospect theory implies that the magnitudes of the losses need not be that large in order to induce risk-seeking behavior [...] even small losses appear to have significant consequences'' Levy1992, 297
 
+
+% ``We should say, for example, not that an actor pursued a risky policy because she was in the domain of losses, but that because of risk-seeking with respect to loses she adopted a more risky alternative than predicted by a standard expected-value calculations.'' Levy1992, 298
 
 % ``the very fact of a loss is often more important than the magnitude of the loss and that large losses may not be that much worse than smaller losses'' Levy1992, 287
 
@@ -348,6 +361,8 @@ The clientelism literature focuses on utility maximization theory.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PRIOR LOSES OR GAINS (house money fx)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 % ``reference point which is not equivalent to the status quo'' Levy1992a, 174
 
@@ -377,11 +392,16 @@ The clientelism literature focuses on utility maximization theory.
 
 % ``negative information is more influential than comparable positive information'' Lau1985, 132
 
+%%%% "instant endowment effect"
+
+    % ``after a series of gains an individual will treat the possibility of a subsequent setback as a loss rather than as a foregone gain, overweight it, and engage in risk-seeking behavior to maintain her cumulative gains against that loss'' Levy1997, 91
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Prospect theory and EU incosistencies
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``It is ironic that just as rational choice has become the most influential paradigm in international relations and political science over the last decade, expected-utility theory has come under increasing attack by experimental and empirical evidence of systematic violations of the expected-utility principle in individual-choice behavior'' Levy1997, 87
 
 % ``Expected-utility theory has dominated the analysis of decision-making under risk, both as a normative model of rational choice and a descriptive model of how people actually behave. But not all of its predictors appear to be fully consistent with observed behavior'' Levy1992a, 173
 
@@ -396,6 +416,17 @@ The clientelism literature focuses on utility maximization theory.
 %% role of Experiments 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% ``Technically, in order to explain a choice in terms of prospect theory one would have to identify how the actor (1) defines the reference point, (2) identifies the available options, and assesses the (3) value and (4) probability of each outcome. The analyst would then have to (5) modify the subjective probabilities by an appropriate probability-weighting function, and, finally, (6) show that the resulting of the preferred prospect or option exceeds the value of alternative.'' Levy1992, 296
+
+
+% ``But the application of the theory also raises dif tual and methodological issues'' Levy1992, 292
+
+% ``challenges to the external validity of prospect theory-based hypotheses for international behavior are much more serious than challenges to their internal validity'' Levy1997, 87
+
+% ``The experimental literature focuses primarily on choices involving either the domain of losses or the domain of gains but not a combination of the two.'' Levy1992, 295
+
+% ``the experimental designs are such that expected-utility theory and prospect theory give different predictions as to likely choices. This facilitates a test of the hypothesis that the combination of the value function and probability-weighting function lead individuals to prefer a prospect in spite of its lower value than the alternative.'' Levy1992, 293
+
 % ``Tversky1981 themselves recognize that their theory was developed for one-shot gambles [...] As Hirshleifer2001 1577 notes, translating evidence from psychology experiments to financial decision-making is not at all obvious.'' Ackert2006, 6 
 
 
@@ -405,6 +436,11 @@ The clientelism literature focuses on utility maximization theory.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Experiments invalidating EUT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``This suggests that it is not enough for the analyst to demonstrate that the observed behavior is consistent with prospect theory. It is also necessary to demonstrate that prospect theory provides a \emph{better} explanation than does expected-utility theory.''\footnote{Italics in original.} Levy1992, 297
+
+
+% ``Thus expected-utility theory is more parsimonious than prospect theory.'' Levy1992, 296
 
 % ``Experiments have identified a number of well-known violations of expected utility theory'' Battalio1990, 25
 
