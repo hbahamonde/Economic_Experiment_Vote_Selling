@@ -303,6 +303,25 @@ The clientelism literature focuses on utility maximization theory.
 %% EXPECTED UTILITY THEORY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% ``whether we are in a domain of gain or loss should not affect our attitude toward risk. Yet, we tend to take risky bets when we are in a domain of loss.'' Mercer2005, 1
+
+% ``rational choice and game theoretic models have become ascendant in political science and have achieved some dominance within it'' McDermott2004, 289
+
+% ``Risk is an even more difficult variable to operationalize than domain. The central concern is fear of tautological definition; risk cannot be determined by domain, on the one hand, or by outcome, on the other.'' McDermott1998, 38
+
+
+%``Prospect theory may appear to be less precise than rational choice theories claim to be, but, in reality, prospect theory proves to be more analytically maleable. This is because, with rational choice theories, utilities are notoriously difficult to assess, and basic supporting axioms are frequently violated in individual behavior.'' McDermott1998, 36
+
+% ``In short, prospect theory predicts that individuals tend to be risk averse in a domain of gains, or when things are going well, and relatively risk seeking in a domain of losses, as when a leader is in the midst of a crisis.'' McDermott1998, 18
+
+% ``Expected value was one of the first theories of decision making under risk.''  McDermott1998, 15
+
+% ``The expected value of an outcome is equal to its payoff times its probability.''  McDermott1998, 15
+
+% ``This model failed in predicting outcomes in many instances because it was obvious that the value that a particular payoff held for someone was not always directly related to its precise monetary worth.'' McDermott1998, 15
+
+% ``Bernoulli was the ‹rst to see this contradiction [showing] that people would not always bet solely on the basis of the expected value of a game.'' McDermott1998, 15-16
+
 % ``The expected-utility principle asserts that individuals attempt to maximize expected utility in their choices between risky options: they weight the utilities of individual outcomes by their probabilities and choose the option with the highest weighted sum''  Levy1992a, 173
 
 % ``The expected-utility principle posits that actors try to maximize their expected by weighting the utility of each possible outcome of a given course of action by the probability of its occurrence, summing over all possible outcomes for each strategy, and selecting that strategy with the highest expected utility.'' Levy1997, 88
@@ -311,9 +330,44 @@ The clientelism literature focuses on utility maximization theory.
 %% PROSPECT THEORY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% ``prospect theory's limited influence in political science'' Mercer2005, 2
+
+%%% In Comparative Politics Weyland:
+
+    % % ``Prospect theory has received little attention in the fields of American politics and comparative politics, with a few exceptions (e.g., Hansen 1985, Pierson 1994, Weyland2002). Most surprising, political economists have shown no interest in prospect theory.'' Mercer2005, 2
+
+
+    % ``Weyland extends loss aversion to comparative politics. He challenges the view that dictatorships engage in radical economic reform more easily than democracies by emphasizing the importance of loss aversion for both leaders and citizens in Latin American democracies.'' Mercer2005, 12
+
+    % Fanis2004  
+    % ``Expected utility theory explains collective action as an attempt by individuals to maximize their gains. In contrast, my application of prospect theory to collective action suggests that people are motivated to participate in collective action by a fear of loss.'' Fanis2004, 363
+
+% ``Prospect theory is influential in political science only among international relations (IR) theorists.'' Mercer2005, 2
+
+% ``Although international relations theorists who study security have used prospect theory extensively, Americanists, comparativists, and political economists have shown little interest in it.'' Mercer2005, 1
+
+% ``people do not seem able to treat probability in a linear fashion, even with training and effort.'' McDermott2004, 293
+
+% ``prospect theory sheds light on the interaction between the person and the situation in decision-making environments'' McDermott2004, 293
+
+%``prospect theory works at the individual level of analysis. But prospect theory is not a traditional personality theory; that is, an analyst need not know much about the individual character or history of a particular leader in order to explain or predict behavior. Rather, it is a theory concerned with the importance and impact of the environment on the person.'' McDermott2004, 293
+
+% ``In theoretical terms, the S-shaped curve means that people tend to be risk averse in the domain of gains and risk seeking in the domain of losses; this is the crux of prospect theory. In short, prospect theory predicts that domain affects risk propensity. The third aspect of the value function is the asymmetric nature of the value curve; it is steeper in the domain of losses than in that of gains.'' McDermott1998, 29
+
+
+% ``Prospect theory is based on psychophysical models, such as those that originally inspired Bernoulli's expected value proposition.'' McDermott1998, 18
+
+% ``Prospect theory is a theory of decision making under conditions of risk.'' McDermott1998, 15
+
 % decision-making process
 
 % ``Experimental evidence suggests that people tend to evaluate choices with respect to a reference point, overweight losses relative to comparable gains, engage in risk-averse behavior in choices among gains but risk-acceptant behavior in choices among losses, and respond to probabilities in a nonlinear manner.'' Levy1997, 87
+
+% ``people have difficulty with probability at extreme ranges: sometimes people may treat highly likely but uncertain events as certain; on other occasions, people may treat highly unlikely events as impossible.'' McDermott1998, 30
+
+% ``prospect theory accounts for these discrepancies by noting the extreme (over)weight and attention that individuals give to small probabilities that potentially involve either huge gains (winning the lottery) or huge losses (losing your house in a fire). This phenomenon helps account for worst-case scenario planning.'' McDermott1998, 32
+
+% ``Underweighting of moderate and high probabilities relative to sure things contributes to risk aversion in gains by reducing the attractiveness of positive gambles. The same effect also contributes to risk seeking in losses by attenuating the aversiveness of negative gambles. Low probabilities, however, are overweighted, and very low probabilities are either overweighted quite grossly or neglected altogether.'' Kahneman:2012tc
 
     % ``Risk-seeking in the domain of losses should led decision-makers to take \emph{disproportionate risks} to avoid certain losses, and risk aversion in the domain of gains should led decision-makers to be \emph{excessively eager} to secure certain gains.''\footnote{My emphases.} Levy1992, 299-300
     
@@ -362,7 +416,19 @@ The clientelism literature focuses on utility maximization theory.
 %% PRIOR LOSES OR GAINS (house money fx)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% ``people's value structures are understood to shift over time.'' McDermott2004, 301
 
+% ``losses are harder for individuals to accept and assimilate than gains [hence, when] things are bad or likely to get worse, [people] are more likely to make risky choices to recover their losses.'' McDermott2004, 294
+
+% ``The situation in a large sense determines the domain of action.'' McDermott2004, 294
+
+% ``In most rational choice models [...] preferences themselves are assumed not to shift. This is not the case in prospect theory, where a decision- maker's risk propensity is expected to shift in response to changes in the environment.'' McDermott2004, 292
+
+% ``[prospect theory] focuses attention on the context of a situation, which helps illuminate other important areas of research, including framing, uncertainty, accountability, escalation and commitment, sunk costs, and momentum effects.'' McDermott2004, 290
+
+% ``The reference point is a critical concept in assessing gains and losses; thus, it is central to the notions of domain and risk.'' McDermott1998, 40
+
+% ``In prospect theory, value is a function of this change, in a positive or negative direction, rather than a result of absolute welfare, as is the case with subjective expected utility theory.'' McDermott1998, 28
 
 % ``reference point which is not equivalent to the status quo'' Levy1992a, 174
 
@@ -390,7 +456,14 @@ The clientelism literature focuses on utility maximization theory.
 
 % ``People appear to be less risk averse after a windfall of money'' Ackert2006, 15
 
-% ``negative information is more influential than comparable positive information'' Lau1985, 132
+ 
+    %%%% ATTENTION TO LOSSES       
+
+        % ``negative information is more influential than comparable positive information'' Lau1985, 132
+
+        % ``This attention to losses speaks to a wide variety of literature in political science'' McDermott2004, 298
+
+        % ``the `adjustment and anchoring' heuristic. Once people have an initial assessment of a problem---even if the assessment is arbitrary---they will use it to anchor subsequent judgments and thus inadequately revise their beliefs to accommodate new information.'' Mercer2005, 7-8
 
 %%%% "instant endowment effect"
 
@@ -400,6 +473,14 @@ The clientelism literature focuses on utility maximization theory.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Prospect theory and EU incosistencies
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``A decade of laboratory experiments revealed that people systematically violate the axioms of subjective expected utility theory.'' Mercer2005, 1
+
+% ``prospect theory excels in providing a model that offers descriptively accurate formulations of the human decision-making process.'' McDermott2004, 292
+
+% ``Prospect theory [...] provides an alternative model to rational choice and other theories, one that is founded on empirical data.'' McDermott2004, 290
+
+% ``argue here that the central task of asset pricing is to examine how expected returns are related to risk and to investor misvaluation.'' Hirshleifer2001, 1534
 
 % ``It is ironic that just as rational choice has become the most influential paradigm in international relations and political science over the last decade, expected-utility theory has come under increasing attack by experimental and empirical evidence of systematic violations of the expected-utility principle in individual-choice behavior'' Levy1997, 87
 
@@ -416,7 +497,30 @@ The clientelism literature focuses on utility maximization theory.
 %% role of Experiments 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+    % GROUPS
+
+        % ``Current models of prospect theory lack the ability to confront game theoretic models on their own grounds because of their inability to deal with strategic interaction and aggregation of choice across individuals.'' McDermott2004, 305
+
+        % ``work that attempts to expand the applicability of prospect theory to dyadic and group interactions will constitute an enormous contribution to the field.'' McDermott2004, 308
+
+% ``more direct comparisons between game theoretic rational choice models and prospect theory can be conducted on a larger scale.'' McDermott2004, 306
+
+% ``prospect theory does not depend on assumptions of individual behavior that are rooted in economic models that presume that individual actors naturally incorporate invariance, dominance, and transitivity into their decision-making. Rather, prospect theory develops its assumptions empirically, through experimentation.'' McDermott2004, 291
+
+% ``Even though considerable laboratory evidence in favor of prospect theory has accumulated, some economists believe the endowment effect is merely the result of a mistake made by inexperienced consumers and through'' List2004, 615
+
+    %%% EXPERTS
+
+    % ``prospect theory adequately organizes behavior among inexperienced consumers, but consumers with intense market experience behave largely in accordance with neoclassical predictions'' List2004, 615
+
+    % ``Researchers find that `experts' are as likely as `novices' to allow the framing of a problem to influence their decisions'' Mercer2005, 13
+
 % ``Technically, in order to explain a choice in terms of prospect theory one would have to identify how the actor (1) defines the reference point, (2) identifies the available options, and assesses the (3) value and (4) probability of each outcome. The analyst would then have to (5) modify the subjective probabilities by an appropriate probability-weighting function, and, finally, (6) show that the resulting of the preferred prospect or option exceeds the value of alternative.'' Levy1992, 296
+
+%% INCENTIVE EFFECTS
+% ``The implication, that low laboratory incentives may be somewhat unrealistic and therefore not useful in measuring attitudes toward "real-world" risks, is echoed by Kahneman1979, 265 '' Harrison2005, 1644-1645
+
+% ``With real payoffs, risk aversion increases sharply when payoffs are scaled up by factors of 20, 50, and 90 [...] In contrast, behavior is largely unaffected when hypothetical payoffs are scaled up.'' Harrison2005, 1653
 
 
 % ``But the application of the theory also raises dif tual and methodological issues'' Levy1992, 292
@@ -431,6 +535,8 @@ The clientelism literature focuses on utility maximization theory.
 
 
 % ``In this paper we provide experimental evidence on behavior in a market setting as a guide for future theoretical work'' Ackert2006, 6 
+
+% ``Another approach to the problem of creating meaningful monetary incentives involves conducting the research in poorer societies where the ratio of monetary reward to normal income is relatively high.'' Levy1997, 95
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
