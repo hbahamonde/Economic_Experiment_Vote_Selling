@@ -172,6 +172,8 @@ headpunct=:
 Authors are listed in alphabetical order. We thank O'Higgins University for funding this project, and the participants of the colloquium at the Centre for Experimental Social Sciences (CESS) at Universidad de Santiago, Chile. Javiera Tobar, Cristopher Reyes and Basti\'an Garrido provided excellent research assistance.}}
 
 
+% Share with: Rick Lau, Ana de la O, Virginia Oliveros, Dave Redlawsk, Bob Kaufman, Jack Levi.
+
 \affil[1]{Senior Researcher, University of Turku, Finland}
 \affil[2]{Assistant Professor, O$'$Higgins University, Chile}
 
@@ -297,11 +299,50 @@ The clientelism literature focuses on utility maximization theory.
 
 \section{Prospect Theory and its Implications for Clientelism: When Losses Loom Larger than Gains}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% EXPERIMENTAL DESIGN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Lupia:1998ub develop game-theoretical expectations and designed an experiment.
+
+
+% party a and b
+% ``The roles assumed by subjects, and the alternatives that subjects face, are generally described using neutral terminology with a minimum of moral or emotional connotations'' Dickson2011
+
+% ``The abstract experimental tasks associated with this form of stylization are used in part because of a desire to maintain experimental control.'' Dickson2011
+
+% ``In most economics experiments, subjects receive cash payments that depend on their own choices in the laboratory and, in the case of game-theoretic experiments, on the choices of other people.'' Dickson2011
+
+% ``By controlling for preferences using monetary incentives, experimental economists attempt to focus on testing other aspects of their theoretical models, such as whether actors make choices that are consistent with a model's equilibrium predictions, or the extent to which actors' cognitive skills enable them to make the optimal choices predicted by theory.'' Dickson2011
+
+% ``allow us to learn about individuals’ intrinsic motivations by observing deviations from game-theoretic predictions''  Dickson2011
+
+
+% ``Morton:2010ly summarize existing norms by estimating that payments are typically structured to average around 50 to 100 percent above the minimum wage for the time spent in the lab. Such considerations aside, resource constraints give experimentalists a natural incentive to minimize the scale of payoffs in order to maximize the amount of data that can be selected---as long as the payments that subjects receive are sufficient to motivate them in the necessary way.'' Dickson2011
+
+
+% ``Bassi2011 suggest that the scale of financial incentives can affect experimental results [...] The fit between subjects' behavior and game-theoretic predictions became monotonically stronger as incentives increased'' Dickson2011
+
+% ``A growing body of work has used laboratory voting games to evaluate theories of voting where subjects are given monetary incentives to induce them to have preferences over outcomes as in the evaluated theory.'' Bassi2011, 559
+
+% ``research agendas that integrate experimental and formal modeling pursuits provide a portal for more effective interdisciplinary work and can improve the applicability and relevance of formal models to a wide range of important substantive questions in political science.'' Aldrich2011
+
+% Aldrich2011 gives an extensive review about the use of experiments and formal models.
+
+% ``formal models can help experimentalists determine which settings are most critical to a particular causal hypothesis and experimenters can inform formal modelers by evaluating their theoretical predictions' performance in relevant environs.'' Aldrich2011
+
+% ``paying subjects for their participation as a means of aligning their incentives with those of analogous actors in the formal models.'' Aldrich2011
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% EXPECTED UTILITY THEORY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% ``Many formal models contain descriptions of political perceptions, opinions, and behaviors that are unrealistic.'' Aldrich2011
+
+% ``Experiments permit the creation of a specialized setting in which a model's premises can be emulated, with the test being whether the experiment's subjects behave as the model predicts.'' Aldrich2011
+
+% ``Pure rational choice based theories contend that voters choose to achieve an electoral outcome closer to their preferences-that is, they have instrumental or investment motivations.'' Bassi2011, 558
 
 % ``whether we are in a domain of gain or loss should not affect our attitude toward risk. Yet, we tend to take risky bets when we are in a domain of loss.'' Mercer2005, 1
 
@@ -341,6 +382,7 @@ The clientelism literature focuses on utility maximization theory.
 
     % Fanis2004  
     % ``Expected utility theory explains collective action as an attempt by individuals to maximize their gains. In contrast, my application of prospect theory to collective action suggests that people are motivated to participate in collective action by a fear of loss.'' Fanis2004, 363
+
 
 % ``Prospect theory is influential in political science only among international relations (IR) theorists.'' Mercer2005, 2
 
@@ -415,6 +457,9 @@ The clientelism literature focuses on utility maximization theory.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PRIOR LOSES OR GAINS (house money fx)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Our experimental design minimizes hypothetical bias and cheap talk (Harrison2006) by compensating subjects with real money according to their decisions.
+
 
 % ``people's value structures are understood to shift over time.'' McDermott2004, 301
 
