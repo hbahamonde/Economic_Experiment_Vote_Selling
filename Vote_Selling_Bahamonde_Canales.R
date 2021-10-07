@@ -672,6 +672,7 @@ dat.v.b = dat.v.b %>% select(session.code,
                              points.cumul,
                              points.cumul.delta,
                              payoff, 
+                             offer.made.party.cum,
                              everything())
 ## ----
 
@@ -730,6 +731,56 @@ m1.clst.std.err = as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$part
 m1.clst.t.test = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,3])[1:5])
 m1.clst.p.value = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,4])[1:5])
 custom.model.names.m1 = "Amount of Vote-Buying Offer"
+
+
+#########################################################################
+##### Sunk Costs
+#########################################################################
+
+m3.d = dat.v.b %>% select(offer.made.party, offer.made.party.cum, points.cumul.delta, round, participant.code) %>% drop_na()
+
+
+dat.v.b = dat.v.b %>%
+    group_by(participant.code) %>%
+    arrange(round, .by_group = TRUE) %>%
+    mutate(offer.made.party.cum = cumsum(offer.made.party))
+
+
+m3 = lm(offer.made.party ~ offer.made.party.cum + points.cumul.delta, m3.d)
+
+# Clustered Std Errors and Model info
+m3.clst.std.err = as.numeric(coeftest(m3, vcov. = vcovCL(m3, cluster = m3.d$participant.code, type = "HC0"))[,2])[1:5]
+m3.clst.t.test = c(as.numeric(coeftest(m3, vcov. = vcovCL(m3, cluster = m3.d$participant.code, type = "HC0"))[,3])[1:5])
+m3.clst.p.value = c(as.numeric(coeftest(m3, vcov. = vcovCL(m3, cluster = m3.d$participant.code, type = "HC0"))[,4])[1:5])
+
+
+q2 = as.numeric(quantile(dat.v.b$points.cumul.delta, na.rm = T)[2])
+q4 = as.numeric(quantile(dat.v.b$points.cumul.delta, na.rm = T)[4])
+
+m3.p1.d = data.frame(ggeffects::ggpredict(
+    model=m3,
+    terms=c("offer.made.party.cum [all]", "points.cumul.delta [1049.25]"), 
+    vcov.fun = "vcovHC", 
+    vcov.type = "HC0")
+    )
+
+
+p_load(lattice, latticeExtra, DAMisc)
+xyplot(predicted ~ x | group, 
+                scales=list(relation="free", rot=0),
+                data=m3.p1.d, 
+                aspect = 1,
+                xlab = "Cumulative Offers Made Throughout Rounds", 
+                ylab = "Amount of Vote-Buying Offer (points)", 
+                lower=m3.p1.d$conf.low,
+                upper=m3.p1.d$conf.high,
+                panel = panel.ci, 
+                zl=F, 
+                prepanel=prepanel.ci,
+                layout = c(1, 1) # columns, rows
+       )
+
+
 
 #########################################################################
 ##### Competitive Offers Model
