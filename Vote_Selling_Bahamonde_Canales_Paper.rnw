@@ -172,7 +172,7 @@ headpunct=:
 Authors are listed in alphabetical order. We thank O'Higgins University for funding this project, and the participants of the colloquium at the Centre for Experimental Social Sciences (CESS) at Universidad de Santiago, Chile. Javiera Tobar, Cristopher Reyes and Basti\'an Garrido provided excellent research assistance.}}
 
 
-% Share with: Rick Lau, Ana de la O, Virginia Oliveros, Dave Redlawsk, Bob Kaufman, Jack Levi.
+% Share with: Rick Lau, Ana de la O, Virginia Oliveros, Dave Redlawsk, Bob Kaufman, Jack Levi, Barbara Vis (https://www.barbaravis.nl/publications/)
 
 \affil[1]{Senior Researcher, University of Turku, Finland}
 \affil[2]{Assistant Professor, O$'$Higgins University, Chile}
@@ -276,7 +276,9 @@ options(scipen = 99999999999)
 \newpage
 \section{Introduction}
 
-The clientelism literature focuses on utility maximization theory.
+1. ``Risk is a central feature of political decision making '' \parencite[334]{Vis2011}. For instance, governments might need to pursue unpopular reforms \parencite{Vis2007,Vis2009,Weyland2002}, probably upsetting loyal constituents. Often times, while campaigning political parties might fear losing elections, and as a consequence, might feel the need to resort to alternative methods different than delivering policy packages \parencite{Kitschelt2000} in order to secure electoral victories. Vote buying is an electoral technique which \todo{define}. Why do Parties Buy Votes? For several reasons vote buying is a risky strategy. First, it is illegal (see \textcite{Bahamonde2020a} for a historical review on the United States). Political parties engaging in vote buying, for instance, might risk electoral costs such as losing electoral support of the wealthier \parencite{Weitz-shapiro}. Second, vote choices are secret, and thus, voters may accept the particularistic benefit from the clientelist party but then defect and vote for another party \parencite{Stokes2005,Nichter2008}. Yet, despite these risks political parties still engage in vote buying. 
+
+2. The clientelism literature focuses on utility maximization theory.
 
 % agreement: income
 % Scholars mostly agree on the positive correlation between poverty and clientelism \parencite{Calvo2004,Weitz-shapiro,Kitschelt2000,Kitschelt2015}.\footnote{Following \textcite[316]{Nichter2014}, clientelist vote-buying is defined as ``the distribution of rewards to individuals or small groups during elections in contingent exchange for vote choices.''} Since the poor derive more utility from immediate transfers than the uncertain returns associated with future policy packages, clientelist political parties only target the poor (\textcite{Brusco2004,Stokes:2013cj}). Indeed, \textcite[12]{Weitz-Shapiro:2014aa} explained that ``[a]lmost universally, scholars of clientelism treat and analyze [this] practice as an exchange between politicians and their poor clients.'' 
@@ -299,9 +301,31 @@ The clientelism literature focuses on utility maximization theory.
 
 \section{Prospect Theory and its Implications for Clientelism: When Losses Loom Larger than Gains}
 
+\textcite[279]{Kahneman1979}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% EXPERIMENTAL DESIGN
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Downsian/Spatial
+% Plott:1991wk developed an experiment based on Downsian spatial theory of voting.
+
+% McDermott2002 provides a good summary of Experimental Methods in Political Science, with an emphasis on EXPERIMENTAL VOTING AND ELECTIONS Since
+
+
+
+
+\textcite{Levy1992a,Levy1992,Mercer2005,Levy1997,Mercer2005,McDermott2004,McDermott1998,Linde2017,Vis2011,Vieider2019} provide an excellent overview of prospect theory.
+
+% ``We need experiments because they help to reduce the bias that can exist in less rigorous forms ofobservation'' McDermott2002, 33
+
+%% my design
+% ``In between-subjects designs, different groups of subjects are randomly assigned to various experimental or control conditions.'' McDermott2002, 33
+
+% ``No other methodology can offer the strong support for the causal inferences that experiments allow'' McDermott2002, 38
+
+% this is NOT my design
+% In within-subject de- signs, otherwise known as the A-B-A experimental design strategy, each person serves as his or her own control by participating across time in both control and treatment conditions. Subjects begin with a baseline (A), are then administered a treatment or manipulation condition (B), and are measured again at baseline (A) once the treatment ends McDermott2002, 33
 
 % Lupia:1998ub develop game-theoretical expectations and designed an experiment.
 
@@ -325,13 +349,21 @@ The clientelism literature focuses on utility maximization theory.
 
 % ``A growing body of work has used laboratory voting games to evaluate theories of voting where subjects are given monetary incentives to induce them to have preferences over outcomes as in the evaluated theory.'' Bassi2011, 559
 
-% ``research agendas that integrate experimental and formal modeling pursuits provide a portal for more effective interdisciplinary work and can improve the applicability and relevance of formal models to a wide range of important substantive questions in political science.'' Aldrich2011
 
-% Aldrich2011 gives an extensive review about the use of experiments and formal models.
+%%%% Formal Models
 
-% ``formal models can help experimentalists determine which settings are most critical to a particular causal hypothesis and experimenters can inform formal modelers by evaluating their theoretical predictions' performance in relevant environs.'' Aldrich2011
+        % Aldrich2011 gives an extensive review about the use of experiments and formal models.
 
-% ``paying subjects for their participation as a means of aligning their incentives with those of analogous actors in the formal models.'' Aldrich2011
+        % ``formal models can help experimentalists determine which settings are most critical to a particular causal hypothesis and experimenters can inform formal modelers by evaluating their theoretical predictions' performance in relevant environs.'' Aldrich2011
+
+        % ``Formal models present hypotheses, which are then tested under experimental conditions. The experimental findings are used to refine and develop hypotheses to produce new theoretical models and predictions, which can then be experimentally tested in turn. Political scientists might benefit from this process as well in order to both establish empirical validation of formal models and speed the cumulation of knowledge'' McDermott2002, 45
+
+        % ``research agendas that integrate experimental and formal modeling pursuits provide a portal for more effective interdisciplinary work and can improve the applicability and relevance of formal models to a wide range of important substantive questions in political science.'' Aldrich2011
+
+        % ``paying subjects for their participation as a means of aligning their incentives with those of analogous actors in the formal models.'' Aldrich2011
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% EXPECTED UTILITY THEORY
@@ -371,9 +403,19 @@ The clientelism literature focuses on utility maximization theory.
 %% PROSPECT THEORY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% advances in economics 
+        % Koszegi2006, 1135: ``Equat[e] the reference point with expectations rather than the status quo'' \footnote{I owe this point to Salomo Hirvonen.}
+        
+        % Koszegi2007: focuses on ``delayed consequences, to study preferences over monetary risk.''
+
+        % ``First---and second---generation prospect theory have a common limitation: the reference points from which prospects are evaluated are assumed to be certainties [so they extend PT]  by allowing reference points to be uncertain.'' Schmidt2008
+
+
 % ``prospect theory's limited influence in political science'' Mercer2005, 2
 
-%%% In Comparative Politics Weyland:
+%%% In Comparative Politics:
+
+    % ``the bias toward experiments focused primarily on American topics is reflected in the predominance of voting behavior as a primary concern of experimental work.'' McDermott2002, 44
 
     % % ``Prospect theory has received little attention in the fields of American politics and comparative politics, with a few exceptions (e.g., Hansen 1985, Pierson 1994, Weyland2002). Most surprising, political economists have shown no interest in prospect theory.'' Mercer2005, 2
 
@@ -382,6 +424,16 @@ The clientelism literature focuses on utility maximization theory.
 
     % Fanis2004  
     % ``Expected utility theory explains collective action as an attempt by individuals to maximize their gains. In contrast, my application of prospect theory to collective action suggests that people are motivated to participate in collective action by a fear of loss.'' Fanis2004, 363
+
+    % ``Comparative Politics (CP) have been particularly slow on incorporating prospect theory in their work'' Vis2011, 338-339
+
+    % ``experiments are a promising research tool that have the potential to make substantial contributions to the study of democracy and development.'' DeLaO2011
+
+    % issue salience
+    % ``Depending on the initial baseline’s position relative to the optimal outcome, that same outcome could be reached by either a negative externality change (if the base is lower than the optimal outcome) or a positive externality change (if the base is higher than the optimal outcome).'' Steinacker2006, 474
+
+    % welfare state
+    Vis2009,Vis:2010tq ``it shows that an improving political position (a gain) is the necessary condition for not-unpopular reform while for unpopular reform it is a deteriorating socio-economic situation (a loss)'' (Vis2009, 395)
 
 
 % ``Prospect theory is influential in political science only among international relations (IR) theorists.'' Mercer2005, 2
@@ -458,6 +510,10 @@ The clientelism literature focuses on utility maximization theory.
 %% PRIOR LOSES OR GAINS (house money fx)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+``Individuals use a reference point, usually the status quo'' Vis2011, 335
+
+% ``This means that the propensity to take risks is thus not a stable personality trait, with some individuals being prone to take risks while others always steer away from them'' Vis2011, 335
+
 % Our experimental design minimizes hypothetical bias and cheap talk (Harrison2006) by compensating subjects with real money according to their decisions.
 
 
@@ -518,6 +574,8 @@ The clientelism literature focuses on utility maximization theory.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Prospect theory and EU incosistencies
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``expected utility theory since the latter theory’s predictions continually failed empirically'' Vis2011, 335
 
 % ``A decade of laboratory experiments revealed that people systematically violate the axioms of subjective expected utility theory.'' Mercer2005, 1
 
