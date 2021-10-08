@@ -376,6 +376,8 @@ options(scipen = 99999999999)
 
         % ``A significant body of theoretical work now incorporates the ideas in prospect theory into more traditional models of economic behavior, and a growing body of empirical work tests the predictions of these new theories.'' Barberis2013, 174
 
+       %  ``the descriptive accuracy of such theories [...] has been shown to fall short of the mark in a long string of findings.'' Vieider2019, 1
+
 
 
 
@@ -461,10 +463,15 @@ options(scipen = 99999999999)
     % ``Depending on the initial baseline’s position relative to the optimal outcome, that same outcome could be reached by either a negative externality change (if the base is lower than the optimal outcome) or a positive externality change (if the base is higher than the optimal outcome).'' Steinacker2006, 474
 
     % welfare state
-    Vis2009,Vis:2010tq ``it shows that an improving political position (a gain) is the necessary condition for not-unpopular reform while for unpopular reform it is a deteriorating socio-economic situation (a loss)'' (Vis2009, 395)
+    % Vis2009,Vis:2010tq ``it shows that an improving political position (a gain) is the necessary condition for not-unpopular reform while for unpopular reform it is a deteriorating socio-economic situation (a loss)'' (Vis2009, 395)
+
+    % party platform change
+    % ``due to loss aversion evoked by the expectation of losing office, government parties, on average, change their platform more than opposition parties do.'' Schumacher2015, 1051
+
+% HERE Vieider2019
 
 
-``prospect theory is based on two central notions: reference dependence, which is the notion that the utility of outcomes is defined over changes in outcomes from a reference point instead of over absolute outcome levels and likelihood dependence, which is the notion that people distort probabilities non-linearly when making a decision.'' Vieider2019, 334
+% ``prospect theory is based on two central notions: reference dependence, which is the notion that the utility of outcomes is defined over changes in outcomes from a reference point instead of over absolute outcome levels and likelihood dependence, which is the notion that people distort probabilities non-linearly when making a decision.'' Vieider2019, 334
 
 % ``The central idea in prospect theory is that people derive utility from `gains' and `losses' measured relative to a reference point.'' Barberis2013, 178
 
@@ -488,6 +495,8 @@ options(scipen = 99999999999)
 % decision-making process
 
 % ``Experimental evidence suggests that people tend to evaluate choices with respect to a reference point, overweight losses relative to comparable gains, engage in risk-averse behavior in choices among gains but risk-acceptant behavior in choices among losses, and respond to probabilities in a nonlinear manner.'' Levy1997, 87
+
+% ``Likelihood dependence captures the observation that people tend to distort probabilities non-linearly when making a decision'', Vieider2019, 2
 
 % ``people have difficulty with probability at extreme ranges: sometimes people may treat highly likely but uncertain events as certain; on other occasions, people may treat highly unlikely events as impossible.'' McDermott1998, 30
 
