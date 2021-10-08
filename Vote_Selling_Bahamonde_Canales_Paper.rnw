@@ -1,4 +1,4 @@
-\documentclass[onesided]{article}
+%\documentclass[onesided]{article}
 \usepackage[T1]{fontenc}
 \linespread{1.5} % Line spacing - Palatino needs more space between lines
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
@@ -274,11 +274,13 @@ options(scipen = 99999999999)
 % 6.1 Discussion.
 
 \newpage
-\section{Introduction}
+\section{Vote Buying as a Risky Gamble}
 
 1. ``Risk is a central feature of political decision making '' \parencite[334]{Vis2011}. For instance, governments might need to pursue unpopular reforms \parencite{Vis2007,Vis2009,Weyland2002}, probably upsetting loyal constituents. Often times, while campaigning political parties might fear losing elections, and as a consequence, might feel the need to resort to alternative methods different than delivering policy packages \parencite{Kitschelt2000} in order to secure electoral victories. Vote buying is an electoral technique which \todo{define}. Why do Parties Buy Votes? For several reasons vote buying is a risky strategy. First, it is illegal (see \textcite{Bahamonde2020a} for a historical review on the United States). Political parties engaging in vote buying, for instance, might risk electoral costs such as losing electoral support of the wealthier \parencite{Weitz-shapiro}. Second, vote choices are secret, and thus, voters may accept the particularistic benefit from the clientelist party but then defect and vote for another party \parencite{Stokes2005,Nichter2008}. Yet, despite these risks political parties still engage in vote buying. 
 
 2. The clientelism literature focuses on utility maximization theory.
+
+3. This theory provides several explanations for vote buying, and the way in which political parties cope with risks associated with vote buying. (Nichter, Cox, Stokes, Auyero)
 
 % agreement: income
 % Scholars mostly agree on the positive correlation between poverty and clientelism \parencite{Calvo2004,Weitz-shapiro,Kitschelt2000,Kitschelt2015}.\footnote{Following \textcite[316]{Nichter2014}, clientelist vote-buying is defined as ``the distribution of rewards to individuals or small groups during elections in contingent exchange for vote choices.''} Since the poor derive more utility from immediate transfers than the uncertain returns associated with future policy packages, clientelist political parties only target the poor (\textcite{Brusco2004,Stokes:2013cj}). Indeed, \textcite[12]{Weitz-Shapiro:2014aa} explained that ``[a]lmost universally, scholars of clientelism treat and analyze [this] practice as an exchange between politicians and their poor clients.'' 
@@ -307,8 +309,13 @@ options(scipen = 99999999999)
 %% EXPERIMENTAL DESIGN
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\parencite{Downs:1957vg} the value of voting decreases as the size of the electorate increases.
+
 % Downsian/Spatial
-% Plott:1991wk developed an experiment based on Downsian spatial theory of voting.
+    
+    % Plott:1991wk developed an experiment based on Downsian spatial theory of voting.
+
+    % they do a ``strategic voting in a controlled (laboratory) environment. Our aim is to carefully isolate important determinants of the strategic vote. In particular, we are interested in the effect on strategic voting of information about others' preferences'' Tyszler2016, 361
 
 % McDermott2002 provides a good summary of Experimental Methods in Political Science, with an emphasis on EXPERIMENTAL VOTING AND ELECTIONS Since
 
@@ -320,7 +327,12 @@ options(scipen = 99999999999)
 % ``We need experiments because they help to reduce the bias that can exist in less rigorous forms ofobservation'' McDermott2002, 33
 
 %% my design
-% ``In between-subjects designs, different groups of subjects are randomly assigned to various experimental or control conditions.'' McDermott2002, 33
+   
+    % ``In between-subjects designs, different groups of subjects are randomly assigned to various experimental or control conditions.'' McDermott2002, 33
+
+    % ``All variations were made across subjects'', Tyszler2016, 371
+
+    % ``Every individual is informed about his or her own preferences before each election. All this is common knowledge.'' Tyszler2016, 371
 
 % ``No other methodology can offer the strong support for the causal inferences that experiments allow'' McDermott2002, 38
 
@@ -371,6 +383,8 @@ options(scipen = 99999999999)
 %% EXPECTED UTILITY THEORY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% ``it is commonly assumed that most if not all economic and political agents obey the maxims of consistency and coherence leading to the maximization of utility.'' Quattrone1988, 719
+
 
 % ``Many formal models contain descriptions of political perceptions, opinions, and behaviors that are unrealistic.'' Aldrich2011
 
@@ -414,6 +428,8 @@ options(scipen = 99999999999)
 
    % ``Prospect theory, an empirically correct theory of choice under risk'', Vis2011, 334
 
+   % ``it is widely agreed that prospect theory offers an accurate description of risk attitudes in experimental settings.'' Barberis2013, 179
+
 
 % advances in economics 
         % Koszegi2006, 1135: ``Equat[e] the reference point with expectations rather than the status quo'' \footnote{I owe this point to Salomo Hirvonen.}
@@ -448,7 +464,7 @@ options(scipen = 99999999999)
     Vis2009,Vis:2010tq ``it shows that an improving political position (a gain) is the necessary condition for not-unpopular reform while for unpopular reform it is a deteriorating socio-economic situation (a loss)'' (Vis2009, 395)
 
 
-% HERE Barberis2013
+``prospect theory is based on two central notions: reference dependence, which is the notion that the utility of outcomes is defined over changes in outcomes from a reference point instead of over absolute outcome levels and likelihood dependence, which is the notion that people distort probabilities non-linearly when making a decision.'' Vieider2019, 334
 
 % ``The central idea in prospect theory is that people derive utility from `gains' and `losses' measured relative to a reference point.'' Barberis2013, 178
 
@@ -526,7 +542,15 @@ options(scipen = 99999999999)
 %% PRIOR LOSES OR GAINS (house money fx)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-``Individuals use a reference point, usually the status quo'' Vis2011, 335
+% ``a shift in the reference point lead[s] to reversals of preferences in the evaluation of political and economic options, contrary to the assumption of invariance.'' Quattrone1988, 719
+
+% ``it allows people's preferences to depend on the circumstances they face.'' Fatas2007, 168
+
+% ``sad people will take more risk when trying to avoid a certain loss.'' Campos-Vazquez2014, 6
+
+% ``in traditional economic analysis, preferences over goods do not depend on initial endowments.'' Barberis2013, 186
+
+% ``Individuals use a reference point, usually the status quo'' Vis2011, 335
 
 % ``This means that the propensity to take risks is thus not a stable personality trait, with some individuals being prone to take risks while others always steer away from them'' Vis2011, 335
 
@@ -591,6 +615,8 @@ options(scipen = 99999999999)
 %% Prospect theory and EU incosistencies
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% ``the assumptions underlying the classical theory of risky choice are systematically violated in the manner predicted by prospect theory.'' Quattrone1988, 719
+
 % ``people systematically violate the predictions of expected utility theory, economists' workhorse model of decision making under risk.'' Barberis2013, 173
 
 % ``expected utility theory since the latter theory’s predictions continually failed empirically'' Vis2011, 335
@@ -636,6 +662,12 @@ options(scipen = 99999999999)
 
     % ``financial professionals behaved according to prospect theory and violated expected utility maximization.'' Abdellaoui2013, 411
 
+    % ``politicians' deviate from expected utility theory in the direction predicted by prospect theory but that these deviations are somewhat smaller than those of other people'' Linde2017, 101 THIS SPEAKS WELL ABOUT MY RESEARCH QUESTION IN TERMS OF EXTERNAL VALIDITY
+
+    % ``expert subjects do not seem to be immune to framing'' Fatas2007, 191
+
+    % ``results with inexperienced subjects support prospect theory much less than those of Quattrone1988.''
+
 % ``Technically, in order to explain a choice in terms of prospect theory one would have to identify how the actor (1) defines the reference point, (2) identifies the available options, and assesses the (3) value and (4) probability of each outcome. The analyst would then have to (5) modify the subjective probabilities by an appropriate probability-weighting function, and, finally, (6) show that the resulting of the preferred prospect or option exceeds the value of alternative.'' Levy1992, 296
 
 %% INCENTIVE EFFECTS
@@ -655,6 +687,7 @@ options(scipen = 99999999999)
 % ``Tversky1981 themselves recognize that their theory was developed for one-shot gambles [...] As Hirshleifer2001 1577 notes, translating evidence from psychology experiments to financial decision-making is not at all obvious.'' Ackert2006, 6 
 
 
+
 % ``In this paper we provide experimental evidence on behavior in a market setting as a guide for future theoretical work'' Ackert2006, 6 
 
 % ``Another approach to the problem of creating meaningful monetary incentives involves conducting the research in poorer societies where the ratio of monetary reward to normal income is relatively high.'' Levy1997, 95
@@ -663,6 +696,10 @@ options(scipen = 99999999999)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Experiments invalidating EUT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``According to prospect theory, we make a decision dependent on our perception of whether the decision involves making a gain or a loss. This is at odds with the consistency or invariance assumptions of rational theory.'' Fatas2007, 168
+
+% ``Experiments and empirical observations have revealed that actual behavior and decisions frequently deviate from the neoclassical predictions.'' Fatas2007, 167
 
 % ``This suggests that it is not enough for the analyst to demonstrate that the observed behavior is consistent with prospect theory. It is also necessary to demonstrate that prospect theory provides a \emph{better} explanation than does expected-utility theory.''\footnote{Italics in original.} Levy1992, 297
 
