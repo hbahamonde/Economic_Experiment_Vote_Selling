@@ -292,10 +292,15 @@ Since clientelist political parties operate within uncertain scenarios, the lite
 Yet, despite all these risks, political parties still buy votes in many parts of the world \parencite[F356]{Vicente2014}. In fact, in some instances vote buying is deeply embedded in the way politics is done. For instance, \textcite{Gonzalez-Ocantos2012} report that 24\% of registered voters in Nicaragua were offered a clientelist gift. 
 
 % Why do parties keep buying votes?: Rat Choice
-If clientelism is risky \parencite[43]{Szwarcberg2013}, expensive \parencite[35]{Zarazaga2014} and uncertain \parencite{Rueda2016}, Why do parties keep buying votes? While there are multiple answers to this question, unfortunately, most quantitative researchers have framed their answers within the game-theoretical oriented expected utility theory (EUT) \parencite{Neumann:1947tc}.\footnote{For the purposes of this paper, I focus exclusively on quantitative research. Among others, very important qualitative papers are \textcite{Scott1972}, \textcite{Auyero2000} and \textcite{Szwarcberg2013}.} I consider this an important limitation. \todo{here why EUT has failed}
+If clientelism is risky \parencite[43]{Szwarcberg2013}, expensive \parencite[35]{Zarazaga2014} and uncertain \parencite{Rueda2016}, \emph{Why do parties keep buying votes?} While there are multiple answers to this question, unfortunately, most quantitative researchers have framed their answers within the game-theoretical oriented expected utility theory (EUT) \parencite{Neumann:1947tc}.\footnote{For the purposes of this paper, I focus exclusively on quantitative research. Among others, very important qualitative papers are \textcite{Scott1972}, \textcite{Auyero2000} and \textcite{Szwarcberg2013}.} For instance, Do political parties target because they want to reassure loyalties (core voters) or because they want to flip voters (swing voters)? This is an important question as it speaks about the way in which parties make decisions in risky contexts. In fact, \textcite[14]{Carlin2015} states that ``our knowledge of who parties target remains incomplete.'' On the one hand, \textcite{Cox1986} and \textcite[7]{Zarazaga2015a} explain that since constituencies are well known for clientelist parties, they allocate resources to core voters. On the other hand, \textcite{Stokes2005} argues that since allocating resources to individuals who \emph{ex-ante} vote for the party is a waste, parties target swing voters. In turn, \textcite[1083]{Albertus2012a} explains that clientelist parties ``may simultaneously target both swing and core groups of voters.''
+
+
+
+
+I consider this an important limitation. \todo{here why EUT has failed}
 
 % example of failure
-For instance, \textcite[14]{Carlin2015} states that ``our knowledge of who parties target remains incomplete.'' On the one hand, \textcite{Cox1986} and \textcite[7]{Zarazaga2015a} explain that since constituencies are well known for clientelist parties, they allocate resources to core voters. On the other hand, \textcite{Stokes2005} argues that since allocating resources to individuals who \emph{ex-ante} vote for the party is a waste, parties target swing voters. In turn, \textcite[1083]{Albertus2012a} explains that clientelist parties ``may simultaneously target both swing and core groups of voters.''
+
 
 
 
