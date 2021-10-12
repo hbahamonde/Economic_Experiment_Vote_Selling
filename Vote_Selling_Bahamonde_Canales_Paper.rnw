@@ -277,21 +277,35 @@ options(scipen = 99999999999)
 % 6.1 Discussion.
 
 \newpage
-\section{Vote Buying as a Risky Gamble}
+\section{Vote Buying: A Risky Yet Persistent Gamble}
 
 % Risk is a central feature of political decision making
-``Risk is a central feature of political decision making'' \parencite[334]{Vis2011}. For instance, governments might need to pursue unpopular reforms \parencite{Vis2007,Vis2009,Weyland2002} likely risking political support. Another example is when political parties might fear losing elections, and as a consequence, might feel the need to resort to alternative methods other than delivering policy packages in order to secure electoral victories \parencite{Kitschelt2000}. One of these alternatives is vote buying, which is defined a the distribution of rewards during elections in contingent exchange for vote choices \parencite[316]{Nichter2014}.
+``Risk is a central feature of political decision making'' \parencite[334]{Vis2011}. For instance, governments risk political support when pursuing unpopular reforms \parencite{Vis2007,Vis2009,Weyland2002}. Often times political parties facing electoral losses resort to alternative methods other than delivering policy packages \parencite{Kitschelt2000}. One of these alternatives is vote buying, which is defined as the distribution of rewards during elections in contingent exchange for vote choices \parencite[316]{Nichter2014}.
 
 % Vote buying is a risky strategy, why
-Vote buying is a very risky strategy. First, it is illegal (see \textcite{Bahamonde2020a} for a historical review on the United States). Political parties engaging in vote buying might risk losing electoral support from the wealthy \parencite{Weitz-shapiro} or from society in general \parencite{GonzalezOcantos2014}, thus endangering positive electoral outcomes. Second, vote choices are secret; voters may accept the private benefit from the clientelist party but then defect and vote for another party \parencite{Stokes2005,Nichter2008,GonzalezOcantos2014,Vicente2014}. 
+Vote buying is a very risky strategy. First, it is illegal. \textcite[]{Bahamonde2020a} explains that in the United States vote buying was illegal as early as the 1700s. And such, buying votes requires extra care so to avoid reputational costs and legal issues. For instance, political parties engaging in vote buying might risk losing electoral support from the wealthy \parencite{Weitz-shapiro} or from society in general \parencite{GonzalezOcantos2014}. Second, since vote choices are secret \parencite{Nichter2008} even in developing contexts such as Africa \parencite{Vicente2014} and Latin America \parencite{Hidalgo2012,Oliveros2019,Murillo2021a}, voters may accept the private benefit but later defect and vote for another party \parencite{Stokes2005,Nichter2008,GonzalezOcantos2014,Vicente2014}. 
+
+Since clientelist political parties operate within uncertain scenarios, the literature has described a few decision-making strategies parties employ, particularly under contexts of risk. Unfortunately, all of them provide very poor-quality information at best. \textcite[1147]{Dixit1996} explain that parties track ``constituents' likes and dislikes, \emph{compulsively} participating in a spectrum of events [such as] baptisms and bar mitzvahs.''\footnote{Emphases are mine.} \textcite[317]{Stokes2005} argues that parties develop skills that allow them to infer whether clients voted for their party by \emph{looking at them in the eyes}. \textcite{Gay:1993aa,Gay1998} document similar findings for the Brazilian case. Overall, vote buying requires parties to sustain close relationships over time with their clients in a personal and individualized way \parencite{Auyero2000,Szwarcberg2013,Bahamonde2018}. Unfortunately, parties are left with no more than guesses about whether their clientelistic investments are effective or not. 
 
 
-% Yet, despite these risks, vote buying is very comon.
-Yet, despite these risks, political parties buy votes in many parts of the world \parencite[F356]{Vicente2014}. The literature has described a few choices parties have to cope with these risks when buying votes. However, all of them give incomplete information at best. \textcite[1147]{Dixit1996} explain that parties track ``constituents' likes and dislikes, \emph{compulsively} participating in a spectrum of events [such as] baptisms and bar mitzvahs.''\footnote{Emphases are mine.} \textcite[317]{Stokes2005} argues that parties develop skills that allow them to infer whether clients voted for their party by \emph{looking at them in the eyes.} \textcite{Gay:1993aa,Gay1998} documents similar findings for Brazilian case. Overall, vote buying requires parties to sustain close relationships over time with their clients in a personal and individualized way \parencite{Auyero2000,Szwarcberg2013,Bahamonde2018}. Unfortunately, parties are left with no more than guesses about whether their clientelistic investments were effective or not. 
-
+% Yet, despite these risks, vote buying is very common.
+Yet, despite all these risks, political parties still buy votes in many parts of the world \parencite[F356]{Vicente2014}. In fact, in some instances vote buying is deeply embedded in the way politics is done. For instance, \textcite{Gonzalez-Ocantos2012} report that 24\% of registered voters in Nicaragua were offered a clientelist gift. 
 
 % Why do parties keep buying votes?: Rat Choice
-If clientelism is risky \parencite[43]{Szwarcberg2013}, expensive \parencite[35]{Zarazaga2014} and uncertain \parencite{Rueda2016}, Why do parties keep buying votes? While there are multiple answers to this question, unfortunately, most quantitative researchers have framed their answers within the game-theoretical oriented expected utility theory (EUT) \parencite{Neumann:1947tc}.\footnote{For the purposes of this paper, I focus exclusively on quantitative research. Among others, very important qualitative papers are \textcite{Scott1972}, \textcite{Auyero2000} and \textcite{Szwarcberg2013}.} 
+If clientelism is risky \parencite[43]{Szwarcberg2013}, expensive \parencite[35]{Zarazaga2014} and uncertain \parencite{Rueda2016}, Why do parties keep buying votes? While there are multiple answers to this question, unfortunately, most quantitative researchers have framed their answers within the game-theoretical oriented expected utility theory (EUT) \parencite{Neumann:1947tc}.\footnote{For the purposes of this paper, I focus exclusively on quantitative research. Among others, very important qualitative papers are \textcite{Scott1972}, \textcite{Auyero2000} and \textcite{Szwarcberg2013}.} I consider this an important limitation. \todo{here why EUT has failed}
+
+% example of failure
+For instance, \textcite[14]{Carlin2015} states that ``our knowledge of who parties target remains incomplete.'' On the one hand, \textcite{Cox1986} and \textcite[7]{Zarazaga2015a} explain that since constituencies are well known for clientelist parties, they allocate resources to core voters. On the other hand, \textcite{Stokes2005} argues that since allocating resources to individuals who \emph{ex-ante} vote for the party is a waste, parties target swing voters. In turn, \textcite[1083]{Albertus2012a} explains that clientelist parties ``may simultaneously target both swing and core groups of voters.''
+
+
+
+
+
+
+
+\textcite{Nichter2008} used game-theoretical techniques to introduce the concept of ``turnout buying,'' suggesting that parties deliver private benefits even when monitoring is absent.
+
+\textcite{Gans-Morse2013} offer a formal model to explain that clientelist parties  offer a mix four clientelist strategies during elections (vote buying, turnout buying, abstention buying, and double persuasion)
 
 
 Since this framework ``was one of the first theories of decision making under risk'' \parencite[15]{McDermott1998}, EUT has dominated political science for the most part \parencite[289]{McDermott2004}, and the vote buying literature has been no exception. As its core, EUT considers that the value of an outcome is equal to its payoff times its probability, and that individuals choose the option with the highest weighted sum  (\cite[15]{McDermott1998}, \cite[173]{Levy1992a})
@@ -356,7 +370,7 @@ Vote-buying is an expensive strategy \textcite[35]{Zarazaga2014}
 ``It argues that parties enjoy wide discretion to target clientelistic payoffs to inexpensive voters in their strongholds, but that head-to-head competition compels them to bid for more expensive voters.'' Corstange2018
 
 
-``the analysis demonstrates that a party may simultaneously target both swing and core groups of voters with particularistic goods, the choice being determined by the distributive good.'' Albertus2012a
+
 
 Vote buying is an electoral technique which \todo{define}. 
 
@@ -370,8 +384,7 @@ Vote buying is an electoral technique which \todo{define}.
 % challenge: income
 % This agreement has recently been challenged \parencite[55]{Hicken2007}. \textcite{Gonzalez-Ocantos2012} and \textcite[]{Holland2015} found that income had little or no effect on vote-buying. For instance, \textcite[32]{Szwarcberg2013} ``challenges the assumption [that brokers] with access to material benefits will always distribute goods to low-income voters in exchange for electoral support.'' In fact, \textcite{Bahamonde2018} explains that non-poor individuals can be targeted when they are sufficiently noticeable, increasing compliance. He explains that wealthy houses in very poor neighborhoods in Brazil can be targeted too.
 
-% the lit has failed
-% While there are important agreements, the literature has failed to provide a convincing answer to the following question: \emph{Who do parties target? Swing or core voters? Why?} These questions have historically haunted the literature. In fact, \textcite[14]{Carlin2015} states that ``our knowledge of who parties target remains incomplete.'' On the one hand, \textcite{Cox1986} explain that since constituencies are well-known, they allocate resources to core voters. On the other hand, \textcite{Stokes2005} argues that since allocating resources to individuals who \emph{ex-ante}vote for the party is a waste, parties target swing voters (similarly, see \textcite{Zarazaga2015a,Gallego2014}). Yet, \textcite[p7]{Zarazaga2015a} asserts that both ``[q]ualitative and quantitative evidence mainly shows that party machines reward their own supporters,'' not swing voters.
+
 
 
 
