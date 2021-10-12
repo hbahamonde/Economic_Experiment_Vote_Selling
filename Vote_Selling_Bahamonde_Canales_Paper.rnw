@@ -330,6 +330,8 @@ options(scipen = 99999999999)
    
     % ``In between-subjects designs, different groups of subjects are randomly assigned to various experimental or control conditions.'' McDermott2002, 33
 
+    % ``this paper uses the `between-sample' (between individual) variation in loss aversion.'' Hwang2021, 11
+
     % ``All variations were made across subjects'', Tyszler2016, 371
 
     % ``Every individual is informed about his or her own preferences before each election. All this is common knowledge.'' Tyszler2016, 371
@@ -421,6 +423,11 @@ options(scipen = 99999999999)
 %% PROSPECT THEORY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% definition of risk
+
+    % ``In classical decision theory, risk is most commonly conceived as reflecting variation in the distribution of possible outcomes.'' March1987, 1404
+
+    % ``those most at risk will buy more insurance than the others (this is called `adverse selection')'' Arrow1996, 111
 
 %% best model 
     
@@ -483,7 +490,14 @@ options(scipen = 99999999999)
 
 % ``prospect theory sheds light on the interaction between the person and the situation in decision-making environments'' McDermott2004, 293
 
-%``prospect theory works at the individual level of analysis. But prospect theory is not a traditional personality theory; that is, an analyst need not know much about the individual character or history of a particular leader in order to explain or predict behavior. Rather, it is a theory concerned with the importance and impact of the environment on the person.'' McDermott2004, 293
+% personality
+
+    %``prospect theory works at the individual level of analysis. But prospect theory is not a traditional personality theory; that is, an analyst need not know much about the individual character or history of a particular leader in order to explain or predict behavior. Rather, it is a theory concerned with the importance and impact of the environment on the person.'' McDermott2004, 293
+
+    % ``Attitudes toward risk are usually pictured as stable properties of individuals, perhaps related to aspects of personality development or culture.'' March1987, 1406
+
+    % ``This means that the propensity to take risks is thus not a stable personality trait, with some individuals being prone to take risks while others always steer away from them'' Vis2011, 335
+
 
 % ``In theoretical terms, the S-shaped curve means that people tend to be risk averse in the domain of gains and risk seeking in the domain of losses; this is the crux of prospect theory. In short, prospect theory predicts that domain affects risk propensity. The third aspect of the value function is the asymmetric nature of the value curve; it is steeper in the domain of losses than in that of gains.'' McDermott1998, 29
 
@@ -561,9 +575,8 @@ options(scipen = 99999999999)
 
 % ``Individuals use a reference point, usually the status quo'' Vis2011, 335
 
-% ``This means that the propensity to take risks is thus not a stable personality trait, with some individuals being prone to take risks while others always steer away from them'' Vis2011, 335
 
-% Our experimental design minimizes hypothetical bias and cheap talk (Harrison2006) by compensating subjects with real money according to their decisions.
+Our experimental design minimizes hypothetical bias and cheap talk (Harrison2006) by compensating subjects with real money according to their decisions.
 
 
 % ``people's value structures are understood to shift over time.'' McDermott2004, 301
@@ -575,6 +588,8 @@ options(scipen = 99999999999)
 % ``In most rational choice models [...] preferences themselves are assumed not to shift. This is not the case in prospect theory, where a decision- maker's risk propensity is expected to shift in response to changes in the environment.'' McDermott2004, 292
 
 % ``[prospect theory] focuses attention on the context of a situation, which helps illuminate other important areas of research, including framing, uncertainty, accountability, escalation and commitment, sunk costs, and momentum effects.'' McDermott2004, 290
+
+% ``Empirical studies of risk taking [...] indicate that risk preference varies with context.'' March1987, 1412
 
 % ``The reference point is a critical concept in assessing gains and losses; thus, it is central to the notions of domain and risk.'' McDermott1998, 40
 
@@ -623,6 +638,10 @@ options(scipen = 99999999999)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Prospect theory and EU incosistencies
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``Both variance and semivariance ideas of risk, however, have been shown to be inconsistent with von Neumann axioms.'' March1987, 1405
+
+% ``It is not certain, however, that managers believe that risk and retum are positively correlated.'' March1987, 1405
 
 % ``the assumptions underlying the classical theory of risky choice are systematically violated in the manner predicted by prospect theory.'' Quattrone1988, 719
 
@@ -676,6 +695,8 @@ options(scipen = 99999999999)
     % ``expert subjects do not seem to be immune to framing'' Fatas2007, 191
 
     % ``results with inexperienced subjects support prospect theory much less than those of Quattrone1988.''
+
+    % ``[managers] believe that fewer risks should, and would, be taken when things are going well. They expect riskier choices to be made when an organization is `failing'.'' March1987, 1409
 
 % ``Technically, in order to explain a choice in terms of prospect theory one would have to identify how the actor (1) defines the reference point, (2) identifies the available options, and assesses the (3) value and (4) probability of each outcome. The analyst would then have to (5) modify the subjective probabilities by an appropriate probability-weighting function, and, finally, (6) show that the resulting of the preferred prospect or option exceeds the value of alternative.'' Levy1992, 296
 
