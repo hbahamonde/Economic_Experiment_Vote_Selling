@@ -306,6 +306,7 @@ While all these are important questions as they speak about party's decision-mak
 % reason for conflicting views
 This paper posits that these conflicting views about clientelist targeting originate in the wrong understanding about the party's decision-making process under risk implicit in the expected utility theory, as formalized by \textcite{Neumann:1947tc}.\footnote{For the purposes of this paper, I focus exclusively on quantitative research. Just to name a few important qualitative contributions who are not necessarily framed in the EUT paradigm, see \textcite{Scott1972}, \textcite{Auyero2000} and \textcite{Szwarcberg2013}.} \input{abstract.txt}\unskip
 
+\todo{this paper proceeds as follows}
 
 
 
