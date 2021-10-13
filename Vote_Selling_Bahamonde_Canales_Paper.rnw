@@ -287,46 +287,96 @@ options(scipen = 99999999999)
 
 
 % Vote buying is a risky strategy, why
-Vote buying is a very risky strategy.\footnote{Vote buying is defined as the distribution of rewards during elections in contingent exchange for vote choices \parencite[316]{Nichter2014}.} First, it is illegal. \textcite{Bahamonde2020a} explains that in the United States vote buying was illegal as early as the 1700s. Thus, buying votes requires extra care so to avoid reputational costs and legal issues. For instance, due to stigma associated with vote buying, clientelist political parties might risk losing electoral support from the wealthy \parencite{Weitz-shapiro} or from society in general \parencite{GonzalezOcantos2014}. Second, vote choices are secret, thus preventing parties from effective monitoring and enforcing \parencite{Nichter2008}. Even in developing contexts such as Africa \parencite{Wantchekon2003,Vicente2014} and Latin America \parencite{Hidalgo2012,Oliveros2019,Murillo2021a}, voters might accept the private benefit but then secretly vote for another party \parencite{Stokes2005,Nichter2008,Szwarcberg2013,GonzalezOcantos2014,Vicente2014}. In fact, since clientelism may also work with low levels of enforcement, monitoring and credible commitments \parencite{Hicken2020}, investments in clientelism are always done under contexts of very high risk.
+Vote buying is a very risky strategy.\footnote{Vote buying is defined as the distribution of rewards during elections in contingent exchange for vote choices \parencite[316]{Nichter2014}.} First, it is illegal. \textcite{Bahamonde2020a} explains that in the United States vote buying was illegal as early as the 1700s. Thus, buying votes requires extra care so to avoid reputational costs and legal issues. For instance, due to stigma associated with vote buying, clientelist political parties might risk losing electoral support from the wealthy \parencite{Weitz-shapiro} or from society in general \parencite{GonzalezOcantos2014}. Second, vote choices are secret, thus preventing parties from effective monitoring and enforcing \parencite{Nichter2008}. Even in developing contexts such as Africa \parencite{Wantchekon2003,Vicente2014} and Latin America \parencite{Hidalgo2012,Oliveros2019,Murillo2021a}, voters might accept the private benefit but then secretly vote for another party \parencite{Stokes2005,Nichter2008,Szwarcberg2013,GonzalezOcantos2014,Vicente2014}. In fact, since clientelism may also work even with low levels of enforcement and monitoring \parencite{Hicken2020}, investments in clientelism are always done in contexts of very high risk.
 
 % Yet, despite these risks, vote buying is very common.
-Yet, despite all these risks, political parties still buy votes in many parts of the world \parencite[F356]{Vicente2014}. For instance, in some countries vote buying is so deeply embedded in electoral politics that \textcite{Gonzalez-Ocantos2012} report that 24\% of registered voters in Nicaragua were offered a clientelist gift. 
+Yet, despite all these risks and uncertainties, political parties still buy votes in many parts of the world \parencite[F356]{Vicente2014}. For instance, in some countries vote buying is so deeply embedded in electoral politics that \textcite{Gonzalez-Ocantos2012} report that 24\% of registered voters in Nicaragua were offered a clientelist gift. If clientelism is risky \parencite[43]{Szwarcberg2013}, expensive \parencite[35]{Zarazaga2014} and uncertain \parencite{Rueda2016}, \emph{What is the best strategy for optimal clientelist targeting?} That is, \emph{Do political parties buy votes to reassure electoral loyalties (core voters) or to flip voters (swing voters)?} 
 
-% Why do parties keep buying votes?
-If clientelism is risky \parencite[43]{Szwarcberg2013}, expensive \parencite[35]{Zarazaga2014} and uncertain \parencite{Rueda2016}, \emph{Why do political parties buy votes?} The core of the answer rests on the idea that clientelist political anticipating electoral losses resort to vote buying \parencite{Diaz-Cayeros2008}. More importantly, given that resources aimed at buying votes are limited, \emph{Who do political parties target? Do political parties buy votes because they want to reassure electoral loyalties (core voters) or because they want to flip voters (swing voters)?} 
+% Why do parties keep buying votes? 
+% \emph{Why do political parties buy votes?} The core of the answer rests on the idea that clientelist political parties resort to vote buying when anticipating electoral losses \parencite{Diaz-Cayeros2008}. But then, considering that resources aimed at buying votes are scarce, 
+
 
 % Literature provides conflicting answers, with some recent helpful views
-While all these are important questions as they speak about the party's decision-making process in risky contexts, unfortunately, the literature provided conflicting answers. In fact, \textcite[14]{Carlin2015} states that ``our knowledge of who parties target remains incomplete.'' On the one hand, \textcite{Cox1986} and \textcite[7]{Zarazaga2015a} explain that since constituencies are well known to clientelist parties, they allocate resources to core voters. On the other hand, \textcite{Lindbeck1987,Dixit1996,Stokes2005} argue that since allocating resources to individuals who \emph{ex-ante} vote for the party is a waste, parties target swing voters. In order to contribute to solving this debate, \textcite[1083]{Albertus2012a} explains that clientelist parties ``may simultaneously target both swing and core groups of voters,'' while in a similar vein \textcite[148]{Diaz-Cayeros2008} explains that long-lasting hegemonic parties (such as the PRI in Mexico) seek ``to prevent core voters from defecting in the future,'' but newly elected incumbents in need of forging a new majority coalition targeted swing voters. 
+While all these are important questions as they speak about party's decision-making process in risky contexts, unfortunately, the literature provides conflicting answers. In fact, \textcite[14]{Carlin2015} state that ``our knowledge of who parties target remains incomplete.'' On the one hand, \textcite{Cox1986} and \textcite[7]{Zarazaga2015a} explain that since constituencies are well known to clientelist parties, they allocate resources to core voters. On the other hand, \textcite{Lindbeck1987,Dixit1996,Stokes2005} argue that since allocating resources to individuals who \emph{ex-ante} vote for the party is a waste, parties target swing voters. Others who have contributed to this debate explain that clientelist parties ``may simultaneously target both swing and core groups of voters'' \parencite[1083]{Albertus2012a} while in a similar vein \textcite[148]{Diaz-Cayeros2008} explains that long-lasting hegemonic parties (such as the PRI in Mexico) seek ``to prevent core voters from defecting in the future,'' but newly elected incumbents in need of forging a new majority coalition target swing voters. 
 
-% 
-This paper argues that these conflicting views are product of the theoretical framework leveraged as a starting point. In particular, most most quantitative researchers have framed their answers within the game-theoretical oriented expected utility theory (EUT) \parencite{Neumann:1947tc}.\footnote{For the purposes of this paper, I focus exclusively on quantitative research. Among others, very important qualitative papers are \textcite{Scott1972}, \textcite{Auyero2000} and \textcite{Szwarcberg2013}.} 
+% reason for conflicting views
+This paper argues that these conflicting views about clientelist targeting originate in the wrong understanding of decision-making under risk present in the game-theoretical oriented expected utility theory (EUT), as formalized by \textcite{Neumann:1947tc}, the single most considered theoretical framework in the clientelism literature.\footnote{For the purposes of this paper, I focus exclusively on quantitative research. Just to name a few important qualitative contributions who are not necessarily framed in the EUT paradigm, see \textcite{Scott1972}, \textcite{Auyero2000} and \textcite{Szwarcberg2013}.} 
 
-While there are multiple answers to this question, unfortunately, 
-
-
-
-For instance, 
-
-I consider this an important limitation. \todo{here why EUT has failed}
+% Formal models in clientelism
+Since this framework ``was one of the first theories of decision making under risk'' \parencite[15]{McDermott1998}, EUT has dominated political science for the most part \parencite[289]{McDermott2004}, and the vote buying literature has been no exception. Just to name a few examples, \textcite{Nichter2008} used game-theoretical techniques to introduce the concept of ``turnout buying,'' suggesting that parties deliver private benefits even when monitoring is absent. \textcite{Gans-Morse2013} offer a formal model to explain that clientelist parties  offer a mix four clientelist strategies during elections (vote buying, turnout buying, abstention buying, and double persuasion), while \textcite[428]{Rueda2014a} ``present[s] a model of vote buying in which a broker sustains bribed voters' compliance by conditioning future bribes.'' Similarly, \textcite[401]{Gallego2014} ``presents a game-theoretical model of political clientelism in which a candidate disciplines a majority of voters through the promise of a future flow of benefit.'' To be sure, the root of the problem is \emph{not} methodological (i.e., the use of game-theory), but conceptual, that is, the implicit decision-making under risk assumptions present in the expected utility theory.
 
 
+% EUT
+As its core, EUT considers that the value of an outcome is equal to its payoff times its probability, and that individuals choose the option with the highest weighted sum  (\cite[15]{McDermott1998}, \cite[173]{Levy1992a}, \cite[88]{Levy1997}). Importantly, it is commonly assumed that all political agents obey the maxims of consistency and coherence leading to the maximization of utility \parencite[719]{Quattrone1988}. Unfortunately, formal models contain descriptions of political behaviors that are ``unrealistic'' \parencite[1]{Aldrich2011}. For instance, EUT contends that voters see elections as investments \parencite{Downs:1957vg,Bassi2011}, a notion that also holds for clientelist parties risking elections in their decision about to ``invest'' in clientelism \textcite{Diaz-Cayeros2008}. 
 
+% EUT refuted in the lab
+Unfortunately, a large body of experimental research finds that the behavioral expectations under risk do not comport with EUT (\cite[25]{Battalio1990}, \cite[1]{Mercer2005}). In fact, Bernoulli---the forefather of EUT \parencite{Fishburn:1977tb}---``was the first to see [...] that people would not always bet solely on the basis of the expected value of a game'' \parencite[15-16]{McDermott1998}. Regarding risky choice, many find that ``the assumptions underlying the classical theory of risky choice are systematically violated'' \parencite[719]{Quattrone1988} and that both ``variance and semivariance ideas of risk [...] have been shown to be inconsistent with von Neumann axioms'' \parencite[1405]{March1987}. From an empirical perspective, there is strong consensus on the idea that ``expected utility theory [...] continually failed empirically'' \parencite[335]{Vis2011}, while others have explained that ``[e]xperiments [...] have revealed that actual behavior and decisions frequently deviate from the neoclassical predictions'' \parencite[167]{Fatas2007}, that in general ``people systematically violate the predictions of expected utility theory'' \parencite[173]{Barberis2013}. 
 
-is that parties anticipating electoral losses resort to alternative methods other than delivering policy packages \parencite{Kitschelt2000,Calvo2012a}. 
-
-Diaz-Cayeros2008
-
-``spending diversification is a rational response by incumbent
-parties to their chances of losing an election'' Diaz-Cayeros2008, 130
-
-``Parties seek to use public funds primarily to reward their own supporters. But when loyal core constituencies are not large enough to guarantee electoral victory, discretionary expenditure is allocated to risky voters.'' Diaz-Cayeros2008, 130
-
-% 1. electoral risks
-% 2. swing/core voters
+ 
 
 
 
 
+
+
+
+
+% ``It is ironic that just as rational choice has become the most influential paradigm in international relations and political science over the last decade, expected-utility theory has come under increasing attack by experimental and empirical evidence of systematic violations of the expected-utility principle in individual-choice behavior'' Levy1997, 87
+
+% ``Expected-utility theory has dominated the analysis of decision-making under risk, both as a normative model of rational choice and a descriptive model of how people actually behave. But not all of its predictors appear to be fully consistent with observed behavior'' Levy1992a, 173
+
+% ``Recent years have witnessed increasing dLssatisfaction with expected utility (EU) theory as a descriptive model of choice under uncertainty.'' Battalio1990, 25
+
+
+
+
+
+
+
+
+
+
+
+
+% EUT wrongly predicts stuff
+- Gonzalez-Ocantos2012, 205-206 40\% electoral support, 24\% client, elections ``were not heavily contested''
+
+% why it's wrong: wrong conception of risk
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% EXPECTED UTILITY THEORY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``The expected-utility principle asserts that individuals attempt to maximize expected utility in their choices between risky options: they weight the utilities of individual outcomes by their probabilities and choose the option with the highest weighted sum''  Levy1992a, 173
+
+% ``The expected-utility principle posits that actors try to maximize their expected by weighting the utility of each possible outcome of a given course of action by the probability of its occurrence, summing over all possible outcomes for each strategy, and selecting that strategy with the highest expected utility.'' Levy1997, 88
+
+
+
+
+% ``whether we are in a domain of gain or loss should not affect our attitude toward risk. Yet, we tend to take risky bets when we are in a domain of loss.'' Mercer2005, 1
+
+
+% ``Risk is an even more difficult variable to operationalize than domain. The central concern is fear of tautological definition; risk cannot be determined by domain, on the one hand, or by outcome, on the other.'' McDermott1998, 38
+
+
+%``Prospect theory may appear to be less precise than rational choice theories claim to be, but, in reality, prospect theory proves to be more analytically maleable. This is because, with rational choice theories, utilities are notoriously difficult to assess, and basic supporting axioms are frequently violated in individual behavior.'' McDermott1998, 36
+
+% ``In short, prospect theory predicts that individuals tend to be risk averse in a domain of gains, or when things are going well, and relatively risk seeking in a domain of losses, as when a leader is in the midst of a crisis.'' McDermott1998, 18
+
+
+% ``This model failed in predicting outcomes in many instances because it was obvious that the value that a particular payoff held for someone was not always directly related to its precise monetary worth.'' McDermott1998, 15
+
+
+
+
+
+
+
+
+
+% is that parties anticipating electoral losses resort to alternative methods other than delivering policy packages \parencite{Kitschelt2000,Calvo2012a}. 
 
 % Since clientelist political parties operate in uncertain scenarios, the literature has described a few decision-making strategies parties employ, particularly, under contexts of risk. Unfortunately, all of them provide---at best---very poor-quality information. \textcite[1147]{Dixit1996} explain that parties track ``constituents' likes and dislikes, \emph{compulsively} participating in a spectrum of events [such as] baptisms and bar mitzvahs.''\footnote{Emphasis is mine.} \textcite[317]{Stokes2005} argues that parties develop skills that allow them to infer whether clients voted for their party by \emph{looking at them in the eyes}. \textcite{Gay:1993aa,Gay1998} document similar findings for the Brazilian case. Overall, vote buying requires parties to sustain close relationships over time with their clients in a personal and individualized way \parencite{Auyero2000,Szwarcberg2013,Bahamonde2018}. Unfortunately, parties are left with no more than guesses about whether their clientelistic investments are effective or not. 
 
@@ -342,53 +392,6 @@ parties to their chances of losing an election'' Diaz-Cayeros2008, 130
 
 
 
-\textcite{Nichter2008} used game-theoretical techniques to introduce the concept of ``turnout buying,'' suggesting that parties deliver private benefits even when monitoring is absent.
-
-\textcite{Gans-Morse2013} offer a formal model to explain that clientelist parties  offer a mix four clientelist strategies during elections (vote buying, turnout buying, abstention buying, and double persuasion)
-
-
-Since this framework ``was one of the first theories of decision making under risk'' \parencite[15]{McDermott1998}, EUT has dominated political science for the most part \parencite[289]{McDermott2004}, and the vote buying literature has been no exception. As its core, EUT considers that the value of an outcome is equal to its payoff times its probability, and that individuals choose the option with the highest weighted sum  (\cite[15]{McDermott1998}, \cite[173]{Levy1992a})
-
-
-
-% ``The expected-utility principle asserts that individuals attempt to maximize expected utility in their choices between risky options: they weight the utilities of individual outcomes by their probabilities and choose the option with the highest weighted sum''  Levy1992a, 173
-
-% ``The expected-utility principle posits that actors try to maximize their expected by weighting the utility of each possible outcome of a given course of action by the probability of its occurrence, summing over all possible outcomes for each strategy, and selecting that strategy with the highest expected utility.'' Levy1997, 88
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% EXPECTED UTILITY THEORY
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% ``it is commonly assumed that most if not all economic and political agents obey the maxims of consistency and coherence leading to the maximization of utility.'' Quattrone1988, 719
-
-
-%% It doesn't work
-
-    % ``Many formal models contain descriptions of political perceptions, opinions, and behaviors that are unrealistic.'' Aldrich2011
-
-
-% ``Pure rational choice based theories contend that voters choose to achieve an electoral outcome closer to their preferences-that is, they have instrumental or investment motivations.'' Bassi2011, 558
-
-% ``whether we are in a domain of gain or loss should not affect our attitude toward risk. Yet, we tend to take risky bets when we are in a domain of loss.'' Mercer2005, 1
-
-
-% ``Risk is an even more difficult variable to operationalize than domain. The central concern is fear of tautological definition; risk cannot be determined by domain, on the one hand, or by outcome, on the other.'' McDermott1998, 38
-
-
-%``Prospect theory may appear to be less precise than rational choice theories claim to be, but, in reality, prospect theory proves to be more analytically maleable. This is because, with rational choice theories, utilities are notoriously difficult to assess, and basic supporting axioms are frequently violated in individual behavior.'' McDermott1998, 36
-
-% ``In short, prospect theory predicts that individuals tend to be risk averse in a domain of gains, or when things are going well, and relatively risk seeking in a domain of losses, as when a leader is in the midst of a crisis.'' McDermott1998, 18
-
-
-% ``This model failed in predicting outcomes in many instances because it was obvious that the value that a particular payoff held for someone was not always directly related to its precise monetary worth.'' McDermott1998, 15
-
-% ``Bernoulli was the ‹rst to see this contradiction [showing] that people would not always bet solely on the basis of the expected value of a game.'' McDermott1998, 15-16
 
 
 
@@ -398,12 +401,7 @@ Since this framework ``was one of the first theories of decision making under ri
 
 
 
-Gonzalez-Ocantos2015 ``legitimacy buying''
-Gallego2014 ``Self-Enforcing Clientelism''
 
-Vote-buying is an expensive strategy \textcite[35]{Zarazaga2014}
-
-``We argue that this relationship is driven by the fact that politicians outsource some of their vote-buying efforts to interest associations'' Holland2015
 
 % my research finds different results
 ``It argues that parties enjoy wide discretion to target clientelistic payoffs to inexpensive voters in their strongholds, but that head-to-head competition compels them to bid for more expensive voters.'' Corstange2018
@@ -575,8 +573,6 @@ Vote buying is an electoral technique which \todo{define}.
     % party platform change
     % ``due to loss aversion evoked by the expectation of losing office, government parties, on average, change their platform more than opposition parties do.'' Schumacher2015, 1051
 
-% HERE Vieider2019
-
 
 % ``prospect theory is based on two central notions: reference dependence, which is the notion that the utility of outcomes is defined over changes in outcomes from a reference point instead of over absolute outcome levels and likelihood dependence, which is the notion that people distort probabilities non-linearly when making a decision.'' Vieider2019, 334
 
@@ -739,30 +735,22 @@ Vote buying is an electoral technique which \todo{define}.
 %% Prospect theory and EU incosistencies
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% ``Both variance and semivariance ideas of risk, however, have been shown to be inconsistent with von Neumann axioms.'' March1987, 1405
 
 % ``It is not certain, however, that managers believe that risk and retum are positively correlated.'' March1987, 1405
 
-% ``the assumptions underlying the classical theory of risky choice are systematically violated in the manner predicted by prospect theory.'' Quattrone1988, 719
 
-% ``people systematically violate the predictions of expected utility theory, economists' workhorse model of decision making under risk.'' Barberis2013, 173
 
-% ``expected utility theory since the latter theory’s predictions continually failed empirically'' Vis2011, 335
 
-% ``A decade of laboratory experiments revealed that people systematically violate the axioms of subjective expected utility theory.'' Mercer2005, 1
 
 % ``Prospect theory [...] provides an alternative model to rational choice and other theories, one that is founded on empirical data.'' McDermott2004, 290
 
 % ``argue here that the central task of asset pricing is to examine how expected returns are related to risk and to investor misvaluation.'' Hirshleifer2001, 1534
 
-% ``It is ironic that just as rational choice has become the most influential paradigm in international relations and political science over the last decade, expected-utility theory has come under increasing attack by experimental and empirical evidence of systematic violations of the expected-utility principle in individual-choice behavior'' Levy1997, 87
 
-% ``Expected-utility theory has dominated the analysis of decision-making under risk, both as a normative model of rational choice and a descriptive model of how people actually behave. But not all of its predictors appear to be fully consistent with observed behavior'' Levy1992a, 173
 
 
 % ``No single alternative consistently organizes choices. Among the more important inconsistencies, we identify conditions generating systematic fanning in of indifference curves in the unit probability triangle, and find risk-loving over a number of gambles with all positive payoffs, in cases where prospect theory predicts risk aversion.'' Battalio1990, 25
 
-% ``Recent years have witnessed increasing dLssatisfaction with expected utility (EU) theory as a descriptive model of choice under uncertainty.'' Battalio1990, 25
 
 % ``Our overall conclusion is that none of the alternatives to expected utility theory considered here consistently organize the data, so we have a long way to go before having a complete descriptive model of choice under uncertainty.'' Battalio1990, 46
 
@@ -832,14 +820,13 @@ Vote buying is an electoral technique which \todo{define}.
 
 % ``According to prospect theory, we make a decision dependent on our perception of whether the decision involves making a gain or a loss. This is at odds with the consistency or invariance assumptions of rational theory.'' Fatas2007, 168
 
-% ``Experiments and empirical observations have revealed that actual behavior and decisions frequently deviate from the neoclassical predictions.'' Fatas2007, 167
+
 
 % ``This suggests that it is not enough for the analyst to demonstrate that the observed behavior is consistent with prospect theory. It is also necessary to demonstrate that prospect theory provides a \emph{better} explanation than does expected-utility theory.''\footnote{Italics in original.} Levy1992, 297
 
 
 % ``Thus expected-utility theory is more parsimonious than prospect theory.'' Levy1992, 296
 
-% ``Experiments have identified a number of well-known violations of expected utility theory'' Battalio1990, 25
 
 % ``These alternatives to EU theory often hold quite different views of the behavioral processes underlying choice under uncertainty, and make a number of new predictions that have yet to be subject to thorough experimental investigation.'' Battalio1990, 25
 
