@@ -281,7 +281,22 @@ If clientelism is risky \parencite[43]{Szwarcberg2013}, expensive \parencite[35]
 
 \input{abstract.txt}\unskip
 
-Importantly, in this paper we follow \textcite[297]{Levy1992} as we carefully try to not only show that the observed behavior of political agents is consistent with prospect theory but that prospect theory provides a better explanation of vote buying than do clientelism descriptions based on expected-utility theory.
+% contribution
+We contribute to the literature in a number of ways. First, prospect theory has not received much attention among political economists and comparative politics scholars \parencite[338-339]{Vis2011}. In fact, \textcite[2]{Mercer2005} states that ``political economists have shown no interest in prospect theory.'' We believe this is a serious issue that should be corrected. We intend to bridge this gap by offering an alternative theory of the political economy of vote buying but taking prospect theory as a starting point \parencite{Kahneman1979}. Second, in this paper we follow \textcite[297]{Levy1992} as we carefully try to not only show that the observed behavior of political agents is consistent with prospect theory but that prospect theory provides a better explanation of vote buying than do traditional descriptions of vote buying based on expected-utility theory. Third, and from a methodological standpoint, we follow \parencite{Aldrich2011,McDermott2002} in that there is a need of implementing experiments aimed to test formal models, and such, we believe that ``[p]olitical scientists might benefit from this process as well in order to both establish empirical validation of formal models and speed the cumulation of knowledge'' \parencite[45]{McDermott2002}. Our paper is particularly relevant to the the study of democracy and development where experiments have been described as ``a promising research tool that have the potential to make substantial contributions'' \parencite{DeLaO2011}.
+
+
+% % ``Prospect theory has received little attention in the fields of American politics and comparative politics, with a few exceptions (e.g., Hansen 1985, Pierson 1994, Weyland2002). Most surprising, political economists have shown no interest in prospect theory.'' Mercer2005, 2
+
+% ``Comparative Politics (CP) have been particularly slow on incorporating prospect theory in their work'' Vis2011, 338-339
+
+% ``experiments are a promising research tool that have the potential to make substantial contributions to the study of democracy and development.'' DeLaO2011
+
+% ``formal models can help experimentalists determine which settings are most critical to a particular causal hypothesis and experimenters can inform formal modelers by evaluating their theoretical predictions' performance in relevant environs.'' Aldrich2011
+
+% ``Formal models present hypotheses, which are then tested under experimental conditions. The experimental findings are used to refine and develop hypotheses to produce new theoretical models and predictions, which can then be experimentally tested in turn. Political scientists might benefit from this process as well in order to both establish empirical validation of formal models and speed the cumulation of knowledge'' McDermott2002, 45
+
+% ``research agendas that integrate experimental and formal modeling pursuits provide a portal for more effective interdisciplinary work and can improve the applicability and relevance of formal models to a wide range of important substantive questions in political science.'' Aldrich2011
+
 
 \todo{add this paper proceeds as follows}
 
@@ -299,7 +314,7 @@ As its core, the expected utility theory considers that the value of an outcome 
 Since the expected utility theory (EUT) ``was one of the first theories of decision making under risk'' \parencite[15]{McDermott1998}, EUT has dominated political science for the most part (\cite[289]{McDermott2004}, \cite[87]{Levy1997}), and the vote buying literature has been no exception. Just to name a few examples, \textcite{Nichter2008} used game-theoretical techniques to introduce the concept of ``turnout buying,'' suggesting that parties deliver private benefits even when monitoring is absent. \textcite{Gans-Morse2013} offer a formal model to explain that clientelist parties  offer a mix four clientelist strategies during elections (vote buying, turnout buying, abstention buying, and double persuasion), while \textcite[428]{Rueda2014a} ``present[s] a model of vote buying in which a broker sustains bribed voters' compliance by conditioning future bribes.'' Similarly, \textcite[401]{Gallego2014} ``presents a game-theoretical model of political clientelism in which a candidate disciplines a majority of voters through the promise of a future flow of benefit.'' 
 
 % Formal models in clientelism: example and clarification
-We contest this traditional approach focused on absolute gains by shifting the attention to losses and context-dependent decision-making processes. It actually seems rather interesting that most vote-buying theories are framed within the EUT without even declaring it, as it if were the default or go-to framework. It needs to be clarified that the root of the problem is \emph{not} methodological (i.e., the use of game theory), but analytical, that is, the assumed decision-making process under risk embedded in the EUT. For instance, electoral explanations based on the EUT contend that voters see elections as ``investments'' \parencite{Downs:1957vg,Bassi2011}, a notion that also holds for clientelist political parties under risk \parencite{Diaz-Cayeros2008}. In this paper we challenge this approach by offering an alternative theory of the political economy of vote buying, but taking prospect theory as a starting point \parencite{Kahneman1979}.
+We contest this traditional approach focused on absolute gains by shifting the attention to losses and context-dependent decision-making processes. It actually seems rather interesting that most vote-buying theories are framed within the EUT without even declaring it, as it if were the default or go-to framework. It needs to be clarified that the root of the problem is \emph{not} methodological (i.e., the use of game theory), but analytical, that is, the assumed decision-making process under risk embedded in the EUT. For instance, electoral explanations based on the EUT contend that voters see elections as ``investments'' \parencite{Downs:1957vg,Bassi2011}, a notion that also holds for clientelist political parties under risk \parencite{Diaz-Cayeros2008}. 
 
 % dont work empirically
 We believe that this shift in focus is a valuable exercise because theories based on the EUT contain descriptions of political behaviors that are ``unrealistic'' \parencite[124]{Aldrich2011}. In effect, a large body of experimental research finds that the behavioral expectations under risk do not comport with the EUT (\cite[25]{Battalio1990}, \cite[1]{Mercer2005}). As a matter of fact, Bernoulli---the forefather of the EUT \parencite{Fishburn:1977tb}---``was the first to see [...] that people would not always bet solely on the basis of the expected value of a game'' \parencite[15-16]{McDermott1998}. From a decision-making standpoint, many find that ``the assumptions underlying the classical theory of risky choice are systematically violated'' \parencite[719]{Quattrone1988} and that both ``variance and semivariance ideas of risk [...] have been shown to be inconsistent with von Neumann axioms'' \parencite[1405]{March1987}. Moreover, from an empirical perspective, there seems to be a strong consensus on the idea that ``expected utility theory [...] continually failed empirically'' \parencite[335]{Vis2011}, while others have explained that ``[e]xperiments [...] have revealed that actual behavior and decisions frequently deviate from the neoclassical predictions'' \parencite[167]{Fatas2007}. In sum, the empirical literature consistently finds that ``people systematically violate the predictions of expected utility theory'' \parencite[173]{Barberis2013}. In fact, \textcite[87]{Levy1997} finds ``ironic'' that just as rational choice has become the most influential paradigm in political science, EUT has come under heavy attacks by experimental \emph{and} empirical evidence.
@@ -331,8 +346,13 @@ In sum, the way in which the literature assesses clientelist targeting and polit
 % the best theory was developed
 Prospect theory ``is a theory of decision making under conditions of risk'' \parencite[15]{McDermott1998}, and was developed by \textcite{Kahneman1979} as a way ``to incorporate the observed violations of expected utility into an alternative theory of risky choice'' \parencite[179]{Levy1992a}, one that is based on empirical data \parencite[290]{McDermott2004}. Since its development, prospect theory has emerged as a ``leading alternative'' \parencite[171]{Levy1992a}, ``best available description'' \parencite[173]{Barberis2013} and ``empirically correct theory'' \parencite[334]{Vis2011} about how people evaluate risk \parencite[5]{Ackert2006}, particularly ``[excelling] in providing a model that offers descriptively accurate formulations of the human decision-making process'' \parencite[292]{McDermott2004}.
 
+
+% influence of the theory--where else this theory has been applied.
+The theory has been most influential among IR scholars but just ``limited'' influence in political science in general \parencite[2]{Mercer2005}. Still, in comparative politics, there are several contributions that take prospect theory as a framework. For instance, \textcite{Weyland2002} studies levels of loss aversion of dictatorships when they perform radical economic reforms. \textcite{Vis2009,Vis:2010tq} studies welfare state reform showing that political gains are the necessary condition for not-unpopular reform, while for unpopular reform are deteriorating socio-economic situation, or political losses. In turn, \textcite{Steinacker2006} studies issue salience, \textcite{Schumacher2015} studies party platform change. 
+
+
 % main principles and contrasts with EUT
-The theory is based on two main empirically-derived concepts \parencite[334]{Vieider2019}. First, utilities are defined over changes in outcomes respect to a reference point (``reference dependence''). Note the sharp contrast with EUT where the focus is on absolute levels of wealth \parencite[5-6]{Ackert2006}. Second, individuals distort probabilities in an asymmetrical non-linear S-shaped way when making risky decisions (``likelihood dependence''). Note also another important difference with EUT where agents are assumed to treat probabilities linearly, ``even with training and effort'' \parencite[293]{McDermott2004}. As \textcite[18]{McDermott1998} clearly puts it, ``prospect theory predicts that individuals tend to be risk averse in a domain of gains [i.e., when things are going well], and relatively risk seeking in a domain of losses [i.e., in the midst of a crisis].'' This distinction also separates prospect theory from EUT where the latter assumes that ``whether we are in a domain of gain or loss should not affect our attitude toward risk'' \parencite[1]{Mercer2005}.
+Since others have already provided very good reviews of prospect theory \parencite{Levy1992a,Levy1992,Levy1997,McDermott1998,McDermott2004,Mercer2005,Mercer2005,Vis2011,Barberis2013,Linde2017,Vieider2019}, we will limit this section to describe its main components. The theory is based on two main empirically-derived concepts \parencite[334]{Vieider2019}. First, utilities are defined over changes in outcomes respect to a reference point (``reference dependence''). Note the sharp contrast with EUT where the focus is on absolute levels of wealth \parencite[5-6]{Ackert2006}. Second, individuals distort probabilities in an asymmetrical non-linear S-shaped way when making risky decisions (``likelihood dependence''). Note also another important difference with EUT where agents are assumed to treat probabilities linearly, ``even with training and effort'' \parencite[293]{McDermott2004}. As \textcite[18]{McDermott1998} clearly puts it, ``prospect theory predicts that individuals tend to be risk averse in a domain of gains [i.e., when things are going well], and relatively risk seeking in a domain of losses [i.e., in the midst of a crisis].'' This distinction also separates prospect theory from EUT where the latter assumes that ``whether we are in a domain of gain or loss should not affect our attitude toward risk'' \parencite[1]{Mercer2005}.
 
 
 % central idea in prospect theory (Reference dependence)
@@ -345,156 +365,29 @@ Likelihood dependence is another central idea in prospect theory. Prospect theor
 Importantly, the likelihood of the value curve is non-linear. From an analytical point of view, we consider this is \emph{the} feature that out trumps the normative expectations contained in EUT. Formally, the asymmetrical curvature of the likelihood explains why individuals have risk-averse behaviors in choices among gains but risk-acceptant behaviors in choices among losses \parencite[87]{Levy1997}. In the domain of gains, the concavity of the value function encourages risk aversion by undervaluing the probability of success of a gamble relative to a certain outcome (underweighting). However, in the domain of losses, the convexity of the value function encourages risk-seeking behaviors by exaggerating the probabilities of rare but catastrophic losses (overweighting) \parencite[183-184]{Levy1992a}. Typical examples are individuals who tend to underweight likely events such as heart attacks (not changing diet) but tend to overweight rare events such as a plane crash (praying before landing). Unlike theories based on EUT, \textcite{Kahneman:2012tc} explains that ``Underweighting of moderate and high probabilities relative to sure things contributes to risk aversion [while] very low probabilities are either overweighted quite grossly or neglected altogether'' (see also \cite[32]{McDermott1998})\todo{add pages}. % \textcite[32]{McDermott1998} explains that ``prospect theory accounts for these discrepancies by noting the extreme (over)weight and attention that individuals give to small probabilities.'' 
 
 % to conclude PT section: most important empirical finding in PT
-In prospect theory, both reference and likelihood dependence lead to a more accurate description of decision-making under risk. In fact, experimental evidence consistently finds evidence about decision-makers distorting probabilities in a non-linear way \parencite[87]{Levy1997}. The evidence suggests that in the domain of losses, risk-seeking decision-makers take \emph{disproportionate risks} to avoid certain losses, while in the domain of gains, risk-averted decision-makers are \emph{excessively eager} to secure gains \parencite[297, 299-300]{Levy1992}. This is explained because decision-makers ``have difficulty with probability at extreme ranges'' \parencite[30]{McDermott1998}. To sum, ``losses are harder for individuals to accept [hence, when] things are bad or likely to get worse, [decision-makers] are more likely to make risky choices to recover their losses'' \parencite[294]{McDermott2004}. 
-
+In prospect theory, both reference and likelihood dependence lead to a more accurate description of decision-making under risk. In fact, experimental evidence consistently finds evidence about decision-makers distorting probabilities in a non-linear way \parencite[87]{Levy1997}. In particular, the evidence suggests that in the domain of losses, risk-seeking decision-makers take \emph{disproportionate risks} to avoid certain losses, while in the domain of gains, risk-averted decision-makers are \emph{excessively eager} to secure gains \parencite[297, 299-300]{Levy1992}. This is explained because decision-makers ``have difficulty with probability at extreme ranges'' \parencite[30]{McDermott1998}. Finally, it is important to note while attitudes toward risk are usually portrait as aspects of personality \parencite[1406]{March1987}, prospect theory is \emph{not} a personality theory, that is, it is not necessary to know about the individual personality traits of decision-makers in order to predict behavior (\cite[293]{McDermott2004}, \cite[335]{Vis2011})
+ 
 % implications for vote buying
 The implications for vote buying are considerable. In sharp contrast to traditional vote-buying theories based on EUT, prospect theory predicts that clientelist parties should buy votes when are probable winners or have experienced important losses in the past, irregardless of whether the voter is a core or a swing voter. 
 
+% 1 why Clientelist parties should buy votes when they are probable winners
+Clientelist parties should buy more votes when they are probable winners because decision-makers will exaggerate the small probability of losing the election. We expect vote buying to be higher in favorable electoral scenarios by making vote-buying an attractive strategy due to the absolute aversion and intolerance to the (small) probability of losing the election. The mechanics of such decision-making process should then make clear that there is no ``wasting'' when buying votes in the domain of gains. This is consistent with prospect theory. Empirical studies confirm that ``actors perceive themselves to be in the domain of losses more often than we would normally expect'' (\cite[291]{Levy1992}; see also \parencite{Lau1985}), even if they are not. This implies that loss aversion explains why decision-makers are more concerned to prevent a decline than to increase it \parencite[285]{Levy1992} (see also \cite[89]{Levy1997}). To sum, when things are going well electorally, clientelist political parties will tend to buy more votes because ``future losses hurt more than future gains gratify'' \parencite[285]{Levy1992}.
+
+
+% 2 why Clientelist parties should buy votes when they have experienced important losses in the past
+Clientelist parties should buy more votes when they have experienced important losses in the past, making vote buying an attractive strategy by altering the decision-makers' reference point. Altering the reference point downwards increases (1) risk-seeking behaviors and (2) the tendency of decision-makers to bet on long shots \parencite[286-287]{Kahneman1979}, that is, the tendency of clientelist political parties of incurring in more risks (i.e., vote buying) when things are not going well, and the tendency to aspire winning hard elections even when having a history of past electoral losses. This behavior has been confirmed by others, that is, the tendency of  individuals in the domain of losses to ``break-even'' \parencite{Thaler1990}. This implies that political losers should buy more votes not necessarily because they want to win the next election but because they will try to compensate for past losses. \parencite[297]{Levy1992} notes that the elasticity of the risk-seeking behavior should be quite high because ``the magnitudes of the losses need not be that large in order to induce risk-seeking behavior, even small losses should induce the risk-seeking behavior.'' Consequently, we expect a steeper predicted effect in the data analyses. To sum, ``losses are harder for individuals to accept [hence, when] things are bad or likely to get worse, [decision-makers] are more likely to make risky choices to recover their losses'' \parencite[294]{McDermott2004}. 
 
    
-% HERE
+% Importantly, it should not matter whether the voter is a swing or a core voter. 
+% Importantly, it should not matter whether the voter is a swing or a core voter. Besides risking electoral support from the wealthy \parencite{Weitz-shapiro} or from society in general \parencite{GonzalezOcantos2014}, when clientelist political parties are probable winners, they incur in the additional risk of buying votes from unlikely voters, irregardless of where that voter is in the swing-core continuum. Given the impossibility of accurate monitoring \parencite{Nichter2008,Hicken2020}, in risky contexts parties avoid the (small) probability of losing the election by diversifying their electoral portfolio. 
 
 
-% decision-making process
 
-    
 
-    
-    
 
 
-  
 
 
-       
-   
-    
-
-    %% Why parties buy votes when it's almost certain that they will win the election.
-        
-    
-
-        % ``Loss aversion also helps to explain why states are more concerned to prevent a decline in their reputation or credibility than to increase it by a comparable amount'' Levy1992, 285
-
-        % ``future losses hurt more than future gains gratify'' Levy1992, 285
-
-        % ``One implication of loss aversion is that people tend to value what they have more than comparable things they do not have, and that the disutility of relinquishing a good is greater than the utility of acquiring it.'' Levy1997, 89
-
-        % ``Prospect theory implies that the magnitudes of the losses need not be that large in order to induce risk-seeking behavior [...] even small losses appear to have significant consequences'' Levy1992, 297
-
-
-        % ``We should say, for example, not that an actor pursued a risky policy because she was in the domain of losses, but that because of risk-seeking with respect to loses she adopted a more risky alternative than predicted by a standard expected-value calculations.'' Levy1992, 298
-
-        % ``the very fact of a loss is often more important than the magnitude of the loss and that large losses may not be that much worse than smaller losses'' Levy1992, 287
-
-
-        % ``Prospect theory suggests another hypothesis as well: actors perceive themselves to be in the domain of losses more often than we would normally expect'' Levy1992 291  (HERE CITE LAU)
-
-
-
-
-
-
-
-
-\textcite{Levy1992a,Levy1992,Levy1997,McDermott1998,McDermott2004,Mercer2005,Mercer2005,Vis2011,Barberis2013,Linde2017,Vieider2019} provide an excellent overview of prospect theory.
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% PROSPECT THEORY
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% advances in economics 
-       
-        
-        % Koszegi2007: focuses on ``delayed consequences, to study preferences over monetary risk.''
-
-        % ``First---and second---generation prospect theory have a common limitation: the reference points from which prospects are evaluated are assumed to be certainties [so they extend PT]  by allowing reference points to be uncertain.'' Schmidt2008
-
-%%% Influence in polisci
-
-    % ``prospect theory's limited influence in political science'' Mercer2005, 2
-
-    % ``Prospect theory is influential in political science only among international relations (IR) theorists.'' Mercer2005, 2
-
-    % ``Although international relations theorists who study security have used prospect theory extensively, Americanists, comparativists, and political economists have shown little interest in it.'' Mercer2005, 1
-
-
-
-%%% In Comparative Politics:
-
-    % ``the bias toward experiments focused primarily on American topics is reflected in the predominance of voting behavior as a primary concern of experimental work.'' McDermott2002, 44
-
-    % % ``Prospect theory has received little attention in the fields of American politics and comparative politics, with a few exceptions (e.g., Hansen 1985, Pierson 1994, Weyland2002). Most surprising, political economists have shown no interest in prospect theory.'' Mercer2005, 2
-
-
-    % ``Weyland extends loss aversion to comparative politics. He challenges the view that dictatorships engage in radical economic reform more easily than democracies by emphasizing the importance of loss aversion for both leaders and citizens in Latin American democracies.'' Mercer2005, 12
-
-    % Fanis2004  
-    % ``Expected utility theory explains collective action as an attempt by individuals to maximize their gains. In contrast, my application of prospect theory to collective action suggests that people are motivated to participate in collective action by a fear of loss.'' Fanis2004, 363
-
-    % ``Comparative Politics (CP) have been particularly slow on incorporating prospect theory in their work'' Vis2011, 338-339
-
-    % ``experiments are a promising research tool that have the potential to make substantial contributions to the study of democracy and development.'' DeLaO2011
-
-    % issue salience
-    % ``Depending on the initial baseline’s position relative to the optimal outcome, that same outcome could be reached by either a negative externality change (if the base is lower than the optimal outcome) or a positive externality change (if the base is higher than the optimal outcome).'' Steinacker2006, 474
-
-    % welfare state
-    % Vis2009,Vis:2010tq ``it shows that an improving political position (a gain) is the necessary condition for not-unpopular reform while for unpopular reform it is a deteriorating socio-economic situation (a loss)'' (Vis2009, 395)
-
-    % party platform change
-    % ``due to loss aversion evoked by the expectation of losing office, government parties, on average, change their platform more than opposition parties do.'' Schumacher2015, 1051
-
-
-
-% personality
-
-    %``prospect theory works at the individual level of analysis. But prospect theory is not a traditional personality theory; that is, an analyst need not know much about the individual character or history of a particular leader in order to explain or predict behavior. Rather, it is a theory concerned with the importance and impact of the environment on the person.'' McDermott2004, 293
-
-    % ``Attitudes toward risk are usually pictured as stable properties of individuals, perhaps related to aspects of personality development or culture.'' March1987, 1406
-
-    % ``This means that the propensity to take risks is thus not a stable personality trait, with some individuals being prone to take risks while others always steer away from them'' Vis2011, 335
-
-   
-
-
-
-%%%% "instant endowment effect"
-
-    % ``after a series of gains an individual will treat the possibility of a subsequent setback as a loss rather than as a foregone gain, overweight it, and engage in risk-seeking behavior to maintain her cumulative gains against that loss'' Levy1997, 91
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Prospect theory and EU incosistencies
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% ``It is not certain, however, that managers believe that risk and retum are positively correlated.'' March1987, 1405
-
-% ``argue here that the central task of asset pricing is to examine how expected returns are related to risk and to investor misvaluation.'' Hirshleifer2001, 1534
-
-% ``No single alternative consistently organizes choices. Among the more important inconsistencies, we identify conditions generating systematic fanning in of indifference curves in the unit probability triangle, and find risk-loving over a number of gambles with all positive payoffs, in cases where prospect theory predicts risk aversion.'' Battalio1990, 25
-
-
-% ``Our overall conclusion is that none of the alternatives to expected utility theory considered here consistently organize the data, so we have a long way to go before having a complete descriptive model of choice under uncertainty.'' Battalio1990, 46
-
-
-
-% ``there are a number of conceptual and methodological problems which must be overcome before hypotheses based on prospect theory can be constructed and tested against the empirical evidence'' Levy1992, 283-284
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% PROBLEMS OF PROSPECT THEORY
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% ``Risk is an even more difficult variable to operationalize than domain. The central concern is fear of tautological definition; risk cannot be determined by domain, on the one hand, or by outcome, on the other.'' McDermott1998, 38
-
-%``Prospect theory may appear to be less precise than rational choice theories claim to be, but, in reality, prospect theory proves to be more analytically maleable. This is because, with rational choice theories, utilities are notoriously difficult to assess, and basic supporting axioms are frequently violated in individual behavior.'' McDermott1998, 36
-
-% ``This model failed in predicting outcomes in many instances because it was obvious that the value that a particular payoff held for someone was not always directly related to its precise monetary worth.'' McDermott1998, 15
 
 
 
@@ -989,3 +882,97 @@ count <- comma(as.numeric(count)) # add comma
 
 
 % ``Experimental evidence suggests that people tend to evaluate choices with respect to a reference point, overweight losses relative to comparable gains, engage in risk-averse behavior in choices among gains but risk-acceptant behavior in choices among losses, and respond to probabilities in a nonlinear manner.'' Levy1997, 87
+
+
+% ``We should say, for example, not that an actor pursued a risky policy because she was in the domain of losses, but that because of risk-seeking with respect to loses she adopted a more risky alternative than predicted by a standard expected-value calculations.'' Levy1992, 298
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Prospect theory and EU incosistencies
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% ``It is not certain, however, that managers believe that risk and retum are positively correlated.'' March1987, 1405
+
+% ``argue here that the central task of asset pricing is to examine how expected returns are related to risk and to investor misvaluation.'' Hirshleifer2001, 1534
+
+% ``No single alternative consistently organizes choices. Among the more important inconsistencies, we identify conditions generating systematic fanning in of indifference curves in the unit probability triangle, and find risk-loving over a number of gambles with all positive payoffs, in cases where prospect theory predicts risk aversion.'' Battalio1990, 25
+
+
+% ``Our overall conclusion is that none of the alternatives to expected utility theory considered here consistently organize the data, so we have a long way to go before having a complete descriptive model of choice under uncertainty.'' Battalio1990, 46
+
+
+
+% ``there are a number of conceptual and methodological problems which must be overcome before hypotheses based on prospect theory can be constructed and tested against the empirical evidence'' Levy1992, 283-284
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PROBLEMS OF PROSPECT THEORY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``Risk is an even more difficult variable to operationalize than domain. The central concern is fear of tautological definition; risk cannot be determined by domain, on the one hand, or by outcome, on the other.'' McDermott1998, 38
+
+%``Prospect theory may appear to be less precise than rational choice theories claim to be, but, in reality, prospect theory proves to be more analytically maleable. This is because, with rational choice theories, utilities are notoriously difficult to assess, and basic supporting axioms are frequently violated in individual behavior.'' McDermott1998, 36
+
+% ``This model failed in predicting outcomes in many instances because it was obvious that the value that a particular payoff held for someone was not always directly related to its precise monetary worth.'' McDermott1998, 15
+
+
+% ``Prospect theory implies that the magnitudes of the losses need not be that large in order to induce risk-seeking behavior [...] even small losses appear to have significant consequences'' Levy1992, 297
+
+% ``Prospect theory suggests another hypothesis as well: actors perceive themselves to be in the domain of losses more often than we would normally expect'' Levy1992 291  (HERE CITE LAU)
+
+ % ``Loss aversion also helps to explain why states are more concerned to prevent a decline in their reputation or credibility than to increase it by a comparable amount'' Levy1992, 285
+
+% ``One implication of loss aversion is that people tend to value what they have more than comparable things they do not have, and that the disutility of relinquishing a good is greater than the utility of acquiring it.'' Levy1997, 89
+
+
+% ``the very fact of a loss is often more important than the magnitude of the loss and that large losses may not be that much worse than smaller losses'' Levy1992, 287
+
+% ``A change of reference point alters the preference order for prospects. In particular, the present theory implies that a negative translation of a choice problem, such as arises from imcomplete adaptation to recent losses, increases risk seeking in some situations [...] the tendency to bet on long shots increases in the course of the betting day provides some support for the hypothesis that a failure to adapt to losses or to attain an expected gain induces risk seeking'' \parencite[286-287]{Kahneman1979}
+
+ % As \parencite[297]{Levy1992} explains, the magnitudes of the losses need not be that large in order to induce risk-seeking behavior, even small losses should induce the risk-seeking behavior. 
+
+% ``prospect theory's limited influence in political science'' Mercer2005, 2
+
+% ``Prospect theory is influential in political science only among international relations (IR) theorists.'' Mercer2005, 2
+
+% ``Although international relations theorists who study security have used prospect theory extensively, Americanists, comparativists, and political economists have shown little interest in it.'' Mercer2005, 1
+
+% Fanis2004  
+% ``Expected utility theory explains collective action as an attempt by individuals to maximize their gains. In contrast, my application of prospect theory to collective action suggests that people are motivated to participate in collective action by a fear of loss.'' Fanis2004, 363
+
+% ``Weyland extends loss aversion to comparative politics. He challenges the view that dictatorships engage in radical economic reform more easily than democracies by emphasizing the importance of loss aversion for both leaders and citizens in Latin American democracies.'' Mercer2005, 12
+
+% welfare state
+    % Vis2009,Vis:2010tq ``it shows that an improving political position (a gain) is the necessary condition for not-unpopular reform while for unpopular reform it is a deteriorating socio-economic situation (a loss)'' (Vis2009, 395)
+
+% issue salience
+% ``Depending on the initial baseline’s position relative to the optimal outcome, that same outcome could be reached by either a negative externality change (if the base is lower than the optimal outcome) or a positive externality change (if the base is higher than the optimal outcome).'' Steinacker2006, 474
+
+
+
+% party platform change
+% ``due to loss aversion evoked by the expectation of losing office, government parties, on average, change their platform more than opposition parties do.'' Schumacher2015, 1051
+
+
+% advances in economics 
+
+
+% Koszegi2007: focuses on ``delayed consequences, to study preferences over monetary risk.''
+
+% ``First---and second---generation prospect theory have a common limitation: the reference points from which prospects are evaluated are assumed to be certainties [so they extend PT]  by allowing reference points to be uncertain.'' Schmidt2008
+
+%%% In Comparative Politics:
+
+% ``the bias toward experiments focused primarily on American topics is reflected in the predominance of voting behavior as a primary concern of experimental work.'' McDermott2002, 44
+
+    
+% personality
+
+%``prospect theory works at the individual level of analysis. But prospect theory is not a traditional personality theory; that is, an analyst need not know much about the individual character or history of a particular leader in order to explain or predict behavior. Rather, it is a theory concerned with the importance and impact of the environment on the person.'' McDermott2004, 293
+
+% ``Attitudes toward risk are usually pictured as stable properties of individuals, perhaps related to aspects of personality development or culture.'' March1987, 1406
+
+% ``This means that the propensity to take risks is thus not a stable personality trait, with some individuals being prone to take risks while others always steer away from them'' Vis2011, 335
+
+%%%% "instant endowment effect"
+% ``after a series of gains an individual will treat the possibility of a subsequent setback as a loss rather than as a foregone gain, overweight it, and engage in risk-seeking behavior to maintain her cumulative gains against that loss'' Levy1997, 91
