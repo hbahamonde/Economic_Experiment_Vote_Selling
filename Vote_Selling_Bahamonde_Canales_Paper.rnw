@@ -285,29 +285,12 @@ If clientelism is risky \parencite[43]{Szwarcberg2013}, expensive \parencite[35]
 We contribute to the literature in three ways. First, prospect theory has not received much attention among political economists and comparative politics scholars \parencite[338-339]{Vis2011}. In fact, \textcite[2]{Mercer2005} states that ``political economists have shown no interest in prospect theory.'' We believe this is a serious issue that should be corrected. We intend to bridge this gap by offering an alternative theory of the political economy of vote buying but taking prospect theory as a starting point \parencite{Kahneman1979}. Second, in this paper we follow \textcite[297]{Levy1992} as we carefully try to not only show that the observed behavior of political agents is consistent with prospect theory but that prospect theory provides a better explanation of vote buying than do traditional descriptions of vote buying based on expected-utility theory. Third, and from a methodological standpoint, we follow \parencite{Aldrich2011,McDermott2002} in that there is a need of implementing experiments aimed to test formal models, and such, we believe that ``[p]olitical scientists might benefit from this process as well in order to both establish empirical validation of formal models and speed the cumulation of knowledge'' \parencite[45]{McDermott2002}. Our paper is particularly relevant to the the study of democracy and development where experiments have been described as ``a promising research tool that have the potential to make substantial contributions'' \parencite{DeLaO2011}.
 
 
-% % ``Prospect theory has received little attention in the fields of American politics and comparative politics, with a few exceptions (e.g., Hansen 1985, Pierson 1994, Weyland2002). Most surprising, political economists have shown no interest in prospect theory.'' Mercer2005, 2
-
-% ``Comparative Politics (CP) have been particularly slow on incorporating prospect theory in their work'' Vis2011, 338-339
-
-% ``experiments are a promising research tool that have the potential to make substantial contributions to the study of democracy and development.'' DeLaO2011
-
-% ``formal models can help experimentalists determine which settings are most critical to a particular causal hypothesis and experimenters can inform formal modelers by evaluating their theoretical predictions' performance in relevant environs.'' Aldrich2011
-
-% ``Formal models present hypotheses, which are then tested under experimental conditions. The experimental findings are used to refine and develop hypotheses to produce new theoretical models and predictions, which can then be experimentally tested in turn. Political scientists might benefit from this process as well in order to both establish empirical validation of formal models and speed the cumulation of knowledge'' McDermott2002, 45
-
-% ``research agendas that integrate experimental and formal modeling pursuits provide a portal for more effective interdisciplinary work and can improve the applicability and relevance of formal models to a wide range of important substantive questions in political science.'' Aldrich2011
-
-
 \todo{add this paper proceeds as follows}
 
 \section{The Unexpected Findings of the Expected Utility Theory}
 
 % basics of EUT
 As its core, the expected utility theory considers that the value of an outcome is equal to its payoff times its probability, and that agents choose the option with the highest weighted sum  (\cite[15]{McDermott1998}, \cite[173]{Levy1992a}, \cite[88]{Levy1997}). Importantly, it is commonly assumed that all political agents obey the maxims of invariance, dominance, and transitivity leading to the maximization of utility (\cite[291]{McDermott2004}, \cite[719]{Quattrone1988}).\todo{complete references}
-
-
-% ``prospect theory does not depend on assumptions of individual behavior that are rooted in economic models that presume that individual actors naturally incorporate invariance, dominance, and transitivity into their decision-making. Rather, prospect theory develops its assumptions empirically, through experimentation.'' McDermott2004, 291
-
 
 
 % Formal models in clientelism
@@ -395,17 +378,6 @@ Clientelist parties should buy more votes when they have experienced important l
 %% EXPERIMENTAL DESIGN
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \parencite{Downs:1957vg} the value of voting decreases as the size of the electorate increases.
-
-% Downsian/Spatial
-    
-    % Plott:1991wk developed an experiment based on Downsian spatial theory of voting.
-
-    % they do a ``strategic voting in a controlled (laboratory) environment. Our aim is to carefully isolate important determinants of the strategic vote. In particular, we are interested in the effect on strategic voting of information about others' preferences'' Tyszler2016, 361
-
-% McDermott2002 provides a good summary of Experimental Methods in Political Science, with an emphasis on EXPERIMENTAL VOTING AND ELECTIONS Since
-
-
 
 
 
@@ -440,32 +412,15 @@ Clientelist parties should buy more votes when they have experienced important l
 
 % ``By controlling for preferences using monetary incentives, experimental economists attempt to focus on testing other aspects of their theoretical models, such as whether actors make choices that are consistent with a model's equilibrium predictions, or the extent to which actors' cognitive skills enable them to make the optimal choices predicted by theory.'' Dickson2011
 
-% ``allow us to learn about individuals’ intrinsic motivations by observing deviations from game-theoretic predictions''  Dickson2011
-
 
 % ``Morton:2010ly summarize existing norms by estimating that payments are typically structured to average around 50 to 100 percent above the minimum wage for the time spent in the lab. Such considerations aside, resource constraints give experimentalists a natural incentive to minimize the scale of payoffs in order to maximize the amount of data that can be selected---as long as the payments that subjects receive are sufficient to motivate them in the necessary way.'' Dickson2011
 
 
 % ``Bassi2011 suggest that the scale of financial incentives can affect experimental results [...] The fit between subjects' behavior and game-theoretic predictions became monotonically stronger as incentives increased'' Dickson2011
 
-% ``A growing body of work has used laboratory voting games to evaluate theories of voting where subjects are given monetary incentives to induce them to have preferences over outcomes as in the evaluated theory.'' Bassi2011, 559
 
 
-%%%% Formal Models
 
-        % Aldrich2011 gives an extensive review about the use of experiments and formal models.
-
-        % ``formal models can help experimentalists determine which settings are most critical to a particular causal hypothesis and experimenters can inform formal modelers by evaluating their theoretical predictions' performance in relevant environs.'' Aldrich2011
-
-        % ``Formal models present hypotheses, which are then tested under experimental conditions. The experimental findings are used to refine and develop hypotheses to produce new theoretical models and predictions, which can then be experimentally tested in turn. Political scientists might benefit from this process as well in order to both establish empirical validation of formal models and speed the cumulation of knowledge'' McDermott2002, 45
-
-        % ``research agendas that integrate experimental and formal modeling pursuits provide a portal for more effective interdisciplinary work and can improve the applicability and relevance of formal models to a wide range of important substantive questions in political science.'' Aldrich2011
-
-        % ``paying subjects for their participation as a means of aligning their incentives with those of analogous actors in the formal models.'' Aldrich2011
-
-        % ``A significant body of theoretical work now incorporates the ideas in prospect theory into more traditional models of economic behavior, and a growing body of empirical work tests the predictions of these new theories.'' Barberis2013, 174
-
-       %  ``the descriptive accuracy of such theories [...] has been shown to fall short of the mark in a long string of findings.'' Vieider2019, 1
 
 
 
@@ -528,23 +483,13 @@ Clientelist parties should buy more votes when they have experienced important l
 % ``Another approach to the problem of creating meaningful monetary incentives involves conducting the research in poorer societies where the ratio of monetary reward to normal income is relatively high.'' Levy1997, 95
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Experiments invalidating EUT
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{A Formal Model of Vote-Buying}
 
-% ``According to prospect theory, we make a decision dependent on our perception of whether the decision involves making a gain or a loss. This is at odds with the consistency or invariance assumptions of rational theory.'' Fatas2007, 168
+Formal models can usually help experimentalists determine which theoretical settings and equilibria are most relevant to a particular causal hypothesis (\textcite{McDermott2002}, \textcite{Aldrich2011} and \textcite[174]{Barberis2013}). Thus, in this section we developed a vote-buying game within the Downsian-``spatial'' paradigms \parencite{Downs:1957vg,Enelow:1990aa,Plott:1991wk}. The idea is to test the descriptive accuracy of the game-theory model in the experimental section of this paper (\cite[559]{Bassi2011}, \cite{Dickson2011}, \cite[361]{Tyszler2016}, \cite[1]{Vieider2019}).
 
 
 
-% ``Thus expected-utility theory is more parsimonious than prospect theory.'' Levy1992, 296
-
-
-% ``These alternatives to EU theory often hold quite different views of the behavioral processes underlying choice under uncertainty, and make a number of new predictions that have yet to be subject to thorough experimental investigation.'' Battalio1990, 25
-
-
-\section{Formal Model}
-
-We consider an electorate of $n$ voters. Voters vote for a leader to implement a common policy $\gamma$ from the set $\Gamma=\{1,2,...,100\}$. Each citizen $i$ has an ideal point $x_i$ which is an \emph{iid} draw from an uniform distribution $\Gamma$. When policy $\gamma$ is implemented, payoffs of citizen $i$ are given by $u(D,x_i,\gamma)=D-\vert x_i-\gamma \vert$, where $D$ represents \textcolor{red}{completar ac\'a}. This payoff can be incremented by transferences from both parties to voter $i$.
+Following this tradition, we consider an electorate of $n$ voters. Voters vote for a leader to implement a common policy $\gamma$ from the set $\Gamma=\{1,2,...,100\}$. Each citizen $i$ has an ideal point $x_i$ which is an \emph{iid} draw from an uniform distribution $\Gamma$. When policy $\gamma$ is implemented, payoffs of citizen $i$ are given by $u(D,x_i,\gamma)=D-\vert x_i-\gamma \vert$, where $D$ represents \textcolor{red}{completar ac\'a}. This payoff can be incremented by transferences from both parties to voter $i$.
 
 In this election, there are two candidates. One ``left-wing'' party and one ``right-wing'' party. The left-wing (right-wing) candidate represents a policy $\gamma_L$ ($\gamma_R$) which is an \emph{iid} draw from an uniform distribution over $\{1,...,50\}$ ($\{51,...,100\}$). The location of this policy give us the number of voters $n_L$ leaning towards the left-wing candidate, while the number of voters leaning towards the right-wing party is given by $n_L+n_R=n$. While we consider that voters are attached to an ideological continuum, we do so with the sole purpose of modeling preferences---both formally and experimentally.\footnote{Ultimately, experimental subjects are not told anything about ideology. They only observe that there are a number of ``points'' associated with the victory of party A or party B. In this sense, voters lean (``ideologically'') towards the party that gives them more points.}
 
@@ -561,7 +506,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 The timing of the game is as follows: at the beginning of the game $n$ voters and two political parties are randomly located on their respective ideal points: voters along $\Gamma$, the ``left-wing'' candidate along $\{1,...,50\}$, and the ``right-wing'' candidate on $\{51,...,100\}$. All locations are public information, as well as every party's budget $B$, the total number of voters ($n$) and the number of supporters of each party ($n_L$ and $n_R$). 
 
 
-In this game each party simultaneously decides whether to make a a vote-buying offer to the voter. If a party decides to negotiate with the voter, privately offers the voter to buy his vote. Then the voter decides if to take the offer, or which one accept if he receives two offers. If he accepts an offer, he should vote for that candidate.\footnote{It is important to consider that to simplify the game (and the experiment), accepting the offer necessarily implies compliance. That is, accepting the offer means voting for the party the voter accepted the offer from. We leave for future research the case where the voter may defect.} %On the vote-selling case, the voter may privately propose a certain amount to each party in exchange for her vote. Then the parties decide if to pay or not the offer. The voter then decides which one to accept, if any. In this case, the voter offers to one or both parties, and each proposed amount might be different.
+In this game each party simultaneously decides whether to make a vote-buying offer to the voter. If a party decides to negotiate with the voter, privately offers the voter to buy his vote. Then the voter decides if to take the offer, or which one accept if he receives two offers. If he accepts an offer, he should vote for that candidate.\footnote{It is important to consider that to simplify the game (and the experiment), accepting the offer necessarily implies compliance. That is, accepting the offer means voting for the party the voter accepted the offer from. We leave for future research the case where the voter may defect.} %On the vote-selling case, the voter may privately propose a certain amount to each party in exchange for her vote. Then the parties decide if to pay or not the offer. The voter then decides which one to accept, if any. In this case, the voter offers to one or both parties, and each proposed amount might be different.
 
 \paragraph{Equilibrium} In this case, both parties can offer certain amount in exchange for electoral support. Note that parties only have incentives to negotiate with a voter if he is the pivotal voter. That means that $\vert n_L -n_R \vert \leq 1$, and that voter $i$ supports the ex-ante winner of the election ($i\in max\{n_L,n_R\}$). The voter prefers the party closer to her ideal point. If both parties are located at the same distance, the voter is indifferent. Denote by $i^*\in \{L,R\}$ the preferred party of the voter, and $-i^*$ the other party. 
  
@@ -954,3 +899,59 @@ count <- comma(as.numeric(count)) # add comma
 
 %%%% "instant endowment effect"
 % ``after a series of gains an individual will treat the possibility of a subsequent setback as a loss rather than as a foregone gain, overweight it, and engage in risk-seeking behavior to maintain her cumulative gains against that loss'' Levy1997, 91
+
+%%%% Formal Models
+
+% Aldrich2011 gives an extensive review about the use of experiments and formal models.
+
+% ``formal models can help experimentalists determine which settings are most critical to a particular causal hypothesis and experimenters can inform formal modelers by evaluating their theoretical predictions' performance in relevant environs.'' Aldrich2011
+
+% ``Formal models present hypotheses, which are then tested under experimental conditions. The experimental findings are used to refine and develop hypotheses to produce new theoretical models and predictions, which can then be experimentally tested in turn. Political scientists might benefit from this process as well in order to both establish empirical validation of formal models and speed the cumulation of knowledge'' McDermott2002, 45
+
+% ``research agendas that integrate experimental and formal modeling pursuits provide a portal for more effective interdisciplinary work and can improve the applicability and relevance of formal models to a wide range of important substantive questions in political science.'' Aldrich2011
+
+% ``paying subjects for their participation as a means of aligning their incentives with those of analogous actors in the formal models.'' Aldrich2011
+
+% ``A significant body of theoretical work now incorporates the ideas in prospect theory into more traditional models of economic behavior, and a growing body of empirical work tests the predictions of these new theories.'' Barberis2013, 174
+
+
+
+% \parencite{Downs:1957vg} the value of voting decreases as the size of the electorate increases.
+
+% Downsian/Spatial
+
+% they do a ``strategic voting in a controlled (laboratory) environment. Our aim is to carefully isolate important determinants of the strategic vote. In particular, we are interested in the effect on strategic voting of information about others' preferences'' Tyszler2016, 361
+
+% McDermott2002 provides a good summary of Experimental Methods in Political Science, with an emphasis on EXPERIMENTAL VOTING AND ELECTIONS Since
+
+
+% ``allow us to learn about individuals’ intrinsic motivations by observing deviations from game-theoretic predictions''  Dickson2011
+
+% ``A growing body of work has used laboratory voting games to evaluate theories of voting where subjects are given monetary incentives to induce them to have preferences over outcomes as in the evaluated theory.'' Bassi2011, 559
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Experiments invalidating EUT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ``According to prospect theory, we make a decision dependent on our perception of whether the decision involves making a gain or a loss. This is at odds with the consistency or invariance assumptions of rational theory.'' Fatas2007, 168
+
+
+
+% ``Thus expected-utility theory is more parsimonious than prospect theory.'' Levy1992, 296
+
+
+% ``These alternatives to EU theory often hold quite different views of the behavioral processes underlying choice under uncertainty, and make a number of new predictions that have yet to be subject to thorough experimental investigation.'' Battalio1990, 25
+
+% % ``Prospect theory has received little attention in the fields of American politics and comparative politics, with a few exceptions (e.g., Hansen 1985, Pierson 1994, Weyland2002). Most surprising, political economists have shown no interest in prospect theory.'' Mercer2005, 2
+
+% ``Comparative Politics (CP) have been particularly slow on incorporating prospect theory in their work'' Vis2011, 338-339
+
+% ``experiments are a promising research tool that have the potential to make substantial contributions to the study of democracy and development.'' DeLaO2011
+
+% ``formal models can help experimentalists determine which settings are most critical to a particular causal hypothesis and experimenters can inform formal modelers by evaluating their theoretical predictions' performance in relevant environs.'' Aldrich2011
+
+% ``Formal models present hypotheses, which are then tested under experimental conditions. The experimental findings are used to refine and develop hypotheses to produce new theoretical models and predictions, which can then be experimentally tested in turn. Political scientists might benefit from this process as well in order to both establish empirical validation of formal models and speed the cumulation of knowledge'' McDermott2002, 45
+
+% ``research agendas that integrate experimental and formal modeling pursuits provide a portal for more effective interdisciplinary work and can improve the applicability and relevance of formal models to a wide range of important substantive questions in political science.'' Aldrich2011
+
+% ``prospect theory does not depend on assumptions of individual behavior that are rooted in economic models that presume that individual actors naturally incorporate invariance, dominance, and transitivity into their decision-making. Rather, prospect theory develops its assumptions empirically, through experimentation.'' McDermott2004, 291
