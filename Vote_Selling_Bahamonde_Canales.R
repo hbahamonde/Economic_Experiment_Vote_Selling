@@ -675,6 +675,7 @@ dat.v.b = dat.v.b %>% select(session.code,
                              everything())
 ## ----
 
+
 ################################################################################## 
 # ***** Q      U       E       S       T       I       O       N       S *********
 ##################################################################################
@@ -928,6 +929,7 @@ p_load(xtable)
 xtable(summary.stats[order(summary.stats$variable),], 
        caption = "Summary Statistics", 
        digits = 0,
+       label = "summary:stats:t",
        align = rep("c",12))
 ## ----
 

@@ -373,57 +373,6 @@ Clientelist parties should buy more votes when they have experienced important l
 
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% EXPERIMENTAL DESIGN
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-% ``We need experiments because they help to reduce the bias that can exist in less rigorous forms ofobservation'' McDermott2002, 33
-
-%% my design
-
-    % Our experimental design minimizes hypothetical bias and cheap talk (Harrison2006) by compensating subjects with real money according to their decisions.
-   
-    % ``In between-subjects designs, different groups of subjects are randomly assigned to various experimental or control conditions.'' McDermott2002, 33
-
-    % ``this paper uses the `between-sample' (between individual) variation in loss aversion.'' Hwang2021, 11
-
-    % ``All variations were made across subjects'', Tyszler2016, 371
-
-    % ``Every individual is informed about his or her own preferences before each election. All this is common knowledge.'' Tyszler2016, 371
-
-% ``No other methodology can offer the strong support for the causal inferences that experiments allow'' McDermott2002, 38
-
-% this is NOT my design
-% In within-subject de- signs, otherwise known as the A-B-A experimental design strategy, each person serves as his or her own control by participating across time in both control and treatment conditions. Subjects begin with a baseline (A), are then administered a treatment or manipulation condition (B), and are measured again at baseline (A) once the treatment ends McDermott2002, 33
-
-% Lupia:1998ub develop game-theoretical expectations and designed an experiment.
-
-
-% party a and b
-% ``The roles assumed by subjects, and the alternatives that subjects face, are generally described using neutral terminology with a minimum of moral or emotional connotations'' Dickson2011
-
-% ``The abstract experimental tasks associated with this form of stylization are used in part because of a desire to maintain experimental control.'' Dickson2011
-
-% ``In most economics experiments, subjects receive cash payments that depend on their own choices in the laboratory and, in the case of game-theoretic experiments, on the choices of other people.'' Dickson2011
-
-% ``By controlling for preferences using monetary incentives, experimental economists attempt to focus on testing other aspects of their theoretical models, such as whether actors make choices that are consistent with a model's equilibrium predictions, or the extent to which actors' cognitive skills enable them to make the optimal choices predicted by theory.'' Dickson2011
-
-
-% ``Morton:2010ly summarize existing norms by estimating that payments are typically structured to average around 50 to 100 percent above the minimum wage for the time spent in the lab. Such considerations aside, resource constraints give experimentalists a natural incentive to minimize the scale of payoffs in order to maximize the amount of data that can be selected---as long as the payments that subjects receive are sufficient to motivate them in the necessary way.'' Dickson2011
-
-
-% ``Bassi2011 suggest that the scale of financial incentives can affect experimental results [...] The fit between subjects' behavior and game-theoretic predictions became monotonically stronger as incentives increased'' Dickson2011
-
-
-
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% role of Experiments 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -480,13 +429,11 @@ Clientelist parties should buy more votes when they have experienced important l
 
 % ``In this paper we provide experimental evidence on behavior in a market setting as a guide for future theoretical work'' Ackert2006, 6 
 
-% ``Another approach to the problem of creating meaningful monetary incentives involves conducting the research in poorer societies where the ratio of monetary reward to normal income is relatively high.'' Levy1997, 95
 
 
 \section{A Formal Model of Vote-Buying}
 
-Formal models can usually help experimentalists determine which theoretical settings and equilibria are most relevant to a particular causal hypothesis (\textcite{McDermott2002}, \textcite{Aldrich2011} and \textcite[174]{Barberis2013}). Thus, in this section we developed a vote-buying game within the Downsian-``spatial'' paradigms \parencite{Downs:1957vg,Enelow:1990aa,Plott:1991wk}. The idea is to test the descriptive accuracy of the game-theory model in the experimental section of this paper (\cite[559]{Bassi2011}, \cite{Dickson2011}, \cite[361]{Tyszler2016}, \cite[1]{Vieider2019}).
-
+Formal models can usually help experimentalists determine which theoretical settings and equilibria are most relevant to a particular causal hypothesis (\textcite{McDermott2002}, \textcite{Aldrich2011} and \textcite[174]{Barberis2013}). Thus, in this section we developed a vote-buying game within the Downsian-``spatial'' paradigms \parencite{Downs:1957vg,Enelow:1990aa,Plott:1991wk}. The idea is to test the descriptive accuracy of the game-theory model in the experimental section of this paper (\cite{Lupia:1998ub}, \cite[559]{Bassi2011}, \cite{Dickson2011}, \cite[361]{Tyszler2016}, \cite[1]{Vieider2019}).
 
 
 Following this tradition, we consider an electorate of $n$ voters. Voters vote for a leader to implement a common policy $\gamma$ from the set $\Gamma=\{1,2,...,100\}$. Each citizen $i$ has an ideal point $x_i$ which is an \emph{iid} draw from an uniform distribution $\Gamma$. When policy $\gamma$ is implemented, payoffs of citizen $i$ are given by $u(D,x_i,\gamma)=D-\vert x_i-\gamma \vert$, where $D$ represents \textcolor{red}{completar ac\'a}. This payoff can be incremented by transferences from both parties to voter $i$.
@@ -523,9 +470,27 @@ Parties expect winning the election but have limited budgets. Hence, they want t
 
 \section{Experimental Design}
 
-Building on the game theory model, a lab economic experiment was designed. The experiment was conducted at O'Higgins University and Centre for Experimental Social Sciences (CESS) of \emph{Universidad de Santiago}, Chile. Subjects received a minimum of \$5,000 Chilean pesos. The maximum depended on the quality of individual decisions. {\color{red}summary statistics here}. The basic flow is depicted in \autoref{experimental:design:fig}. 
+% why an experiment
+Building on our formal model of vote buying, a lab economic experiment was designed. Since we intend to contribute to the comparative politics, political development and clientelism literatures, we should note that experiments are the only methodology that can offer strong support for causal inferences \parencite{McDermott2002,DeLaO2011}. 
 
-The experiment has two parts, with four stages each. The first part is the vote-buying portion. During the first stage, participants are assigned a role at random. They can be either \emph{party A}, \emph{party B}, or \emph{voter}. Voters are assigned at random an ``ideological'' position. That is, voters receive a certain amount of points (at random) depending on whether party A or B wins the election. For instance, if party A wins election, a voter might receive 2,400 points, whereas if party B wins the election, the voter might receive 200 points. It is in this sense that the voter is ``ideologically'' closer to party A. The substantive correlate is that voters perceive some utility when, for instance, their preferred fiscal policies are implemented. During the first stage, both parties receive different endowments too. The idea is to reflect the fact that some parties are wealthier than others. Note that voters receive zero endowments. The clientelism literature is consistent in that both poor and rich voters are prone to receive clientelist offerings \parencite{Bahamonde2018}. 
+% administrative
+The experiment was conducted in Chile by the \emph{Centre for Experimental Social Sciences (CESS)} administered by the \emph{University of Santiago} and \emph{Oxford University, Nuffield College} between \Sexpr{min(format(as.Date(dat$participant.time_started), format="%B %d %Y"))} and \Sexpr{max(format(as.Date(dat$participant.time_started), format="%B %d %Y"))}. It was programmed in \texttt{O-tree}, the online version of \texttt{Z-tree} \parencite{Fischbacher2007}. Following \textcite{Harrison2006} and others, our experimental design minimizes hypothetical bias and ``cheap talk'' by compensating subjects with real money according to their decisions \parencite{Dickson2011}. Thus, subjects received a show-up fee of CLP \$2,000.\footnote{\textcite[95]{Levy1997} notes that in poorer societies (like the Chilean society) conducting research with relatively smaller monetary incentives is still meaningful. However, see \parencite{Morton:2010ly,Bassi2011}.} The maximum payoff depended on the quality of individual decisions. \autoref{summary:stats:t} shows summary statistics broken down by role and pre-treatment observables (i.e., socio-demographic covariates). A total of \Sexpr{as.numeric(length(unique(v.buying.dat$participant.code)))} subjects were recruited. The total sample size is \Sexpr{as.numeric(nrow(dat.v.b))}. Formally, we follow an in between-subjects design where different groups of individuals are randomly assigned to various experimental or control conditions \parencite{McDermott2002,Tyszler2016,Hwang2021}.
+
+% flow
+The basic experimental flow is depicted in \autoref{experimental:design:fig}. The experiment has four stages. In the first stage, participants were assigned at random a role, an ideological position, a party endowment (for the ones playing the ``party'' role) and a voter weight (for the ones playing the ``voter'' role). Every game was played among three players (two parties and a voter). Each player played the game three times. For every time, a new randomization process took place, i.e., players received a role, an ``ideology,'' a party endowment and voter weight. 
+
+% HERE 
+
+
+% role and ideology
+Following \textcite{Dickson2011}, roles were presented using a neutral terminology to maximize experimental control. Thus, the design considered the following roles: \emph{party A}, \emph{party B}, or \emph{voter}. Voters were assigned at random an ``ideological'' position. Voters received at random a certain amount of experimental points depending on whether party A or B won the election. For instance, if party A won the election, a voter received 2,400 points, whereas if party B won the election, the voter received 200 points. Hence, the voter in this example should feel ``ideologically'' closer to party A. The idea was to model the spatial distance as considered by traditional voting theories based on the EUT \parencite{Downs:1957vg, Enelow:1990aa}. Importantly, this piece of information was not presented to subjects as ``ideology.'' Just the points either option would give. In turn, parties also received an ``ideological'' position which made them ``close'' or ``farther way'' from the voter. The idea was to mimic an electoral market, and observe under which conditions different clientelist dynamics developed. It is important to note that following our formal model and \textcite[371]{Tyszler2016}, everything was common knowledge. 
+
+
+% endowments
+Both parties received different endowments too. The idea was to reflect the fact that some parties are wealthier than others, a factor that might increase the probability of vote buying \parencite{Juan-Pablo-Luna:2014wp}. Note that both parties receive the same endowment. Since our experimental design is an in between-subjects design, we should be able to observe and exploit the statistical differences (if any) across ``parties'' with different endowments. For simplicity, voters received zero initial endowments. However, this is consistent with the vote-buying literature in that both poor and rich voters are prone to receive clientelist offerings \parencite{Bahamonde2018}. 
+
+% voter weight
+
 
 \begin{figure}[H]
 \includegraphics[scale=.7, center]{Experimental_Flow_Figure.pdf}
@@ -955,3 +920,39 @@ count <- comma(as.numeric(count)) # add comma
 % ``research agendas that integrate experimental and formal modeling pursuits provide a portal for more effective interdisciplinary work and can improve the applicability and relevance of formal models to a wide range of important substantive questions in political science.'' Aldrich2011
 
 % ``prospect theory does not depend on assumptions of individual behavior that are rooted in economic models that presume that individual actors naturally incorporate invariance, dominance, and transitivity into their decision-making. Rather, prospect theory develops its assumptions empirically, through experimentation.'' McDermott2004, 291
+
+% Lupia:1998ub develop game-theoretical expectations and designed an experiment.
+
+
+% ``In between-subjects designs, different groups of subjects are randomly assigned to various experimental or control conditions.'' McDermott2002, 33
+
+% ``this paper uses the `between-sample' (between individual) variation in loss aversion.'' Hwang2021, 11
+
+% ``All variations were made across subjects'', Tyszler2016, 371
+
+% ``Every individual is informed about his or her own preferences before each election. All this is common knowledge.'' Tyszler2016, 371
+
+% ``No other methodology can offer the strong support for the causal inferences that experiments allow'' McDermott2002, 38
+
+% ``Another approach to the problem of creating meaningful monetary incentives involves conducting the research in poorer societies where the ratio of monetary reward to normal income is relatively high.'' Levy1997, 95
+
+% ``We need experiments because they help to reduce the bias that can exist in less rigorous forms ofobservation'' McDermott2002, 33
+
+
+% this is NOT my design
+% In within-subject de- signs, otherwise known as the A-B-A experimental design strategy, each person serves as his or her own control by participating across time in both control and treatment conditions. Subjects begin with a baseline (A), are then administered a treatment or manipulation condition (B), and are measured again at baseline (A) once the treatment ends McDermott2002, 33
+
+
+% ``In most economics experiments, subjects receive cash payments that depend on their own choices in the laboratory and, in the case of game-theoretic experiments, on the choices of other people.'' Dickson2011
+
+% ``By controlling for preferences using monetary incentives, experimental economists attempt to focus on testing other aspects of their theoretical models, such as whether actors make choices that are consistent with a model's equilibrium predictions, or the extent to which actors' cognitive skills enable them to make the optimal choices predicted by theory.'' Dickson2011
+
+% ``Morton:2010ly summarize existing norms by estimating that payments are typically structured to average around 50 to 100 percent above the minimum wage for the time spent in the lab. Such considerations aside, resource constraints give experimentalists a natural incentive to minimize the scale of payoffs in order to maximize the amount of data that can be selected---as long as the payments that subjects receive are sufficient to motivate them in the necessary way.'' Dickson2011
+
+
+% ``Bassi2011 suggest that the scale of financial incentives can affect experimental results [...] The fit between subjects' behavior and game-theoretic predictions became monotonically stronger as incentives increased'' Dickson2011
+
+% party a and b
+% ``The roles assumed by subjects, and the alternatives that subjects face, are generally described using neutral terminology with a minimum of moral or emotional connotations'' Dickson2011
+
+% ``The abstract experimental tasks associated with this form of stylization are used in part because of a desire to maintain experimental control.'' Dickson2011
