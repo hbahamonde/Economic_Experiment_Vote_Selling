@@ -11,8 +11,7 @@
                 line width=1pt] %
 
 % random
-\draw[decoration={brace,mirror,raise=5pt},decorate]
-  (-33,-1) -- node[black,midway,xshift=-1.2cm] {\tiny{{\bf Vote-buying}}} (-33,-10);
+
 
                     % 1
                     \node[draw,align=center,fill=yellow,text=black] (RA) at (-22,-5.5) {Random\\Assignments\\\tiny{(role, ideology, party endowments)}}; % 1
@@ -33,29 +32,6 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% random
-\draw[decoration={brace,mirror,raise=5pt},decorate]
-  (-33,-13) -- node[black,midway,xshift=-1.2cm] {\tiny{{\bf Vote-selling}}} (-33,-23);
-
-
-
-                    % 1
-                    \node[draw,align=center,fill=yellow,text=black] (RA2) at (-22,-18) {Random\\Assignments\\\tiny{(role, ideology, party endowments)}}; % 1
-                    \path [red,  ->] (-12,-18) edge (-9,-18);
-
-
-                    % 2
-                    \node[draw,align=center,fill=orange,text=black] (OFFERP2) at (-2,-18) {Voters consider\\selling votes}; % 1
-                    \path [red,  ->] (5,-18) edge (8,-18);
-
-
-                    % 3
-                    \node[draw,align=center,fill=green,text=black] (OFFERV2) at (15,-18) {Parties consider\\offerings, if any}; % 1
-                    \path [red,  ->] (22,-18) edge (25,-18);
-
-                    % 3
-                    \node[draw,align=center,fill=orange,text=black] (VDECID2) at (28.5,-18) {Voters\\vote};
 
 
 \end{tikzpicture}
