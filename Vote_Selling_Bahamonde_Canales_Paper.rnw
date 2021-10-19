@@ -491,17 +491,25 @@ Also, voters were assigned an ``ideological'' position at random. That is, voter
 
 \begin{figure}[H]
 \includegraphics[scale=.9, center]{Experimental_Flow_Figure.pdf}
-\caption{{\bf Experimental Flow and Timing of the Experimental Game.\label{experimental:design:fig}}\\\hspace{\textwidth} {\bf Note}: Note here.}\centering
+\caption{{\bf Experimental Flow and Timing of the Voting Game.\label{experimental:design:fig}}\\\hspace{\textwidth} {\bf Note}: Note here.}\centering
 \end{figure}
 
 
 % endowments
 Both parties received as well different ``endowments'' at random. The idea was to reflect the fact that some parties are wealthier than others, a factor that might increase the probability of vote buying \parencite{Juan-Pablo-Luna:2014wp}. Note that both parties receive the same endowment. Since our experimental design is an in between-subjects design, we should be able to observe and exploit the statistical differences (if any) across ``parties'' with different endowments. Participants acting the ``party'' role accumulated/lost wealth depending on whether they got elected/not-elected. For every time they bought votes at some amount, that amount was discounted from their wealth. For simplicity, voters received zero endowments.\footnote{This is consistent with the vote-buying literature in that both poor and rich voters are prone to receive clientelist offerings \parencite{Bahamonde2018}.} In turn, participants acting the ``voter'' role accumulated/lost wealth depending on whether their party got elected/not-elected (as per traditional EUT voting theories) and on whether they decided to sell/not-sell their vote. It is important to note that following our formal model and \textcite[371]{Tyszler2016}, both ideology and party endowments were common knowledge. 
 
+
+
+% summary:stats:t
+<<summary:stats:t, echo = FALSE, results='asis', warning = FALSE, message = F, cache=FALSE, include = TRUE>>=
+
+
+@
+
+
+
 % vote share
 In addition, both parties received at random an initial vote share, that is, a \emph{certain} number of (fictional) votes that both parties were going to receive in the election. This number did \emph{not} include the vote intention of the participant acting the ``voter'' role. Overall, this experimental condition mimics the degree in which an election is contested. In particular, this variable accomplishes two goals. First, it puts parties in different electoral contestation environments. In other words, it introduces the element of risk (of losing the election) in the game. Since voters win/lose points when their parties win/lose elections, this risk is also relevant for players acting the ``voter'' role. Second, it gives (or not) voters certain amount of electoral leverage. Since \textcite{Downs:1957vg}, traditional spatial theories of voting have considered that pivotal voters have more weight in an election, and hence, they might have incentives to sell their vote at higher prices. Given that all this information is public, this is piece of information is key in our experimental design.
-
-% HERE
 
 During the second stage, parties decide whether to buy votes by making an  offer. Experimental subjects acting the ``party'' role enter an amount of points, which ranges from zero to the maximum assigned budget in that round.\footnote{Participants acting the ``party'' role are told that offering zero amount means they do not want to buy votes.} The design allows for simultaneous (offers from both parties), for one or zero offers. In the third stage voters evaluate offers (if any). If the party decided that it did not want to make an offer at that time, the voter is told that the party did not make an offer. Voters are told that accepting the offer necessarily implies voting for that party.\footnote{For simplicity, we did not include the possibility of defecting. We encourage future studies to randomize certain probability of getting caught if defecting to encourage/discourage the behavior.} 
 
@@ -510,15 +518,28 @@ During the second stage, parties decide whether to buy votes by making an  offer
 
 
 
-\section{Statistical Analyses}
-
-% summary:stats:t
-<<summary:stats:t, echo = FALSE, results='asis', warning = FALSE, message = F, cache=FALSE, include = TRUE>>=
+\section{Statistical Analyses: What levels of electoral risk drive vote buying?}
 
 
-@
 
-Test 
+
+% questions
+In this section we will analyze two main dependent variables. First, the amount of the vote-buying offer made by parties (if any), and second, whether both parties make clientelist offerings (1, 0 otherwise). Both distributions are plotted in \autoref{dep:var:plot:fig} (left and right panel, respectively). From a statistical point of view, we concentrate on these variables because they show different levels of vote buying in both a continuous and dichotomous fashion. 
+
+% theoretical expectations
+From an internal validity standpoint, we expect both measurements to vary with the levels of risk the party is dealing with. Accordingly, if the predictions of our formal model (and the ones of the traditional vote-buying theories based on the EUT) are correct, the amount of the vote-buying offer made by parties should be higher in riskier scenarios (i.e., when facing probable electoral losses). However, we have hypothesized that parties should buy votes due to risk-seeking in the domain of losses (i.e., when experienced prior losses), and due to risk-aversion in the domain of gains (i.e., when being a likely winner hate the idea of loss). Similarly, situations in which both parties simultaneously make clientelist offerings directly resemble highly contested electoral markets. Since the vote share, ideological positions and endowments are public information (as formalized in our game), this is an important advantage of our game. 
+
+From an external validity standpoint, we believe that voters in real elections can estimate with some degree of success actual vote shares\todo{reference}, for instance, by looking at electoral polls. Voters can also identify ideological positions \todo{cite CPS Luna and Zech.} and endowments. For instance, others have studied how voters can identify whether parties are linked to the businesses sector or the blue-collar, grassroots and working-class sectors. 
+
+We should expect such markets to be riskier for parties, hence (according to the game-theoretical model), with more levels of vote buying. We believe this identification strategy appropriately captures the decision-making process under risk of political parties. 
+
+\begin{figure}[H]
+\includegraphics[scale=.6, center]{depvarplot.png}
+\caption{{\bf Dependent Variables.\label{dep:var:plot:fig}}\\\hspace{\textwidth} {\bf Note}: Note here.}\centering
+\end{figure}
+
+% parametric model
+We proceed by estimating two models. In the first specification 
 
 
 % reg:table:t
@@ -537,7 +558,7 @@ Test
 
 \begin{figure}[H]
 \includegraphics[scale=.7, center]{m2plot.png}
-\caption{Predicted Values of Competitive Vote-Buying Offer.\label{m1plot}}
+\caption{Predicted Probability of Competitive Vote-Buying Offer.\label{m1plot}}
 \caption*{{\bf Note}: ``Competitive vote buying'' is when both parties try to buy someone's vote at the same time. Having all players complete information, this strategy is more expensive and uncertain. Based on the MLE estimates in \autoref{reg:t}, the figure shows the predicted values of whether parties engage in competitive vote buying strategies. Substantively, the figure shows that experimental subjects acting the ``party'' role engage in competitive vote buying when they try to recover losses in the short run by engaging in competitive vote buying (panel 1). However, subjects do not consider their own budgets nor their ideological/spatial distance with respect to their constituencies when making decisions (panel 3 and 4).}\centering
 \end{figure}
 
