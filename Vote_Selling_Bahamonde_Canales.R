@@ -706,6 +706,47 @@ plot(dat.v.b$offer.party.type[dat.v.b$party.id.before.voter=="B"])
 ## most of the times, at the same time.
 
 
+# payoff plot SAVE BY HAND
+p_load(lattice) 
+options(scipen=9999999) # turn off sci not
+payoffplot = densityplot(~payoff | role, 
+            #scales=list(relation="free", rot=0),
+            scales=list(x=list(at=c(
+                round(as.numeric(quantile(dat.v.b$payoff)[1]),-2),
+                round(as.numeric(quantile(dat.v.b$payoff)[2]),-2),
+                round(as.numeric(quantile(dat.v.b$payoff)[3]),-2),
+                round(as.numeric(quantile(dat.v.b$payoff)[4]),-2),
+                round(as.numeric(quantile(dat.v.b$payoff)[5]),-2)
+            ), 
+            labels=c(
+                round(as.numeric(quantile(dat.v.b$payoff)[1]),-2),
+                round(as.numeric(quantile(dat.v.b$payoff)[2]),-2),
+                round(as.numeric(quantile(dat.v.b$payoff)[3]),-2),
+                round(as.numeric(quantile(dat.v.b$payoff)[4]),-2),
+                round(as.numeric(quantile(dat.v.b$payoff)[5]),-2)
+            )),
+            rot=90),
+            data=dat.v.b, 
+            aspect = 1,
+            xlab = " ", 
+            ylab = "Payoffs by Role (actual currency)", 
+            layout = c(3, 1)
+)# columns, rows
+
+# saving plot
+png(filename="payoffplot.png", 
+    type="cairo",
+    units="in", 
+    width=8, 
+    height=5, 
+    pointsize=10, 
+    res=1000)
+
+print(payoffplot)
+dev.off()
+
+
+round(as.numeric(quantile(dat.v.b$payoff)[3]),-2)
 ######################################################################### 
 # ************** M      O       D       E       L       S **************
 #########################################################################
