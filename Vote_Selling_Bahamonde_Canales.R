@@ -746,7 +746,6 @@ print(payoffplot)
 dev.off()
 
 
-round(as.numeric(quantile(dat.v.b$payoff)[3]),-2)
 ######################################################################### 
 # ************** M      O       D       E       L       S **************
 #########################################################################
@@ -949,6 +948,34 @@ png(filename="m2plot.png",
 print(m2plot)
 dev.off()
 
+
+
+
+
+
+# plotting dep variable plot BY HAND
+p_load(gridExtra,lattice)
+m1.dep.var = histogram(~m1.d$offer.made.party, 
+                       aspect = 1,
+                       xlab = "Amount of Vote-Buying Offer (points)"
+                       )
+
+m2.dep.var = histogram(~as.factor(dat.v.b$competitive.offers.party), 
+                       aspect = 1,
+                       xlab = "Competitive Vote-Buying Offer"
+                       )
+
+png(filename="depvarplot.png", 
+    type="cairo",
+    units="in", 
+    width=8, 
+    height=5, 
+    pointsize=10, 
+    res=1000)
+
+grid.arrange(m1.dep.var,m2.dep.var, ncol=2)
+
+dev.off()
 
 
 ################################################ 
