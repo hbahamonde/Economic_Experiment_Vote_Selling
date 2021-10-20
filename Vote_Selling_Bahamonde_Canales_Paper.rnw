@@ -247,13 +247,15 @@ options(scipen = 99999999999)
 
 
 \vspace*{0.3cm}
-\centerline{{\bf Abstract length}: \Sexpr{abstract.c.l} words}.\todo{150 max}
+\centerline{{\bf Abstract length}: \Sexpr{abstract.c.l} words.}\todo{shorten to 150}
 \vspace*{0.3cm}
+
+
 
 \centerline{\bf Please consider downloading the last version of the paper \href{https://github.com/hbahamonde/Economic_Experiment_Vote_Selling/raw/master/Vote_Selling_Bahamonde_Canales_Paper.pdf}{\texttt{{\color{red}here}}}.}
 
 \vspace*{0.3cm}
-\centerline{\bf {\color{red}Rough draft PLEASE DO NOT CIRCULATE}}.
+\centerline{\bf {\color{red}Rough draft PLEASE DO NOT CIRCULATE}.}
 
 
 \centerline{\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1} % keywords.  
@@ -284,13 +286,13 @@ If clientelism is risky \parencite[43]{Szwarcberg2013}, expensive \parencite[35]
 % contribution
 We contribute to the literature in three ways. First, prospect theory has not received much attention among political economists and comparative politics scholars \parencite[338-339]{Vis2011}. In fact, \textcite[2]{Mercer2005} states that ``political economists have shown no interest in prospect theory.'' We believe this is a serious issue that should be corrected. We intend to bridge this gap by offering an alternative theory of the political economy of vote buying but taking prospect theory as a starting point \parencite{Kahneman1979}. Second, in this paper we follow \textcite[297]{Levy1992} as we carefully try to not only show that the observed behavior of political agents is consistent with prospect theory but that prospect theory provides a better explanation of vote buying than do traditional descriptions of vote buying based on expected-utility theory. Third, and from a methodological standpoint, we follow \parencite{Aldrich2011,McDermott2002} in that there is a need of implementing experiments aimed to test formal models, and such, we believe that ``[p]olitical scientists might benefit from this process as well in order to both establish empirical validation of formal models and speed the cumulation of knowledge'' \parencite[45]{McDermott2002}. Our paper is particularly relevant to the the study of democracy and development where experiments have been described as ``a promising research tool that have the potential to make substantial contributions'' \parencite{DeLaO2011}.
 
-
-\todo{add this paper proceeds as follows}
+% This paper proceeds as follows. 
+This paper proceeds as follows. First, we explain the basics aspects of expected utility theory while paying special attention to several empirical departures. Importantly, we show how these departures are critical for our understanding of vote buying. Second, we explain the basic concepts behind prospect theory, while providing more details about the direct implications for the clientelism and vote-buying literatures. Third, following the basic intuitions of traditional voting games based on the expected utility theory we offer a basic formal model of vote buying. Fourth, we present our experimental design. Fifth, we analyze the experimental data. Sixth, we conclude by readdressing our results and discussing possible avenues for future research. 
 
 \section{The Unexpected Findings of the Expected Utility Theory}
 
 % basics of EUT
-As its core, the expected utility theory considers that the value of an outcome is equal to its payoff times its probability, and that agents choose the option with the highest weighted sum  (\cite[15]{McDermott1998}, \cite[173]{Levy1992a}, \cite[88]{Levy1997}). Importantly, it is commonly assumed that all political agents obey the maxims of invariance, dominance, and transitivity leading to the maximization of utility (\cite[291]{McDermott2004}, \cite[719]{Quattrone1988}).\todo{complete references}
+As its core, the expected utility theory considers that the value of an outcome is equal to its payoff times its probability, and that agents choose the option with the highest weighted sum  (\cite[15]{McDermott1998}, \cite[173]{Levy1992a}, \cite[88]{Levy1997}). Importantly, it is commonly assumed that all political agents obey the maxims of invariance, dominance, and transitivity leading to the maximization of utility (\cite[291]{McDermott2004}, \cite[719]{Quattrone1988}).
 
 
 % Formal models in clientelism
@@ -345,7 +347,7 @@ Reference dependence is the central idea in prospect theory (\cite[178]{Barberis
 Likelihood dependence is another central idea in prospect theory. Prospect theory pays considerable attention to losses. \textcite[171]{Levy1992a} in fact explains that individuals ``give more weight to losses than to comparable gains,'' which translates into the famous statement ``losses loom larger than gains.'' Losses have also been the focus in other areas of political science \parencite[298]{McDermott2004}. For instance, \textcite[132]{Lau1985} explains that ``negative information is more influential than comparable positive information.'' 
 
 % likelihood dependence explained
-Importantly, the likelihood of the value curve is non-linear. From an analytical point of view, we consider this is \emph{the} feature that out trumps the normative expectations contained in EUT. Formally, the asymmetrical curvature of the likelihood explains why individuals have risk-averse behaviors in choices among gains but risk-acceptant behaviors in choices among losses \parencite[87]{Levy1997}. In the domain of gains, the concavity of the value function encourages risk aversion by undervaluing the probability of success of a gamble relative to a certain outcome (underweighting). However, in the domain of losses, the convexity of the value function encourages risk-seeking behaviors by exaggerating the probabilities of rare but catastrophic losses (overweighting) \parencite[183-184]{Levy1992a}. Typical examples are individuals who tend to underweight likely events such as heart attacks (not changing diet) but tend to overweight rare events such as a plane crash (praying before landing). Unlike theories based on EUT, \textcite{Kahneman:2012tc} explains that ``Underweighting of moderate and high probabilities relative to sure things contributes to risk aversion [while] very low probabilities are either overweighted quite grossly or neglected altogether'' (see also \cite[32]{McDermott1998})\todo{add pages}. % \textcite[32]{McDermott1998} explains that ``prospect theory accounts for these discrepancies by noting the extreme (over)weight and attention that individuals give to small probabilities.'' 
+Importantly, the likelihood of the value curve is non-linear. From an analytical point of view, we consider this is \emph{the} feature that out trumps the normative expectations contained in EUT. Formally, the asymmetrical curvature of the likelihood explains why individuals have risk-averse behaviors in choices among gains but risk-acceptant behaviors in choices among losses \parencite[87]{Levy1997}. In the domain of gains, the concavity of the value function encourages risk aversion by undervaluing the probability of success of a gamble relative to a certain outcome (underweighting). However, in the domain of losses, the convexity of the value function encourages risk-seeking behaviors by exaggerating the probabilities of rare but catastrophic losses (overweighting) \parencite[183-184]{Levy1992a}. Typical examples are individuals who tend to underweight likely events such as heart attacks (not changing diet) but tend to overweight rare events such as a plane crash (praying before landing). Unlike theories based on EUT, \textcite{Kahneman:2012tc}\todo{add pages} explains that ``Underweighting of moderate and high probabilities relative to sure things contributes to risk aversion [while] very low probabilities are either overweighted quite grossly or neglected altogether'' (see also \cite[32]{McDermott1998}). % \textcite[32]{McDermott1998} explains that ``prospect theory accounts for these discrepancies by noting the extreme (over)weight and attention that individuals give to small probabilities.'' 
 
 % to conclude PT section: most important empirical finding in PT
 In prospect theory, both reference and likelihood dependence lead to a more accurate description of decision-making under risk. In fact, experimental evidence consistently finds evidence about decision-makers distorting probabilities in a non-linear way \parencite[87]{Levy1997}. In particular, the evidence suggests that in the domain of losses, risk-seeking decision-makers take \emph{disproportionate risks} to avoid certain losses, while in the domain of gains, risk-averted decision-makers are \emph{excessively eager} to secure gains \parencite[297, 299-300]{Levy1992}. This is explained because decision-makers ``have difficulty with probability at extreme ranges'' \parencite[30]{McDermott1998}. Finally, it is important to note while attitudes toward risk are usually portrait as aspects of personality \parencite[1406]{March1987}, prospect theory is \emph{not} a personality theory, that is, it is not necessary to know about the individual personality traits of decision-makers in order to predict behavior (\cite[293]{McDermott2004}, \cite[335]{Vis2011})
@@ -442,9 +444,11 @@ In this election, there are two candidates. One ``left-wing'' party and one ``ri
 
 Both parties negotiate with only one of these $n$ voters. That voter is randomly selected from the total population $n$. Observe that the higher the $n$, the lower the representation in the election of this voter. That is, a larger $n$ necessarily implies that every individual electoral choice matters less. However, if $n$ is small, negotiating with this voter may be more attractive to political parties. This is because negotiating with a large number of voters is costly. We assume that each party has a budget ($B$) that they can use to buy votes. If a party decides not to negotiate with the voter (or the voter does no accept the offer), the party keeps this budget. The profits of party $i$ is given by,
 
-\begin{align*}
+\begin{equation}
+\begin{aligned}
   \pi_i(W,e_i,s_i)=W\cdot e_i+(1-s_i\cdot a_j )\cdot B
-\end{align*}
+\end{aligned}
+\end{equation}
 
 where $W$ ($W\geq B$) is a constant that represents how much each party values winning the election, $e_i=1$ if party $i$ wins the election, 0 otherwise,  $s_i$ is the fraction of $B$ that the party offers to voter $j$ who can accept the offer ($a_j=1$) or not ($a_j=0$). We study one version of this party-voter interaction, namely, when both parties make simultaneous offers to the voter, and voters decide whether to accept the offer or not. 
 
@@ -459,11 +463,12 @@ In this game each party simultaneously decides whether to make a vote-buying off
  
  Note that, naturally, both parties want to make different offers. If the voter is pivotal, the less preferred party has incentives to offer him a certain amount $m_{-i^*}$ such that the he perceives more utility voting for that party rather than voting for the opposite party, that is:
 
-\begin{align*}
+\begin{equation}
+\begin{aligned}
     m_{-i^*} &\geq \left( D-\vert x_{i^*}-\gamma_{i^*} \vert \right) - \left( D-\vert x_{i^*}-\gamma_{-i^*} \vert \right)\\
      &=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert . 
-\end{align*}
-
+\end{aligned}
+\end{equation}
 
 Parties expect winning the election but have limited budgets. Hence, they want to win the election at a minimum cost. If party $-i^*$ offers the voter $m_{-i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$, he will be indifferent between voting for party $i^*$ or party $-i^*$. Both offers $m_{i^*}=0$ and $m_{-i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$ are the minimum amount, but enough to make the pivotal voter indifferent between both political parties. Indifference gives the party some electoral advantage of winning of the election. Voter indifference gives two possible Nash equilibria. In one equilibrium the voter rejects the offer and votes for $i^*$. In the other equilibrium, the voter accepts the offer and the elected party is $-i^*$. If individuals are utility maximizers, they should be indifferent between these two equilibria. %However, if we frequently observe that voters reject offers, this would give us some light that the players have other motivations. For example, more politicized players may be more likely to reject offers from the less preferred party.
   
@@ -474,9 +479,10 @@ Parties expect winning the election but have limited budgets. Hence, they want t
 Building on our formal model of vote buying, a lab economic experiment was designed. The experiment was conducted in Chile by the \emph{Centre for Experimental Social Sciences (CESS)} administered by the \emph{University of Santiago} and \emph{Oxford University, Nuffield College} between \Sexpr{min(format(as.Date(dat$participant.time_started), format="%B %d %Y"))} and \Sexpr{max(format(as.Date(dat$participant.time_started), format="%B %d %Y"))}. It was programmed in \texttt{O-tree}, the online version of \texttt{Z-tree} \parencite{Fischbacher2007}. Following \textcite{Harrison2006} and others, our experimental design minimizes hypothetical bias and ``cheap talk'' by compensating subjects with real money according to their decisions \parencite{Morton:2010ly,Dickson2011}. At the beginning of each experimental session all participants were required to successfully complete two practice rounds.\footnote{To make sure participants understood the dynamics of the game, they were shown two examples of the voting game. Participants were required to enter the correct amount of points each hypothetical participant would receive in each example. Importantly, all actual participants had to enter the exact amount of points to continue playing the game.} Those data were used in the statistical analyses. In addition, subjects received a show-up fee of CLP \$2,000. Payoffs depended on the quality of individual decisions.\footnote{\textcite[95]{Levy1997} notes that in poorer societies (like the Chilean society) conducting research with relatively smaller monetary incentives is still meaningful. However, see \parencite{Morton:2010ly,Bassi2011}.} \autoref{payoffs:plot:fig} shows the distribution of payoffs expressed in actual currency by role. \autoref{summary:stats:t} shows summary statistics broken down by pre-treatment observables. These covariates were captured by a battery of socio-demographic questions delivered at the end of the study.\footnote{The table also details the same information conveyed in \autoref{payoffs:plot:fig}.} A total of \Sexpr{as.numeric(length(unique(v.buying.dat$participant.code)))} subjects were recruited. Each subject played the game three times. The total sample size is \Sexpr{as.numeric(nrow(dat.v.b))}. For every new game, a whole new randomization process took place.\footnote{That is, participants received a role, an ``ideology,'' a party endowment and a contestability structure.} Formally, we follow an in between-subjects design where different groups of individuals are randomly assigned to various experimental or control conditions \parencite{McDermott2002,Tyszler2016,Hwang2021}. The basic experimental flow is depicted in \autoref{experimental:design:fig}. 
 
 
-\begin{figure}[H]
+\begin{figure}[h]
 \includegraphics[scale=.6, center]{payoffplot.png}
-\caption{{\bf Distribution of Payoffs by Role (actual currency; show-up fee excluded).\label{payoffs:plot:fig}}\\\hspace{\textwidth} {\bf Note}: Density plots show the distribution of payoffs expressed in actual currency by experimental condition. Amounts exclude the show-up fee of \$2,000. 0\%, 25\%, 50\%, 75\% and 100\% quantiles are shown (rounded).}\centering
+\caption{{\bf Distribution of Payoffs by Role (actual currency; show-up fee excluded).\label{payoffs:plot:fig}}}
+\caption*{{\bf Note}: Density plots show the distribution of payoffs expressed in actual currency by experimental condition. Amounts exclude the show-up fee of \$2,000. 0\%, 25\%, 50\%, 75\% and 100\% quantiles are shown (rounded).}\centering
 \end{figure}
 
 % experimental points
@@ -489,9 +495,11 @@ At the beginning of every game participants received a role at random. Following
 % ideology
 Also, voters were assigned an ``ideological'' position at random. That is, voters received at random a certain amount of experimental points depending on whether party A or B won the election. For instance, if party A won the election, a voter would receive in that case 2,400 points, whereas if party B won the election, that voter would receive 200 points. Hence, the voter in this example should feel ``ideologically'' closer to party A. The idea was to model party-voter spatial distances, as considered by traditional voting theories based on the EUT \parencite{Downs:1957vg, Enelow:1990aa}. The basic intuition of this paradigm is that the set of candidates that are ideologically closer to a voter produce more utilities in the form of fiscal policies that are beneficial to that voter, either in terms of redistributive or free-market oriented policies (\cite{Acemoglu:1996rm,Boix:2003db}, but importantly, see \cite{Haggard:2016vr}). In short, our design mimics an electoral market where we can observe under which conditions different clientelist dynamics developed. Critically, this piece of information was not presented to participants as ``ideology,'' but as the points either option would give. In turn, parties also received an ``ideological'' position which made them ``closer'' or ``farther way'' from the voter.  
 
-\begin{figure}[H]
+
+\begin{figure}[h]
 \includegraphics[scale=.9, center]{Experimental_Flow_Figure.pdf}
-\caption{{\bf Experimental Flow and Timing of the Voting Game.\label{experimental:design:fig}}\\\hspace{\textwidth} {\bf Note}: Note here.}\centering
+\caption{{\bf Experimental Flow and Timing of the Voting Game.\label{experimental:design:fig}}}
+\caption*{{\bf Note}: At the beginning of each experimental session all participants were required to successfully complete two practice rounds. A total of \Sexpr{as.numeric(length(unique(v.buying.dat$participant.code)))} subjects were recruited. Each subject played the game three times. The total sample size is \Sexpr{as.numeric(nrow(dat.v.b))}. For every new game, a whole new randomization process took place. Formally, we follow an in between-subjects design where different groups of individuals are randomly assigned to various experimental or control conditions.}\centering
 \end{figure}
 
 
@@ -516,9 +524,10 @@ During the second stage, parties decide whether to buy votes by making an  offer
 % internal validity
 Since the focus of this paper is on vote buying, we discarded the \emph{voter} data and analyze all observations $i$ acting any of the party roles (\emph{party A} and \emph{party B}). In particular, we analyze one main dependent variable, namely, the amount of the vote-buying offer made by parties (if any). The distribution is plotted in \autoref{dep:var:plot:fig}. 
 
-\begin{figure}[H]
+\begin{figure}[h]
 \includegraphics[scale=.6, center]{depvarplot.png}
-\caption{{\bf Distribution of Dependent Variable.\label{dep:var:plot:fig}}\\\hspace{\textwidth} {\bf Note}: Since the focus of this paper is on vote buying, we discarded the voter data.}\centering
+\caption{{\bf Distribution of Dependent Variable.\label{dep:var:plot:fig}}}
+\caption*{{\bf Note}: Since the focus of this paper is on vote buying, we discarded the voter data (N=\Sexpr{nrow(m1.d)}). Mean = \Sexpr{round(mean(m1.d$offer.made.party),0)}, median = \Sexpr{round(median(m1.d$offer.made.party),0)}, mode = \Sexpr{round(getmode(m1.d$offer.made.party),0)}.}\centering
 \end{figure}
 
 % internal validity
@@ -555,9 +564,9 @@ Substantive results are shown in \autoref{m1plot} (regression table is shown in 
 
 
 
-\begin{figure}[H]
+\begin{figure}[h]
 \includegraphics[scale=.6, center]{m1plot.png}
-\caption{Predicted Values of Vote-Buying Offer.\label{m1plot}}
+\caption{{\bf Predicted Values of Vote-Buying Offer.\label{m1plot}}}
 \caption*{{\bf Note}: Based on the OLS estimates in \autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1) and avoid losses by over-securing electoral support even in favorable contexts (panel 4). However, subjects do not consider their own budgets nor do their take into account ideological/spatial distance with respect to their constituencies when making decisions (panel 2 and 3).}\centering
 \end{figure}
 
@@ -653,7 +662,7 @@ count <- comma(as.numeric(count)) # add comma
 \section{Appendix}
 \pagenumbering{roman}
 \setcounter{page}{1}
-\newpage
+%\newpage
 
 
 % 1. summary:stats:t

@@ -5,6 +5,14 @@ cat("\014")
 rm(list=ls())
 
 ## ---- loadings:d ----
+
+# function to to recover mode
+getmode <- function(v) {
+    uniqv <- unique(v)
+    uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+
+
 # Load the data
 if (!require("pacman")) install.packages("pacman"); library(pacman) 
 p_load(rio,tibble)
@@ -776,10 +784,6 @@ custom.model.names.m1 = "Amount of Vote-Buying Offer"
 ##### Competitive Offers Model
 #########################################################################
 
-table(dat.v.b$vote.intention.party,dat.v.b$competitive.offers.party)
-
-
-
 m2 = glm(competitive.offers.party ~ 
              points.cumul.delta +
              budget + 
@@ -956,11 +960,6 @@ png(filename="m2plot.png",
 
 print(m2plot)
 dev.off()
-
-
-
-
-
 
 # plotting dep variable plot BY HAND
 p_load(gridExtra,lattice)
