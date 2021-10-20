@@ -331,7 +331,7 @@ Prospect theory ``is a theory of decision making under conditions of risk'' \par
 
 
 % influence of the theory--where else this theory has been applied.
-The theory has been most influential among IR scholars, unfortunately it has had just ``limited'' influence in political science \parencite[2]{Mercer2005}. Still, in comparative politics, there are several contributions that take prospect theory as a framework. For instance, \textcite{Weyland2002} studies levels of loss aversion of dictatorships when they perform radical economic reforms. \textcite{Vis2009,Vis:2010tq} study welfare state reform showing that political gains are the necessary condition for not-unpopular reform, while for unpopular reform are deteriorating socio-economic situation, or political losses. In turn, \textcite{Steinacker2006} studies issue salience, \textcite{Schumacher2015} focuses on party platform change, while \textcite[1]{Carreras2019} argues that ``that citizens who were in the domain of economic losses were more likely to take a risk and vote in favor of Brexit.''
+The theory has been most influential among IR scholars, unfortunately it has had just ``limited'' influence in political science \parencite[2]{Mercer2005}. Still, in comparative politics, there are several contributions that take prospect theory as a framework. For instance, \textcite{Weyland2002} studies levels of loss aversion of dictatorships when they perform radical economic reforms. \textcite{Vis2009,Vis:2010tq} study welfare state reform showing that political gains are the necessary condition for not-unpopular reform, while for unpopular reform are deteriorating socio-economic situation, or political losses. In turn, \textcite{Steinacker2006} studies issue salience, \textcite{Schumacher2015} focuses on party platform change, while \textcite{Carreras2019} argues that ``that citizens who were in the domain of economic losses were more likely to take a risk and vote in favor of Brexit.''
 
 
 % main principles and contrasts with EUT
@@ -514,7 +514,7 @@ In addition, both parties received at random an initial vote share, that is, a \
 During the second stage, parties decide whether to buy votes by making an  offer. Experimental subjects acting the ``party'' role enter an amount of points, which ranges from zero to the maximum assigned budget in that round.\footnote{Participants acting the ``party'' role are told that offering zero amount means they do not want to buy votes.} The design allows for simultaneous (offers from both parties), for one or zero offers. In the third stage voters evaluate offers (if any). If the party decided that it did not want to make an offer at that time, the voter is told that the party did not make an offer. Voters are told that accepting the offer necessarily implies voting for that party.\footnote{For simplicity, we did not include the possibility of defecting. We encourage future studies to randomize certain probability of getting caught if defecting to encourage/discourage the behavior.} 
 
 
-%Importantly, both budgets (for party A and B) are the same. However, given that the voter-party distance is assigned at random, both parties have \emph{relative} ``different'' budgets.
+
 
 
 
@@ -542,24 +542,29 @@ In sum, we believe this identification strategy appropriately captures the decis
 \end{figure}
 
 % parametric model
-We proceed by estimating two models. Both consider only the data of participants acting any of the party roles. In the first specification we fit the next OLS regression model,
+We proceed by estimating two models. Both consider only the data of participants $i$ acting any of the party roles. In the first specification we fit the next OLS regression model,
+
+% m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance + budget + participant.code, m1.d)
 
 
-
-\begin{equation}\label{eq:1}
-\text{Offer} = \beta_{0} + \beta_{1}\text{Vote Share}_{i} + \beta_{2}\delta\text{Points Accumulated}_{i} + \beta_{3}\text{Party Budget}_{i} + \alpha_{i} + \epsilon_{i}
+\begin{equation}\label{eq:ols}
+\text{Offer} = \beta_{0} + \beta_{1}\text{Vote Share}_{i} + \beta_{2}\Delta\text{Points Accumulated}_{i} + \beta_{3}\text{Spatial Distance}_{i} + \beta_{4}\text{Party Budget}_{i} + \alpha_{i} + \epsilon_{i}
 \end{equation}
 
-where \emph{Vote Share} is the certain number of (fictional) voters that were going to cast their votes for the party, $\delta\text{\emph{Points Accumulated}}$ captures changes in the accumulated points respect the experimental round played in $t-1$, \emph{Party Budget} is the party budget. 
+
+where \emph{Vote Share} is the certain number of (fictional) voters that were going to cast their votes for the party, $\Delta\text{\emph{Points Accumulated}}$ captures changes in the accumulated points respect to the experimental round played in $t-1$. For instance, if a player won 1,200 points in $t-1$ but then lost $500$ in the next round, $\Delta\text{\emph{Points Accumulated}}_{t}=700$. \emph{Party Budget} is the party budget, and $\alpha_{i}$ is a vector of participant fixed-effects.
+
+In the second specification we fit the next Logistic regression model,
 
 
+competitive.offers.party ~ 
+             points.cumul.delta +
+             budget + 
+             #vote.intention.party + 
+             ideo.distance
 
-In the second specification we fit the next Logit regression model,
-
-\begin{equation}\label{eq:2}
-
-\text{\texttt{logit}}(\pi) = \beta_{0} + \beta_{1}  
-
+\begin{equation}\label{eq:mle}
+logit(\pi) = \beta_{0} + \beta_{1}\Delta\text{Points Accumulated}_{i} + \beta_{2}\text{Party Budget}_{i} + \beta_{1}\text{Vote Share}_{i}
 \end{equation}
 
 where $\pi=\text{Pr}(\text{Competitive Offer}=1)$, 
