@@ -553,35 +553,22 @@ To test these hypotheses we exploit the experimental data described above by fit
 \end{equation}
 
 
-where \emph{Vote Share} is the certain number of (fictional) voters that were going to cast their votes for the party, $\Delta\text{\emph{Points Accumulated}}$ captures changes in the accumulated points respect to the experimental round played in $t-1$. For instance, if a player won 1,200 points in $t-1$ but then lost $500$ in the next round, then $\Delta\text{\emph{Points Accumulated}}_{t}=700$. \emph{Party Budget} is the party budget, and $\alpha_{i}$ is a vector of participant fixed-effects. 
+where \emph{Vote Share} is the certain number of (fictional) voters that were going to cast their votes for the party, $\Delta\text{\emph{Points Accumulated}}$ captures changes in the accumulated points respect to the experimental round played in $t-1$. For instance, if a player won 1,200 points in $t-1$ but then lost $500$ in the next round, then $\Delta\text{\emph{Points Accumulated}}_{t}=700$. Importantly, this variable captures sunk costs. The intuition is to evaluate whether they are not considered when evaluating new proposals, as the EUT posits it. \emph{Party Budget} is the party budget, and $\alpha_{i}$ is a vector of participant fixed-effects. 
 
 If traditional vote-buying theories based on the EUT are correct, then we should expect $\beta_{1}<0$, $\beta_{2}=0$, $\beta_{3}=\left\lbrace>0 \;\veebar <0 \right\rbrace$ and $\beta_{4}>0$. In simple, the larger the vote share, the less vote buying (because there are less risks of losing the election). Prior losses or ``sunk costs'' should not matter for vote-buying. The closer a party is to the voter is either positive for vote buying (core voter hypothesis) or negative (swing voter hypothesis). The bigger the budget of a party, the more vote buying (for instance, incumbents are usually considered to be more prone to buy votes, see \cite{Weitz-shapiro,Szwarcberg2013}). However, if the expectations rather conform with prospect theory, we should expect $\beta_{1}>0$, $\beta_{2}>0$, $\beta_{3}=0$ and $\beta_{4}=0$.
-
-
-Substantive results are shown in \autoref{m1plot} (regression table is shown in \autoref{reg:t}). The figure strongly supports 
-
-
-
 
 
 \begin{figure}[h]
 \includegraphics[scale=.6, center]{m1plot.png}
 \caption{{\bf Predicted Values of Vote-Buying Offer.\label{m1plot}}}
-\caption*{{\bf Note}: Based on the OLS estimates in \autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Substantively, the figure shows that experimental subjects try to recover losses in the short run by spending more on vote-buying (panel 1) and avoid losses by over-securing electoral support even in favorable contexts (panel 4). However, subjects do not consider their own budgets nor do their take into account ideological/spatial distance with respect to their constituencies when making decisions (panel 2 and 3).}\centering
+\caption*{{\bf Note}: Based on the OLS estimates in \autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Confidence intervals were constructed robust standard errors (as shown in \autoref{reg:t}). Substantively, the figure shows that experimental subjects avoid losses by over-securing electoral support even in favorable contexts (panel 1) and do consider sunk costs and try to recover losses in the short run by spending more on vote-buying (panel 2). However, parties do not consider ideological/spatial distances with respect to their constituencies when making decisions nor do their budget, i.e., parties with more resources do not necessarily invest more vote buying (panel 3 and 4).}\centering
 \end{figure}
 
 
+Substantive results are shown in \autoref{m1plot} (regression table is shown in \autoref{reg:t}). Overall, results strongly supports prospect theory. Invidials 
 
 
 
-
-
-
-
-
-
-
- 
 
 \section{Discussion}
 Discussion

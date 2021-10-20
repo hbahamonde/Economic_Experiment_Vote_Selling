@@ -872,9 +872,14 @@ m1.p4.d = data.frame(ggeffects::ggpredict(
 
 # plot (export by hand)
 m1.p.d = as.data.frame(rbind(m1.p1.d,m1.p2.d,m1.p3.d,m1.p4.d))
-m1.p.d$group = as.factor(m1.p.d$group)
-m1.p.d$group <- relevel(m1.p.d$group, "Points Cumul (delta)")
+m1.p.d$group = factor(m1.p.d$group, 
+                      levels = c("Vote Share", 
+                                 "Points Cumul (delta)", 
+                                 "Spatial Distance (left-right)", 
+                                 "Party's Budget"))
 
+#m1.p.d$group = as.factor(m1.p.d$group)
+#m1.p.d$group <- relevel(m1.p.d$group, "Points Cumul (delta)")
 
 p_load(lattice, latticeExtra, DAMisc)
 m1plot = xyplot(predicted ~ x | group, 
@@ -889,7 +894,7 @@ m1plot = xyplot(predicted ~ x | group,
                 zl=F, 
                 prepanel=prepanel.ci,
                 layout = c(4, 1) # columns, rows
-)
+                )
 
 # saving plot
 png(filename="m1plot.png", 
