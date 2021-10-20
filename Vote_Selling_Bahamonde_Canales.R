@@ -776,6 +776,10 @@ custom.model.names.m1 = "Amount of Vote-Buying Offer"
 ##### Competitive Offers Model
 #########################################################################
 
+table(dat.v.b$vote.intention.party,dat.v.b$competitive.offers.party)
+
+
+
 m2 = glm(competitive.offers.party ~ 
              points.cumul.delta +
              budget + 
@@ -803,17 +807,17 @@ custom.model.names.m2 = "Competitive Vote-Buying Offer"
 ## Reg Table
 p_load(texreg)
 reg.table = texreg::texreg( # screenreg
-    list(m1, m2),
-    custom.model.names = c(custom.model.names.m1,custom.model.names.m2),
+    list(m1),
+    custom.model.names = c(custom.model.names.m1),
     #custom.coef.names = NULL,
     omit.coef = "participant",
-    override.se = list(c(m1.clst.t.test,rep(0.0, length(unique(m1.d$participant.code))-1)), c(m2.clst.std.err)),
-    override.pvalues = list(c(m1.clst.p.value,rep(0.0, length(unique(m1.d$participant.code))-1)), m2.clst.p.value),
-    custom.header = list( "OLS" = 1, "Logit" = 2),
+    override.se = list(c(m1.clst.t.test,rep(0.0, length(unique(m1.d$participant.code))-1))),
+    override.pvalues = list(c(m1.clst.p.value,rep(0.0, length(unique(m1.d$participant.code))-1))),
+    custom.header = list( "OLS" = 1),
     stars = c(0.001, 0.01, 0.05, 0.1),
     label = "reg:t",
     float.pos="H",
-    custom.note = "%stars. Robust standard errors in parentheses. OLS model with fixed effects (parameteres omitted)."
+    custom.note = "%stars. Robust standard errors in parentheses. \\\\ Fixed effects parameteres were omitted.\n"
 )
 ## ----
 
@@ -960,10 +964,10 @@ m1.dep.var = histogram(~m1.d$offer.made.party,
                        xlab = "Amount of Vote-Buying Offer (points)"
                        )
 
-m2.dep.var = histogram(~as.factor(dat.v.b$competitive.offers.party), 
-                       aspect = 1,
-                       xlab = "Competitive Vote-Buying Offer"
-                       )
+# m2.dep.var = histogram(~as.factor(dat.v.b$competitive.offers.party), 
+#                       aspect = 1,
+#                       xlab = "Competitive Vote-Buying Offer"
+#                       )
 
 png(filename="depvarplot.png", 
     type="cairo",
@@ -973,8 +977,8 @@ png(filename="depvarplot.png",
     pointsize=10, 
     res=1000)
 
-grid.arrange(m1.dep.var,m2.dep.var, ncol=2)
-
+m1.dep.var
+#grid.arrange(m1.dep.var,m2.dep.var, ncol=2)
 dev.off()
 
 

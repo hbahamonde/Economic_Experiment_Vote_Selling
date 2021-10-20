@@ -524,25 +524,25 @@ During the second stage, parties decide whether to buy votes by making an  offer
 
 
 % questions
-In this section we will analyze two main dependent variables. First, the amount of the vote-buying offer made by parties (if any), and second, whether both parties make clientelist offerings (1, 0 otherwise). Both distributions are plotted in \autoref{dep:var:plot:fig} (left and right panel, respectively). From a statistical point of view, we concentrate on these two variables because they show different levels of vote buying in both a continuous and dichotomous fashion. 
+In this section we will analyze one main dependent variable, namely, the amount of the vote-buying offer made by parties (if any). The distribution is plotted in \autoref{dep:var:plot:fig}. 
 
 % internal validity
-From an internal validity standpoint, we expect both measurements to vary with the levels of risk the party is dealing with. Accordingly, if the predictions of our formal model (and the ones of the traditional vote-buying theories based on the EUT) are correct, the amount of the vote-buying offer made by parties should be higher in riskier scenarios (i.e., when facing probable electoral losses). Similarly, situations in which both parties make simultaneous clientelist offerings directly resemble highly contested and risky electoral markets. Since vote share, ideological positions and endowments were public information (as formalized in our game), we believe these theoretical expectations should be consistent with the expectations of the traditional game-theoretical vote-buying literature. 
+From an internal validity standpoint, we expect this distribution to vary with the levels of risk the party is dealing with. Accordingly, if the predictions of our formal model (and the ones of the traditional vote-buying theories based on the EUT) are correct, the amount of the vote-buying offer made by parties should be higher in riskier scenarios (i.e., when facing probable electoral losses). Since vote share, ideological positions and endowments were public information (as formalized in our game), we believe these theoretical expectations should be consistent with the expectations of the traditional game-theoretical vote-buying literature. 
 
 % external validity
 From an external validity standpoint, we believe that voters in real elections can estimate with some degree of success actual vote shares, for instance, by looking at electoral polls\todo{add reference}. Voters can also identify parties' ideological positions. For instance, \textcite{Luna2005} identify a number of conditions that are associated with higher levels of elite-mass congruence in Latin America.\footnote{However, see \textcite{Visconti2021}.} Voters can also make inferences about a party's endowment, and how those endowments can be redistributed in a clientelist fashion \parencite{Auyero2000}. In turn, the literature is consistent in that brokers also provide necessary information about available resources and how to get access to them \parencite{Murillo2021a}. 
 
 % theoretical expectations
-In sum, we believe this identification strategy appropriately captures the decision-making process under risk of political parties as theorized by traditional vote-buying scholars based on the EUT. On the contrary, we expect that parties should buy votes due to risk-seeking in the domain of losses (i.e., when experienced prior losses) and due to risk-aversion in the domain of gains (i.e., when being a likely winner as the idea of losing electoral support becomes unbearable). 
+In sum, we believe this identification strategy appropriately captures the decision-making process under risk of political parties as theorized by traditional vote-buying scholars based on the EUT. That said, based on prospect theory, we have different expectations, i.e.,  parties should buy votes due to risk-seeking in the domain of losses (i.e., when experienced prior losses) and due to risk-aversion in the domain of gains (i.e., when being a likely winner as the idea of losing electoral support becomes unbearable). 
 
 
 \begin{figure}[H]
 \includegraphics[scale=.6, center]{depvarplot.png}
-\caption{{\bf Dependent Variables.\label{dep:var:plot:fig}}\\\hspace{\textwidth} {\bf Note}: Note here.}\centering
+\caption{{\bf Distribution of Dependent Variable.\label{dep:var:plot:fig}}\\\hspace{\textwidth} {\bf Note}: Note here.}\centering
 \end{figure}
 
 % parametric model
-We proceed by estimating two models. Both consider only the data of participants $i$ acting any of the party roles. In the first specification we fit the next OLS regression model,
+Considering only the data of participants $i$ acting any of the party roles, we proceed by fitting the next OLS regression model,
 
 % m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance + budget + participant.code, m1.d)
 
@@ -554,20 +554,7 @@ We proceed by estimating two models. Both consider only the data of participants
 
 where \emph{Vote Share} is the certain number of (fictional) voters that were going to cast their votes for the party, $\Delta\text{\emph{Points Accumulated}}$ captures changes in the accumulated points respect to the experimental round played in $t-1$. For instance, if a player won 1,200 points in $t-1$ but then lost $500$ in the next round, $\Delta\text{\emph{Points Accumulated}}_{t}=700$. \emph{Party Budget} is the party budget, and $\alpha_{i}$ is a vector of participant fixed-effects.
 
-In the second specification we fit the next Logistic regression model,
 
-
-competitive.offers.party ~ 
-             points.cumul.delta +
-             budget + 
-             #vote.intention.party + 
-             ideo.distance
-
-\begin{equation}\label{eq:mle}
-logit(\pi) = \beta_{0} + \beta_{1}\Delta\text{Points Accumulated}_{i} + \beta_{2}\text{Party Budget}_{i} + \beta_{1}\text{Vote Share}_{i}
-\end{equation}
-
-where $\pi=\text{Pr}(\text{Competitive Offer}=1)$, 
 
 % reg:table:t
 <<reg:table:t, echo = FALSE, results='asis', warning = FALSE, message = F, cache=FALSE, include = TRUE>>=
@@ -583,11 +570,7 @@ where $\pi=\text{Pr}(\text{Competitive Offer}=1)$,
 
 
 
-\begin{figure}[H]
-\includegraphics[scale=.7, center]{m2plot.png}
-\caption{Predicted Probability of Competitive Vote-Buying Offer.\label{m1plot}}
-\caption*{{\bf Note}: ``Competitive vote buying'' is when both parties try to buy someone's vote at the same time. Having all players complete information, this strategy is more expensive and uncertain. Based on the MLE estimates in \autoref{reg:t}, the figure shows the predicted values of whether parties engage in competitive vote buying strategies. Substantively, the figure shows that experimental subjects acting the ``party'' role engage in competitive vote buying when they try to recover losses in the short run by engaging in competitive vote buying (panel 1). However, subjects do not consider their own budgets nor their ideological/spatial distance with respect to their constituencies when making decisions (panel 3 and 4).}\centering
-\end{figure}
+
 
 
 
