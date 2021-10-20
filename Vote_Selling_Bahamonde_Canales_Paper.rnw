@@ -2,7 +2,7 @@
 \usepackage[T1]{fontenc}
 \linespread{1.5} % Line spacing - Palatino needs more space between lines
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
-
+\usepackage{threeparttable} % package to have long notes in reg tables in texreg. 
 \usepackage[hmarginratio=1:1,columnsep=20pt]{geometry} % Document margins
 %\usepackage{multicol} % Used for the two-column layout of the document
 \usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
@@ -500,14 +500,6 @@ Both parties received as well different ``endowments'' at random. The idea was t
 
 
 
-% summary:stats:t
-<<summary:stats:t, echo = FALSE, results='asis', warning = FALSE, message = F, cache=FALSE, include = TRUE>>=
-
-
-@
-
-
-
 % vote share
 In addition, both parties received at random an initial vote share, that is, a \emph{certain} number of (fictional) voters that were going to cast their votes for each party. This number did \emph{not} include the vote intention of the participant acting the ``voter'' role. Overall, this experimental condition mimics the degree in which an election is contested. In particular, this variable accomplishes two goals. First, it puts parties in different electoral contestation environments. In other words, it introduces the element of risk (of losing the election) in the game. Since voters win/lose points when their parties win/lose elections, this risk is also relevant for players acting the ``voter'' role. Second, it gives (or not) voters certain amount of electoral leverage. Since \textcite{Downs:1957vg}, traditional spatial theories of voting have considered that pivotal voters have more weight in an election, and hence, they might have incentives to sell their vote at higher prices. Given that all this information is public, this is piece of information is key in our experimental design.
 
@@ -518,49 +510,50 @@ During the second stage, parties decide whether to buy votes by making an  offer
 
 
 
-\section{Statistical Analyses: What levels of electoral risk drive vote buying?}
+\section{Statistical Analyses: Risk and Vote Buying}
 
 
+% internal validity
+Since the focus of this paper is on vote buying, we discarded the \emph{voter} data and analyze all observations $i$ acting any of the party roles (\emph{party A} and \emph{party B}). In particular, we analyze one main dependent variable, namely, the amount of the vote-buying offer made by parties (if any). The distribution is plotted in \autoref{dep:var:plot:fig}. 
 
-
-% questions
-In this section we will analyze one main dependent variable, namely, the amount of the vote-buying offer made by parties (if any). The distribution is plotted in \autoref{dep:var:plot:fig}. 
+\begin{figure}[H]
+\includegraphics[scale=.6, center]{depvarplot.png}
+\caption{{\bf Distribution of Dependent Variable.\label{dep:var:plot:fig}}\\\hspace{\textwidth} {\bf Note}: Since the focus of this paper is on vote buying, we discarded the voter data.}\centering
+\end{figure}
 
 % internal validity
 From an internal validity standpoint, we expect this distribution to vary with the levels of risk the party is dealing with. Accordingly, if the predictions of our formal model (and the ones of the traditional vote-buying theories based on the EUT) are correct, the amount of the vote-buying offer made by parties should be higher in riskier scenarios (i.e., when facing probable electoral losses). Since vote share, ideological positions and endowments were public information (as formalized in our game), we believe these theoretical expectations should be consistent with the expectations of the traditional game-theoretical vote-buying literature. 
 
 % external validity
-From an external validity standpoint, we believe that voters in real elections can estimate with some degree of success actual vote shares, for instance, by looking at electoral polls\todo{add reference}. Voters can also identify parties' ideological positions. For instance, \textcite{Luna2005} identify a number of conditions that are associated with higher levels of elite-mass congruence in Latin America.\footnote{However, see \textcite{Visconti2021}.} Voters can also make inferences about a party's endowment, and how those endowments can be redistributed in a clientelist fashion \parencite{Auyero2000}. In turn, the literature is consistent in that brokers also provide necessary information about available resources and how to get access to them \parencite{Murillo2021a}. 
+From an external validity standpoint, we believe that voters in real elections can estimate with some degree of success actual vote shares, for instance, by looking at electoral polls\todo{add reference}. Voters can also identify parties' ideological positions. For instance, \textcite{Luna2005} identify a number of conditions that are associated with higher levels of elite-mass congruence in Latin America.\footnote{However, see \textcite{Visconti2021}.} Voters can also make inferences about a party's endowment, and how those endowments can be redistributed in a clientelist fashion \parencite{Auyero2000}. In turn, the literature is consistent in that brokers also provide necessary information about available resources and how to get access to them \parencite{Murillo2021a}. In sum, we believe this identification strategy appropriately captures the decision-making process under risk of political parties as theorized by traditional vote-buying scholars based on the EUT.
 
 % theoretical expectations
-In sum, we believe this identification strategy appropriately captures the decision-making process under risk of political parties as theorized by traditional vote-buying scholars based on the EUT. That said, based on prospect theory, we have different expectations, i.e.,  parties should buy votes due to risk-seeking in the domain of losses (i.e., when experienced prior losses) and due to risk-aversion in the domain of gains (i.e., when being a likely winner as the idea of losing electoral support becomes unbearable). 
+However, based on prospect theory, we have different expectations, i.e.,  parties should buy votes due to risk-seeking in the domain of losses (i.e., when experienced prior losses) and due to risk-aversion in the domain of gains (i.e., when being a likely winner as the idea of losing electoral support becomes unbearable). 
 
-
-\begin{figure}[H]
-\includegraphics[scale=.6, center]{depvarplot.png}
-\caption{{\bf Distribution of Dependent Variable.\label{dep:var:plot:fig}}\\\hspace{\textwidth} {\bf Note}: Note here.}\centering
-\end{figure}
-
-% parametric model
-Considering only the data of participants $i$ acting any of the party roles, we proceed by fitting the next OLS regression model,
-
-% m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance + budget + participant.code, m1.d)
-
+To test these hypotheses we exploit the experimental data described above by fitting the OLS regression model specified in \autoref{eq:ols},
 
 \begin{equation}\label{eq:ols}
-\text{Offer} = \beta_{0} + \beta_{1}\text{Vote Share}_{i} + \beta_{2}\Delta\text{Points Accumulated}_{i} + \beta_{3}\text{Spatial Distance}_{i} + \beta_{4}\text{Party Budget}_{i} + \alpha_{i} + \epsilon_{i}
+\begin{aligned}
+\text{Offer}_{i} = \; & \beta_{0} + \\
+                & \beta_{1}\text{Vote Share}_{i} + \\
+                & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
+                & \beta_{3}\text{Spatial Distance}_{i} + \\
+                & \beta_{4}\text{Party Budget}_{i} + \\
+                & \alpha_{i} + \epsilon_{i}
+\end{aligned}
 \end{equation}
 
 
-where \emph{Vote Share} is the certain number of (fictional) voters that were going to cast their votes for the party, $\Delta\text{\emph{Points Accumulated}}$ captures changes in the accumulated points respect to the experimental round played in $t-1$. For instance, if a player won 1,200 points in $t-1$ but then lost $500$ in the next round, $\Delta\text{\emph{Points Accumulated}}_{t}=700$. \emph{Party Budget} is the party budget, and $\alpha_{i}$ is a vector of participant fixed-effects.
+where \emph{Vote Share} is the certain number of (fictional) voters that were going to cast their votes for the party, $\Delta\text{\emph{Points Accumulated}}$ captures changes in the accumulated points respect to the experimental round played in $t-1$. For instance, if a player won 1,200 points in $t-1$ but then lost $500$ in the next round, then $\Delta\text{\emph{Points Accumulated}}_{t}=700$. \emph{Party Budget} is the party budget, and $\alpha_{i}$ is a vector of participant fixed-effects. 
+
+If traditional vote-buying theories based on the EUT are correct, then we should expect $\beta_{1}<0$, $\beta_{2}=0$, $\beta_{3}=\left\lbrace>0 \;\veebar <0 \right\rbrace$ and $\beta_{4}>0$. In simple, the larger the vote share, the less vote buying (because there are less risks of losing the election). Prior losses or ``sunk costs'' should not matter for vote-buying. The closer a party is to the voter is either positive for vote buying (core voter hypothesis) or negative (swing voter hypothesis). The bigger the budget of a party, the more vote buying (for instance, incumbents are usually considered to be more prone to buy votes, see \cite{Weitz-shapiro,Szwarcberg2013}). However, if the expectations rather conform with prospect theory, we should expect $\beta_{1}>0$, $\beta_{2}>0$, $\beta_{3}=0$ and $\beta_{4}=0$.
+
+
+Substantive results are shown in \autoref{m1plot} (regression table is shown in \autoref{reg:t}). The figure strongly supports 
 
 
 
-% reg:table:t
-<<reg:table:t, echo = FALSE, results='asis', warning = FALSE, message = F, cache=FALSE, include = TRUE>>=
 
-
-@
 
 \begin{figure}[H]
 \includegraphics[scale=.6, center]{m1plot.png}
@@ -584,11 +577,6 @@ where \emph{Vote Share} is the certain number of (fictional) voters that were go
 \section{Discussion}
 Discussion
 \todo{pending.}
-
-
-
-
-
 
 
 
@@ -655,18 +643,30 @@ count <- comma(as.numeric(count)) # add comma
 
 
 %% reset tables and figures counter
-%\setcounter{table}{0}
-%\renewcommand{\thetable}{OA\arabic{table}}
-%\setcounter{figure}{0}
-%\renewcommand{\thefigure}{OA\arabic{figure}}
+\setcounter{table}{0}
+\renewcommand{\thetable}{A\arabic{table}}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{A\arabic{figure}}
 
 
 
-%\section{Appendix}
-%\pagenumbering{roman}
-%\setcounter{page}{1}
-%\newpage
+\section{Appendix}
+\pagenumbering{roman}
+\setcounter{page}{1}
+\newpage
 
+
+% 1. summary:stats:t
+<<summary:stats:t, echo = FALSE, results='asis', warning = FALSE, message = F, cache=FALSE, include = TRUE>>=
+
+
+@
+
+% 2. reg:table:t
+<<reg:table:t, echo = FALSE, results='asis', warning = FALSE, message = F, cache=FALSE, include = TRUE>>=
+
+
+@
 
 
 \end{document}

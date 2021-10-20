@@ -811,14 +811,19 @@ reg.table = texreg::texreg( # screenreg
     custom.model.names = c(custom.model.names.m1),
     #custom.coef.names = NULL,
     omit.coef = "participant",
+    custom.coef.names = c("Intercept", "Vote Share", "Points Accumulated (delta)", "Spatial Distance", "Party Budget"),
     override.se = list(c(m1.clst.t.test,rep(0.0, length(unique(m1.d$participant.code))-1))),
     override.pvalues = list(c(m1.clst.p.value,rep(0.0, length(unique(m1.d$participant.code))-1))),
     custom.header = list( "OLS" = 1),
     stars = c(0.001, 0.01, 0.05, 0.1),
+    symbol = "\\cdot",
     label = "reg:t",
+    caption = "Statistical Model (OLS): Amount of Vote-Buying Offer",
     float.pos="H",
-    custom.note = "%stars. Robust standard errors in parentheses. \\\\ Fixed effects parameteres were omitted.\n"
-)
+    use.packages = FALSE,
+    threeparttable = TRUE,
+    custom.note = "\\item %stars. \\item Robust standard errors in parentheses. \\item Fixed effects parameteres omitted in table."
+    )
 ## ----
 
 ## ---- reg:table:t ----
