@@ -526,8 +526,8 @@ Since the focus of this paper is on vote buying, we discarded the \emph{voter} d
 
 \begin{figure}[h]
 \includegraphics[scale=.6, center]{depvarplot.png}
-\caption{{\bf Distribution of Dependent Variable.\label{dep:var:plot:fig}}}
-\caption*{{\bf Note}: Since the focus of this paper is on vote buying, we discarded the voter data (N=\Sexpr{nrow(m1.d)}). Mean = \Sexpr{round(mean(m1.d$offer.made.party),0)}, median = \Sexpr{round(median(m1.d$offer.made.party),0)}, mode = \Sexpr{round(getmode(m1.d$offer.made.party),0)}.}\centering
+\caption{{\bf Distribution of the Dependent Variable.\label{dep:var:plot:fig}}}
+\caption*{{\bf Note}: Since the focus of this paper is on vote buying, we discarded the voter data. The new sample size consisting only in parties is N=\Sexpr{nrow(m1.d)} (mean = \Sexpr{round(mean(m1.d$offer.made.party),0)}, median = \Sexpr{round(median(m1.d$offer.made.party),0)}).}\centering
 \end{figure}
 
 % internal validity
@@ -561,17 +561,16 @@ If traditional vote-buying theories based on the EUT are correct, then we should
 \begin{figure}[h]
 \includegraphics[scale=.6, center]{m1plot.png}
 \caption{{\bf Predicted Values of Vote-Buying Offer.\label{m1plot}}}
-\caption*{{\bf Note}: Based on the OLS estimates in \autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Confidence intervals were constructed robust standard errors (as shown in \autoref{reg:t}). Substantively, the figure shows that experimental subjects avoid losses by over-securing electoral support even in favorable contexts (panel 1) and do consider sunk costs and try to recover losses in the short run by spending more on vote-buying (panel 2). However, parties do not consider ideological/spatial distances with respect to their constituencies when making decisions nor do their budget, i.e., parties with more resources do not necessarily invest more vote buying (panel 3 and 4).}\centering
+\caption*{{\bf Note}: Based on the OLS estimates in \autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Confidence intervals were constructed robust standard errors (as shown in \autoref{reg:t}). Substantively, the figure shows that experimental subjects avoid losses by over-securing electoral support even in favorable contexts (panel 1) and do consider sunk costs and try to recover losses in the short run by spending more on vote-buying (panel 2). However, parties do not consider ideological/spatial distances with respect to their constituencies when making decisions nor do their budget, i.e., parties with more resources do not necessarily invest more vote buying (panels 3 and 4).}\centering
 \end{figure}
 
 
-Substantive results are shown in \autoref{m1plot} (regression table is shown in \autoref{reg:t}). Overall, results strongly supports prospect theory. Invidials 
+Substantive results are shown in \autoref{m1plot} (regression table is shown in \autoref{reg:t}). Overall, results strongly supports prospect theory.\todo{pending} 
 
 
 
 
 \section{Discussion}
-Discussion
 \todo{pending.}
 
 
