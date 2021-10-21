@@ -1,6 +1,6 @@
 \RequirePackage{atbegshi}
 \documentclass[compress,aspectratio=169]{beamer} % aspectratio=169
-%\usepackage[svgnames]{xcolor}
+
 
 % % % % % % % % % % % % % % %
 %             MY PACKAGES 
@@ -32,7 +32,6 @@
 %\autoref{x:y}                        %ocupar para autoref.
 %\usepackage{nopageno}      %desactivar para p�ginas
 \usepackage{pifont}
-%\usepackage{color,xcolor,ucs}
 %\usepackage{marvosym} %faces
 \usepackage{hyperref}
 \usepackage{multirow}
@@ -211,10 +210,15 @@
 %           DOCUMENT ID
 % % % % % % % % % % % % % % %
 
-\title{The Political Economy of Vote-Selling and Vote-Buying} % \input{title.txt}\unskip
+\title{\input{title.txt}\unskip} % 
 
-\author[shortname]{H\'ector Bahamonde \textsuperscript{1} \and Andrea Canales \inst{1}}
-\institute[shortinst]{\textsuperscript{1} O$'$Higgins University}
+
+\author[shortname]{Hector Bahamonde \inst{1} \and Andrea Canales \inst{2}}
+
+\institute[shortinst]{\inst{1} University of Turku, Finland \and %
+                      \inst{2} O$'$Higgins University, Chile
+                      }
+
 \date{\today}
 
 %to to see shadows of previous blocks
@@ -233,32 +237,87 @@
 
 
 \section{Motivation}
-\subsection{Motivation}
+\subsection{First things first...}
 
-\begin{frame}{Motivation: Vote-Buying Literature Forgets About Vote-Sellers}
+\begin{frame}{}
 
-{\bf Clientelism}: ``the distribution of rewards to individuals or small groups during elections in contingent exchange for vote choices'' {\scriptsize(Nichter, 2014)}.
+{\bf Vote buying}: distribution of private rewards to individuals or small groups during elections in contingent exchange for vote choices {\scriptsize(Nichter, 2014)}.
 \vspace{1cm}
 
+  \includegraphics[scale=0.3, center]{Resources_Presentation/vote_buying.jpg}
 
-
-  \begin{itemize}
-    \item The clientelism literature has focused primarily on vote-\emph{buying} (parties buying votes in exchange of electoral support).
-    \item Unfortunately, we are rather ignorants about vote-\emph{sellers}.% Who are they?
-    %\item Moreover, we do not know the micro-dynamics of the transaction itself.
-    \item[$\star$] {\bf Supply and demand story}: Do parties target likely voters? Why? At what price? Under what conditions do sellers sell their votes?
-  \end{itemize}
 \end{frame}
 
 
-\subsection{Talk}
+\subsection{Motivating the problem}
+\begin{frame}{Vote-Buying Literature Builds on the Wrong Framework}
+
+\begin{itemize}
+    \item {\bf Say you're a \underline{clientelist} political party campaigning}:
+        \begin{enumerate}
+            \item When do you buy votes? {\scriptsize\color{gray} Winning/losing the elections?}
+            \item Who do you target? {\scriptsize\color{gray} Your own supporters (``core'') or the ones who are more likely to flip (``swing'')?}
+            \item Should your past haunt you? {\scriptsize\color{gray} Do prior losses matter?}
+        \end{enumerate}
+    \item {\bf Intuitively, these questions seem easy to answer}:
+        \begin{enumerate}
+            \item[\checkmark] When losing the elections: {\bf risk}.
+            \item[\checkmark] To the ones who are more likely to flip (``swing''): {\bf waste}.
+            \item[\checkmark] It shouldn't: prior losses should not matter: {\bf ``sunk costs.''}
+        \end{enumerate}
+   \item {\bf They are not}. Starting point: {\color{blue}traditional clientelism research has failed to answer these questions because it has a wrong understanding about the decision-making process of clientelist parties}.
+   \end{itemize}
+\end{frame}
+
+
+\subsection{Motivate the problem}
 \begin{frame}{Plan for Today}
-	  \begin{enumerate}
-    	\item Formalize our theory and mechanisms.
-    	\item Explain experimental design.
-    	\item Feedback!
-    \end{enumerate}
+    \begin{itemize}
+      \item {\bf Motivate the problem}: vote buying literature is based solely on the Expected Utility Theory {\tiny (von Neumann and Morgenstern)}.
+      \item {\bf Explain why we should care}: as a consequence, there are too many important loose ends.
+      \item {\bf Propose a possible solution}: re-think how parties make decisions under risk (Prospect Theory).
+      \item {\bf Empirics}: following the precepts of EUT, we formalized a vote buying game, and then test it in an economic experiment.
+      \item {\bf Results}: we find strong support in favor of prospect theory.
+      \item {\bf Feedback wanted!} 
+    \end{itemize}
 \end{frame}
+
+
+\section{The problem}
+
+\subsection{The problem}
+
+\begin{frame}{Clientelism and the Expected Utility Theory}
+    \begin{itemize}
+      \item 
+      \item Safe to say that 99\% of the vote-buying literature takes the Expected Utility Theory as a starting point:
+          \begin{itemize}
+            \item Approach focused 
+            \item Consequences, the literature assumes that in a party's decision-making process,
+              \begin{itemize}
+                  \item losses and gains affect in a comparable way (winning elections feels good as losing one hurts).
+                  \item parties focus only on absolute levels of utilities (while overlooking changes in outcomes respect to a reference point).
+              \end{itemize}
+          \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\subsection{So What?}
+
+\begin{frame}{Several Empirical Findings Don't Conform with the EUT}
+    \begin{itemize}
+      \item Safe to say that 99\% of the vote-buying literature takes the Expected Utility Theory as a starting point:
+          \begin{itemize}
+            \item Approach focused 
+          \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+
+
+
+
 
 
 \section{The Model}
