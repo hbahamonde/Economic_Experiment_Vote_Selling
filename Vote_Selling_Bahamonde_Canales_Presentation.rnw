@@ -273,10 +273,10 @@
 \subsection{Motivate the problem}
 \begin{frame}{Plan for Today}
     \begin{itemize}
-      \item {\bf Motivate the problem}: vote buying literature is based solely on the Expected Utility Theory {\tiny (von Neumann and Morgenstern)}.
+      \item {\bf Motivate the problem}: vote buying literature is based solely on the Expected Utility Theory (EUT) {\tiny (von Neumann and Morgenstern)}.
       \item {\bf Explain why we should care}: as a consequence, there are too many important loose ends.
       \item {\bf Propose a possible solution}: re-think how parties make decisions under risk (Prospect Theory).
-      \item {\bf Empirics}: following the precepts of EUT, we formalized a vote buying game, and then test it in an economic experiment.
+      \item {\bf Empirics}: following the precepts of EUT, we formalized a vote buying game, and then test it in an economic lab experiment.
       \item {\bf Results}: we find strong support in favor of prospect theory.
       \item {\bf Feedback wanted!} 
     \end{itemize}
@@ -285,21 +285,56 @@
 
 \section{The problem}
 
-\subsection{The problem}
+\subsection{The Problem: Theory}
 
 \begin{frame}{Clientelism and the Expected Utility Theory}
-    \begin{itemize}
-      \item 
-      \item Safe to say that 99\% of the vote-buying literature takes the Expected Utility Theory as a starting point:
-          \begin{itemize}
-            \item Approach focused 
-            \item Consequences, the literature assumes that in a party's decision-making process,
-              \begin{itemize}
-                  \item losses and gains affect in a comparable way (winning elections feels good as losing one hurts).
-                  \item parties focus only on absolute levels of utilities (while overlooking changes in outcomes respect to a reference point).
-              \end{itemize}
-          \end{itemize}
-    \end{itemize}
+  \begin{itemize}
+    \item The EUT was one of the first theories of decision making under risk.
+    \item Since its introduction, it has \emph{dominated} political science as a field (including the vote-buying lit.).
+    \item {\bf The problem}: the (whole!) literature assumes that in the party's decision-making process:
+              \begin{enumerate}
+                  \item {\color{blue}Losses and gains affect in a {\bf comparable} way}.\\
+                  {\scriptsize\color{gray}Winning elections {\bf feels good as} losing one hurts.}
+                  \item {\color{blue}Parties focus only on {\bf absolute} levels of utilities}.\\
+                  {\scriptsize\color{gray}Overlooking {\bf changes} in outcomes respect to a reference point.}
+                  \item[] {\bf They don't}.
+              \end{enumerate}
+  \end{itemize}
+\end{frame}
+
+
+
+\subsection{The Problem: Empirical}
+
+\begin{frame}{Clientelism and the Expected Utility Theory}
+  \begin{itemize}
+    \item These assumptions have led to several empirical inconsistencies.
+    \item Authors tend to ignore or treat them as unimportant empirical deviations:
+        \begin{enumerate}
+          \item Clientelist Targeting.
+          \item Political Contestation.
+        \end{enumerate}
+  \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Clientelist Targeting}
+  \begin{itemize}
+    \item Since constituencies are well known to clientelist parties, they allocate resources to {\bf core voters}.\\
+    {\tiny\color{gray}Cox and Mccubbins (1986).}
+    \item Since allocating resources to individuals who ex-ante vote for the party is a waste, parties target {\bf swing voters}.\\
+    {\tiny\color{gray} Dixit and Londregan (1996) and Stokes (2005).}
+    \item Some state ``that our knowledge of who parties target remains incomplete.''\\
+    {\tiny\color{gray} Carlin and Moseley (2015).}
+    \item {\color{blue}We contend that this is \emph{very} important question, yet one that literature has \emph{failed} to answer}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Political Contestation}
+  \begin{itemize}
+    \item Test
+  \end{itemize}
 \end{frame}
 
 \subsection{So What?}
