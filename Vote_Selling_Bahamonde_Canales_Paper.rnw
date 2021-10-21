@@ -42,7 +42,6 @@
 \usepackage{textcomp}
 \usepackage[export]{adjustbox}
 \usepackage{afterpage}
-\usepackage{filecontents}
 \usepackage{color}
 \usepackage{latexsym}
 \usepackage{lscape}       %\begin{landscape} and \end{landscape}
@@ -565,7 +564,7 @@ If traditional vote-buying theories based on the EUT are correct, then we should
 \end{figure}
 
 
-Substantive results are shown in \autoref{m1plot} (regression table is shown in \autoref{reg:t}). Overall, results strongly supports prospect theory.\todo{pending} 
+Substantive results are shown in \autoref{m1plot} (regression table is shown in \autoref{reg:t}). Overall, results clearly depart from the theoretical expectations of traditional vote-buying theories based on the EUT, and widely support prospect theory. Parties do not buy votes when they are losing the election but when they are winning it (panel 1 in \autoref{m1plot}). As prospect theory predicts, decision-makers in the domain of gains will exaggerate the unlikely scenario of losing the election and will become more risk-averse, making the strategy of vote-buying more attractive. Second, unlike the expectations EUT-based vote-buying theories, parties will consider sunk costs in their calculations and hence will buy votes when experiencing prior losses (panel 2 in \autoref{m1plot}). That is, when parties are in the domain of losses they will be more risk-seeking, and gamble more money on vote-buying. Importantly, parties do not consider whether voters are swing or core voters (panel 3) neither consider their own budgets (panel 4). 
 
 
 
