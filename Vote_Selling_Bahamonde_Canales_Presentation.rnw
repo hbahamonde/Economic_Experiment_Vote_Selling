@@ -225,7 +225,39 @@
 %\setbeamercovered{dynamic}
 
 
+
+
+
 \begin{document}
+
+<<echo=FALSE, cache=FALSE, warning = FALSE, message = F>>=
+read_chunk('/Users/hectorbahamonde/research/Economic_Experiment_Vote_Selling/Vote_Selling_Bahamonde_Canales.r') # Hector path // MAC
+# read_chunk('Vote_Selling_Bahamonde_Canales.R') % Andrea path
+
+@
+
+
+<<rsetup, include=FALSE>>=
+chooseCRANmirror(graphics=FALSE, ind=1)
+if (!require("pacman")) install.packages("pacman"); library(pacman)
+p_load(knitr)
+options(scipen = 99999999999)
+
+@
+
+<<loadings:d, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = FALSE, cache=FALSE, eval=TRUE>>=
+
+@
+
+<<summary:stats:d, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = FALSE, cache=FALSE, eval=TRUE>>=
+
+@
+
+<<models-d, echo=FALSE, comment=NA, warning=FALSE, message=FALSE, include = TRUE, cache=FALSE, eval=TRUE>>=
+
+@
+
+
 % % % % % % % % % % % % % % %
 %           CONTENT
 % % % % % % % % % % % % % % %
@@ -545,9 +577,9 @@
 
 
 
-\section{The Model}
+\section{Formal Model}
 
-\subsection{The Model}
+\subsection{Formal Model}
 
 
 \miniframeson
@@ -784,42 +816,91 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 \section{Experimental Design}
 
 
-\subsection{Experimental Design}
+\subsection{Setup}
+\begin{frame}[c]%{Experimental Design: Setup}
+  \begin{itemize}
+    \item The experiment was conducted in Chile {\tiny\color{gray}(April/May 2021).} 
+    \item \texttt{O-tree} (\texttt{Z-tree}). {\tiny\color{gray}Fischbacher 2007.}
+    \item All participants were required to successfully complete two practice rounds.
+    \item Show-up fee of \$2,000 CLP ($\approx$ 2.1\texteuro).
+    \item Every game was played between three people: two parties and one voter.
+    \item All transactions were performed exchanging experimental ``points''\\
+    {\tiny\color{gray}(1 point = \$\Sexpr{as.numeric(unique(dat$session.config.real_world_currency_per_point))}).}
+    \item  A total of \Sexpr{as.numeric(length(unique(v.buying.dat$participant.code)))} subjects were recruited. 
+    \item Each subject played the game three times (N = \Sexpr{as.numeric(nrow(dat.v.b))}).
+ 
+  \end{itemize}
+\end{frame}
 
 
+\subsection{Treatments}
+\begin{frame}[c]%{Treatments}
+  \begin{itemize}
+    %\item In between-subjects design (individuals are randomly assigned to various treatments)
 
-\begin{frame}{Experimental Design}
+    \item {\color{blue}Role}: \emph{party A}, \emph{party B} or \emph{voter}.
 
-\underline{{\color{red}{\bf Parts}}}:
-  \begin{enumerate}
-    \item {\bf Vote-buying}: {\bf parties} are first players (get out and buy votes, if needed).
-    \item {\bf Vote-selling}: {\bf voters} are first players (get out and sell votes, if needed).\pause
-  \end{enumerate}
+    \item {\bf Voters}: {\color{blue}``ideological position''} (points depending on whether party A or B won election). 
 
-\underline{For both parts, the following {\color{red}{\bf stages}}}:
-  \begin{enumerate}
-    \item Random assignments: role (P$_{a}$, P$_{b}$, V$_{\frac{1}{3}}$, V$_{\frac{1}{5}}$), ``ideology,'' ``party endowments.'' {\bf Games are played among three subjects \emph{always}: {\color{red}two parties, one voter}}.
-    \item buying/selling {\bf offers}.
-    \item buying/selling {\bf choices}.
-    \item Election: [{\color{red}{\bf V}}: if her party wins, she wins \$], [{\color{red}{\bf P}}: if he wins the election, he wins \$].
-  \end{enumerate}
+    % For instance, if party A wins the election, a voter would receive in that case 2,400 points, whereas if party B won the election, that voter would receive 200 points (``ideologically'' closer to party A).
 
+    \item {\bf Parties}: {\color{blue}endowments}.\\
+    {\tiny\color{gray}But both parties receive the same endowment in the same game.}
+
+    \item {\bf Parties}: {\color{blue}vote shares} (certain number of votes each party will receive---excluding the ``voter'' participant.
+
+    \item Every randomization was common knowledge.
+    
+    %\item Our design mimics an electoral market where we can observe under which conditions different clientelist dynamics develop.
+  \end{itemize}
 \end{frame}
 
 
 
-\begin{frame}{Experimental Flow}
+\miniframeson
+\subsection{Experimental Flow}
+\begin{frame}%{Experimental Flow}
 \includegraphics[scale=1, center]{Experimental_Flow_Figure.pdf}
 \end{frame}
 
 
-\begin{frame}{Caveats}
- \begin{enumerate}
-    \item {\bf Ideology}: voters ``lean'' towards a party based on the amount of points received if party wins the election. {\scriptsize{\bf Not really ``ideology.''}}
-    \item {\bf Party endowments}: fixed. \emph{Parties face different relative vote-buying costs depending on party-voter distance}. {\scriptsize Proxy of ``randomized'' party endowment}.
-    \item {\bf Relative importance of voter is randomized}. Voters are told they represent $\frac{1}{3}$ or $\frac{1}{5}$ of voters (randomized \& public knowledge).
-  \end{enumerate}
+
+
+
+\miniframesoff
+\begin{frame}{Payoffs}
+  \begin{columns}[c]
+  \begin{column}{.48\textwidth}
+  
+\begin{enumerate}
+
+    \item Participants acting the “party” role accumulated/lost wealth depending on whether they got elected/not-elected. For every time they bought votes at some amount, that amount was discounted from their wealth. For simplicity, voters received zero endowments
+
+    \item participants acting the “voter” role accumulated/lost wealth depending on whether their party got elected/not-elected (as per traditional EUT voting theories) and on whether they decided to sell/not-sell their vote.
+
+
+    \item Payoffs depended on...
+    \item {\bf Minimize hypothetical bias}: subjects were compensated with real money according to their decisions.
+\end{enumerate}
+
+\end{column}
+
+
+\hfill%
+\begin{column}{.48\textwidth}
+
+
+\includegraphics[scale=0.4, center]{payoffplot.png}
+
+  \end{column}
+  \end{columns}
 \end{frame}
+
+
+
+
+
+
 
 
 
