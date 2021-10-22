@@ -268,7 +268,7 @@ options(scipen = 99999999999)
 \end{frame}
 
 
-\section{Motivation}
+\section{Introduction}
 \subsection{First things first...}
 
 \begin{frame}[c]{}
@@ -281,7 +281,7 @@ options(scipen = 99999999999)
 \end{frame}
 
 
-\subsection{Motivating the problem}
+\subsection{Motivation}
 \begin{frame}[c]{Vote-Buying Literature Builds on the Wrong Framework}
 
 \begin{itemize}
@@ -824,9 +824,9 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
     \item All participants were required to successfully complete two practice rounds.
     \item Show-up fee of \$2,000 CLP ($\approx$ 2.1\texteuro).
     \item Every game was played between three people: two parties and one voter.
-    \item All transactions were performed exchanging experimental ``points''\\
+    \item All transactions were performed exchanging experimental ``points.''\\
     {\tiny\color{gray}(1 point = \$\Sexpr{as.numeric(unique(dat$session.config.real_world_currency_per_point))}).}
-    \item  A total of \Sexpr{as.numeric(length(unique(v.buying.dat$participant.code)))} subjects were recruited. 
+    \item \Sexpr{as.numeric(length(unique(v.buying.dat$participant.code)))} subjects were recruited. 
     \item Each subject played the game three times (N = \Sexpr{as.numeric(nrow(dat.v.b))}).
  
   \end{itemize}
@@ -844,10 +844,10 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 
     % For instance, if party A wins the election, a voter would receive in that case 2,400 points, whereas if party B won the election, that voter would receive 200 points (``ideologically'' closer to party A).
 
-    \item {\bf Parties}: {\color{blue}endowments}.\\
+    \item {\bf Parties}: {\color{blue}endowments} (points to buy votes, if any).\\
     {\tiny\color{gray}But both parties receive the same endowment in the same game.}
 
-    \item {\bf Parties}: {\color{blue}vote shares} (certain number of votes each party will receive---excluding the ``voter'' participant.
+    \item {\bf Parties}: {\color{blue}vote shares} (number of votes each party \emph{will} receive---excluding the ``voter'' participant.
 
     \item Every randomization was common knowledge.
     
@@ -866,23 +866,20 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 
 
 
-
-\miniframesoff
-\begin{frame}{Payoffs}
+\miniframeson
+\subsection{Payoffs}
+\begin{frame}%{Payoffs}
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
   
-\begin{enumerate}
+\begin{itemize}
 
-    \item Participants acting the “party” role accumulated/lost wealth depending on whether they got elected/not-elected. For every time they bought votes at some amount, that amount was discounted from their wealth. For simplicity, voters received zero endowments
+  %\item {\bf Minimize hypothetical bias}: subjects were compensated with real money according to their decisions.
+  
+  \item {\bf Parties}: payoffs depended on whether they get elected. If they buy votes, that amount is discounted. % For simplicity, voters received zero endowments
 
-    \item participants acting the “voter” role accumulated/lost wealth depending on whether their party got elected/not-elected (as per traditional EUT voting theories) and on whether they decided to sell/not-sell their vote.
-
-
-    \item Payoffs depended on...
-    \item {\bf Minimize hypothetical bias}: subjects were compensated with real money according to their decisions.
-\end{enumerate}
-
+  \item {\bf Voters}: payoffs depended on whether their party get elected, and on whether they sell their vote. {\bf Can't defect: if they accept and offer, they vote for that party}.
+\end{itemize}
 \end{column}
 
 
@@ -898,79 +895,36 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 
 
 
+\miniframeson
+\section{Statistical Analyses}
 
+\subsection{Dependent Variable}
 
+\begin{frame}%{Payoffs}
+  \begin{columns}[c]
+  \begin{column}{.5\textwidth}
+  
+\begin{itemize}
+  \item Our focus is vote buying. \\
+  Voter data discarded. 
 
+  \item {\bf Dependent variable}: the amount of the vote-buying offer made by parties (if any).
 
-
-
-
-\begin{frame}{Comparative Statics: Ideology}
- \begin{itemize}
-    \item Downsian paradigm is unidimensional: left-right continuum (policy-oriented).
-    \item We add some more complexity: a non-policy factor (vote-selling is \emph{not} policy-oriented, {\scriptsize Kitschelt 2007}).
-    \item Research question: {\bf What's the tipping point at which voters stop caring about ideology, and start selling their votes?}
-    \item[$\star$] {\scriptsize Ideology given by party-voter spatial distance (randomized)}.
-  \end{itemize}
-\end{frame}
-
-
-
-\begin{frame}{Comparative Statics: Competitiveness}
- \begin{itemize}
-    \item Competitive authoritarian regimes survive not due to electoral fraud {\scriptsize (Levitsky and Way 2010)}.
-    \item They survive because of the incumbent's capacity to mobilize a large mass of supporters, discouraging likely opposers {\scriptsize (Magaloni 2008)}.
-    \item Research questions: 
-      \begin{enumerate}
-        \item {\bf At which point do parties feel \underline{encouraged} and start buying votes?}
-        \item {\bf At which point do parties feel \underline{discouraged} and abandon the electoral race, not even buying votes?}
-         \item[$\star$] {\scriptsize Competitiveness given by [$\frac{1}{3}$, $\frac{1}{5}$] voter types (randomized)}.
-	 \end{enumerate}
-  \end{itemize}
-\end{frame}
-
-
-
-\begin{frame}{Comparative Statics: Endowments}
- \begin{itemize}
-    \item Literature won't give a definitive answer: Parties with more resources buy votes at higher prices {\scriptsize(Bahamonde, 2018)} or not {\scriptsize(Szwarcberg, 2013)}.
-    \item {\bf Ultimately}, the question is: Does \emph{expensive clientelism} exist?
-    \item Research question: {\bf Do wealthier parties buy more votes?}
-    \item \scriptsize{\emph{Remember caveat: not ``really'' randomized. Proxy.}}
-      \item[$\star$] {\scriptsize Relative party purchasing power varies according to party-voter spatial distance}.
-	\end{itemize}
-\end{frame}
-
-
-\begin{frame}{Comparative Statics: Targeting}
- \begin{itemize}
-    \item Literature won't give a definitive answer:
-
-    	\begin{itemize} 
-    		\item \emph{Do parties target {\bf own supporters} (since it's {\bf cheaper})}?\\
-    		{\scriptsize (Cox and McCubbins)} 
-    		\item \emph{Do parties target {\bf unlikely voters} (otherwise it's a {\bf waste})}?\\ 
-    		{\scriptsize (Stokes)}.
-    	\end{itemize}
-    \item Research question: {\bf Who do political parties target? Own? Unlikely?}
-    \item[$\star$] {\scriptsize Own/Unlikely are given at random}.
+  \item If predictions of formal model and traditional vote-buying th. is accurate, we should see that offers go up in risky scenarios (facing probable electoral losses).
 \end{itemize}
+\end{column}
+
+
+\hfill%
+\begin{column}{.48\textwidth}
+
+
+\includegraphics[scale=0.4, center]{depvarplot.png}
+
+  \end{column}
+  \end{columns}
 \end{frame}
 
-
-\begin{frame}{Comparative Statics: Sequence}
-\includegraphics[scale=0.5, center]{Experimental_Flow_Figure.pdf}
- \begin{itemize}
-    \item Research question: Does being the first one in making an offer matter? When? How?
-\end{itemize}
-\end{frame}
-
-\section{Feedback}
-\subsection{Feedback}
-
-\begin{frame}[plain]{Feedback Wanted}
-\includegraphics[scale=1, center]{Experimental_Flow_Figure.pdf}
-\end{frame}
 
 \end{document}
 
