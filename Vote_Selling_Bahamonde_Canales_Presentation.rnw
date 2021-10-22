@@ -239,7 +239,7 @@
 \section{Motivation}
 \subsection{First things first...}
 
-\begin{frame}{}
+\begin{frame}[c]{}
 
 {\bf Vote buying}: distribution of private rewards to individuals or small groups during elections in contingent exchange for vote choices {\scriptsize(Nichter, 2014)}.
 \vspace{1cm}
@@ -250,7 +250,7 @@
 
 
 \subsection{Motivating the problem}
-\begin{frame}{Vote-Buying Literature Builds on the Wrong Framework}
+\begin{frame}[c]{Vote-Buying Literature Builds on the Wrong Framework}
 
 \begin{itemize}
     \item {\bf Say you're a \underline{clientelist} political party campaigning}:
@@ -270,8 +270,9 @@
 \end{frame}
 
 
-\subsection{Motivate the problem}
-\begin{frame}{Plan for Today}
+
+\miniframesoff
+\begin{frame}[c]{Plan for Today}
     \begin{itemize}
       \item {\bf Motivate the problem}: vote buying literature is based solely on the Expected Utility Theory (EUT) {\tiny (von Neumann and Morgenstern)}.
       \item {\bf Explain why we should care}: as a consequence, there are too many important loose ends.
@@ -285,9 +286,10 @@
 
 \section{The problem}
 
-\subsection{The Problem: Theory}
+\subsection{The Problem}
 
-\begin{frame}{Clientelism and the Expected Utility Theory}
+\miniframeson
+\begin{frame}[c]{Clientelism and the Expected Utility Theory}
   \begin{itemize}
     \item The EUT was one of the first theories of decision making under risk.
     \item Since its introduction, it has \emph{dominated} political science as a field (including the vote-buying lit.).
@@ -297,29 +299,19 @@
                   {\scriptsize\color{gray}Winning elections {\bf feels good as} losing one hurts.}
                   \item {\color{blue}Parties focus only on {\bf absolute} levels of utilities}.\\
                   {\scriptsize\color{gray}Overlooking {\bf changes} in outcomes respect to a reference point.}
-                  \item[] {\bf They don't}.
               \end{enumerate}
+        \item These assumptions have led to several empirical inconsistencies.
+          \begin{enumerate}
+            \item Clientelist Targeting.
+            \item Political Contestation.
+          \end{enumerate}
   \end{itemize}
 \end{frame}
 
+\subsection{The Problem: Clientelist Targeting}
 
-
-\subsection{The Problem: Empirical}
-
-\begin{frame}{Clientelism and the Expected Utility Theory}
-  \begin{itemize}
-    \item These assumptions have led to several empirical inconsistencies.
-    \item Authors tend to ignore or treat them as unimportant empirical deviations:
-        \begin{enumerate}
-          \item Clientelist Targeting.
-          \item Political Contestation.
-        \end{enumerate}
-  \end{itemize}
-\end{frame}
-
-
-
-\begin{frame}{Clientelist Targeting}
+\miniframeson
+\begin{frame}{Not Clear Who Clientelist Parties Target}
   \begin{itemize}
     \item Since constituencies are well known to clientelist parties, they allocate resources to {\bf core voters}.\\
     {\tiny\color{gray}Cox and Mccubbins (1986).}
@@ -331,22 +323,220 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Political Contestation}
+\subsection{The Problem: Political Contestation}
+
+\miniframeson
+\begin{frame}{Not Clear The Role of Political Contestation on Vote Buying}
   \begin{itemize}
-    \item Test
+    \item The more contested an election, the more risks of losing the election, the more incentives to resort to vote buying to prevent that from happening\\
+    {\tiny\color{gray} Scott (1972), Shefter (1977), Diaz-Cayeros (2008), Corstange (2018).}
+    \item However, some find very high levels of vote-buying in uncontested elections.\\
+    {\tiny\color{gray} Gonzalez-Ocantos, Jonge, et al. (2012).} 
+    \item {\color{blue}Why would a party buy such a massive amount of votes in a safe and uncontested election?}
   \end{itemize}
 \end{frame}
 
-\subsection{So What?}
+\section{Theory}
 
-\begin{frame}{Several Empirical Findings Don't Conform with the EUT}
-    \begin{itemize}
-      \item Safe to say that 99\% of the vote-buying literature takes the Expected Utility Theory as a starting point:
-          \begin{itemize}
-            \item Approach focused 
-          \end{itemize}
+\subsection{Changing the starting point}
+
+
+\miniframeson
+\begin{frame}{Wrong Understanding of Decision-Making Process under Risk}
+  \begin{columns}[c]
+  \begin{column}{.48\textwidth}
+
+    \begin{itemize} 
+      \item[] \underline{Change from traditional focus (EUT)}:
+        \begin{itemize}
+          \item Losses and gains affect in a {\bf comparable} way.
+          \item Parties focus only on {\bf absolute} levels of utilities.
+        \end{itemize}
     \end{itemize}
+
+
+    \begin{itemize} 
+      \item[] {\color{white}\underline{To one based on Prospect Theory} {\color{white}\tiny{(Kahneman and Tversky, 1979)}}:}
+        \begin{itemize}
+          \item[] {\color{white}{\bf Reference dependence}.}
+          \item[] {\color{white}{\bf Likelihood dependence}.}
+        \end{itemize}
+    \end{itemize}
+
+\end{column}
+
+
+\hfill%
+\begin{column}{.48\textwidth}
+
+
+\includegraphics[scale=0.25, center]{Resources_Presentation/eut.jpg}
+
+  \end{column}
+  \end{columns}
 \end{frame}
+
+
+
+\miniframesoff
+\begin{frame}{Wrong Understanding of Decision-Making Process under Risk}
+  \begin{columns}[c]
+  \begin{column}{.48\textwidth}
+
+    \begin{itemize} 
+      \item[] \underline{Change from traditional focus (EUT)}:
+        \begin{itemize}
+          \item Losses and gains affect in a {\bf comparable} way.
+          \item Parties focus only on {\bf absolute} levels of utilities.
+        \end{itemize}
+    \end{itemize}
+
+
+    \begin{itemize} 
+      \item[] \underline{To one based on Prospect Theory} {\color{gray}\tiny{(Kahneman and Tversky, 1979)}}:
+        \begin{itemize}
+          \item[1.] {\bf Reference dependence}.
+          \item[2.] {\bf Likelihood dependence}.
+        \end{itemize}
+    \end{itemize}
+
+\end{column}
+
+
+\hfill%
+\begin{column}{.48\textwidth}
+
+
+\includegraphics[scale=0.25, center]{Resources_Presentation/prospect_theory.png}
+
+  \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+
+
+
+
+
+
+\subsection{Theory}
+
+\miniframeson
+\begin{frame}[c]{Prospect Theory}
+  \begin{columns}[c]
+  \begin{column}{.48\textwidth}
+
+\begin{itemize} 
+      \item[1.] {\bf Reference dependence}. Elements that influence decisions,
+          \begin{itemize}
+            \item[\checkmark] {\color{blue}context} in which decision-making processes take place.
+            \item[\checkmark] {\color{blue}changes of wealth}, rather than final asset position.
+            \item[\checkmark] {\color{blue}sunk costs} do matter.
+          \end{itemize}
+\end{itemize}
+
+\end{column}
+
+
+\hfill%
+\begin{column}{.48\textwidth}
+
+
+\includegraphics[scale=0.25, center]{Resources_Presentation/prospect_theory.png}
+
+  \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+\miniframesoff
+\begin{frame}{Prospect Theory}
+  \begin{columns}[c]
+  \begin{column}{.48\textwidth}
+
+\begin{itemize} 
+      \item[2.] {\bf Likelihood dependence}. Asymmetrical curvature of the likelihood influences decisions,
+          \begin{itemize}
+            \item[\checkmark]  Individuals have risk-averse behaviors in the domain of gains.
+            \item[\checkmark] In the domain of losses, individuals have risk-acceptant behaviors. 
+          \end{itemize}
+\end{itemize}
+
+\end{column}
+
+
+\hfill%
+\begin{column}{.48\textwidth}
+
+
+\includegraphics[scale=0.25, center]{Resources_Presentation/prospect_theory.png}
+
+  \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+
+
+\subsection{Theoretical Expectations}
+
+\miniframeson
+\begin{frame}{Prospect Theory and Vote-Buying}
+  \begin{columns}[c]
+  \begin{column}{.48\textwidth}
+
+\begin{itemize} 
+      \item {\bf Overweighting}: in the domain of {\color{blue}losses}, the convexity of the  function encourages {\color{blue}risk-seeking} behaviors by exaggerating the probabilities of rare but catastrophic losses.
+      \item {\bf Underweighting}: in the domain of {\color{blue}gains}, the concavity of the function encourages {\color{blue}risk aversion} by undervaluing the probability of success.
+\end{itemize}
+
+\end{column}
+
+
+\hfill%
+\begin{column}{.48\textwidth}
+
+
+\includegraphics[scale=0.25, center]{Resources_Presentation/prospect_theory.png}
+
+  \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+\miniframesoff
+\begin{frame}{Prospect Theory and Vote-Buying}
+  \begin{columns}[c]
+  \begin{column}{.48\textwidth}
+
+  \underline{Vote-buying will be higher when parties},
+
+\begin{enumerate} 
+      \item {\bf Are probable winners}: parties will exaggerate the small probability of losing the election ({\color{blue}risk-seeking}).
+      \item {\bf Have experienced losses in the past} (sunk costs): making vote buying an attractive strategy by altering the decision-makers' reference point ({\color{blue}risk aversion}).
+      %\item in the domain of gains, risk-averted decision-makers are excessively eager to secure gains, while risk-seeking decision-makers take disproportionate risks to avoid certain losses.
+\end{enumerate}
+
+\end{column}
+
+
+\hfill%
+\begin{column}{.48\textwidth}
+
+
+\includegraphics[scale=0.25, center]{Resources_Presentation/prospect_theory.png}
+
+  \end{column}
+  \end{columns}
+\end{frame}
+
+
+
 
 
 
@@ -356,9 +546,27 @@
 
 
 \section{The Model}
+
 \subsection{The Model}
 
-\begin{frame}{Downs (1957)}
+
+\miniframeson
+\begin{frame}{A Formal Model of Vote-Buying}
+  \begin{itemize} 
+        \item Formal models can help experimentalists determine which theoretical settings and equilibria are most relevant to a particular causal hypothesis.\\
+        {\tiny\color{gray}McDermott (2002), Aldrich and Lupia (2011), Barberis (2013).} 
+        \item We developed a vote-buying game within the Downsian-``spatial'' paradigms (EUT).\\
+         {\tiny\color{gray}Downs (1957), Enelow and Hinich (1990), Plott (1991).} 
+        \item The idea is to test the descriptive accuracy of the game-theory model in the experimental section of this paper.\\
+{\tiny\color{gray}Lupia and McCubbins (1998), Bassi, Morton, and Williams (2011), Dickson (2011), Tyszler and Schram (2016), Vieider and Vis (2019).} 
+  \end{itemize}
+\end{frame}
+
+
+
+
+
+\begin{frame}<presentation:0>{Downs (1957)}
 \centering
 %\pgfmathdeclarefunction{gauss}{2}{%
   %\pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
@@ -383,7 +591,7 @@
 \end{tikzpicture}    
 \end{frame}
 
-\begin{frame}{Downs (1957)}
+\begin{frame}<presentation:0>{Downs (1957)}
 \centering
 \begin{tikzpicture}[scale=1.5]
 \begin{axis}[axis lines=none, xtick=\empty, ytick=\empty,xmin=0,xmax=10,ymax=1,domain=0:10,
@@ -400,7 +608,7 @@
 \end{frame}
 
 
-\begin{frame}{The Model}
+\begin{frame}<presentation:0>{The Model}
 \begin{itemize}
 	\item $n$ voters, each citizen $i$ has an ideal point $x_i$ which is an \emph{iid} draw from an uniform distribution $\Gamma=\{1,2,...,100\}$.
 	\item When policy $\gamma$ is implemented, payoffs of citizen $i$ are given by $u(D,x_i,\gamma)=D-\vert x_i-\gamma \vert$.
@@ -411,7 +619,7 @@
 \end{frame}
 
 
-\begin{frame}{The Model}
+\begin{frame}<presentation:0>{The Model}
 \begin{itemize}
 \item Each candidate has a budget ($B$) that they can use to buy votes.
 \item Profits of party $i$ are given by, 
@@ -425,7 +633,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 
 \end{frame}
 
-\begin{frame}{The Model}
+\begin{frame}<presentation:0>{The Model}
 \centering
 \vspace{1cm}
 \begin{tikzpicture}[scale=0.8]
@@ -493,7 +701,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 
 \end{frame}
 
-\begin{frame}{Timing}
+\begin{frame}<presentation:0>{Timing}
 \begin{itemize}
 	\item At the beginning of the game $n$ voters and two political parties are randomly located on their respective ideal points: voters along $\Gamma$, and payoff relevant information is revealed.
 	\item \textbf{Vote-buying Case}
@@ -513,7 +721,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Equilibrium in Vote-Buying Case}
+\begin{frame}<presentation:0>{Equilibrium in Vote-Buying Case}
 	\begin{itemize}
 		\item Parties only have incentives to negotiate with a voter $i$ if he is the pivotal voter, this means:
 		\begin{align*}
@@ -530,7 +738,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Equilibrium in Vote-Buying Case}
+\begin{frame}<presentation:0>{Equilibrium in Vote-Buying Case}
 \begin{itemize}
 	\item Parties want to win the election at a minimum cost, in equilibrium $m^*_{i^*}=0$ and $m^*_{-i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$.
 	\item The pivotal voter is indifferent between both political parties.
@@ -543,7 +751,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 \end{frame}
 
 
-\begin{frame}{Equilibrium in Vote-Selling Case}
+\begin{frame}<presentation:0>{Equilibrium in Vote-Selling Case}
 	\begin{itemize}
 		\item The voter has incentives to set the highest price each party can pay (this is given by $B$).
 		\item The voter may swing towards party $-i^*$ only if budget is large enough to compensate for looses if voting for his less prefer policy ($B> \vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$).
@@ -552,7 +760,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Equilibrium in Vote-Selling Case}
+\begin{frame}<presentation:0>{Equilibrium in Vote-Selling Case}
 	\begin{itemize}
 		
 		\item Then the parties,
