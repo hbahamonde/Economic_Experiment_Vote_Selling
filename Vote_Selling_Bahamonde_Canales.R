@@ -772,9 +772,10 @@ m1.d = as.data.frame(m1.d)
 
 # Model (with participant FEs)
 m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance + budget + participant.code, m1.d)
-
+# summary(m1)
 
 # Clustered Std Errors and Model info
+options(scipen=9999999) # turn off sci not
 m1.clst.std.err = as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,2])[1:5]
 m1.clst.t.test = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,3])[1:5])
 m1.clst.p.value = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,4])[1:5])
@@ -816,7 +817,7 @@ reg.table = texreg::texreg( # screenreg
     #custom.coef.names = NULL,
     omit.coef = "participant",
     custom.coef.names = c("Intercept", "Vote Share", "Points Accumulated (delta)", "Spatial Distance", "Party Budget"),
-    override.se = list(c(m1.clst.t.test,rep(0.0, length(unique(m1.d$participant.code))-1))),
+    override.se = list(c(m1.clst.std.err,rep(0.0, length(unique(m1.d$participant.code))-1))),
     override.pvalues = list(c(m1.clst.p.value,rep(0.0, length(unique(m1.d$participant.code))-1))),
     custom.header = list( "OLS" = 1),
     stars = c(0.001, 0.01, 0.05, 0.1),
