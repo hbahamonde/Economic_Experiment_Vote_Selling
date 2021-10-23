@@ -934,7 +934,7 @@ m1.p.d.1.p = xyplot(predicted ~ x | group,
 png(filename="m1plot_1.png", 
     type="cairo",
     units="in", 
-    width=12, 
+    width=5, 
     height=5, 
     pointsize=10, 
     res=1000)
@@ -943,7 +943,85 @@ print(m1.p.d.1.p)
 dev.off()
 
 
+# m1.p.d.2
+m1.p.d.2.p = xyplot(predicted ~ x | group, 
+                    scales=list(relation="free", rot=0),
+                    data=m1.p.d.2, 
+                    aspect = 1,
+                    xlab = " ", 
+                    ylab = "Amount of Vote-Buying Offer (points)", 
+                    lower=m1.p.d.2$conf.low,
+                    upper=m1.p.d.2$conf.high,
+                    panel = panel.ci, 
+                    zl=F, 
+                    prepanel=prepanel.ci,
+                    layout = c(1, 1) # columns, rows
+)
+# saving plot
+png(filename="m1plot_2.png", 
+    type="cairo",
+    units="in", 
+    width=5, 
+    height=5, 
+    pointsize=10, 
+    res=1000)
 
+print(m1.p.d.2.p)
+dev.off()
+
+
+# m1.p.d.3
+m1.p.d.3.p = xyplot(predicted ~ x | group, 
+                    scales=list(relation="free", rot=0),
+                    data=m1.p.d.3, 
+                    aspect = 1,
+                    xlab = " ", 
+                    ylab = "Amount of Vote-Buying Offer (points)", 
+                    lower=m1.p.d.3$conf.low,
+                    upper=m1.p.d.3$conf.high,
+                    panel = panel.ci, 
+                    zl=F, 
+                    prepanel=prepanel.ci,
+                    layout = c(1, 1) # columns, rows
+)
+# saving plot
+png(filename="m1plot_3.png", 
+    type="cairo",
+    units="in", 
+    width=5, 
+    height=5, 
+    pointsize=10, 
+    res=1000)
+
+print(m1.p.d.3.p)
+dev.off()
+
+
+# m1.p.d.4
+m1.p.d.4.p = xyplot(predicted ~ x | group, 
+                    scales=list(relation="free", rot=0),
+                    data=m1.p.d.4, 
+                    aspect = 1,
+                    xlab = " ", 
+                    ylab = "Amount of Vote-Buying Offer (points)", 
+                    lower=m1.p.d.4$conf.low,
+                    upper=m1.p.d.4$conf.high,
+                    panel = panel.ci, 
+                    zl=F, 
+                    prepanel=prepanel.ci,
+                    layout = c(1, 1) # columns, rows
+)
+# saving plot
+png(filename="m1plot_4.png", 
+    type="cairo",
+    units="in", 
+    width=5, 
+    height=5, 
+    pointsize=10, 
+    res=1000)
+
+print(m1.p.d.4.p)
+dev.off()
 
 ## MODEL 2 PLOTS
 m2.p1.d = data.frame(ggeffects::ggpredict(
@@ -1017,7 +1095,7 @@ m1.dep.var = histogram(~m1.d$offer.made.party,
 png(filename="depvarplot.png", 
     type="cairo",
     units="in", 
-    width=8, 
+    width=5, 
     height=5, 
     pointsize=10, 
     res=1000)
