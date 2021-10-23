@@ -910,6 +910,41 @@ print(m1plot)
 dev.off()
 
 
+
+m1.p.d.1 = m1.p.d[m1.p.d$group=="Vote Share",]
+m1.p.d.2 = m1.p.d[m1.p.d$group=="Points Cumul (delta)",]
+m1.p.d.3 = m1.p.d[m1.p.d$group=="Spatial Distance (left-right)",]
+m1.p.d.4 = m1.p.d[m1.p.d$group=="Party's Budget",]
+
+# m1.p.d.1
+m1.p.d.1.p = xyplot(predicted ~ x | group, 
+                    scales=list(relation="free", rot=0),
+                    data=m1.p.d.1, 
+                    aspect = 1,
+                    xlab = " ", 
+                    ylab = "Amount of Vote-Buying Offer (points)", 
+                    lower=m1.p.d.1$conf.low,
+                    upper=m1.p.d.1$conf.high,
+                    panel = panel.ci, 
+                    zl=F, 
+                    prepanel=prepanel.ci,
+                    layout = c(1, 1) # columns, rows
+                    )
+# saving plot
+png(filename="m1plot_1.png", 
+    type="cairo",
+    units="in", 
+    width=12, 
+    height=5, 
+    pointsize=10, 
+    res=1000)
+
+print(m1.p.d.1.p)
+dev.off()
+
+
+
+
 ## MODEL 2 PLOTS
 m2.p1.d = data.frame(ggeffects::ggpredict(
     model=m2,
