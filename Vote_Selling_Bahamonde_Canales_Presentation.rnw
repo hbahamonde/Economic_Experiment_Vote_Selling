@@ -289,13 +289,13 @@ options(scipen = 99999999999)
         \begin{enumerate}
             \item When do you buy votes? {\scriptsize\color{gray} Winning/losing the elections?}
             \item Who do you target? {\scriptsize\color{gray} Your own supporters (``core'') or the ones who are more likely to flip (``swing'')?}
-            \item Should your past haunt you? {\scriptsize\color{gray} Do prior losses matter?}
+            \item Should your past ``haunt'' you? {\scriptsize\color{gray} Do prior losses matter?}
         \end{enumerate}
     \item {\bf Intuitively, these questions seem easy to answer}:
         \begin{enumerate}
             \item[\checkmark] When losing the elections: {\bf risk}.
             \item[\checkmark] To the ones who are more likely to flip (``swing''): {\bf waste}.
-            \item[\checkmark] It shouldn't: prior losses should not matter: {\bf ``sunk costs.''}
+            \item[\checkmark] It shouldn't: {\bf ``sunk costs.''} should not affect current decisions.
         \end{enumerate}
    \item {\bf They are not}. Starting point: {\color{blue}traditional clientelism research has failed to answer these questions because it has a wrong understanding about the decision-making process of clientelist parties}.
    \end{itemize}
@@ -312,6 +312,18 @@ options(scipen = 99999999999)
       \item {\bf Empirics}: following the precepts of EUT, we formalized a vote buying game, and then test it in an economic lab experiment.
       \item {\bf Results}: we find strong support in favor of prospect theory.
       \item {\bf Feedback wanted!} 
+    \end{itemize}
+\end{frame}
+
+\subsection{Argument}
+
+\miniframeson
+\begin{frame}[c]{Argument}
+   \huge {\bf Vote-buying will be higher when parties},
+   \centering
+    \begin{itemize}
+      \item[\checkmark] {\color{blue} Are probable winners}---{\color{gray}risk averse in the domain of gains}.
+      \item[\checkmark] {\color{blue} Have experienced losses in the past} ({\color{blue}sunk costs})---{\color{gray}risk-seeking in the domain of losses}.
     \end{itemize}
 \end{frame}
 
@@ -838,16 +850,16 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
   \begin{itemize}
     %\item In between-subjects design (individuals are randomly assigned to various treatments)
 
-    \item {\color{blue}Role}: \emph{party A}, \emph{party B} or \emph{voter}.
+    \item[1.] {\color{blue}Role}: \emph{party A}, \emph{party B} or \emph{voter}.
 
-    \item {\bf Voters}: {\color{blue}``ideological position''} (points depending on whether party A or B won election). 
+    \item[2.] {\bf Voters}: {\color{blue}``ideological position''} (points depending on whether party A or B won election). {\tiny\color{gray} Points reflect ``spatial'' distance between the voter and both parties (continuum 1-100).}
 
     % For instance, if party A wins the election, a voter would receive in that case 2,400 points, whereas if party B won the election, that voter would receive 200 points (``ideologically'' closer to party A).
 
-    \item {\bf Parties}: {\color{blue}endowments} (points to buy votes, if any).\\
+    \item[3.] {\bf Parties}: {\color{blue}endowments} (points to buy votes, if any).\\
     {\tiny\color{gray}But both parties receive the same endowment in the same game.}
 
-    \item {\bf Parties}: {\color{blue}vote shares} (number of votes each party \emph{will} receive---excluding the ``voter'' participant.
+    \item[4.] {\bf Parties}: {\color{blue}vote shares} (number of votes each party \emph{will} receive---excluding the ``voter'' participant.
 
     \item Every randomization was common knowledge.
     
@@ -876,9 +888,9 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 
   %\item {\bf Minimize hypothetical bias}: subjects were compensated with real money according to their decisions.
   
-  \item {\bf Parties}: payoffs depended on whether they get elected. If they buy votes, that amount is discounted. % For simplicity, voters received zero endowments
+  \item {\bf Parties}: payoffs depend on whether they are elected. If they spend points on vote-buying, that amount is discounted. % For simplicity, voters received zero endowments
 
-  \item {\bf Voters}: payoffs depended on whether their party get elected, and on whether they sell their vote. {\bf Can't defect: if they accept and offer, they vote for that party}.
+  \item {\bf Voters}: payoffs depend on whether their party is elected, and on whether they sell their vote. {\bf Can't defect: if they accept an offer, they vote for that party}.
 \end{itemize}
 \end{column}
 
@@ -895,22 +907,22 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 
 
 
-\miniframeson
 \section{Statistical Analyses}
 
 \subsection{Dependent Variable}
 
+\miniframeson
 \begin{frame}%{Payoffs}
   \begin{columns}[c]
-  \begin{column}{.5\textwidth}
+  \begin{column}{.47\textwidth}
   
 \begin{itemize}
-  \item Our focus is vote buying. \\
-  Voter data discarded. 
+  \item Focus is vote buying (parties). \\
+  {\color{gray}Voter data discarded}. 
 
   \item {\bf Dependent variable}: the amount of the vote-buying offer made by parties (if any).
 
-  \item If predictions of formal model and traditional vote-buying th. is accurate, we should see that offers go up in risky scenarios (facing probable electoral losses).
+  \item If predictions of formal model and traditional vote-buying theories are accurate, we should see that offers go up when facing probable electoral losses.
 \end{itemize}
 \end{column}
 
@@ -919,12 +931,274 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 \begin{column}{.48\textwidth}
 
 
-\includegraphics[scale=0.4, center]{depvarplot.png}
+\includegraphics[scale=0.45, center]{depvarplot.png}
 
   \end{column}
   \end{columns}
 \end{frame}
 
+
+\subsection{Statistical Model: OLS}
+
+% eq:0
+\miniframeson
+\begin{frame}[c]
+        \begin{center}
+            \begin{equation*}\label{eq:ols}
+            \begin{aligned}
+                \text{Offer}_{i} = \; & \beta_{0} + \\
+                & \beta_{1}\text{Vote Share}_{i} + \\
+                & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
+                & \beta_{3}\text{Spatial Distance}_{i} + \\
+                & \beta_{4}\text{Party Budget}_{i} + \\
+                & \alpha_{i} + \epsilon_{i}
+            \end{aligned}
+            \end{equation*}
+        \end{center}
+
+
+        \begin{itemize}
+            \item[] {\color{white}empty}.
+        \end{itemize}
+\end{frame}
+
+
+% eq:1
+\miniframesoff
+\begin{frame}[c]
+        \begin{center}
+            \begin{equation*}\label{eq:ols}
+            \begin{aligned}
+                \text{{\color{red}Offer}}_{i} = \; & \beta_{0} + \\
+                & \beta_{1}\text{Vote Share}_{i} + \\
+                & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
+                & \beta_{3}\text{Spatial Distance}_{i} + \\
+                & \beta_{4}\text{Party Budget}_{i} + \\
+                & \alpha_{i} + \epsilon_{i}
+            \end{aligned}
+            \end{equation*}
+        \end{center}
+
+
+        \begin{itemize}
+            \item[{\color{red}$\bullet$}] Dependent variable described.
+        \end{itemize}
+\end{frame}
+
+% eq:2
+\miniframesoff
+\begin{frame}[c]
+        \begin{center}
+            \begin{equation*}\label{eq:ols}
+            \begin{aligned}
+                \text{Offer}_{i} = \; & \beta_{0} + \\
+                & \beta_{1}\text{{\color{red}Vote Share}}_{i} + \\
+                & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
+                & \beta_{3}\text{Spatial Distance}_{i} + \\
+                & \beta_{4}\text{Party Budget}_{i} + \\
+                & \alpha_{i} + \epsilon_{i}
+            \end{aligned}
+            \end{equation*}
+        \end{center}
+
+
+        \begin{itemize}
+            \item[{\color{red}$\bullet$}] Number of certain votes each party.
+        \end{itemize}
+\end{frame}
+
+
+% eq:3
+\miniframesoff
+\begin{frame}[c]
+        \begin{center}
+            \begin{equation*}\label{eq:ols}
+            \begin{aligned}
+                \text{Offer}_{i} = \; & \beta_{0} + \\
+                & \beta_{1}\text{Vote Share}_{i} + \\
+                & \beta_{2}{\color{red}\Delta}\text{{\color{red}Points Accumulated}}_{i} + \\
+                & \beta_{3}\text{Spatial Distance}_{i} + \\
+                & \beta_{4}\text{Party Budget}_{i} + \\
+                & \alpha_{i} + \epsilon_{i}
+            \end{aligned}
+            \end{equation*}
+        \end{center}
+
+
+        \begin{itemize}
+            \item[{\color{red}$\bullet$}] Change in points respect to $t-1$ (prior round).
+        \end{itemize}
+\end{frame}
+
+
+% eq:4
+\miniframesoff
+\begin{frame}[c]
+        \begin{center}
+            \begin{equation*}\label{eq:ols}
+            \begin{aligned}
+                \text{Offer}_{i} = \; & \beta_{0} + \\
+                & \beta_{1}\text{Vote Share}_{i} + \\
+                & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
+                & \beta_{3}\text{{\color{red}Spatial Distance}}_{i} + \\
+                & \beta_{4}\text{Party Budget}_{i} + \\
+                & \alpha_{i} + \epsilon_{i}
+            \end{aligned}
+            \end{equation*}
+        \end{center}
+
+
+        \begin{itemize}
+            \item[{\color{red}$\bullet$}] Distance from the voter (points).
+        \end{itemize}
+\end{frame}
+
+
+% eq:5
+\miniframesoff
+\begin{frame}[c]
+        \begin{center}
+            \begin{equation*}\label{eq:ols}
+            \begin{aligned}
+                \text{Offer}_{i} = \; & \beta_{0} + \\
+                & \beta_{1}\text{Vote Share}_{i} + \\
+                & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
+                & \beta_{3}\text{Spatial Distance}_{i} + \\
+                & \beta_{4}\text{{\color{red}Party Budget}}_{i} + \\
+                & \alpha_{i} + \epsilon_{i}
+            \end{aligned}
+            \end{equation*}
+        \end{center}
+
+
+        \begin{itemize}
+            \item[{\color{red}$\bullet$}] Party's budget (points).
+        \end{itemize}
+\end{frame}
+
+
+% eq:6
+\miniframesoff
+\begin{frame}[c]
+        \begin{center}
+            \begin{equation*}\label{eq:ols}
+            \begin{aligned}
+                \text{Offer}_{i} = \; & \beta_{0} + \\
+                & \beta_{1}\text{Vote Share}_{i} + \\
+                & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
+                & \beta_{3}\text{Spatial Distance}_{i} + \\
+                & \beta_{4}\text{Party Budget}_{i} + \\
+                & {\color{red}\alpha}_{i} + \epsilon_{i}
+            \end{aligned}
+            \end{equation*}
+        \end{center}
+
+
+        \begin{itemize}
+            \item[{\color{red}$\bullet$}] Participant fixed effects.
+        \end{itemize}
+\end{frame}
+
+
+
+\subsection{Results}
+
+% 0
+\miniframeson
+\begin{frame}[c]
+        \begin{center}
+          \vspace{-0.7cm}\includegraphics[scale=.5, center]{m1plot.png}
+        \end{center}
+
+
+        \begin{itemize}
+            \vspace{-1.5cm}\item[] Overall, results conform with Prospect Theory's predictions. {\TINY\color{gray}Robust std. errors used to construct confidence intervals.}
+        \end{itemize}
+\end{frame}
+
+% 1
+\miniframesoff
+\begin{frame}[c]
+        \begin{center}
+          \vspace{-0.7cm}\includegraphics[scale=.5, center]{m1plot.png}
+        \end{center}
+
+
+        \begin{itemize}
+            \vspace{-1.5cm}\item[1.] Parties buy vote more when winning the election (not when losing).
+        \end{itemize}
+\end{frame}
+
+
+% 2
+\miniframesoff
+\begin{frame}[c]
+        \begin{center}
+          \vspace{-0.7cm}\includegraphics[scale=.5, center]{m1plot.png}
+        \end{center}
+
+
+        \begin{itemize}
+            \vspace{-1.5cm}\item[2.] Decision-makers buy more votes when sunk costs are higher.
+        \end{itemize}
+\end{frame}
+
+
+% 3
+\miniframesoff
+\begin{frame}[c]
+        \begin{center}
+          \vspace{-0.7cm}\includegraphics[scale=.5, center]{m1plot.png}
+        \end{center}
+
+
+        \begin{itemize}
+            \vspace{-1.5cm}\item[3.] Spatial distances (core/swing) do not matter.
+        \end{itemize}
+\end{frame}
+
+
+% 4
+\miniframesoff
+\begin{frame}[c]
+        \begin{center}
+          \vspace{-0.7cm}\includegraphics[scale=.5, center]{m1plot.png}
+        \end{center}
+
+
+        \begin{itemize}
+            \vspace{-1.5cm}\item[4.] Party budget does not matter.
+        \end{itemize}
+\end{frame}
+
+
+\section{Discussion}
+
+
+\subsection{Discussion}
+
+\miniframeson
+\begin{frame}%{Payoffs}
+  \begin{columns}[c]
+  \begin{column}{.48\textwidth}
+  
+\begin{itemize}
+
+ 
+  \item {\bf Test}: 
+\end{itemize}
+\end{column}
+
+
+\hfill%
+\begin{column}{.48\textwidth}
+
+
+\includegraphics[scale=0.4, center]{m1plot_1.png}
+
+  \end{column}
+  \end{columns}
+\end{frame}
 
 \end{document}
 

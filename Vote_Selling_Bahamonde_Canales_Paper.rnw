@@ -537,16 +537,9 @@ However, based on prospect theory, we have different expectations, i.e.,  partie
 
 To test these hypotheses we exploit the experimental data described above by fitting the OLS regression model specified in \autoref{eq:ols},
 
-\begin{equation}\label{eq:ols}
-\begin{aligned}
-\text{Offer}_{i} = \; & \beta_{0} + \\
-                & \beta_{1}\text{Vote Share}_{i} + \\
-                & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
-                & \beta_{3}\text{Spatial Distance}_{i} + \\
-                & \beta_{4}\text{Party Budget}_{i} + \\
-                & \alpha_{i} + \epsilon_{i}
-\end{aligned}
-\end{equation}
+% OLS Equation
+{\input{ols_model.tex}\unskip}
+
 
 
 where \emph{Vote Share} is the certain number of (fictional) voters that were going to cast their votes for the party, $\Delta\text{\emph{Points Accumulated}}$ captures changes in the accumulated points respect to the experimental round played in $t-1$. For instance, if a player won 1,200 points in $t-1$ but then lost $500$ in the next round, then $\Delta\text{\emph{Points Accumulated}}_{t}=700$. Importantly, this variable captures sunk costs. The intuition is to evaluate whether they are not considered when evaluating new proposals, as the EUT posits it. \emph{Party Budget} is the party budget, and $\alpha_{i}$ is a vector of participant fixed-effects. 
