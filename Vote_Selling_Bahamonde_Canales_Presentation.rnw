@@ -285,19 +285,19 @@ options(scipen = 99999999999)
 \begin{frame}[c]{Vote-Buying Literature Builds on the Wrong Framework}
 
 \begin{itemize}
-    \item {\bf Say you're a \underline{clientelist} political party campaigning}:
+    \item {\bf Say you're a \underline{clientelist} political party campaigning}\pause:
         \begin{enumerate}
-            \item When do you buy votes? {\scriptsize\color{gray} Winning/losing the elections?}
-            \item Who do you target? {\scriptsize\color{gray} Your own supporters (``core'') or the ones who are more likely to flip (``swing'')?}
-            \item Should your past ``haunt'' you? {\scriptsize\color{gray} Do prior losses matter?}
+            \item When do you buy votes? {\scriptsize\color{gray} Winning/losing the elections?}\pause
+            \item Who do you target? {\scriptsize\color{gray} Your own supporters (``core'') or the ones who are more likely to flip (``swing'')?}\pause
+            \item Should your past ``haunt'' you? {\scriptsize\color{gray} Do prior losses matter?}\pause
         \end{enumerate}
     \item {\bf Intuitively, these questions seem easy to answer}:
         \begin{enumerate}
-            \item[\checkmark] When losing the elections: {\bf risk}.
-            \item[\checkmark] To the ones who are more likely to flip (``swing''): {\bf waste}.
-            \item[\checkmark] It shouldn't: {\bf ``sunk costs.''} should not affect current decisions.
+            \item[\checkmark] When losing the elections: {\bf risk}.\pause
+            \item[\checkmark] To the ones who are more likely to flip (``swing''): {\bf waste}.\pause
+            \item[\checkmark] It shouldn't: {\bf ``sunk costs.''} should not affect current decisions.\pause
         \end{enumerate}
-   \item {\bf They are not}. Starting point: {\color{blue}traditional clientelism research has failed to answer these questions because it has a wrong understanding about the decision-making process of clientelist parties}.
+   \item {\bf They are not}. \pause Starting point: {\color{blue}traditional clientelism research has failed to answer these questions because it has a wrong understanding about the decision-making process of clientelist parties}.
    \end{itemize}
 \end{frame}
 
@@ -306,12 +306,12 @@ options(scipen = 99999999999)
 \miniframesoff
 \begin{frame}[c]{Plan for Today}
     \begin{itemize}
-      \item {\bf Motivate the problem}: vote buying literature is based solely on the Expected Utility Theory (EUT) {\tiny (von Neumann and Morgenstern)}.
-      \item {\bf Explain why we should care}: as a consequence, there are too many important loose ends.
-      \item {\bf Propose a possible solution}: re-think how parties make decisions under risk (Prospect Theory).
-      \item {\bf Empirics}: following the precepts of EUT, we formalized a vote buying game, and then test it in an economic lab experiment.
-      \item {\bf Results}: we find strong support in favor of prospect theory.
-      \item {\bf Feedback wanted!} 
+      \item {\bf Motivate the problem}: vote buying literature is purely based on the Expected Utility Theory (EUT) {\tiny (von Neumann and Morgenstern)}.\pause
+      \item {\bf Explain why we should care}: there are too many important loose ends.\pause
+      \item {\bf Propose a possible solution}: re-think about how parties make decisions under risk (Prospect Theory).\pause
+      \item {\bf Empirics}: follow the concepts of EUT, we formalized a vote buying game, and then test it in an economic lab experiment.\pause
+      \item {\bf Results}: we find strong support in favor of prospect theory.\pause
+      \item {\bf Feedback wanted!}
     \end{itemize}
 \end{frame}
 
@@ -322,7 +322,7 @@ options(scipen = 99999999999)
    \huge {\bf Vote-buying will be higher when parties},
    \centering
     \begin{itemize}
-      \item[\checkmark] {\color{blue} Are probable winners}---{\color{gray}risk averse in the domain of gains}.
+      \item[\checkmark] {\color{blue} Are probable winners}---{\color{gray}risk averse in the domain of gains}.\pause
       \item[\checkmark] {\color{blue} Have experienced losses in the past} ({\color{blue}sunk costs})---{\color{gray}risk-seeking in the domain of losses}.
     \end{itemize}
 \end{frame}
@@ -335,16 +335,16 @@ options(scipen = 99999999999)
 \miniframeson
 \begin{frame}[c]{Clientelism and the Expected Utility Theory}
   \begin{itemize}
-    \item The EUT was one of the first theories of decision making under risk.
-    \item Since its introduction, it has \emph{dominated} political science as a field (including the vote-buying lit.).
-    \item {\bf The problem}: the (whole!) literature assumes that in the party's decision-making process:
+    \item The EUT was one of the first theories of decision making under risk.\pause
+    \item Since its introduction, it has \emph{dominated} political science as a field (including the vote-buying lit.).\pause
+    \item {\bf The problem}: the (whole!) literature assumes that in the party's decision-making process:\pause
               \begin{enumerate}
                   \item {\color{blue}Losses and gains affect in a {\bf comparable} way}.\\
-                  {\scriptsize\color{gray}Winning elections {\bf feels good as} losing one hurts.}
+                  {\scriptsize\color{gray}Winning elections {\bf feels good as} losing one hurts.}\pause
                   \item {\color{blue}Parties focus only on {\bf absolute} levels of utilities}.\\
-                  {\scriptsize\color{gray}Overlooking {\bf changes} in outcomes respect to a reference point.}
+                  {\scriptsize\color{gray}Overlooking {\bf changes} in outcomes respect to a reference point (``sunk costs'').}\pause
               \end{enumerate}
-        \item These assumptions have led to several empirical inconsistencies.
+        \item These assumptions have led to several empirical inconsistencies.\pause
           \begin{enumerate}
             \item Clientelist Targeting.
             \item Political Contestation.
@@ -358,11 +358,11 @@ options(scipen = 99999999999)
 \begin{frame}{Not Clear Who Clientelist Parties Target}
   \begin{itemize}
     \item Since constituencies are well known to clientelist parties, they allocate resources to {\bf core voters}.\\
-    {\tiny\color{gray}Cox and Mccubbins (1986).}
+    {\tiny\color{gray}Cox and Mccubbins (1986).}\pause
     \item Since allocating resources to individuals who ex-ante vote for the party is a waste, parties target {\bf swing voters}.\\
-    {\tiny\color{gray} Dixit and Londregan (1996) and Stokes (2005).}
+    {\tiny\color{gray} Dixit and Londregan (1996) and Stokes (2005).}\pause
     \item Some state ``that our knowledge of who parties target remains incomplete.''\\
-    {\tiny\color{gray} Carlin and Moseley (2015).}
+    {\tiny\color{gray} Carlin and Moseley (2015).}\pause
     \item {\color{blue}We contend that this is \emph{very} important question, yet one that literature has \emph{failed} to answer}.
   \end{itemize}
 \end{frame}
@@ -373,9 +373,9 @@ options(scipen = 99999999999)
 \begin{frame}{Not Clear The Role of Political Contestation on Vote Buying}
   \begin{itemize}
     \item The more contested an election, the more risks of losing the election, the more incentives to resort to vote buying to prevent that from happening\\
-    {\tiny\color{gray} Scott (1972), Shefter (1977), Diaz-Cayeros (2008), Corstange (2018).}
-    \item However, some find very high levels of vote-buying in uncontested elections.\\
-    {\tiny\color{gray} Gonzalez-Ocantos, Jonge, et al. (2012).} 
+    {\tiny\color{gray} Scott (1972), Shefter (1977), Diaz-Cayeros (2008), Corstange (2018).}\pause
+    \item However, some find very high levels of vote-buying in {\bf uncontested} elections.\\
+    {\tiny\color{gray} Gonzalez-Ocantos, Jonge, et al. (2012).} \pause
     \item {\color{blue}Why would a party buy such a massive amount of votes in a safe and uncontested election?}
   \end{itemize}
 \end{frame}
@@ -457,14 +457,6 @@ options(scipen = 99999999999)
   \end{columns}
 \end{frame}
 
-
-
-
-
-
-
-
-
 \subsection{Theory}
 
 \miniframeson
@@ -472,11 +464,11 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
 
-\begin{itemize} 
+\begin{itemize}[<+->]
       \item[1.] {\bf Reference dependence}. Elements that influence decisions,
           \begin{itemize}
-            \item[\checkmark] {\color{blue}context} in which decision-making processes take place.
-            \item[\checkmark] {\color{blue}changes of wealth}, rather than final asset position.
+            \item[\checkmark] {\color{blue}context} in which the decision-making processes take place.
+            \item[\checkmark] {\color{blue}changes of wealth}, rather than final asset positions.
             \item[\checkmark] {\color{blue}sunk costs} do matter.
           \end{itemize}
 \end{itemize}
@@ -501,11 +493,11 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
 
-\begin{itemize} 
+\begin{itemize}[<+->]
       \item[2.] {\bf Likelihood dependence}. Asymmetrical curvature of the likelihood influences decisions,
           \begin{itemize}
-            \item[\checkmark]  Individuals have risk-averse behaviors in the domain of gains.
-            \item[\checkmark] In the domain of losses, individuals have risk-acceptant behaviors. 
+            \item[\checkmark] Individuals are risk-averse in the domain of gains.
+            \item[\checkmark] Individuals are risk-acceptant in the domain of losses. 
           \end{itemize}
 \end{itemize}
 
@@ -533,9 +525,9 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
 
-\begin{itemize} 
-      \item {\bf Overweighting}: in the domain of {\color{blue}losses}, the convexity of the  function encourages {\color{blue}risk-seeking} behaviors by exaggerating the probabilities of rare but catastrophic losses.
-      \item {\bf Underweighting}: in the domain of {\color{blue}gains}, the concavity of the function encourages {\color{blue}risk aversion} by undervaluing the probability of success.
+\begin{itemize}[<+->]
+      \item {\bf Overweighting}: in the domain of {\color{blue}losses}, the convexity of the  function encourages {\color{blue}risk-seeking} behaviors by {\bf exaggerating the probabilities of unlikely losses}.
+      \item {\bf Underweighting}: in the domain of {\color{blue}gains}, the concavity of the function encourages {\color{blue}risk aversion} by {\bf undervaluing the probability of success}.
 \end{itemize}
 
 \end{column}
@@ -560,9 +552,9 @@ options(scipen = 99999999999)
 
   \underline{Vote-buying will be higher when parties},
 
-\begin{enumerate} 
-      \item {\bf Are probable winners}: parties will exaggerate the small probability of losing the election ({\color{blue}risk-seeking}).
-      \item {\bf Have experienced losses in the past} (sunk costs): making vote buying an attractive strategy by altering the decision-makers' reference point ({\color{blue}risk aversion}).
+\begin{enumerate}[<+->]
+      \item {\bf Are probable winners}: parties will exaggerate the small probability of losing the election ({\color{blue}risk aversion}).
+      \item {\bf Have experienced losses in the past} (sunk costs): alter the decision-makers' reference point, making vote-buying an attractive strategy ({\color{blue}risk-seeking}).
       %\item in the domain of gains, risk-averted decision-makers are excessively eager to secure gains, while risk-seeking decision-makers take disproportionate risks to avoid certain losses.
 \end{enumerate}
 
@@ -579,16 +571,6 @@ options(scipen = 99999999999)
   \end{columns}
 \end{frame}
 
-
-
-
-
-
-
-
-
-
-
 \section{Formal Model}
 
 \subsection{Formal Model}
@@ -598,10 +580,10 @@ options(scipen = 99999999999)
 \begin{frame}{A Formal Model of Vote-Buying}
   \begin{itemize} 
         \item Formal models can help experimentalists determine which theoretical settings and equilibria are most relevant to a particular causal hypothesis.\\
-        {\tiny\color{gray}McDermott (2002), Aldrich and Lupia (2011), Barberis (2013).} 
-        \item We developed a vote-buying game within the Downsian-``spatial'' paradigms (EUT).\\
+        {\tiny\color{gray}McDermott (2002), Aldrich and Lupia (2011), Barberis (2013).} \pause
+        \item We developed a vote-buying game within the Downsian-``spatial'' paradigms (EUT).\\\pause
          {\tiny\color{gray}Downs (1957), Enelow and Hinich (1990), Plott (1991).} 
-        \item The idea is to test the descriptive accuracy of the game-theory model in the experimental section of this paper.\\
+        \item The idea is to test the descriptive accuracy of the game-theory model in an experimental setting.\\
 {\tiny\color{gray}Lupia and McCubbins (1998), Bassi, Morton, and Williams (2011), Dickson (2011), Tyszler and Schram (2016), Vieider and Vis (2019).} 
   \end{itemize}
 \end{frame}
@@ -884,11 +866,11 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
   
-\begin{itemize}
+\begin{itemize}[<+->]
 
   %\item {\bf Minimize hypothetical bias}: subjects were compensated with real money according to their decisions.
   
-  \item {\bf Parties}: payoffs depend on whether they are elected. If they spend points on vote-buying, that amount is discounted. % For simplicity, voters received zero endowments
+  \item {\bf Parties}: payoffs depend on whether they are elected. If they spend points buying votes, that amount is discounted. % For simplicity, voters received zero endowments
 
   \item {\bf Voters}: payoffs depend on whether their party is elected, and on whether they sell their vote. {\bf Can't defect: if they accept an offer, they vote for that party}.
 \end{itemize}
@@ -1179,14 +1161,15 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 \miniframeson
 \begin{frame}%{Payoffs}
     \begin{itemize}
+    \item This is a work in progress.\pause  
     \item In this paper identified {\bf two main gaps} in the literature. We don't know,
       \begin{enumerate}
         \item The rationale of clientelist targeting.
-        \item The role of electoral contestation.
+        \item The role of electoral contestation.\pause
       \end{enumerate}
-    \item We {\bf attribute this confusion} to the the fact that the literature takes the {\bf EUT as a starting point}.
-    \item We introduced {\bf Prospect Theory} in the vote-buying literature as an {\bf alternative way to understand decision-making under risk}.
-    \item To test this theory, we {\bf formalized a theory of vote-buying} and test it in the {\bf lab}.
+    \item We {\bf attribute this confusion} to the the fact that the literature takes the {\bf EUT as a starting point}.\pause
+    \item We introduced {\bf Prospect Theory} in the vote-buying literature as an {\bf alternative way to understand decision-making under risk}.\pause
+    \item To test this theory, we {\bf formalized a theory of vote-buying} and test it in the {\bf lab}.\pause
     \item Results widely conform with Prospect Theory.
   \end{itemize}
 \end{frame}%{Payoffs}
