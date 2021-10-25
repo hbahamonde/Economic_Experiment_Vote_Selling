@@ -288,7 +288,7 @@ options(scipen = 99999999999)
 \begin{itemize}
     \item {\bf Say you're a \underline{clientelist} political party campaigning}\pause:
         \begin{enumerate}
-            \item When do you buy votes? {\scriptsize\color{gray} Winning/losing the elections?}\pause
+            \item When do you buy votes? {\scriptsize\color{gray} Winning/losing the election?}\pause
             \item Who do you target? {\scriptsize\color{gray} Your own supporters (``core'') or the ones who are more likely to flip (``swing'')?}\pause
             \item Should your past ``haunt'' you? {\scriptsize\color{gray} Do prior electoral losses matter?}\pause
         \end{enumerate}
@@ -298,7 +298,7 @@ options(scipen = 99999999999)
             \item[\checkmark] To both core and swing voters  (targeting core supporters is not a {\bf waste}).\pause
             \item[\checkmark] It shouldn't: {\bf ``sunk costs''} should not affect current decisions.\pause
         \end{enumerate}
-   \item {\bf We contest these answers}. \pause Explain: {\color{blue}traditional clientelism research has failed to answer these questions because it has a wrong understanding about the decision-making process of clientelist parties}.
+   \item {\bf We contest these answers}. \pause Explain: {\color{blue}traditional clientelism research has failed to answer these questions because it has a wrong understanding about the party's decision-making process under risk}.
    \end{itemize}
 \end{frame}
 
@@ -310,7 +310,7 @@ options(scipen = 99999999999)
       \item {\bf Motivate the problem}: vote buying literature is purely based on the Expected Utility Theory (EUT) {\tiny (von Neumann and Morgenstern)}.\pause
       \item {\bf Problem}: as a consequence, there are too many important loose ends.\pause
       \item {\bf Propose a possible solution}: re-think about how parties make decisions under risk (Prospect Theory).\pause
-      \item {\bf Empirics}: follow the concepts of EUT, we formalized a vote buying game, and then test it in an economic lab experiment.\pause
+      \item {\bf Empirics}: we formalized a vote buying game, and then test it in an economic lab experiment.\pause
       \item {\bf Results}: we find strong support in favor of Prospect Theory.\pause
       \item {\bf Feedback wanted!}
     \end{itemize}
@@ -323,7 +323,7 @@ options(scipen = 99999999999)
    \huge {\bf Vote-buying will be higher when parties},
    \centering
     \begin{itemize}
-      \item[\checkmark] {\color{blue} Are probable winners}---{\color{gray}risk averse in the domain of gains}.\pause
+      \item[\checkmark] {\color{blue} Are probable winners}---{\color{gray}risk-averse in the domain of gains}.\pause
       \item[\checkmark] {\color{blue} Have experienced losses in the past} ({\color{blue}sunk costs})---{\color{gray}risk-seeking in the domain of losses}.
     \end{itemize}
 \end{frame}
@@ -364,7 +364,7 @@ options(scipen = 99999999999)
     {\tiny\color{gray} Dixit and Londregan (1996) and Stokes (2005).}\pause
     \item Some state ``that our knowledge of who parties target remains incomplete.''\\
     {\tiny\color{gray} Carlin and Moseley (2015).}\pause
-    \item {\color{blue}We contend that this is \emph{very} important question, yet one that literature has \emph{failed} to answer}.
+    \item {\color{blue}We contend that this is a \emph{very} important question, yet one that the literature has \emph{failed} to answer}.
   \end{itemize}
 \end{frame}
 
@@ -906,7 +906,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 
   \item {\bf Dependent variable}: the amount of the vote-buying offer made by parties (if any).
 
-  \item If predictions of formal model and traditional vote-buying theories are accurate, we should see that offers go up when the risk of losing the election is higher.
+  \item If predictions of formal model are accurate, we should see that offers go up when the risk of losing the election is higher.
 \end{itemize}
 \end{column}
 
