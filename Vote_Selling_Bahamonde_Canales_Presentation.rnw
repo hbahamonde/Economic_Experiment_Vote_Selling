@@ -10,6 +10,7 @@
 \usepackage[export]{adjustbox}
 \usepackage{xcolor}[dvipsnames]
 \usepackage{amssymb,amsmath}
+\usepackage{threeparttable} % package to have long notes in reg tables in texreg. 
 
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.11}
@@ -219,7 +220,7 @@
                       \inst{2} O$'$Higgins University, Chile
                       }
 
-\date{\today}
+\date{Oct. 26th 2021}
 
 %to to see shadows of previous blocks
 %\setbeamercovered{dynamic}
@@ -273,7 +274,7 @@ options(scipen = 99999999999)
 
 \begin{frame}[c]{}
 
-{\bf Vote buying}: distribution of private rewards to individuals or small groups during elections in contingent exchange for vote choices {\scriptsize(Nichter, 2014)}.
+{\bf Vote buying}: distribution of private rewards to individuals during elections in exchange for electoral support {\scriptsize(Nichter, 2014)}.
 \vspace{1cm}
 
   \includegraphics[scale=0.3, center]{Resources_Presentation/vote_buying.jpg}
@@ -289,28 +290,28 @@ options(scipen = 99999999999)
         \begin{enumerate}
             \item When do you buy votes? {\scriptsize\color{gray} Winning/losing the elections?}\pause
             \item Who do you target? {\scriptsize\color{gray} Your own supporters (``core'') or the ones who are more likely to flip (``swing'')?}\pause
-            \item Should your past ``haunt'' you? {\scriptsize\color{gray} Do prior losses matter?}\pause
+            \item Should your past ``haunt'' you? {\scriptsize\color{gray} Do prior electoral losses matter?}\pause
         \end{enumerate}
-    \item {\bf Intuitively, these questions seem easy to answer}:
+    \item {\bf If we follow what the literature says...the answers are mixed}:
         \begin{enumerate}
             \item[\checkmark] When losing the elections: {\bf risk}.\pause
-            \item[\checkmark] To the ones who are more likely to flip (``swing''): {\bf waste}.\pause
-            \item[\checkmark] It shouldn't: {\bf ``sunk costs.''} should not affect current decisions.\pause
+            \item[\checkmark] To both core and swing voters  (targeting core supporters is not a {\bf waste}).\pause
+            \item[\checkmark] It shouldn't: {\bf ``sunk costs''} should not affect current decisions.\pause
         \end{enumerate}
-   \item {\bf They are not}. \pause Starting point: {\color{blue}traditional clientelism research has failed to answer these questions because it has a wrong understanding about the decision-making process of clientelist parties}.
+   \item {\bf We contest these answers}. \pause Explain: {\color{blue}traditional clientelism research has failed to answer these questions because it has a wrong understanding about the decision-making process of clientelist parties}.
    \end{itemize}
 \end{frame}
 
 
 
 \miniframesoff
-\begin{frame}[c]{Plan for Today}
+\begin{frame}[c]{Milestones}
     \begin{itemize}
       \item {\bf Motivate the problem}: vote buying literature is purely based on the Expected Utility Theory (EUT) {\tiny (von Neumann and Morgenstern)}.\pause
-      \item {\bf Explain why we should care}: there are too many important loose ends.\pause
+      \item {\bf Problem}: as a consequence, there are too many important loose ends.\pause
       \item {\bf Propose a possible solution}: re-think about how parties make decisions under risk (Prospect Theory).\pause
       \item {\bf Empirics}: follow the concepts of EUT, we formalized a vote buying game, and then test it in an economic lab experiment.\pause
-      \item {\bf Results}: we find strong support in favor of prospect theory.\pause
+      \item {\bf Results}: we find strong support in favor of Prospect Theory.\pause
       \item {\bf Feedback wanted!}
     \end{itemize}
 \end{frame}
@@ -372,7 +373,7 @@ options(scipen = 99999999999)
 \miniframeson
 \begin{frame}{Not Clear The Role of Political Contestation on Vote Buying}
   \begin{itemize}
-    \item The more contested an election, the more risks of losing the election, the more incentives to resort to vote buying to prevent that from happening\\
+    \item The more contested an election, the more risks of losing the election, the more vote buying.\\
     {\tiny\color{gray} Scott (1972), Shefter (1977), Diaz-Cayeros (2008), Corstange (2018).}\pause
     \item However, some find very high levels of vote-buying in {\bf uncontested} elections.\\
     {\tiny\color{gray} Gonzalez-Ocantos, Jonge, et al. (2012).} \pause
@@ -494,7 +495,7 @@ options(scipen = 99999999999)
   \begin{column}{.48\textwidth}
 
 \begin{itemize}[<+->]
-      \item[2.] {\bf Likelihood dependence}. Asymmetrical curvature of the likelihood influences decisions,
+      \item[2.] {\bf Likelihood dependence}. The asymmetrical curvature of the likelihood does influence decisions,
           \begin{itemize}
             \item[\checkmark] Individuals are risk-averse in the domain of gains.
             \item[\checkmark] Individuals are risk-acceptant in the domain of losses. 
@@ -521,12 +522,12 @@ options(scipen = 99999999999)
 \subsection{Theoretical Expectations}
 
 \miniframeson
-\begin{frame}{Prospect Theory and Vote-Buying}
+\begin{frame}{Prospect Theory: Implications for Decision-Making}
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
 
 \begin{itemize}[<+->]
-      \item {\bf Overweighting}: in the domain of {\color{blue}losses}, the convexity of the  function encourages {\color{blue}risk-seeking} behaviors by {\bf exaggerating the probabilities of unlikely losses}.
+      \item {\bf Overweighting}: in the domain of {\color{blue}losses}, the convexity of the function encourages {\color{blue}risk-seeking} behaviors by {\bf exaggerating the probabilities of unlikely losses}.
       \item {\bf Underweighting}: in the domain of {\color{blue}gains}, the concavity of the function encourages {\color{blue}risk aversion} by {\bf undervaluing the probability of success}.
 \end{itemize}
 
@@ -546,7 +547,7 @@ options(scipen = 99999999999)
 
 
 \miniframesoff
-\begin{frame}{Prospect Theory and Vote-Buying}
+\begin{frame}{Prospect Theory: Implications for Vote-Buying}
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
 
@@ -554,7 +555,7 @@ options(scipen = 99999999999)
 
 \begin{enumerate}[<+->]
       \item {\bf Are probable winners}: parties will exaggerate the small probability of losing the election ({\color{blue}risk aversion}).
-      \item {\bf Have experienced losses in the past} (sunk costs): alter the decision-makers' reference point, making vote-buying an attractive strategy ({\color{blue}risk-seeking}).
+      \item {\bf Have experienced losses in the past} (sunk costs): alter the  reference point, making vote-buying an attractive strategy ({\color{blue}risk-seeking}).
       %\item in the domain of gains, risk-averted decision-makers are excessively eager to secure gains, while risk-seeking decision-makers take disproportionate risks to avoid certain losses.
 \end{enumerate}
 
@@ -822,6 +823,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
     {\tiny\color{gray}(1 point = \$\Sexpr{as.numeric(unique(dat$session.config.real_world_currency_per_point))}).}
     \item \Sexpr{as.numeric(length(unique(v.buying.dat$participant.code)))} subjects were recruited. 
     \item Each subject played the game three times (N = \Sexpr{as.numeric(nrow(dat.v.b))}).
+    \item In-between subjects experimental design.
  
   \end{itemize}
 \end{frame}
@@ -904,7 +906,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 
   \item {\bf Dependent variable}: the amount of the vote-buying offer made by parties (if any).
 
-  \item If predictions of formal model and traditional vote-buying theories are accurate, we should see that offers go up when facing probable electoral losses.
+  \item If predictions of formal model and traditional vote-buying theories are accurate, we should see that offers go up when the risk of losing the election is higher.
 \end{itemize}
 \end{column}
 
@@ -940,7 +942,7 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
 
 
         \begin{itemize}
-            \item[] {\color{white}empty}.
+            \item[] {\color{white}empty.}
         \end{itemize}
 \end{frame}
 
@@ -1164,8 +1166,8 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
     \item This is a work in progress.\pause  
     \item In this paper identified {\bf two main gaps} in the literature. We don't know,
       \begin{enumerate}
-        \item The rationale of clientelist targeting.
-        \item The role of electoral contestation.\pause
+        \item {\color{blue}The rationale of clientelist targeting}.
+        \item {\color{blue}The role of electoral contestation}.\pause
       \end{enumerate}
     \item We {\bf attribute this confusion} to the the fact that the literature takes the {\bf EUT as a starting point}.\pause
     \item We introduced {\bf Prospect Theory} in the vote-buying literature as an {\bf alternative way to understand decision-making under risk}.\pause
@@ -1258,6 +1260,28 @@ where $W$ ($W\geq B$) is a constant that represents how much each party values w
             \item All feedback is welcomed!
         \end{itemize}
 \end{frame}
+
+
+\section{Appendix}
+
+\tiny
+\begin{frame}[plain]
+<<summary:stats:t, echo = FALSE, results='asis', warning = FALSE, message = F, cache=FALSE, include = TRUE>>=
+
+@
+\end{frame}
+\normalsize
+
+
+
+\begin{frame}[plain]
+<<reg:table:t, echo = FALSE, results='asis', warning = FALSE, message = F, cache=FALSE, include = TRUE>>=
+
+
+@
+\end{frame}
+
+
 
 \end{document}
 
