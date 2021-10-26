@@ -497,8 +497,8 @@ options(scipen = 99999999999)
 \begin{itemize}[<+->]
       \item[2.] {\bf Likelihood dependence}. The asymmetrical curvature of the likelihood does influence decisions,
           \begin{itemize}
-            \item[\checkmark] Individuals are risk-averse in the domain of gains.
-            \item[\checkmark] Individuals are risk-acceptant in the domain of losses. 
+            \item[\checkmark] Individuals are {\color{blue}risk-averse} in the domain of {\color{blue}gains}.
+            \item[\checkmark] Individuals are {\color{blue}risk-acceptant} in the domain of {\color{blue}losses}. 
           \end{itemize}
 \end{itemize}
 
