@@ -487,7 +487,7 @@ Building on our formal model of vote buying, a lab economic experiment was desig
 
 
 \begin{figure}[h]
-\includegraphics[scale=.6, center]{payoffplot.png}
+\includegraphics[scale=.05, center]{payoffplot.png}
 \caption{{\bf Distribution of Payoffs by Role (actual currency; show-up fee excluded).\label{payoffs:plot:fig}}}
 \caption*{{\bf Note}: Density plots show the distribution of payoffs expressed in actual currency by experimental condition. Amounts exclude the show-up fee of \$2,000. 0\%, 25\%, 50\%, 75\% and 100\% quantiles are shown (rounded).}\centering
 \end{figure}

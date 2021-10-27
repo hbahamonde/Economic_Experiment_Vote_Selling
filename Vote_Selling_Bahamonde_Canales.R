@@ -681,6 +681,14 @@ dat.v.b = dat.v.b %>% select(session.code,
                              points.cumul.delta,
                              payoff, 
                              everything())
+# recode role in English
+p_load(dplyr)
+
+dat.v.b = dat.v.b %>% mutate(role=recode(role, 
+                               "Partido A" = "Party A",
+                               "Partido B" = "Party B",
+                               "votantes" = "Voter"))
+
 ## ----
 
 
@@ -745,8 +753,8 @@ payoffplot = densityplot(~payoff | role,
 png(filename="payoffplot.png", 
     type="cairo",
     units="in", 
-    width=8, 
-    height=5, 
+    width=4, 
+    height=2, 
     pointsize=10, 
     res=1000)
 
@@ -823,7 +831,7 @@ reg.table = texreg::texreg( # screenreg
     stars = c(0.001, 0.01, 0.05, 0.1),
     symbol = "\\cdot",
     label = "reg:t",
-    caption = "Statistical Model (OLS): Amount of Vote-Buying Offer",
+    caption = "Statistical Model (OLS): Amount of Vote-Buying Offer.",
     float.pos="H",
     use.packages = FALSE,
     threeparttable = TRUE,
@@ -1122,7 +1130,7 @@ summary.stats <- dat.v.b %>%
 ## ---- summary:stats:t ----
 p_load(xtable)
 xtable(summary.stats[order(summary.stats$variable),], 
-       caption = "Summary Statistics", 
+       caption = "Summary Statistics.", 
        digits = 0,
        label = "summary:stats:t",
        align = rep("c",12))
