@@ -469,6 +469,9 @@ v.buying.dat.2$ideo.distance = ifelse(
 ## Repeat voter ideology across groups
 v.buying.dat.2 = v.buying.dat.2 %>%
   group_by(v.buying.dat.vote_b.2.group.presupuesto) %>%
+  arrange(desc(v.buying.dat.vote_b.2.group.presupuesto), desc(v.buying.dat.vote_b.2.player.votanteOpartido))
+v.buying.dat.2 = v.buying.dat.2 %>%
+  group_by(v.buying.dat.vote_b.2.group.presupuesto) %>%
   fill(v.buying.dat.voter.ideology.b.2)
 v.buying.dat.2$ideo.distance2.a = abs(v.buying.dat.2$v.buying.dat.vote_b.2.group.ubicacion_pA - v.buying.dat.2$v.buying.dat.voter.ideology.b.2)
 v.buying.dat.2$ideo.distance2.b = abs(v.buying.dat.2$v.buying.dat.vote_b.2.group.ubicacion_pB - v.buying.dat.2$v.buying.dat.voter.ideology.b.2)
@@ -568,6 +571,10 @@ v.buying.dat.3$ideo.distance = ifelse(
 
 # Relative Ideological Distance from Voter
 ## Repeat voter ideology across groups
+v.buying.dat.3 = v.buying.dat.3 %>%
+  group_by(v.buying.dat.vote_b.3.group.presupuesto) %>%
+  arrange(desc(v.buying.dat.vote_b.3.group.presupuesto), desc(v.buying.dat.vote_b.3.player.votanteOpartido))
+
 v.buying.dat.3 = v.buying.dat.3 %>%
   group_by(v.buying.dat.vote_b.3.group.presupuesto) %>%
   fill(v.buying.dat.voter.ideology.b.3)
@@ -831,16 +838,16 @@ p_load(sandwich,lmtest,DAMisc,lattice,latticeExtra)
 m1.d = dat.v.b %>% select(offer.made.party, vote.intention.party, points.cumul.delta, ideo.distance2, budget, participant.code, pivotal.3.5) %>% drop_na()
 m1.d = as.data.frame(m1.d)
 
-# Model (with participant FEs)
+# Model (with participant FEs) # m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance2 + budget + pivotal.3.5 + participant.code, m1.d)
 m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance2 + budget + pivotal.3.5 + participant.code, m1.d)
 # options(scipen=9999999) # turn off sci not
 # summary(m1)
 
 # Clustered Std Errors and Model info
 options(scipen=9999999) # turn off sci not
-m1.clst.std.err = as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,2])[1:5]
-m1.clst.t.test = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,3])[1:5])
-m1.clst.p.value = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,4])[1:5])
+m1.clst.std.err = as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,2])[1:6]
+m1.clst.t.test = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,3])[1:6])
+m1.clst.p.value = c(as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,4])[1:6])
 custom.model.names.m1 = "Amount of Vote-Buying Offer"
 
 #########################################################################
@@ -848,13 +855,16 @@ custom.model.names.m1 = "Amount of Vote-Buying Offer"
 #########################################################################
 
 m2 = glm(competitive.offers.party ~ 
-             points.cumul.delta +
-             budget + 
-             #vote.intention.party + 
-             ideo.distance,
+           vote.intention.party + 
+           points.cumul.delta + 
+           ideo.distance2 + 
+           budget + 
+           pivotal.3.5,
          data = dat.v.b, 
          family = binomial(link = "logit")
 )
+
+summary(m2)
 
 # Clustered Std Errors and Model info
 m2.clst.std.err = as.numeric(coeftest(m2, vcov. = vcovCL(m2, cluster = dat.v.b$participant.code, type = "HC0"))[,2])[1:4]
@@ -873,12 +883,12 @@ custom.model.names.m2 = "Competitive Vote-Buying Offer"
 
 ## Reg Table
 p_load(texreg)
-reg.table = texreg::texreg( # screenreg
+reg.table = texreg::texreg( # screenreg texreg
     list(m1),
     custom.model.names = c(custom.model.names.m1),
     #custom.coef.names = NULL,
     omit.coef = "participant",
-    custom.coef.names = c("Intercept", "Vote Share", "Points Accumulated (delta)", "Spatial Distance", "Party Budget"),
+    custom.coef.names = c("Intercept", "Vote Share", "Points Accumulated (delta)", "Spatial Distance", "Party Budget", "Pivotal Voter"),
     override.se = list(c(m1.clst.std.err,rep(0.0, length(unique(m1.d$participant.code))-1))),
     override.pvalues = list(c(m1.clst.p.value,rep(0.0, length(unique(m1.d$participant.code))-1))),
     custom.header = list( "OLS" = 1),
@@ -896,7 +906,6 @@ reg.table = texreg::texreg( # screenreg
 ## ---- reg:table:t ----
 reg.table
 ## ----
-
 
 
 ## MODEL 1 PLOTS
@@ -1096,34 +1105,52 @@ print(m1.p.d.4.p)
 dev.off()
 
 ## MODEL 2 PLOTS
+# vote.intention.party + points.cumul.delta + ideo.distance2 + budget + pivotal.3.5 + participant.code
 m2.p1.d = data.frame(ggeffects::ggpredict(
     model=m2,
-    terms=c("points.cumul.delta [all]"), 
+    terms=c("vote.intention.party [all]"), 
     vcov.fun = "vcovHC", 
     vcov.type = "HC0")
-); m2.p1.d$group = "Points Cumul (delta)"
+); m2.p1.d$group = "Vote Share"
 
 
 m2.p2.d = data.frame(ggeffects::ggpredict(
     model=m2,
-    terms=c("ideo.distance [all]"), 
+    terms=c("points.cumul.delta [all]"), 
     vcov.fun = "vcovHC", 
     vcov.type = "HC0")
-); m2.p2.d$group = "Spatial Distance (left-right)"
+); m2.p2.d$group = "Points Cumul (delta)"
 
 
 m2.p3.d = data.frame(ggeffects::ggpredict(
     model=m2,
-    terms=c("budget [all]"), 
+    terms=c("ideo.distance2 [all]"), 
     vcov.fun = "vcovHC", 
     vcov.type = "HC0")
-); m2.p3.d$group = "Party's Budget"
+); m2.p3.d$group = "Spatial Distance (left-right)"
+
+
+
+m2.p4.d = data.frame(ggeffects::ggpredict(
+  model=m2,
+  terms=c("budget [all]"), 
+  vcov.fun = "vcovHC", 
+  vcov.type = "HC0")
+); m2.p4.d$group = "Party's Budget"
+
+
+m2.p5.d = data.frame(ggeffects::ggpredict(
+  model=m2,
+  terms=c("pivotal.3.5 [all]"), 
+  vcov.fun = "vcovHC", 
+  vcov.type = "HC0")
+); m2.p5.d$group = "Pivotal Voter"
 
 
 # plot (export by hand)
-m2.p.d = as.data.frame(rbind(m2.p1.d,m2.p2.d,m2.p3.d))
+m2.p.d = as.data.frame(rbind(m2.p1.d,m2.p2.d,m2.p3.d,m2.p4.d,m2.p5.d))
 m2.p.d$group = as.factor(m2.p.d$group)
-m2.p.d$group <- relevel(m2.p.d$group, "Points Cumul (delta)")
+#m2.p.d$group <- relevel(m2.p.d$group, "Points Cumul (delta)")
 
 p_load(lattice, latticeExtra, DAMisc)
 m2plot = xyplot(predicted ~ x | group, 
@@ -1137,7 +1164,7 @@ m2plot = xyplot(predicted ~ x | group,
                 panel = panel.ci, 
                 zl=F, 
                 prepanel=prepanel.ci,
-                layout = c(3, 1) # columns, rows
+                layout = c(5, 1) # columns, rows
 )
 
 # saving plot
