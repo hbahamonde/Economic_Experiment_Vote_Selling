@@ -43,7 +43,7 @@ v.buying.vars = c(
     # "vote_b.1.player.payoff",
     # "vote_b.1.group.id_in_subsession",
     "vote_b.1.group.presupuesto",
-    # "vote_b.1.group.n_votantes",
+    "vote_b.1.group.n_votantes",
     # "vote_b.1.group.partido_elegido" ,
     "vote_b.1.group.tipo_votante" ,
     "vote_b.1.group.n_votantes_A",
@@ -63,7 +63,7 @@ v.buying.vars = c(
     # "vote_b.2.player.payoff" ,
     # "vote_b.2.group.id_in_subsession",
     "vote_b.2.group.presupuesto" ,
-    # "vote_b.2.group.n_votantes" ,
+    "vote_b.2.group.n_votantes" ,
     # "vote_b.2.group.partido_elegido" ,
     "vote_b.2.group.tipo_votante",
     "vote_b.2.group.n_votantes_A",
@@ -83,7 +83,7 @@ v.buying.vars = c(
     # "vote_b.3.player.payoff" ,
     # "vote_b.3.group.id_in_subsession",
     "vote_b.3.group.presupuesto" ,
-    # "vote_b.3.group.n_votantes" ,
+    "vote_b.3.group.n_votantes" ,
     # "vote_b.3.group.partido_elegido" ,
     "vote_b.3.group.tipo_votante",
     "vote_b.3.group.n_votantes_A",
@@ -327,7 +327,8 @@ v.buying.dat.1 = data.frame(
     v.buying.dat$voter.ideology.b.1,
     v.buying.dat$vote_b.1.group.pje_win_cA, 
     v.buying.dat$vote_b.1.group.pje_win_cB,
-    v.buying.dat$vote_b.1.player.tipoAoB
+    v.buying.dat$vote_b.1.player.tipoAoB,
+    v.buying.dat$vote_b.1.group.n_votantes
 )
 
 
@@ -394,6 +395,9 @@ colnames(v.buying.dat.1)[colnames(v.buying.dat.1) == "vote.intention.party"] <- 
 colnames(v.buying.dat.1)[colnames(v.buying.dat.1) == "vote.intention.voter.before.offer"] <- "vote.intention.voter.before.offer"     
 colnames(v.buying.dat.1)[colnames(v.buying.dat.1) == "ideo.distance"] <- "ideo.distance"
 colnames(v.buying.dat.1)[colnames(v.buying.dat.1) == "voters.elect.payoff"] <- "voters.elect.payoff"
+colnames(v.buying.dat.1)[colnames(v.buying.dat.1) == "v.buying.dat.vote_b.1.group.n_votantes"] <- "pivotal.3.5"
+
+
 
 
 # Game 2
@@ -417,7 +421,8 @@ v.buying.dat.2 = data.frame(
     v.buying.dat$voter.ideology.b.2,
     v.buying.dat$vote_b.2.group.pje_win_cA, 
     v.buying.dat$vote_b.2.group.pje_win_cB,
-    v.buying.dat$vote_b.2.player.tipoAoB
+    v.buying.dat$vote_b.2.player.tipoAoB,
+    v.buying.dat$vote_b.2.group.n_votantes
 )
 
 
@@ -480,6 +485,8 @@ colnames(v.buying.dat.2)[colnames(v.buying.dat.2) == "vote.intention.party"] <- 
 colnames(v.buying.dat.2)[colnames(v.buying.dat.2) == "vote.intention.voter.before.offer"] <- "vote.intention.voter.before.offer"     
 colnames(v.buying.dat.2)[colnames(v.buying.dat.2) == "ideo.distance"] <- "ideo.distance"
 colnames(v.buying.dat.2)[colnames(v.buying.dat.2) == "voters.elect.payoff"] <- "voters.elect.payoff"
+colnames(v.buying.dat.2)[colnames(v.buying.dat.2) == "v.buying.dat.vote_b.2.group.n_votantes"] <- "pivotal.3.5"
+
 
 # Game 3
 v.buying.dat.3 = data.frame(
@@ -502,7 +509,9 @@ v.buying.dat.3 = data.frame(
     v.buying.dat$voter.ideology.b.3,
     v.buying.dat$vote_b.3.group.pje_win_cA, 
     v.buying.dat$vote_b.3.group.pje_win_cB,
-    v.buying.dat$vote_b.3.player.tipoAoB
+    v.buying.dat$vote_b.3.player.tipoAoB,
+    v.buying.dat$vote_b.3.group.n_votantes
+    
 )
 
 
@@ -514,7 +523,7 @@ v.buying.dat.3$vote.intention.party = ifelse(
            NA)
 )
 
-# HERE vote.intention.voter.before.offer
+# vote.intention.voter.before.offer
 v.buying.dat.3$vote.intention.voter.before.offer = ifelse(
     v.buying.dat.3$v.buying.dat.vote_b.3.player.tipoAoB=="A", 
     v.buying.dat.3$v.buying.dat.vote_b.3.group.n_votantes_A, 
@@ -564,6 +573,7 @@ colnames(v.buying.dat.3)[colnames(v.buying.dat.3) == "vote.intention.party"] <- 
 colnames(v.buying.dat.3)[colnames(v.buying.dat.3) == "vote.intention.voter.before.offer"] <- "vote.intention.voter.before.offer"     
 colnames(v.buying.dat.3)[colnames(v.buying.dat.3) == "ideo.distance"] <- "ideo.distance"
 colnames(v.buying.dat.3)[colnames(v.buying.dat.3) == "voters.elect.payoff"] <- "voters.elect.payoff"
+colnames(v.buying.dat.3)[colnames(v.buying.dat.3) == "v.buying.dat.vote_b.3.group.n_votantes"] <- "pivotal.3.5"
 
 
 # Stack up 3 games
@@ -665,6 +675,8 @@ dat.v.b = dat.v.b %>% select(session.code,
                              participant.code,
                              round,
                              role,
+                             pivotal.3.5,
+                             vote.intention.party,
                              party.id.before.voter,
                              vote.intention.voter.before.offer,
                              offer.party.type,
@@ -762,6 +774,7 @@ print(payoffplot)
 dev.off()
 
 
+
 ######################################################################### 
 # ************** M      O       D       E       L       S **************
 #########################################################################
@@ -775,11 +788,12 @@ p_load(sandwich,lmtest,DAMisc,lattice,latticeExtra)
 #########################################################################
 
 # Subsetting Data
-m1.d = dat.v.b %>% select(offer.made.party, vote.intention.party, points.cumul.delta, ideo.distance, budget, participant.code) %>% drop_na()
+m1.d = dat.v.b %>% select(offer.made.party, vote.intention.party, points.cumul.delta, ideo.distance, budget, participant.code, pivotal.3.5) %>% drop_na()
 m1.d = as.data.frame(m1.d)
 
 # Model (with participant FEs)
-m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance + budget + participant.code, m1.d)
+m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance + budget + pivotal.3.5 + participant.code, m1.d)
+# options(scipen=9999999) # turn off sci not
 # summary(m1)
 
 # Clustered Std Errors and Model info
@@ -879,13 +893,23 @@ m1.p4.d = data.frame(ggeffects::ggpredict(
     vcov.type = "HC0")
 ); m1.p4.d$group = "Party's Budget"
 
+
+# pivotal voter
+m1.p5.d = data.frame(ggeffects::ggpredict(
+  model=m1,
+  terms=c("pivotal.3.5 [all]"), 
+  vcov.fun = "vcovHC", 
+  vcov.type = "HC0")
+); m1.p5.d$group = "Pivotal Voter"
+
 # plot (export by hand)
-m1.p.d = as.data.frame(rbind(m1.p1.d,m1.p2.d,m1.p3.d,m1.p4.d))
+m1.p.d = as.data.frame(rbind(m1.p1.d,m1.p2.d,m1.p3.d,m1.p4.d,m1.p5.d))
 m1.p.d$group = factor(m1.p.d$group, 
                       levels = c("Vote Share", 
                                  "Points Cumul (delta)", 
                                  "Spatial Distance (left-right)", 
-                                 "Party's Budget"))
+                                 "Party's Budget",
+                                 "Pivotal Voter"))
 
 #m1.p.d$group = as.factor(m1.p.d$group)
 #m1.p.d$group <- relevel(m1.p.d$group, "Points Cumul (delta)")
@@ -902,7 +926,7 @@ m1plot = xyplot(predicted ~ x | group,
                 panel = panel.ci, 
                 zl=F, 
                 prepanel=prepanel.ci,
-                layout = c(4, 1) # columns, rows
+                layout = c(5, 1) # columns, rows
                 )
 
 # saving plot
