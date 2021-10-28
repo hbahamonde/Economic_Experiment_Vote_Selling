@@ -359,6 +359,19 @@ v.buying.dat.1$ideo.distance = ifelse(
            ifelse(v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="votantes", v.buying.dat$voter.ideology.b.1, NA ))
 )
 
+# Relative Ideological Distance from Voter
+## Repeat voter ideology across groups
+v.buying.dat.1 = v.buying.dat.1 %>%
+  group_by(v.buying.dat.vote_b.1.group.presupuesto) %>%
+  fill(v.buying.dat.voter.ideology.b.1)
+v.buying.dat.1$ideo.distance2.a = abs(v.buying.dat.1$v.buying.dat.vote_b.1.group.ubicacion_pA - v.buying.dat.1$v.buying.dat.voter.ideology.b.1)
+v.buying.dat.1$ideo.distance2.b = abs(v.buying.dat.1$v.buying.dat.vote_b.1.group.ubicacion_pB - v.buying.dat.1$v.buying.dat.voter.ideology.b.1)
+v.buying.dat.1$ideo.distance2 = ifelse(
+  v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido A", v.buying.dat.1$ideo.distance2.a,
+  ifelse(v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido B", v.buying.dat.1$ideo.distance2.b, NA
+))
+
+
 v.buying.dat.1$voters.elect.payoff = ifelse(
     v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido A", 
     v.buying.dat.1$v.buying.dat.vote_b.1.group.pje_win_cA, 
@@ -451,6 +464,20 @@ v.buying.dat.2$ideo.distance = ifelse(
            ifelse(v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="votantes", v.buying.dat$voter.ideology.b.2, NA ))
 )
 
+
+# Relative Ideological Distance from Voter
+## Repeat voter ideology across groups
+v.buying.dat.2 = v.buying.dat.2 %>%
+  group_by(v.buying.dat.vote_b.2.group.presupuesto) %>%
+  fill(v.buying.dat.voter.ideology.b.2)
+v.buying.dat.2$ideo.distance2.a = abs(v.buying.dat.2$v.buying.dat.vote_b.2.group.ubicacion_pA - v.buying.dat.2$v.buying.dat.voter.ideology.b.2)
+v.buying.dat.2$ideo.distance2.b = abs(v.buying.dat.2$v.buying.dat.vote_b.2.group.ubicacion_pB - v.buying.dat.2$v.buying.dat.voter.ideology.b.2)
+v.buying.dat.2$ideo.distance2 = ifelse(
+  v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="Partido A", v.buying.dat.2$ideo.distance2.a,
+  ifelse(v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="Partido B", v.buying.dat.2$ideo.distance2.b, NA
+  ))
+
+
 v.buying.dat.2$voters.elect.payoff = ifelse(
     v.buying.dat.2$v.buying.dat.vote_b.2.player.votanteOpartido=="Partido A", 
     v.buying.dat.2$v.buying.dat.vote_b.2.group.pje_win_cA, 
@@ -538,6 +565,18 @@ v.buying.dat.3$ideo.distance = ifelse(
     ifelse(v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="Partido B", v.buying.dat.3$v.buying.dat.vote_b.3.group.ubicacion_pB, 
            ifelse(v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="votantes", v.buying.dat$voter.ideology.b.3, NA ))
 )
+
+# Relative Ideological Distance from Voter
+## Repeat voter ideology across groups
+v.buying.dat.3 = v.buying.dat.3 %>%
+  group_by(v.buying.dat.vote_b.3.group.presupuesto) %>%
+  fill(v.buying.dat.voter.ideology.b.3)
+v.buying.dat.3$ideo.distance2.a = abs(v.buying.dat.3$v.buying.dat.vote_b.3.group.ubicacion_pA - v.buying.dat.3$v.buying.dat.voter.ideology.b.3)
+v.buying.dat.3$ideo.distance2.b = abs(v.buying.dat.3$v.buying.dat.vote_b.3.group.ubicacion_pB - v.buying.dat.3$v.buying.dat.voter.ideology.b.3)
+v.buying.dat.3$ideo.distance2 = ifelse(
+  v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="Partido A", v.buying.dat.3$ideo.distance2.a,
+  ifelse(v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="Partido B", v.buying.dat.3$ideo.distance2.b, NA
+  ))
 
 v.buying.dat.3$voters.elect.payoff = ifelse(
     v.buying.dat.3$v.buying.dat.vote_b.3.player.votanteOpartido=="Partido A", 
@@ -676,6 +715,7 @@ dat.v.b = dat.v.b %>% select(session.code,
                              round,
                              role,
                              pivotal.3.5,
+                             ideo.distance2,
                              vote.intention.party,
                              party.id.before.voter,
                              vote.intention.voter.before.offer,
@@ -788,11 +828,11 @@ p_load(sandwich,lmtest,DAMisc,lattice,latticeExtra)
 #########################################################################
 
 # Subsetting Data
-m1.d = dat.v.b %>% select(offer.made.party, vote.intention.party, points.cumul.delta, ideo.distance, budget, participant.code, pivotal.3.5) %>% drop_na()
+m1.d = dat.v.b %>% select(offer.made.party, vote.intention.party, points.cumul.delta, ideo.distance2, budget, participant.code, pivotal.3.5) %>% drop_na()
 m1.d = as.data.frame(m1.d)
 
 # Model (with participant FEs)
-m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance + budget + pivotal.3.5 + participant.code, m1.d)
+m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance2 + budget + pivotal.3.5 + participant.code, m1.d)
 # options(scipen=9999999) # turn off sci not
 # summary(m1)
 
@@ -880,7 +920,7 @@ m1.p2.d = data.frame(ggeffects::ggpredict(
 # no importa la distancia ideologica
 m1.p3.d = data.frame(ggeffects::ggpredict(
     model=m1,
-    terms=c("ideo.distance [all]"), 
+    terms=c("ideo.distance2 [all]"), 
     vcov.fun = "vcovHC", 
     vcov.type = "HC0")
 ); m1.p3.d$group = "Spatial Distance (left-right)"
