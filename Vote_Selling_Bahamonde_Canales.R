@@ -748,6 +748,9 @@ dat.v.b = dat.v.b %>% mutate(role=recode(role,
                                "Partido B" = "Party B",
                                "votantes" = "Voter"))
 
+# vote.intention.party.2
+dat.v.b$vote.intention.party.2 = round((dat.v.b$vote.intention.party*100)/dat.v.b$pivotal.3.5,0)
+
 ## ----
 
 
@@ -835,11 +838,11 @@ p_load(sandwich,lmtest,DAMisc,lattice,latticeExtra)
 #########################################################################
 
 # Subsetting Data
-m1.d = dat.v.b %>% select(offer.made.party, vote.intention.party, points.cumul.delta, ideo.distance2, budget, participant.code, pivotal.3.5) %>% drop_na()
+m1.d = dat.v.b %>% select(offer.made.party, vote.intention.party.2, points.cumul.delta, ideo.distance2, budget, participant.code, pivotal.3.5) %>% drop_na()
 m1.d = as.data.frame(m1.d)
 
 # Model (with participant FEs) # m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance2 + budget + pivotal.3.5 + participant.code, m1.d)
-m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance2 + budget + pivotal.3.5 + participant.code, m1.d)
+m1 = lm(offer.made.party ~ vote.intention.party.2 + points.cumul.delta + ideo.distance2 + budget + participant.code, m1.d)
 # options(scipen=9999999) # turn off sci not
 # summary(m1)
 
@@ -921,7 +924,7 @@ m1.p1.d = data.frame(ggeffects::ggpredict(
 #mientras mas votos a favor tengo, mas ofrezco
 m1.p2.d = data.frame(ggeffects::ggpredict(
     model=m1,
-    terms=c("vote.intention.party [all]"), 
+    terms=c("vote.intention.party.2 [all]"), 
     vcov.fun = "vcovHC", 
     vcov.type = "HC0")
 ); m1.p2.d$group = "Vote Share"
@@ -952,13 +955,12 @@ m1.p5.d = data.frame(ggeffects::ggpredict(
 ); m1.p5.d$group = "Pivotal Voter"
 
 # plot (export by hand)
-m1.p.d = as.data.frame(rbind(m1.p1.d,m1.p2.d,m1.p3.d,m1.p4.d,m1.p5.d))
+m1.p.d = as.data.frame(rbind(m1.p1.d,m1.p2.d,m1.p3.d,m1.p4.d))
 m1.p.d$group = factor(m1.p.d$group, 
                       levels = c("Vote Share", 
                                  "Points Cumul (delta)", 
                                  "Spatial Distance (left-right)", 
-                                 "Party's Budget",
-                                 "Pivotal Voter"))
+                                 "Party's Budget"))
 
 #m1.p.d$group = as.factor(m1.p.d$group)
 #m1.p.d$group <- relevel(m1.p.d$group, "Points Cumul (delta)")
@@ -975,7 +977,7 @@ m1plot = xyplot(predicted ~ x | group,
                 panel = panel.ci, 
                 zl=F, 
                 prepanel=prepanel.ci,
-                layout = c(5, 1) # columns, rows
+                layout = c(4, 1) # columns, rows
                 )
 
 # saving plot
@@ -1235,7 +1237,7 @@ xtable(summary.stats[order(summary.stats$variable),],
 
 ## ---- abstract ----
 fileConn <- file ("abstract.txt")
-abstract.c = as.character(c("Leveraging on the expected utility theory framework, most research asserts that parties in need of securing electoral support invest in vote buying. We consider this framework is limited in a number of ways. First, it assumes that losses and gains affect party's decision-making process in a comparable way---i.e., winning elections feels good as losing one hurts. Second, it assumes that the decision-making process of clientelist political parties focuses only on absolute levels of utilities while overlooking changes in outcomes respect to a reference point. Whether these assumptions hold is very important for understanding why parties buy votes. By introducing prospect theory in the clientelism literature, we hypothesize that parties are risk averse in the domain of gains and risk-seeking in the domain of losses---i.e., losing an election hurts more than winning an election pleases. This explains why clientelism is most likely when parties are probable winners or have experienced important losses in the past. These results are invariant to the political identity of voters (i.e., whether voters are swing or core voters). Unfortunately, the expected utility theory (wrongly) predicts that under these scenarios clientelism should not occur. After formalizing a theory of vote buying and vote selling within the expected utility theory, we tested it in the lab by designing an economic experiment. The voting experiment was carefully designed to capture different domains of gains/losses as well as varying reference points. Exploiting these novel experimental data, we show that prospect theory provides a better explanation of clientelism than do other theories based on the expected-utility theory. As the statistical analyses suggest, because of risk-seeking with respect to losses, experimental subjects adopt a more risky alternative buying votes in a way that is unpredicted by standard expected-value calculations."))
+abstract.c = as.character(c("Leveraging on the expected utility theory framework, most research asserts that parties in need of securing electoral support invest in vote buying. We consider this framework is limited because it assumes that losses and gains affect party's decision-making process in a comparable way, and because it assumes that the decision-making process of clientelist political parties focuses only on absolute levels of utilities while overlooking changes in outcomes respect to a reference point. We hypothesize that parties are risk averse in the domain of gains and risk-seeking in the domain of losses---i.e., losing an election hurts more than winning an election pleases. This explains why clientelism is most likely when parties are probable winners or have experienced important losses in the past. After formalizing a theory of vote buying and vote selling within the expected utility theory, we tested it in the lab by designing an economic experiment. Exploiting these novel experimental data, we show that prospect theory provides a better explanation of clientelism than do other theories based on the expected-utility theory."))
 writeLines(abstract.c, fileConn)
 close(fileConn)
 ## ----
