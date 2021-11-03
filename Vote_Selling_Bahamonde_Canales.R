@@ -363,9 +363,32 @@ v.buying.dat.1$ideo.distance2 = ifelse(
   ))
 
 # pivotal.voter
-v.buying.dat.1$pivotal.voter = abs(v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_A-v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_B)
-v.buying.dat.1$pivotal.voter = ifelse(v.buying.dat.1$pivotal.voter==1, 1, 0)
-  
+v.buying.dat.1 = v.buying.dat.1 %>%
+  group_by(v.buying.dat.vote_b.1.group.presupuesto) %>%
+  fill(v.buying.dat.party.id.before.voter.b.1)
+
+v.buying.dat.1$pivotal.voter = ifelse(
+  v.buying.dat.1$v.buying.dat.party.id.before.voter.b.1=="A" & # votante (A o B).
+    v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes == 5 & # grupo (3 o 5).
+    v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_A == 3, 1,
+  ifelse(
+    v.buying.dat.1$v.buying.dat.party.id.before.voter.b.1=="A" & # votante (A o B).
+      v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes == 3 & # grupo (3 o 5).
+      v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_A == 2, 1,
+    ifelse(
+      v.buying.dat.1$v.buying.dat.party.id.before.voter.b.1=="B" & # votante (A o B).
+        v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes == 5 & # grupo (3 o 5).
+        v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_B == 3, 1,
+      ifelse(
+        v.buying.dat.1$v.buying.dat.party.id.before.voter.b.1=="B" & # votante (A o B).
+          v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes == 3 & # grupo (3 o 5).
+          v.buying.dat.1$v.buying.dat.vote_b.1.group.n_votantes_B == 2, 1, 0
+        )
+      )
+    )
+  )
+
+
 
 v.buying.dat.1$voters.elect.payoff = ifelse(
   v.buying.dat.1$v.buying.dat.vote_b.1.player.votanteOpartido=="Partido A", 
@@ -466,8 +489,30 @@ v.buying.dat.2$ideo.distance2 = ifelse(
   ))
 
 # pivotal.voter
-v.buying.dat.2$pivotal.voter = abs(v.buying.dat.2$v.buying.dat.vote_b.2.group.n_votantes_A-v.buying.dat.2$v.buying.dat.vote_b.2.group.n_votantes_B)
-v.buying.dat.2$pivotal.voter = ifelse(v.buying.dat.2$pivotal.voter==1, 1, 0)
+v.buying.dat.2 = v.buying.dat.2 %>%
+  group_by(v.buying.dat.vote_b.2.group.presupuesto) %>%
+  fill(v.buying.dat.party.id.before.voter.b.2)
+
+v.buying.dat.2$pivotal.voter = ifelse(
+  v.buying.dat.2$v.buying.dat.party.id.before.voter.b.2=="A" & # votante (A o B).
+    v.buying.dat.2$v.buying.dat.vote_b.2.group.n_votantes == 5 & # grupo (3 o 5).
+    v.buying.dat.2$v.buying.dat.vote_b.2.group.n_votantes_A == 3, 1,
+  ifelse(
+    v.buying.dat.2$v.buying.dat.party.id.before.voter.b.2=="A" & # votante (A o B).
+      v.buying.dat.2$v.buying.dat.vote_b.2.group.n_votantes == 3 & # grupo (3 o 5).
+      v.buying.dat.2$v.buying.dat.vote_b.2.group.n_votantes_A == 2, 1,
+    ifelse(
+      v.buying.dat.2$v.buying.dat.party.id.before.voter.b.2=="B" & # votante (A o B).
+        v.buying.dat.2$v.buying.dat.vote_b.2.group.n_votantes == 5 & # grupo (3 o 5).
+        v.buying.dat.2$v.buying.dat.vote_b.2.group.n_votantes_B == 3, 1,
+      ifelse(
+        v.buying.dat.2$v.buying.dat.party.id.before.voter.b.2=="B" & # votante (A o B).
+          v.buying.dat.2$v.buying.dat.vote_b.2.group.n_votantes == 3 & # grupo (3 o 5).
+          v.buying.dat.2$v.buying.dat.vote_b.2.group.n_votantes_B == 2, 1, 0
+      )
+    )
+  )
+)
 
 
 
@@ -568,8 +613,30 @@ v.buying.dat.3$ideo.distance2 = ifelse(
 
 
 # pivotal.voter
-v.buying.dat.3$pivotal.voter = abs(v.buying.dat.3$v.buying.dat.vote_b.3.group.n_votantes_A-v.buying.dat.3$v.buying.dat.vote_b.3.group.n_votantes_B)
-v.buying.dat.3$pivotal.voter = ifelse(v.buying.dat.3$pivotal.voter==1, 1, 0)
+v.buying.dat.3 = v.buying.dat.3 %>%
+  group_by(v.buying.dat.vote_b.3.group.presupuesto) %>%
+  fill(v.buying.dat.party.id.before.voter.b.3)
+
+v.buying.dat.3$pivotal.voter = ifelse(
+  v.buying.dat.3$v.buying.dat.party.id.before.voter.b.3=="A" & # votante (A o B).
+    v.buying.dat.3$v.buying.dat.vote_b.3.group.n_votantes == 5 & # grupo (3 o 5).
+    v.buying.dat.3$v.buying.dat.vote_b.3.group.n_votantes_A == 3, 1,
+  ifelse(
+    v.buying.dat.3$v.buying.dat.party.id.before.voter.b.3=="A" & # votante (A o B).
+      v.buying.dat.3$v.buying.dat.vote_b.3.group.n_votantes == 3 & # grupo (3 o 5).
+      v.buying.dat.3$v.buying.dat.vote_b.3.group.n_votantes_A == 2, 1,
+    ifelse(
+      v.buying.dat.3$v.buying.dat.party.id.before.voter.b.3=="B" & # votante (A o B).
+        v.buying.dat.3$v.buying.dat.vote_b.3.group.n_votantes == 5 & # grupo (3 o 5).
+        v.buying.dat.3$v.buying.dat.vote_b.3.group.n_votantes_B == 3, 1,
+      ifelse(
+        v.buying.dat.3$v.buying.dat.party.id.before.voter.b.3=="B" & # votante (A o B).
+          v.buying.dat.3$v.buying.dat.vote_b.3.group.n_votantes == 3 & # grupo (3 o 5).
+          v.buying.dat.3$v.buying.dat.vote_b.3.group.n_votantes_B == 2, 1, 0
+      )
+    )
+  )
+)
 
 
 v.buying.dat.3$voters.elect.payoff = ifelse(
@@ -921,7 +988,7 @@ m1.p3.d = data.frame(ggeffects::ggpredict(
   terms=c("ideo.distance2 [all]"), 
   vcov.fun = "vcovHC", 
   vcov.type = "HC0")
-); m1.p3.d$group = "Spatial Distance (left-right)"
+); m1.p3.d$group = "Spatial Distance"
 
 # no importa el budget del partido
 m1.p4.d = data.frame(ggeffects::ggpredict(
@@ -945,7 +1012,7 @@ m1.p.d = as.data.frame(rbind(m1.p1.d,m1.p2.d,m1.p3.d,m1.p4.d,m1.p5.d))
 m1.p.d$group = factor(m1.p.d$group, 
                       levels = c("Vote Share", 
                                  "Points Cumul (delta)", 
-                                 "Spatial Distance (left-right)", 
+                                 "Spatial Distance", 
                                  "Party's Budget",
                                  "Pivotal Voter"))
 
@@ -967,6 +1034,7 @@ m1plot = xyplot(predicted ~ x | group,
                 layout = c(5, 1) # columns, rows
 )
 
+
 # saving plot
 png(filename="m1plot.png", 
     type="cairo",
@@ -983,8 +1051,9 @@ dev.off()
 
 m1.p.d.1 = m1.p.d[m1.p.d$group=="Vote Share",]
 m1.p.d.2 = m1.p.d[m1.p.d$group=="Points Cumul (delta)",]
-m1.p.d.3 = m1.p.d[m1.p.d$group=="Spatial Distance (left-right)",]
+m1.p.d.3 = m1.p.d[m1.p.d$group=="Spatial Distance",]
 m1.p.d.4 = m1.p.d[m1.p.d$group=="Party's Budget",]
+m1.p.d.5 = m1.p.d[m1.p.d$group=="Pivotal Voter",]
 
 # m1.p.d.1
 m1.p.d.1.p = xyplot(predicted ~ x | group, 
@@ -1092,6 +1161,35 @@ png(filename="m1plot_4.png",
 
 print(m1.p.d.4.p)
 dev.off()
+
+
+# m1.p.d.5
+m1.p.d.5.p = xyplot(predicted ~ x | group, 
+                    scales=list(relation="free", rot=0),
+                    data=m1.p.d.5, 
+                    aspect = 1,
+                    xlab = " ", 
+                    ylab = "Amount of Vote-Buying Offer (points)", 
+                    lower=m1.p.d.5$conf.low,
+                    upper=m1.p.d.5$conf.high,
+                    panel = panel.ci, 
+                    zl=F, 
+                    prepanel=prepanel.ci,
+                    layout = c(1, 1) # columns, rows
+)
+# saving plot
+png(filename="m1plot_5.png", 
+    type="cairo",
+    units="in", 
+    width=5, 
+    height=5, 
+    pointsize=10, 
+    res=1000)
+
+print(m1.p.d.5.p)
+dev.off()
+
+
 
 ## MODEL 2 PLOTS
 # vote.intention.party + points.cumul.delta + ideo.distance2 + budget + n.of.voters + participant.code
