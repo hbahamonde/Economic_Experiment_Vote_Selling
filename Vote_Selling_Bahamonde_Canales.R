@@ -944,7 +944,7 @@ reg.table = texreg::texreg( # screenreg texreg
   custom.model.names = c(custom.model.names.m1),
   #custom.coef.names = NULL,
   omit.coef = "participant",
-  custom.coef.names = c("Intercept", "Vote Share", "Points Accumulated (delta)", "Spatial Distance", "Party Budget", "Pivotal Voter"),
+  custom.coef.names = c("Intercept", "Vote Share (%)", "Points Accumulated (delta)", "Spatial Distance", "Party Budget", "Pivotal Voter"),
   override.se = list(c(m1.clst.std.err,rep(0.0, length(unique(m1.d$participant.code))-1))),
   override.pvalues = list(c(m1.clst.p.value,rep(0.0, length(unique(m1.d$participant.code))-1))),
   custom.header = list( "OLS" = 1),
@@ -980,7 +980,7 @@ m1.p2.d = data.frame(ggeffects::ggpredict(
   terms=c("vote.intention.party.2 [all]"), 
   vcov.fun = "vcovHC", 
   vcov.type = "HC0")
-); m1.p2.d$group = "Vote Share"
+); m1.p2.d$group = "Vote Share (%)"
 
 # no importa la distancia ideologica
 m1.p3.d = data.frame(ggeffects::ggpredict(
@@ -1010,7 +1010,7 @@ m1.p5.d = data.frame(ggeffects::ggpredict(
 # plot (export by hand)
 m1.p.d = as.data.frame(rbind(m1.p1.d,m1.p2.d,m1.p3.d,m1.p4.d,m1.p5.d))
 m1.p.d$group = factor(m1.p.d$group, 
-                      levels = c("Vote Share", 
+                      levels = c("Vote Share (%)", 
                                  "Points Cumul (delta)", 
                                  "Spatial Distance", 
                                  "Party's Budget",
@@ -1049,7 +1049,7 @@ dev.off()
 
 
 
-m1.p.d.1 = m1.p.d[m1.p.d$group=="Vote Share",]
+m1.p.d.1 = m1.p.d[m1.p.d$group=="Vote Share (%)",]
 m1.p.d.2 = m1.p.d[m1.p.d$group=="Points Cumul (delta)",]
 m1.p.d.3 = m1.p.d[m1.p.d$group=="Spatial Distance",]
 m1.p.d.4 = m1.p.d[m1.p.d$group=="Party's Budget",]
