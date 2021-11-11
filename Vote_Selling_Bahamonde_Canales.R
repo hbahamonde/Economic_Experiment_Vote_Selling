@@ -1032,7 +1032,7 @@ m1plot = xyplot(predicted ~ x | group,
                 data=m1.p.d, 
                 aspect = 1,
                 xlab = " ", 
-                ylab = "Amount of Vote-Buying Offer (points)", 
+                ylab = "Predicted Amount of\nVote-Buying Offer (points)", 
                 lower=m1.p.d$conf.low,
                 upper=m1.p.d$conf.high,
                 panel = panel.ci, 
@@ -1056,7 +1056,7 @@ dev.off()
 
 
 
-m1.p.d.1 = m1.p.d[m1.p.d$group=="Vote Share (%)",]
+ m1.p.d.1 = m1.p.d[m1.p.d$group=="Vote Share (%)",]
 m1.p.d.2 = m1.p.d[m1.p.d$group=="Points Cumul (delta)",]
 m1.p.d.3 = m1.p.d[m1.p.d$group=="Ideological Distance",]
 m1.p.d.4 = m1.p.d[m1.p.d$group=="Party's Budget",]
