@@ -258,7 +258,8 @@ v.buying.dat = v.buying.dat %>%
 
 v.buying.dat$offer.party.type.b.1 = as.character(v.buying.dat$offer.party.type.b.1)
 v.buying.dat$offer.party.type.b.1[v.buying.dat$n.offers.made.to.voter == 2] <- "AB"
-v.buying.dat$offer.party.type.b.1 = v.buying.dat$offer.party.type.b.1 %>% replace_na("None")
+#v.buying.dat$offer.party.type.b.1 %>% dplyr::replace_na("None")
+#v.buying.dat$offer.party.type.b.1 = v.buying.dat$offer.party.type.b.1 %>% replace_na("None")
 v.buying.dat$offer.party.type.b.1 = as.factor(v.buying.dat$offer.party.type.b.1)
 
 # characterizing offer type of party (game 2)
@@ -281,7 +282,7 @@ v.buying.dat = v.buying.dat %>%
 
 v.buying.dat$offer.party.type.b.2 = as.character(v.buying.dat$offer.party.type.b.2)
 v.buying.dat$offer.party.type.b.2[v.buying.dat$n.offers.made.to.voter == 2] <- "AB"
-v.buying.dat$offer.party.type.b.2 = v.buying.dat$offer.party.type.b.2 %>% replace_na("None")
+#v.buying.dat$offer.party.type.b.2 = v.buying.dat$offer.party.type.b.2 %>% replace_na("None")
 v.buying.dat$offer.party.type.b.2 = as.factor(v.buying.dat$offer.party.type.b.2)
 
 # characterizing offer type of party (game 3)
@@ -303,7 +304,7 @@ v.buying.dat = v.buying.dat %>%
 
 v.buying.dat$offer.party.type.b.3 = as.character(v.buying.dat$offer.party.type.b.3)
 v.buying.dat$offer.party.type.b.3[v.buying.dat$n.offers.made.to.voter == 2] <- "AB"
-v.buying.dat$offer.party.type.b.3 = v.buying.dat$offer.party.type.b.3 %>% replace_na("None")
+#v.buying.dat$offer.party.type.b.3 = v.buying.dat$offer.party.type.b.3 %>% replace_na("None")
 v.buying.dat$offer.party.type.b.3 = as.factor(v.buying.dat$offer.party.type.b.3)
 
 # Game 1
@@ -762,15 +763,15 @@ dat.v.b$points.cumul = as.numeric(dat.v.b$points.cumul)
 dat.v.b$budget = as.numeric(dat.v.b$budget)
 dat.v.b$offer.made.voter = as.numeric(dat.v.b$offer.made.voter)
 dat.v.b$offer.taken.voter = as.numeric(dat.v.b$offer.taken.voter)
-dat.v.b$offer.taken.voter = as.factor(ifelse(dat.v.b$offer.taken.voter == 1, "A", ifelse(dat.v.b$offer.taken.voter == 2, "B", NA)))
-dat.v.b$offer.party.type = relevel(dat.v.b$offer.party.type, ref = "None")
+dat.v.b$offer.taken.voter = as.factor(ifelse(dat.v.b$offer.taken.voter == 1, "A", ifelse(dat.v.b$offer.taken.voter == 2, "B", NA)))#dat.v.b$offer.party.type = relevel(dat.v.b$offer.party.type, ref = "None")
 dat.v.b$vote.intention.party = as.numeric(dat.v.b$vote.intention.party)
 dat.v.b$ideo.distance = as.numeric(dat.v.b$ideo.distance)
 dat.v.b$voters.elect.payoff = as.numeric(dat.v.b$voters.elect.payoff)
 dat.v.b$voters.elect.payoff = as.numeric(dat.v.b$voters.elect.payoff)
 dat.v.b$points.cumul.delta = as.numeric(dat.v.b$points.cumul.delta)
 
-dat.v.b = dat.v.b %>% select(session.code,
+p_load(dplyr)
+dat.v.b = dat.v.b %>% dplyr::select(session.code,
                              participant.code,
                              round,
                              role,
@@ -891,7 +892,7 @@ p_load(sandwich,lmtest,DAMisc,lattice,latticeExtra)
 #########################################################################
 
 # Subsetting Data
-m1.d = dat.v.b %>% select(offer.made.party, vote.intention.party.2, points.cumul.delta, ideo.distance2, budget, participant.code, pivotal.voter) %>% drop_na()
+m1.d = dat.v.b %>% dplyr::select(offer.made.party, vote.intention.party.2, points.cumul.delta, ideo.distance2, budget, participant.code, pivotal.voter) %>% drop_na()
 m1.d = as.data.frame(m1.d)
 
 # Model (with participant FEs) # m1 = lm(offer.made.party ~ vote.intention.party + points.cumul.delta + ideo.distance2 + budget + n.of.voters + participant.code, m1.d)
