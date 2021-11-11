@@ -900,6 +900,10 @@ m1 = lm(offer.made.party ~ vote.intention.party.2 + points.cumul.delta + ideo.di
 # options(scipen=9999999) # turn off sci not
 # summary(m1)
 
+# p_load(sjPlot,sjmisc,ggplot2)
+# theme_set(theme_sjplot())
+# plot_model(m1, type = "int")
+
 # Clustered Std Errors and Model info
 options(scipen=9999999) # turn off sci not
 m1.clst.std.err = as.numeric(coeftest(m1, vcov. = vcovCL(m1, cluster = m1.d$participant.code, type = "HC0"))[,2])[1:6]
