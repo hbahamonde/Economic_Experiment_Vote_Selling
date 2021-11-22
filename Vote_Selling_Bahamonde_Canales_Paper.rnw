@@ -534,7 +534,7 @@ During the second stage, parties decide whether to buy votes by making an offer 
 
 
 % internal validity
-Since the focus of this paper is on vote-buying, we discarded the \emph{voter} data and analyze all observations $i$ acting any of the party roles (\emph{party A} and \emph{party B}). In particular, we analyze one main dependent variable, namely, the amount of the vote-buying offer made by parties (if any). The distribution is plotted in \autoref{dep:var:plot:fig}. 
+Since the focus of this paper is on vote-buying, we discarded the \emph{voter} data and analyzed all observations $i$ acting any of the party roles (\emph{party A} and \emph{party B}). This in practice leaves the data formatted in party-voter dyads. Moving forward, in this paper we concentrate on one main dependent variable, namely, the amount of the vote-buying offer made by parties (if any). The distribution is plotted in \autoref{dep:var:plot:fig}. 
 
 \begin{figure}[h]
 \includegraphics[scale=.6, center]{depvarplot.png}
