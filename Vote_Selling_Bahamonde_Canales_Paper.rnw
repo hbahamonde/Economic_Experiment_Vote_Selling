@@ -136,7 +136,8 @@ headpunct=:
 %%% bib begin
 \usepackage[american]{babel}
 \usepackage{csquotes}
-\usepackage[backend=biber,style=authoryear,dashed=false,doi=false,isbn=false,url=false,arxiv=false]{biblatex}
+\usepackage[backend=biber,style=authoryear,date=year,dashed=false,doi=false,isbn=false,url=false,arxiv=false]{biblatex}
+\renewbibmacro{in:}{} % this should go immediately below calling biblatex package to avoid "In: <journal>" every time.
 %\DeclareLanguageMapping{american}{american-apa}
 \addbibresource{Vote_Selling_Bahamonde_Canales.bib} 
 \addbibresource{/Users/hectorbahamonde/Bibliografia_PoliSci/library.bib} 
@@ -171,7 +172,7 @@ headpunct=:
 \textsc{Andrea Canales}
 \thanks{\href{mailto:andrea.canales@uoh.cl}{andrea.canales@uoh.cl}; 
 \href{http://sites.google.com/view/andrea-canales-g}{\texttt{http://sites.google.com/view/andrea-canales-g}}. \\
-Authors are listed in alphabetical order. We thank Jack Levy for his detailed comments and helpful revisions. We also thank Barbara Vis, Janne Tukiainen, Lauri Saaksvuori and Salomo Hirvonen for their suggestions. We thank O'Higgins University for funding this project, and the participants of the colloquium at the Centre for Experimental Social Sciences (CESS) at Universidad de Santiago (Chile), the participants of the ``DPINVEST \& INVESThub Workshop on Interventions, Evaluations and Field Experiments'' (Turku, Finland), the participants of the Political Science and Economics seminars at Turku University, Finland and the participants of the General Seminar at \AA bo Akademi, Turku, Finland. Javiera Tobar, Cristopher Reyes and Basti\'an Garrido provided excellent research assistance.}}
+Authors are listed in alphabetical order. We thank Jack Levy for his detailed comments and helpful revisions. We also thank Barbara Vis, Janne Tukiainen, Lauri Saaksvuori and Salomo Hirvonen for their suggestions. We thank O'Higgins University for funding this project, and the participants of the colloquium at the Centre for Experimental Social Sciences (CESS) at Universidad de Santiago (Chile), the participants of the ``DPINVEST \& INVESThub Workshop on Interventions, Evaluations and Field Experiments'' (Turku, Finland), the participants of the Political Science and Economics seminars at Turku University, Finland and the participants of the General Seminar at \AA bo Akademi, Turku, Finland. We would also like to thank the Editor of Electoral Studies, and the three reviewers for their suggestions and constructive criticism. Their comments certainly improved the paper significantly. Javiera Tobar, Cristopher Reyes and Basti\'an Garrido provided excellent research assistance. The usual caveats apply.}}
 
 
 % Share with: Rick Lau, Ana de la O, Virginia Oliveros, Dave Redlawsk, Bob Kaufman, Jack Levi, Barbara Vis (https://www.barbaravis.nl/publications/)
