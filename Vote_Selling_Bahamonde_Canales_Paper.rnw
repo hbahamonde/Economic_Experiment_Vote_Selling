@@ -399,7 +399,7 @@ Hence, we expect vote buying to be higher in contexts where parties are winning 
 Moving forward, clientelist parties can also be expected to buy more votes when they are in the domain of losses because of risk-seeking. In these cases, vote buying should be higher when they have experienced important losses or when they have had high spending levels in the past. In line with prospect theory, we argue that past losses are harder to accept, and hence when things have been bad in the past, decision-makers are more likely to make risky choices ``today'' to recover ``yesterday's'' losses \parencite[294]{McDermott2004}. Analytically, \textcite[297]{Levy1992} notes that the elasticity of the risk-seeking behavior is quite high because the magnitudes of past losses need not be large in order to induce the behavior. This means that even small losses can be expected to induce risk-seeking behaviors. Consequently, we expect a steeper predicted effect in the data analyses. 
 
 
-Importantly, the risk-seeking behavior is with respect to vote buying as a strategy. By shifting the decision-makers' reference point downward, vote buying seems more attractive because of the tendency of individuals in the domain of losses to try to ``break-even''  \parencite{Thaler1990}. This implies that clientelist political parties should be expected to buy more votes, not necessarily because they want to win the next election but because they will try to compensate for past losses or ``sunk costs.''\footnote{Due to the ``cost of governing'' \parencite{Powell1993,Nannestad2002,Bawn2012}, \textcite[1041]{Schumacher2015} empirically find that incumbents in the domain of losses take more risks. In terms of our argument, we also find it might be plausible that incumbents fear losing office, thus incentivizing more investments in clientelism. However, while our explanation complements theirs, our formal model, the experimental design and the data analyses focus on the relationship between incumbency and sunk costs (i.e., the need to break even with past investments). Building on \textcite{Schumacher2015}, we encourage future experimental research to problematize the incumbent's risk of losing office. I thank one of the reviewers for this suggestion.} We theorize that clientelist parties will buy more votes when their past electoral losses or past levels of clientelist investments have been high. Clientelist parties that have a history of lost elections or that have invested considerable amounts in vote buying in the past are possible examples of this mechanism. 
+Importantly, the risk-seeking behavior is with respect to vote buying as a strategy. By shifting the decision-makers' reference point downward, vote buying seems more attractive because of the tendency of individuals in the domain of losses to try to ``break-even''  \parencite{Thaler1990}. This implies that clientelist political parties should be expected to buy more votes, not necessarily because they want to win the next election but because they will try to compensate for past losses or ``sunk costs.''\footnote{Due to the ``cost of governing'' \parencite{Powell1993,Nannestad2002,Bawn2012}, \textcite[1041]{Schumacher2015} empirically find that incumbents in the domain of losses take more risks. In terms of our argument, we also find it plausible incumbents to fear losing office, thus incentivizing investments in clientelism. However, while our explanation complements theirs, our formal model, the experimental design and the data analyses focus on the relationship between incumbency and sunk costs (i.e., the need to break even with past investments). Building on \textcite{Schumacher2015}, we encourage future experimental research to problematize the incumbent's risk of losing office. We owe this point to one of the reviewers.} We theorize that clientelist parties will buy more votes when their past electoral losses or past levels of clientelist investments have been high. Clientelist parties that have a history of lost elections or that have invested considerable amounts in vote buying in the past are possible examples of this mechanism. 
 
 
 
@@ -466,7 +466,8 @@ Importantly, the risk-seeking behavior is with respect to vote buying as a strat
 \section{Experimental Design: Buying Votes in the Lab}
 
 % formal model
-Formal models can usually help experimentalists to determine which theoretical settings and equilibria are most relevant to a particular causal hypothesis (\cite{McDermott2002}, \cite{Aldrich2011} and \cite[174]{Barberis2013}). Thus, in \autoref{formal:model} we developed a vote-buying game within the Downsian ``spatial'' paradigms \parencite{Downs:1957vg,Enelow:1990aa}. The idea was to test the normative accuracy of the game-theory model in an experimental context (\cite{Lupia:1998ub}, \cite[559]{Bassi2011}, \cite{Dickson2011}, \cite[361]{Tyszler2016}, \cite[1]{Vieider2019}).
+Formal models can help experimentalists to determine which theoretical settings and equilibria are most relevant to a particular causal hypothesis (\cite{McDermott2002}, \cite{Aldrich2011} and \cite[174]{Barberis2013}). Thus, in \autoref{formal:model} we developed a vote-buying game within the Downsian paradigm \parencite{Downs:1957vg,Enelow:1990aa}. The idea was to test the normative accuracy of the game-theory model in an experimental context (\cite{Lupia:1998ub}, \cite[559]{Bassi2011}, \cite{Dickson2011}, \cite[361]{Tyszler2016}, \cite[1]{Vieider2019}). In this paper this is particularly relevant because most spatial theories of voting are based on expected utility maximization.
+
 
 %The model tried to account for several alternative causal explanations of vote buying. While there are a number of important issues that have been studied, the model paid attention to three of what we consider are the main ones. 
 
@@ -486,20 +487,19 @@ Building on the formal model, we designed a lab economic experiment. As \autoref
 Voters were assigned an ``ideological'' position at random. That is, voters received at random a certain number of experimental points depending on whether party A or B won the election. For example, if party A won the election, the voter would receive 2,400 points, whereas if party B won the election, the voter would receive 200 points. Hence, the voter in this example should feel ``ideologically'' closer to party A. Critically, this piece of information was not presented to participants as ``ideology,'' but as the points either electoral outcome would give. In turn, parties also received an ``ideological'' position that made them ``closer'' or ``farther way'' from the voter.  
 
 % ideology 2
-Substantively, this design accomplishes two goals. First, it models party-voter spatial distances, as considered by traditional voting theories \parencite{Downs:1957vg, Enelow:1990aa}. The basic premise of this paradigm is that the set of candidates that are ideologically closer to a voter produce more utility in the form of fiscal policies, either in terms of redistributive or free-market oriented policies (\cite{Acemoglu:1996rm,Boix:2003db}, but importantly, see \cite{Haggard:2016vr}). Second, it enables us to incorporate both the clientelist targeting and the core/swing voter debates.\footnote{Due to space concerns, we do not expand on this debate from a prospect theory standpoint. Additionally, we only consider these two ideal types of voters. There are other types that we do not discuss in this paper for simplicity. For instance, \textcite[7]{Zarazaga2015a} introduces another category---``conditional supporters''---who ``will vote for the party machine only as long as unexpected events do not persuade them to do otherwise.'' In addition to that, we acknowledge that (single-issue) spatial distances might roughly sort core and swing voters in an ideological continuum. Hence, we believe that core voters should be closer to parties while swing voters should be farther away.} We believe it is relevant to account for these issues because the vote-buying literature seems to be quite divided. In fact, \textcite[14]{Carlin2015} state that ``our knowledge of who parties target remains incomplete.'' On the one hand, \textcite{Cox1986a} and \textcite[7]{Zarazaga2015a} explain that since constituencies are well known to clientelist parties, they allocate resources to core voters. On the other hand, \textcite{Lindbeck1987,Dixit1996,Dahlberg2002,Stokes2005} argue that since allocating resources to individuals who \emph{ex ante} vote for the party is a waste, parties target swing voters. By devising a formal model and an experimental design that considers single-issue ideological positions for both parties and voters, it was then possible to allow parties to target their own/rival supporters. 
+Substantively, this feature accomplishes two goals. First, it accounts for party-voter spatial distances, as considered by traditional voting theories \parencite{Downs:1957vg, Enelow:1990aa}. The basic premise of this paradigm is that the set of candidates that are ideologically closer to a voter produce more utility in the form of fiscal policies, either in terms of redistributive or free-market oriented policies (\cite{Acemoglu:1996rm,Boix:2003db}, but importantly, see \cite{Haggard:2016vr}). Second, it incorporates both the targeting and the core/swing voter debates.\footnote{Due to space concerns, we do not expand on this debate from a prospect theory standpoint. Additionally, we only consider these two ideal types of voters. There are other types that we do not discuss in this paper for simplicity. For instance, \textcite[7]{Zarazaga2015a} introduces another category---``conditional supporters''---who ``will vote for the party machine only as long as unexpected events do not persuade them to do otherwise.'' In addition to that, we acknowledge that (single-issue) spatial distances might roughly sort core and swing voters in an ideological continuum. Hence, we believe that core voters should be closer to parties while swing voters should be farther away.} We believe it is important to consider these issues because the literature is divided.\footnote{In fact, \textcite[14]{Carlin2015} state that ``our knowledge of who parties target remains incomplete.''} On the one hand, \textcite{Cox1986a} and \textcite[7]{Zarazaga2015a} explain that since constituencies are well known to clientelist parties, they allocate resources to core voters. On the other hand, \textcite{Lindbeck1987,Dixit1996,Dahlberg2002,Stokes2005} argue that since allocating resources to individuals who \emph{ex ante} vote for the party is a waste, parties target swing voters. All in all, by considering single-issue ideological positions for both parties and voters, it will be possible to control for other sources of variation in the data analyses.
+
+
 
 
 % endowments
-Next, parties received different ``endowments'' at random as well. Note that both parties receive the same endowment. Since our experimental design is an in-between-subjects design, we should be able to observe and exploit the statistical differences (if any) across ``parties'' with different endowments. Participants acting the ``party'' role accumulated or lost wealth depending on whether they are elected or not elected. Every time they bought votes at some amount, that amount was discounted from their wealth. 
+Next, parties received at random different ``endowments.'' Note that for every game both parties receive the same endowment. However, since our experimental design is an in-between-subjects design, we should be able to observe and exploit statistical differences (if any) across ``parties'' with different endowments. Participants acting the ``party'' role accumulated or lost wealth depending on whether they are elected or not elected. Every time they bought votes at some amount, that amount was discounted from their wealth. In turn, participants acting the ``voter'' role accumulated or lost wealth depending on whether their party was elected or not elected. Critically, and as per traditional spatial voting theories, parties and voters derive utilities when they win elections. It is important to note that following our formal model and \textcite[371]{Tyszler2016}, both ideology and party endowments were common knowledge among participants. For simplicity, voters received zero initial endowments. 
 
-The substantive idea was to reflect the fact that some parties are wealthier than others, a factor that might increase the probability of vote buying  \parencite{Juan-Pablo-Luna:2014wp}. Importantly, it is not clear whether having more resources leads to more clientelism. On the one hand, \textcite{Szwarcberg2013} explains that having economic and material resources available does not necessarily cause more vote buying. Similarly, \textcite[147]{Hagene2015} finds that political clientelism is ``perfectly possible without controlling public funds.'' On the other hand, \textcite{Bahamonde2018} explains that parties with larger budgets will engage in more expensive forms of clientelism, even buying votes from the wealthy. Thus, the formal model and the experiment might shed light on these issues.
-
-Finally, participants acting the ``voter'' role accumulated or lost wealth depending on whether their party was elected or not elected (as per traditional spatial voting theories) and on whether they decided to sell or not sell their vote. For simplicity, voters received zero initial endowments. It is important to note that following our formal model and \textcite[371]{Tyszler2016}, both ideology and party endowments were common knowledge among participants. 
-
+The substantive idea was to reflect the fact that some parties are wealthier than others, a factor that might increase the probability of vote buying  \parencite{Juan-Pablo-Luna:2014wp}. Importantly, it is not clear whether having more resources leads to more clientelism. On the one hand, \textcite{Szwarcberg2013} explains that having economic and material resources available does not necessarily cause more vote buying. Similarly, \textcite[147]{Hagene2015} finds that political clientelism is ``perfectly possible without controlling public funds.'' On the other hand, \textcite{Bahamonde2018} explains that parties with larger budgets will engage in more expensive forms of clientelism, even buying votes from the wealthy. All things considered, the formal model and the experiment were carefully designed to acknowledge rival explanations of vote buying.
 
 
 % vote share
-Moving forward, both parties received at random an initial vote share, that is, a \emph{certain} number of (fictional) voters that were going to cast their votes for each party. Overall, this experimental condition mimics the degree to which an election is contested. In particular, this portion of the design accomplishes two goals. First, it puts parties in different electoral contestation environments. In other words, it introduces the element of risk (of losing the election) in the game. Since voters win or lose points when their parties win or lose elections, this risk is also relevant for players acting the ``voter'' role. Second, it gives (or not) voters a certain amount of electoral leverage. Since \textcite{Downs:1957vg}, traditional spatial theories of voting have considered that pivotal voters have more weight in an election, and hence, they might have incentive to sell their vote at higher prices. It is key in our experimental design that all these pieces of information are public.
+Moving forward, both parties received at random an initial vote share, that is, a \emph{certain} number of (fictional) voters that were going to cast their votes for each party. Overall, this experimental condition mimics the degree to which an election is contested. This portion of the design accomplishes two goals. First, it puts parties in different environments of electoral contestation. In other words, it introduces the element of risk (of losing the election) in the game. Since voters win or lose points when their parties win or lose elections, this risk is also relevant for players acting the ``voter'' role. Second, it gives (or not) voters a certain amount of electoral leverage. Since \textcite{Downs:1957vg}, traditional spatial theories of voting have considered that pivotal voters have more weight in an election. For instance, votes have more value in close electoral races. Thus, given that their votes are more decisive, they might have incentives to sell them at higher prices. It is key in our experimental design that all these pieces of information are public.
 
 % pivotal
 %Third, it allows to consider whether pivotal voters where targeted by clientelist parties more often than non-pivotal voters. Since \textcite{Downs:1957vg}, traditional spatial theories of voting have considered pivotal voters as more decisive. %Hence, in the model we accounted for such electoral scenarios. All in all, the formal model tries to incorporate these factors that might explain different vote-buying dynamics. 
@@ -522,7 +522,7 @@ Finally, the experiment was conducted in Chile by the \emph{Centre for Experimen
 \end{figure}
 
 % experimental points
-Finally, all transactions were performed exchanging experimental ``points.'' We endeavored to employ neutral terminology to maximize experimental control \parencite{Dickson2011}. Thus, throughout all three games, participants bought and sold votes (if any) and accumulated and lost wealth expressed purely in experimental points. Every experimental point was equivalent to \$\Sexpr{as.numeric(unique(dat$session.config.real_world_currency_per_point))} CLP ($\approx$ \texteuro0.00045). Participants learned about the conversion when reading the initial instructions. Final payoffs were converted to actual currency at the end of the study.
+Finally, all transactions were performed exchanging experimental ``points.'' Again, we endeavored to employ neutral terminology to maximize experimental control \parencite{Dickson2011}. Thus, throughout all three games, participants bought and sold votes (if any) and accumulated and lost wealth expressed purely in experimental points. Every experimental point was equivalent to \$\Sexpr{as.numeric(unique(dat$session.config.real_world_currency_per_point))} CLP ($\approx$ \texteuro0.00045). Participants learned about the conversion when reading the initial instructions. Final payoffs were converted to actual currency at the end of the study.
 
 
 
@@ -590,66 +590,7 @@ We encourage future research, particularly scholars in comparative politics, dev
 
 \todo{limitations: we did not include the possibility of defecting}
 
-\clearpage
-\newpage
-\pagenumbering{roman}
-\setcounter{page}{1}
-\printbibliography
-\clearpage
-\newpage
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% WORD COUNT
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
-<<wordcount, echo=FALSE, cache=FALSE, warning = FALSE>>=
-library(knitr)
-
-comma <- function (x, ...) {
-  format(x, ..., big.mark = ",", scientific = FALSE, trim = TRUE)
-}
-
-# To dynamically extract name of the current file, use code below
-nameoffile <- current_input() # get name of file
-nof2 <-  strsplit(nameoffile,"\\.")[[1]][1] # extract name, drop extension
-noftex <- paste(nof2, ".tex", sep="") # add .tex extension
-systemcall <- paste("system('texcount -inc -incbib -total -sum ", noftex, "', intern=TRUE)", sep="") # paste together texcount system command
-texcount.out <- eval(parse(text=systemcall)) # run texcount on current last compiled .tex file
-
-sum.row <- grep("Sum count", texcount.out, value=TRUE) # extract row
-pattern <- "(\\d)+" # regex pattern for digits
-
-count <- regmatches(sum.row, regexpr(pattern, sum.row) )
-# extract digits
-
-count <- comma(as.numeric(count)) # add comma
-@
-
-
-\begin{center}
-\vspace*{\stretch{1}}
-\dotfill
-\dotfill {\huge {\bf Word count}: \Sexpr{count}} \dotfill
-\dotfill
-\vspace*{\stretch{1}}
-\end{center}
-
-\clearpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% WORD COUNT
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% Online Appendix
-%\newpage
-%\section{Online Appendix}
-%\pagenumbering{Roman}
-%\setcounter{page}{1}
-
-
+\todo{say it's a ``hard test'': design an exp based on EUT}
 
 %% reset tables and figures counter
 \setcounter{table}{0}
@@ -716,6 +657,67 @@ Parties expect winning the election but have limited budgets. Hence, they want t
 
 
 @
+
+\clearpage
+\newpage
+\pagenumbering{roman}
+\setcounter{page}{1}
+\printbibliography
+\clearpage
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% WORD COUNT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+<<wordcount, echo=FALSE, cache=FALSE, warning = FALSE>>=
+library(knitr)
+
+comma <- function (x, ...) {
+  format(x, ..., big.mark = ",", scientific = FALSE, trim = TRUE)
+}
+
+# To dynamically extract name of the current file, use code below
+nameoffile <- current_input() # get name of file
+nof2 <-  strsplit(nameoffile,"\\.")[[1]][1] # extract name, drop extension
+noftex <- paste(nof2, ".tex", sep="") # add .tex extension
+systemcall <- paste("system('texcount -inc -incbib -total -sum ", noftex, "', intern=TRUE)", sep="") # paste together texcount system command
+texcount.out <- eval(parse(text=systemcall)) # run texcount on current last compiled .tex file
+
+sum.row <- grep("Sum count", texcount.out, value=TRUE) # extract row
+pattern <- "(\\d)+" # regex pattern for digits
+
+count <- regmatches(sum.row, regexpr(pattern, sum.row) )
+# extract digits
+
+count <- comma(as.numeric(count)) # add comma
+@
+
+
+\begin{center}
+\vspace*{\stretch{1}}
+\dotfill
+\dotfill {\huge {\bf Word count}: \Sexpr{count}} \dotfill
+\dotfill
+\vspace*{\stretch{1}}
+\end{center}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% WORD COUNT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Online Appendix
+%\newpage
+%\section{Online Appendix}
+%\pagenumbering{Roman}
+%\setcounter{page}{1}
+
+
+
 
 
 \end{document}
