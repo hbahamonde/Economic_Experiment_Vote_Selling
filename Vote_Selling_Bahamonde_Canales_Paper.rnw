@@ -545,11 +545,11 @@ Finally, from an external validity standpoint, we believe that voters in real el
 
 
 
-\section{Statistical Analyses: Risk and Vote Buying}
+\section{Statistical Analyses: Vote Buying and Risk}
 
 
 % internal validity
-Since the focus of this paper is on vote buying, we discarded the voter data and analyzed all observations $i$ acting any of the party roles (\emph{party A} and \emph{party B}). In practice, this leaves the data formatted in party-voter dyads. Moving forward, in this paper we concentrate on one main dependent variable, namely, the amount of the vote-buying offers made by parties (if any). The distribution of such this variable is shown in \autoref{dep:var:plot:fig}. 
+Since the focus of this paper is on vote buying, we discarded the voter data and analyzed all observations $i$ acting any of the party roles (\emph{party A} and \emph{party B}). In practice, this leaves the data formatted in party-voter dyads. Empirically, we concentrate on one main dependent variable, namely, the amount of the vote-buying offers made by parties (if any). The distribution of this variable is shown in \autoref{dep:var:plot:fig}. 
 
 \begin{figure}[h]
 \includegraphics[scale=.6, center]{depvarplot.png}
@@ -574,7 +574,7 @@ where \emph{Vote Share} is the percentage of a certain number of (fictional) vot
 
 Following our formal model, we also factor in a parameter $\beta_{3}$ to test the effect of ideological and spatial distances on vote buying. Given the ongoing debate regarding whether parties target core or swinger voters, we do not have specific expectations about the sign of $\beta_{3}$. \autoref{eq:ols} also has a parameter $\beta_{4}$ to test the effect of having large budgets. Since it is still contested whether wealthier parties spend more on clientelism relative to poorer parties, we do not have clear expectations regarding the sign of $\beta_{4}$ either. Finally, $\beta_{5}$ tests whether parties engaged in more aggressive ways of vote buying by spending more resources on pivotal voters. Following the literature, we should expect that $\beta_{5}>0$. We consider important to test for these three hypotheses---$\beta_{3}$, $\beta_{4}$ and $\beta_{5}$---as they are well-established (alternative) explanations in the vote-buying literature. 
 
-Simply put, if traditional vote-buying theories are correct, then we should expect that the larger the vote share, the less vote buying that occurs (because there are less risks of losing the election), sunk costs should not matter for vote buying, and pivotal voters produce more expensive vote-buying offers. Also, the closer a party is to the voter is either positive for vote buying (core voter hypothesis) or negative (swing voter hypothesis). And finally, the bigger the budget of a party, the more (less) vote buying. However, if the expectations conform with prospect theory, we should expect $\beta_{1}>0$ and $\beta_{2}<0$.
+Simply put, if traditional vote-buying theories are correct, then we should expect that the larger the vote share, the less vote buying that occurs (because there are less risks of losing the election), sunk costs should not matter for vote buying, and pivotal voters should produce more expensive vote-buying offers. Also, the closer a party is to the voter is either positive for vote buying (core voter hypothesis) or negative (swing voter hypothesis). And finally, the bigger the budget of a party, the more (less) vote buying. However, if the expectations conform with prospect theory, we should expect $\beta_{1}>0$ and $\beta_{2}<0$.
 
 
 \begin{figure}[h]
