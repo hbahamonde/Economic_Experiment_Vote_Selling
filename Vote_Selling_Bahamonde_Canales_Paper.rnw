@@ -389,7 +389,7 @@ Value-function dependence is another central idea in prospect theory. Importantl
 
 % In prospect theory, both reference dependence and the shape of the value function lead to a more accurate description of decision-making under risk. 
 % In particular, the evidence suggests that in the domain of losses, risk-seeking decision-makers take disproportionate risks to avoid certain losses \parencite[297, 299-300]{Levy1992}, 
-% HERE
+
 
 % In fact, experimental evidence consistently finds evidence of decision-makers distorting values of outcomes in a non-linear way \parencite[87]{Levy1997}
 
@@ -481,12 +481,10 @@ Importantly, the risk-seeking behavior is with respect to vote buying as a strat
 \section{Experimental Design: Buying Votes in the Lab}
 
 % formal model
-Formal models can help experimentalists to determine which theoretical settings and equilibria are most relevant to a particular causal hypothesis (\cite{McDermott2002}, \cite{Aldrich2011} and \cite[174]{Barberis2013}). Thus, in \autoref{formal:model} we developed a vote-buying game within the Downsian paradigm \parencite{Downs:1957vg,Enelow:1990aa}. The idea was to test the descriptive accuracy of the game-theory model in an experimental context (\cite{Lupia:1998ub}, \cite[559]{Bassi2011}, \cite{Dickson2011}, \cite[361]{Tyszler2016}, \cite[1]{Vieider2019}). This feature is particularly relevant for this paper because most spatial theories of voting are based on the concept of expected utility maximization.
+Formal models can help experimentalists to determine which theoretical settings and equilibria are most relevant to a particular causal hypothesis (\cite{McDermott2002}, \cite{Aldrich2011} and \cite[174]{Barberis2013}). Thus, in \autoref{formal:model} we developed a vote-buying game within the Downsian paradigm \parencite{Downs:1957vg,Enelow:1990aa}. The idea was to test the descriptive accuracy of the game-theory model in an experimental context (\cite[559]{Bassi2011}, \cite{Dickson2011}, \cite{Aldrich2012}, \cite[361]{Tyszler2016}, \cite[1]{Vieider2019}). This feature is particularly relevant for our identification strategy because most spatial theories of voting are based on assumptions based on the concept of expected utility maximization. This section tests for those assumptions. Epistemologically, having designed an experiment based on the precepts of economic theories of vote buying becomes a ``crucial case.'' Thus, the ``least-likely'' design approach presented in this paper should improve the inferential leverage of our results \parencite[12]{Levy2008}.% As \parencite[12]{Levy2008} explains, ``[i]nferential leverage from a least likely case is enhanced if our theoretical priors for the leading alternative explanation make it a most likely case for that theory.''
 
 
 %The model tried to account for several alternative causal explanations of vote buying. While there are a number of important issues that have been studied, the model paid attention to three of what we consider are the main ones. 
-
-
 
 % role
 Building on the formal model, we designed a lab economic experiment. As \autoref{experimental:design:fig} shows, at the beginning of every game, participants received a role at random. Following \textcite{Dickson2011}, roles were presented using neutral terminology to maximize experimental control. The design incorporated the following roles: \emph{party A}, \emph{party B}, or \emph{voter}. Every game was played among three players (one \emph{party A}, one \emph{party B}, and one \emph{voter}).
@@ -584,7 +582,7 @@ Simply put, if traditional vote-buying theories are correct, then we should expe
 \caption*{{\bf Note}: Based on the OLS estimates in \autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Confidence intervals were constructed using robust standard errors (as shown in \autoref{reg:t}). Substantively, the figure shows that experimental subjects avoid losses by over-securing electoral support even in favorable contexts (panel 1) and that they do consider sunk costs and try to recover losses in the short run by spending more on vote buying (panel 2). Panel 3 indicates that parties spend more on vote buying for voters closer to their ideological preferences. Panel 4 shows that larger party budgets incentivize more spending on vote buying, and that parties do not necessarily consider whether the voter is pivotal or not (panel 5).}\centering
 \end{figure}
 
-Substantive results are shown in \autoref{m1plot} (regression table is shown in \autoref{reg:t}). Overall, results clearly depart from the theoretical expectations of traditional vote-buying theories and widely support prospect theory. This is particularly relevant given that the experiment was designed according to a formal model based on classical economic voting games. We believe the statistical evidence presented in such a ``least likely'' case design \parencite[12]{Levy2008} improves the inferential leverage of our results. 
+Substantive results are shown in \autoref{m1plot} (regression table is shown in \autoref{reg:t}). Overall, results clearly depart from the theoretical expectations of traditional vote-buying theories and widely support prospect theory. This is particularly relevant given that the experiment was designed according to a formal model based on classical economic voting games. 
 
 First, parties do not buy votes when they are losing the election but when they are winning the election. As panel 1 in \autoref{m1plot} shows, as vote share increases, e.g., as parties have accumulated more electoral assets (i.e., domain of gains), experimental subjects playing the party role consistently buy \emph{more} votes, not less. This finding goes against predictions based on expected utility theory, widely supporting prospect theory. As the latter predicts,  decision-makers in the domain of gains---i.e., parties \emph{winning} the election---tend to be loss averse \parencite{Kahneman1991a} respect to their current endowments \parencite{Kahneman1990a}. As \textcite[91]{Levy1997} explains it, in the domain of gains, ``an individual will treat the \emph{possibility} of a subsequent setback as a loss rather than as a foregone gain,''\footnote{Our emphasis.} and consequently ``engage in risk-seeking behavior to maintain her cumulative gains against that loss.'' Thus, these statistical results seem to support the idea that parties in the domain of gains will give more weight to potential losses due to loss aversion \parencite[1042]{Schumacher2015a}, and thus overdo their spendings on vote-buying to  counteract the unbearable idea of losing already acquired electoral assets (political base).
 
@@ -1014,7 +1012,7 @@ count <- comma(as.numeric(count)) # add comma
 
 % ``prospect theory does not depend on assumptions of individual behavior that are rooted in economic models that presume that individual actors naturally incorporate invariance, dominance, and transitivity into their decision-making. Rather, prospect theory develops its assumptions empirically, through experimentation.'' McDermott2004, 291
 
-% Lupia:1998ub develop game-theoretical expectations and designed an experiment.
+% Aldrich2012 develop game-theoretical expectations and designed an experiment.
 
 
 % ``In between-subjects designs, different groups of subjects are randomly assigned to various experimental or control conditions.'' McDermott2002, 33
