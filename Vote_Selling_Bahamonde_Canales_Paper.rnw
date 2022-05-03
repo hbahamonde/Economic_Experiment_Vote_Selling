@@ -153,7 +153,9 @@ headpunct=:
 
 % DOCUMENT ID
 
-
+% this below is to have endnotes at the end of the document.
+%\usepackage{endnotes}
+%\let\footnote=\endnote 
 
 % TITLE SECTION
 
@@ -661,6 +663,7 @@ Overall, we encourage future research, particularly scholars in comparative poli
 
 @
 
+% normal bibliography
 \clearpage
 \newpage
 \pagenumbering{roman}
@@ -669,6 +672,9 @@ Overall, we encourage future research, particularly scholars in comparative poli
 \clearpage
 \newpage
 
+% EndNotes
+%\newpage
+%\theendnotes
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % WORD COUNT
