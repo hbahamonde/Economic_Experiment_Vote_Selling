@@ -1410,11 +1410,10 @@ xyplot(predicted ~ x | group,
 
 ## ---- abstract ----
 fileConn <- file ("abstract.txt")
-abstract.c = as.character(c("Most traditional theories of clientelism assert that parties in need of securing electoral support invest in vote buying. We consider this framework limited because of two reasons. First, it assumes that losses and gains affect a party's decision-making process in a comparable way. Second, the framework assumes that the decision-making process of clientelist political parties focuses only on absolute levels of utility while overlooking changes in outcomes with respect to a reference point. By proposing a shift from gains to a one focused on losses, we hypothesize that parties are risk-averse in the domain of gains and risk-seeking in the domain of losses---i.e., losing an election hurts more than winning an election pleases. Unlike traditional theories of clientelism, we argue that clientelist political parties buy more votes when they are winning the election or have experienced important losses in the past. After formalizing a theory of vote buying, we tested it by designing an economic experiment. Exploiting these novel experimental data, we show that prospect theory bridges important unexplained gaps in the literature."))
+abstract.c = as.character(c("Most traditional theories of clientelism assert that parties in need of securing electoral support invest in vote buying. We consider this framework limited because of two reasons. First, it assumes that losses and gains affect a party's decision-making process in a comparable way. Second, the framework assumes that the decision-making process of clientelist political parties focuses only on absolute levels of utility while overlooking changes in outcomes with respect to a reference point. By proposing a shift from gains to a one focused on losses, we hypothesize that parties are risk-averse in the domain of gains and risk-seeking in the domain of losses---i.e., losing an election hurts more than winning an election pleases. Unlike traditional theories of clientelism, we argue that clientelist political parties buy more votes when they are winning the election or have experienced important losses in the past. We designed an economic experiment based on traditional theories of voting and vote buying. Exploiting these novel experimental data, we show that prospect theory bridges important unexplained gaps in the literature."))
 writeLines(abstract.c, fileConn)
 close(fileConn)
 ## ----
-
 
 
 
