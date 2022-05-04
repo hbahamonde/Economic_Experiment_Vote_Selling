@@ -292,10 +292,10 @@ options(scipen = 99999999999)
             \item Who do you target? {\scriptsize\color{gray} Your own supporters (``core'') or the ones who are more likely to flip (``swing'')?}\pause
             \item Should your past ``haunt'' you? {\scriptsize\color{gray} Do prior electoral losses matter?}\pause
         \end{enumerate}
-    \item {\bf If we follow what the literature says...the answers are mixed}:
+    \item {\bf If we follow what the literature says...the answers are mixed}:\pause
         \begin{enumerate}
-            \item[\checkmark] When losing the elections.\pause
-            \item[\checkmark] Either core or swing voters.\pause
+            \item[\checkmark] Usually, when losing the elections.\pause
+            \item[\checkmark] Core \emph{or} swing voters.\pause
             \item[\checkmark] It shouldn't: {\bf ``sunk costs''} should not affect current decisions.\pause
         \end{enumerate}
      \item {\bf And yet...}:
@@ -310,14 +310,14 @@ options(scipen = 99999999999)
 
 
 \miniframesoff
-\begin{frame}[c]{Milestones}
+\begin{frame}[c]{This Talk}
     \begin{itemize}
       \item {\bf Motivate the problem}: vote buying literature is mostly based on the Expected Utility Theory (EUT) {\tiny (von Neumann and Morgenstern)}.
       \\
       \vspace{0.3cm}
       As a consequence, there are too many important loose ends.\pause
 
-      \item {\bf Propose a possible solution}: re-think about how parties make decisions under risk (Prospect Theory).\pause
+      \item {\bf Propose} to re-think about how parties make decisions under risk (Prospect Theory).\pause
       \item {\bf Empirics}: we designed an economic lab experiment of vote buying.\pause
       \item {\bf Results}: Prospect Theory explains better parties' decision-making process in risky contexts.
     \end{itemize}
@@ -343,7 +343,7 @@ options(scipen = 99999999999)
 \miniframeson
 \begin{frame}[c]{Clientelism and the Expected Utility Theory}
   \begin{itemize}
-    \item The EUT was one of the first theories of decision making under risk.\pause
+    \item EUT was one of the first theories of decision making under risk.\pause
     \item Since its introduction, it has \emph{dominated} political science as a field (including the vote-buying lit.).\pause
     \item {\bf The problem}: most of the literature assumes that in the party's decision-making process:\pause
               \begin{enumerate}
@@ -369,8 +369,8 @@ options(scipen = 99999999999)
     {\tiny\color{gray}Cox and Mccubbins (1986).}\pause
     \item Since allocating resources to individuals who ex-ante vote for the party is a waste, parties target {\bf swing voters}.\\
     {\tiny\color{gray} Dixit and Londregan (1996) and Stokes (2005).}\pause
-    \item Some state ``that our knowledge of who parties target remains incomplete.''\\
-    {\tiny\color{gray} Carlin and Moseley (2015).}\pause
+    %\item Some state ``that our knowledge of who parties target remains incomplete.''\\
+    %{\tiny\color{gray} Carlin and Moseley (2015).}\pause
     \item {\color{blue}We contend that this is a \emph{very} important question, yet one that the literature has failed to clarify}.
   \end{itemize}
 \end{frame}
@@ -399,7 +399,7 @@ options(scipen = 99999999999)
   \begin{column}{.48\textwidth}
 
     \begin{itemize} 
-      \item[] \underline{Change from traditional focus (EUT)}:
+      \item[] \underline{Change from EUT}:
         \begin{itemize}
           \item Losses and gains affect in a {\bf comparable} way.
           \item Parties focus only on {\bf absolute} levels of utilities.
@@ -408,7 +408,7 @@ options(scipen = 99999999999)
 
 
     \begin{itemize} 
-      \item[] {\color{white}\underline{To one based on Prospect Theory} {\color{white}\tiny{(Kahneman and Tversky, 1979)}}:}
+      \item[] {\color{white}\underline{To Prospect Theory} {\color{white}\tiny{(Kahneman and Tversky, 1979)}}:}
         \begin{itemize}
           \item[] {\color{white}{\bf Reference dependence}.}
           \item[] {\color{white}{\bf Value function}.}
@@ -436,7 +436,7 @@ options(scipen = 99999999999)
   \begin{column}{.48\textwidth}
 
     \begin{itemize} 
-      \item[] \underline{Change from traditional focus (EUT)}:
+      \item[] \underline{Change from EUT}:
         \begin{itemize}
           \item Losses and gains affect in a {\bf comparable} way.
           \item Parties focus only on {\bf absolute} levels of utilities.
@@ -445,7 +445,7 @@ options(scipen = 99999999999)
 
 
     \begin{itemize} 
-      \item[] \underline{To one based on Prospect Theory} {\color{gray}\tiny{(Kahneman and Tversky, 1979)}}:
+      \item[] \underline{To Prospect Theory} {\color{gray}\tiny{(Kahneman and Tversky, 1979)}}:
         \begin{itemize}
           \item[1.] {\bf Reference dependence}.
           \item[2.] {\bf Value function}.
@@ -502,7 +502,7 @@ options(scipen = 99999999999)
   \begin{column}{.48\textwidth}
 
 \begin{itemize}[<+->]
-      \item[2.] {\bf Value function}. The asymmetrical curvature of the likelihood does influence decisions,
+      \item[2.] {\bf Value function}. The asymmetrical curvature of the value function does influence decisions,
           \begin{itemize}
             \item[\checkmark] Individuals are {\color{blue}risk-averse} in the domain of {\color{blue}gains}.
             \item[\checkmark] Individuals are {\color{blue}risk-acceptant} in the domain of {\color{blue}losses}. 
@@ -535,7 +535,7 @@ options(scipen = 99999999999)
 \underline{Vote-buying will be higher when parties},
 
 \begin{enumerate}[<+->]
-      \item {\bf Are probable winners}: due to loss aversion, parties will find intolerable the idea of losing the supporter base they already have ({\color{blue} risk-aversion; decision-makers are more concerned with preventing a decline than increasing gains}).
+      \item {\bf Are probable winners}: due to {\bf loss aversion}, parties will find {\bf intolerable} the idea of {\bf losing the supporter base they already have} ({\color{blue} decision-makers are more concerned with preventing a decline than increasing gains}; risk-aversion).
       \item {\bf Have experienced losses in the past} (sunk costs): alter the  reference point, making vote-buying an attractive strategy ({\color{blue}risk-seeking}).
       %\item in the domain of gains, risk-averted decision-makers are excessively eager to secure gains, while risk-seeking decision-makers take disproportionate risks to avoid certain losses.
 \end{enumerate}
@@ -608,7 +608,7 @@ options(scipen = 99999999999)
 
   \item {\bf Parties}: payoffs depend on whether they are elected. If they spend points buying votes, that amount is discounted. % For simplicity, voters received zero endowments
 
-  \item {\bf Voters}: payoffs depend on whether their party is elected, and on whether they sell their vote. {\bf Can't defect: if they accept an offer, they vote for that party}.
+  \item {\bf Voters}: payoffs depend on whether their party is elected, and on whether they sell their vote. %{\bf Can't defect: if they accept an offer, they vote for that party}.
 \end{itemize}
 \end{column}
 
@@ -643,9 +643,9 @@ options(scipen = 99999999999)
 %\item {\bf Predictions}:
   %\begin{%}
 
-    \item EUT: parties focus on {\bf wins}, i.e., offers go up when parties are {\bf losing the election}.
+    \item EUT: offers go up when parties are {\bf losing the election} ({\color{blue}parties focus on {\bf wins}}).
 
-    \item PT: parties focus on {\bf loses} {\color{blue}(don't want to lose what they ``own'')}.
+    \item PT: parties focus on {\bf loses} {\color{blue}(hold on to what they ``own'')}.
       \begin{enumerate}
         \item Buy more votes when the parties are {\bf wining} the election.
         \item Buy more votes from {\bf core} supporters (hurts more to lose \emph{\bf closest} voters).
@@ -680,6 +680,7 @@ options(scipen = 99999999999)
                 & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
                 & \beta_{3}\text{Spatial Distance}_{i} + \\
                 & \beta_{4}\text{Party Budget}_{i} + \\
+                & \beta_{5}\text{Pivotal Voter}_{i} + \\
                 & \alpha_{n} + \epsilon_{i}
             \end{aligned}
             \end{equation*}
@@ -703,6 +704,7 @@ options(scipen = 99999999999)
                 & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
                 & \beta_{3}\text{Spatial Distance}_{i} + \\
                 & \beta_{4}\text{Party Budget}_{i} + \\
+                & \beta_{5}\text{Pivotal Voter}_{i} + \\
                 & \alpha_{n} + \epsilon_{i}
             \end{aligned}
             \end{equation*}
@@ -725,6 +727,7 @@ options(scipen = 99999999999)
                 & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
                 & \beta_{3}\text{Spatial Distance}_{i} + \\
                 & \beta_{4}\text{Party Budget}_{i} + \\
+                & \beta_{5}\text{Pivotal Voter}_{i} + \\
                 & \alpha_{n} + \epsilon_{i}
             \end{aligned}
             \end{equation*}
@@ -748,6 +751,7 @@ options(scipen = 99999999999)
                 & \beta_{2}{\color{red}\Delta}\text{{\color{red}Points Accumulated}}_{i} + \\
                 & \beta_{3}\text{Spatial Distance}_{i} + \\
                 & \beta_{4}\text{Party Budget}_{i} + \\
+                & \beta_{5}\text{Pivotal Voter}_{i} + \\
                 & \alpha_{n} + \epsilon_{i}
             \end{aligned}
             \end{equation*}
@@ -771,6 +775,7 @@ options(scipen = 99999999999)
                 & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
                 & \beta_{3}\text{{\color{red}Spatial Distance}}_{i} + \\
                 & \beta_{4}\text{Party Budget}_{i} + \\
+                & \beta_{5}\text{Pivotal Voter}_{i} + \\
                 & \alpha_{n} + \epsilon_{i}
             \end{aligned}
             \end{equation*}
@@ -794,6 +799,7 @@ options(scipen = 99999999999)
                 & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
                 & \beta_{3}\text{Spatial Distance}_{i} + \\
                 & \beta_{4}\text{{\color{red}Party Budget}}_{i} + \\
+                & \beta_{5}\text{Pivotal Voter}_{i} + \\
                 & \alpha_{n} + \epsilon_{i}
             \end{aligned}
             \end{equation*}
@@ -817,6 +823,30 @@ options(scipen = 99999999999)
                 & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
                 & \beta_{3}\text{Spatial Distance}_{i} + \\
                 & \beta_{4}\text{Party Budget}_{i} + \\
+                & \beta_{5}\text{{\color{red}Pivotal Voter}}_{i} + \\
+                & \alpha_{n} + \epsilon_{i}
+            \end{aligned}
+            \end{equation*}
+        \end{center}
+
+
+        \begin{itemize}
+            \item[{\color{red}$\bullet$}] Voter is pivotal.
+        \end{itemize}
+\end{frame}
+
+% eq:7
+\miniframesoff
+\begin{frame}[c]
+        \begin{center}
+            \begin{equation*}\label{eq:ols}
+            \begin{aligned}
+                \text{Offer}_{i} = \; & \beta_{0} + \\
+                & \beta_{1}\text{Vote Share}_{i} + \\
+                & \beta_{2}\Delta\text{Points Accumulated}_{i} + \\
+                & \beta_{3}\text{Spatial Distance}_{i} + \\
+                & \beta_{4}\text{Party Budget}_{i} + \\
+                & \beta_{5}\text{Pivotal Voter}_{i} + \\
                 & {\color{red}\alpha}_{n} + \epsilon_{i}
             \end{aligned}
             \end{equation*}
@@ -836,90 +866,106 @@ options(scipen = 99999999999)
 \miniframeson
 \begin{frame}[c]
         \begin{center}
-          \vspace{-0.7cm}\includegraphics[scale=.5, center]{m1plot.png}
-        \end{center}
+          \includegraphics[scale=.5, center]{m1plot.png}
+          \end{center}
+\centering{\vspace{-2cm}Overall, results conform with Prospect Theory.}
 
-
-        \begin{itemize}
-            \vspace{-1.5cm}\item[] Overall, results conform with Prospect Theory's predictions. {\TINY\color{gray}Robust std. errors used to construct confidence intervals.}
-        \end{itemize}
 \end{frame}
 
 % 1
 \miniframesoff
-\begin{frame}[c]
-        \begin{center}
-          \vspace{-0.7cm}\includegraphics[scale=.5, center]{m1plot.png}
-        \end{center}
+\begin{frame}%{Payoffs}
+  \begin{columns}[c]
+  \begin{column}{.48\textwidth}
+      \begin{itemize}
+        \item {\bf Parties are risk-averse in the domain of gains}: due to loss aversion, parties buy more votes when they're likely winners (not losers).
 
-
-        \begin{itemize}
-            \vspace{-1.5cm}\item[1.] Parties buy more votes when are likely winners (not losers).
-        \end{itemize}
+        \item[] {\color{blue}Incumbents buy more votes to prevent a decline than to increasing gains}.
+      \end{itemize}
+\end{column}
+\hfill%
+  \begin{column}{.48\textwidth}
+    \includegraphics[scale=0.5, center]{m1plot_1.png}
+  \end{column}
+  \end{columns}
 \end{frame}
 
 
 % 2
 \miniframesoff
-\begin{frame}[c]
-        \begin{center}
-          \vspace{-0.7cm}\includegraphics[scale=.5, center]{m1plot.png}
-        \end{center}
+\begin{frame}%{Payoffs}
+  \begin{columns}[c]
+  \begin{column}{.48\textwidth}
+      \begin{itemize}
+        \item {\bf Parties are risk-seeking in the domain of losses}: unlike EUT, parties do consider sunk costs, buying more votes to compensate for past losses.
 
-
-        \begin{itemize}
-            \vspace{-1.5cm}\item[2.] Decision-makers buy more votes when sunk costs are higher.
-        \end{itemize}
+        \item[] Decision-makers try to break-even.
+      \end{itemize}
+\end{column}
+\hfill%
+  \begin{column}{.48\textwidth}
+    \includegraphics[scale=0.5, center]{m1plot_2.png}
+  \end{column}
+  \end{columns}
 \end{frame}
 
 
 % 3
 \miniframesoff
-\begin{frame}[c]
-        \begin{center}
-          \vspace{-0.7cm}\includegraphics[scale=.5, center]{m1plot.png}
-        \end{center}
+\begin{frame}%{Payoffs}
+  \begin{columns}[c]
+  \begin{column}{.48\textwidth}
+      \begin{itemize}
+        \item {\bf Core/swing voters}: Parties buy more votes at higher (not lower) prices from closest supporters.
 
-
-        \begin{itemize}
-            \vspace{-1.5cm}\item[3.] Parties buy more votes at higher (not lower) prices from closest supporters.
-        \end{itemize}
+        \item[] {\color{blue}Unlike spatial theories of voting, core voters cost more (not less)}.
+      \end{itemize}
+\end{column}
+\hfill%
+  \begin{column}{.48\textwidth}
+    \includegraphics[scale=0.5, center]{m1plot_3.png}
+  \end{column}
+  \end{columns}
 \end{frame}
-
 
 % 4
 \miniframesoff
-\begin{frame}[c]
-        \begin{center}
-          \vspace{-0.7cm}\includegraphics[scale=.5, center]{m1plot.png}
-        \end{center}
-
-
-        \begin{itemize}
-            \vspace{-1.5cm}\item[4.] Parties with larger budgets spend more on vote buying.
-        \end{itemize}
+\begin{frame}%{Payoffs}
+  \begin{columns}[c]
+  \begin{column}{.48\textwidth}
+      \begin{itemize}
+        \item {\bf Party budgets}: Parties with larger budgets spend more on vote buying.
+      \end{itemize}
+\end{column}
+\hfill%
+  \begin{column}{.48\textwidth}
+    \includegraphics[scale=0.5, center]{m1plot_4.png}
+  \end{column}
+  \end{columns}
 \end{frame}
 
 % 5
 \miniframesoff
-\begin{frame}[c]
-        \begin{center}
-          \vspace{-0.7cm}\includegraphics[scale=.5, center]{m1plot.png}
-        \end{center}
+\begin{frame}%{Payoffs}
+  \begin{columns}[c]
+  \begin{column}{.48\textwidth}
+      \begin{itemize}
+        \item {\bf Pivotal voters}: don't cost more (against most of spatial theories of voting).
 
-
-        \begin{itemize}
-            \vspace{-1.5cm}\item[5.] Pivotal votes don't cost more (against most of spatial theories of voting).
-        \end{itemize}
+        \item[] This implies that parties don't see vote buying in the typical ``insurance'' sense: they don't buy more votes in tighter electoral races.
+      \end{itemize}
+\end{column}
+\hfill%
+  \begin{column}{.48\textwidth}
+    \includegraphics[scale=0.5, center]{m1plot_5.png}
+  \end{column}
+  \end{columns}
 \end{frame}
 
 
+\section{Discussion}
 
-
-
-
-\subsection{Discussion}
-
+\subsection{In sum}
 
 \miniframeson
 \begin{frame}%{Payoffs}
@@ -937,71 +983,7 @@ options(scipen = 99999999999)
   \end{itemize}
 \end{frame}%{Payoffs}
 
-% 1
-\miniframeson
-\begin{frame}%{Payoffs}
-  \begin{columns}[c]
-  \begin{column}{.48\textwidth}
-      \begin{itemize}
-        \item {\bf Parties are risk-averse in the domain of gains}: decision-makers exaggerate the probability of unlikely losses, so they buy more votes when are likely winners (not losers).
-      \end{itemize}
-\end{column}
-\hfill%
-  \begin{column}{.48\textwidth}
-    \includegraphics[scale=0.5, center]{m1plot_1.png}
-  \end{column}
-  \end{columns}
-\end{frame}
 
-
-% 2
-\miniframesoff
-\begin{frame}%{Payoffs}
-  \begin{columns}[c]
-  \begin{column}{.48\textwidth}
-      \begin{itemize}
-        \item {\bf Parties are risk-seeking in the domain of losses}: unlike EUT theories predict, parties do consider sunk costs, buying more votes to compensate for past losses.
-      \end{itemize}
-\end{column}
-\hfill%
-  \begin{column}{.48\textwidth}
-    \includegraphics[scale=0.5, center]{m1plot_2.png}
-  \end{column}
-  \end{columns}
-\end{frame}
-
-
-% 3
-\miniframesoff
-\begin{frame}%{Payoffs}
-  \begin{columns}[c]
-  \begin{column}{.48\textwidth}
-      \begin{itemize}
-        \item {\bf Core/swing voters}: voter types are not relevant for vote buying.
-      \end{itemize}
-\end{column}
-\hfill%
-  \begin{column}{.48\textwidth}
-    \includegraphics[scale=0.5, center]{m1plot_3.png}
-  \end{column}
-  \end{columns}
-\end{frame}
-
-% 4
-\miniframesoff
-\begin{frame}%{Payoffs}
-  \begin{columns}[c]
-  \begin{column}{.48\textwidth}
-      \begin{itemize}
-        \item {\bf Party budgets}: unlike traditional theories, wealthier parties don't necessarily buy more votes.
-      \end{itemize}
-\end{column}
-\hfill%
-  \begin{column}{.48\textwidth}
-    \includegraphics[scale=0.5, center]{m1plot_4.png}
-  \end{column}
-  \end{columns}
-\end{frame}
 
 
 % end
