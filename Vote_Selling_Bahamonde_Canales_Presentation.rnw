@@ -220,7 +220,7 @@
                       \inst{2} O$'$Higgins University, Chile
                       }
 
-\date{Oct. 26th 2021}
+\date{\today}
 
 %to to see shadows of previous blocks
 %\setbeamercovered{dynamic}
@@ -294,11 +294,16 @@ options(scipen = 99999999999)
         \end{enumerate}
     \item {\bf If we follow what the literature says...the answers are mixed}:
         \begin{enumerate}
-            \item[\checkmark] When losing the elections: {\bf risk}.\pause
-            \item[\checkmark] To both core and swing voters  (targeting core supporters is not a {\bf waste}).\pause
+            \item[\checkmark] When losing the elections.\pause
+            \item[\checkmark] Either core or swing voters.\pause
             \item[\checkmark] It shouldn't: {\bf ``sunk costs''} should not affect current decisions.\pause
         \end{enumerate}
-   \item {\bf We contest these answers}. \pause Explain: {\color{blue}traditional clientelism research has failed to answer these questions because it has a wrong understanding about the party's decision-making process under risk}.
+     \item {\bf And yet...}:
+        \begin{enumerate}
+            \item[?] Incumbents also buy votes when they're {\bf winning} the election.\pause
+            \item[?] It's not clear why targeting core voters is not a {\bf waste}\pause
+            \item[?] The role of past losses has been completely overlooked (``sunk cost {\bf fallacy}'')
+        \end{enumerate}
    \end{itemize}
 \end{frame}
 
@@ -307,12 +312,14 @@ options(scipen = 99999999999)
 \miniframesoff
 \begin{frame}[c]{Milestones}
     \begin{itemize}
-      \item {\bf Motivate the problem}: vote buying literature is purely based on the Expected Utility Theory (EUT) {\tiny (von Neumann and Morgenstern)}.\pause
-      \item {\bf Problem}: as a consequence, there are too many important loose ends.\pause
+      \item {\bf Motivate the problem}: vote buying literature is mostly based on the Expected Utility Theory (EUT) {\tiny (von Neumann and Morgenstern)}.
+      \\
+      \vspace{0.3cm}
+      As a consequence, there are too many important loose ends.\pause
+
       \item {\bf Propose a possible solution}: re-think about how parties make decisions under risk (Prospect Theory).\pause
-      \item {\bf Empirics}: we formalized a vote buying game, and then test it in an economic lab experiment.\pause
-      \item {\bf Results}: we find strong support in favor of Prospect Theory.\pause
-      \item {\bf Feedback wanted!}
+      \item {\bf Empirics}: we designed an economic lab experiment of vote buying.\pause
+      \item {\bf Results}: Prospect Theory explains better parties' decision-making process in risky contexts.
     \end{itemize}
 \end{frame}
 
@@ -338,10 +345,10 @@ options(scipen = 99999999999)
   \begin{itemize}
     \item The EUT was one of the first theories of decision making under risk.\pause
     \item Since its introduction, it has \emph{dominated} political science as a field (including the vote-buying lit.).\pause
-    \item {\bf The problem}: the (whole!) literature assumes that in the party's decision-making process:\pause
+    \item {\bf The problem}: most of the literature assumes that in the party's decision-making process:\pause
               \begin{enumerate}
                   \item {\color{blue}Losses and gains affect in a {\bf comparable} way}.\\
-                  {\scriptsize\color{gray}Winning elections {\bf feels good as} losing one hurts.}\pause
+                  {\scriptsize\color{gray}Winning elections {\bf feels just as good as} losing one hurts.}\pause
                   \item {\color{blue}Parties focus only on {\bf absolute} levels of utilities}.\\
                   {\scriptsize\color{gray}Overlooking {\bf changes} in outcomes respect to a reference point (``sunk costs'').}\pause
               \end{enumerate}
@@ -364,7 +371,7 @@ options(scipen = 99999999999)
     {\tiny\color{gray} Dixit and Londregan (1996) and Stokes (2005).}\pause
     \item Some state ``that our knowledge of who parties target remains incomplete.''\\
     {\tiny\color{gray} Carlin and Moseley (2015).}\pause
-    \item {\color{blue}We contend that this is a \emph{very} important question, yet one that the literature has \emph{failed} to answer}.
+    \item {\color{blue}We contend that this is a \emph{very} important question, yet one that the literature has failed to clarify}.
   \end{itemize}
 \end{frame}
 
@@ -404,7 +411,7 @@ options(scipen = 99999999999)
       \item[] {\color{white}\underline{To one based on Prospect Theory} {\color{white}\tiny{(Kahneman and Tversky, 1979)}}:}
         \begin{itemize}
           \item[] {\color{white}{\bf Reference dependence}.}
-          \item[] {\color{white}{\bf Likelihood dependence}.}
+          \item[] {\color{white}{\bf Value function}.}
         \end{itemize}
     \end{itemize}
 
@@ -441,7 +448,7 @@ options(scipen = 99999999999)
       \item[] \underline{To one based on Prospect Theory} {\color{gray}\tiny{(Kahneman and Tversky, 1979)}}:
         \begin{itemize}
           \item[1.] {\bf Reference dependence}.
-          \item[2.] {\bf Likelihood dependence}.
+          \item[2.] {\bf Value function}.
         \end{itemize}
     \end{itemize}
 
@@ -470,7 +477,7 @@ options(scipen = 99999999999)
           \begin{itemize}
             \item[\checkmark] {\color{blue}context} in which the decision-making processes take place.
             \item[\checkmark] {\color{blue}changes of wealth}, rather than final asset positions.
-            \item[\checkmark] {\color{blue}sunk costs} do matter.
+            \item[\checkmark] {\color{blue}sunk costs} do matter: loses are harder to accept.
           \end{itemize}
 \end{itemize}
 
@@ -495,10 +502,11 @@ options(scipen = 99999999999)
   \begin{column}{.48\textwidth}
 
 \begin{itemize}[<+->]
-      \item[2.] {\bf Likelihood dependence}. The asymmetrical curvature of the likelihood does influence decisions,
+      \item[2.] {\bf Value function}. The asymmetrical curvature of the likelihood does influence decisions,
           \begin{itemize}
             \item[\checkmark] Individuals are {\color{blue}risk-averse} in the domain of {\color{blue}gains}.
             \item[\checkmark] Individuals are {\color{blue}risk-acceptant} in the domain of {\color{blue}losses}. 
+            \item[\checkmark] In simple, {\bf loses loom larger than gains}.
           \end{itemize}
 \end{itemize}
 
@@ -522,31 +530,6 @@ options(scipen = 99999999999)
 \subsection{Theoretical Expectations}
 
 \miniframeson
-\begin{frame}{Prospect Theory: Implications for Decision-Making}
-  \begin{columns}[c]
-  \begin{column}{.48\textwidth}
-
-\begin{itemize}[<+->]
-      \item {\bf Overweighting}: in the domain of {\color{blue}losses}, the convexity of the function encourages {\color{blue}risk-seeking} behaviors by {\bf exaggerating the probabilities of unlikely losses}.
-      \item {\bf Underweighting}: in the domain of {\color{blue}gains}, the concavity of the function encourages {\color{blue}risk aversion} by {\bf undervaluing the probability of success}.
-\end{itemize}
-
-\end{column}
-
-
-\hfill%
-\begin{column}{.48\textwidth}
-
-
-\includegraphics[scale=0.25, center]{Resources_Presentation/prospect_theory.png}
-
-  \end{column}
-  \end{columns}
-\end{frame}
-
-
-
-\miniframesoff
 \begin{frame}{Prospect Theory: Implications for Vote-Buying}
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
