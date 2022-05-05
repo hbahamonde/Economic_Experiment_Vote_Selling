@@ -808,36 +808,7 @@ dat.v.b$vote.intention.party.2 = round((dat.v.b$vote.intention.party*100)/dat.v.
 ## ----
 
 
-################################################################################## 
-# ***** Q      U       E       S       T       I       O       N       S *********
-##################################################################################
-
-## plot
-p_load(lattice) # most parties offer something: conditions?
-lattice::histogram(as.factor(dat.v.b$offer.made.party.d))
-
-## plot
-p_load(lattice) # all voters accept offer
-lattice::histogram(as.factor(dat.v.b$offer.taken.voter.d))
-
-## plot
-p_load(lattice) # however, not all voters become swing voters
-## first impressions: most vote-buying offers come from the same party (as they would HATE to loose)
-## it's not the opposing party the one that buys more: winning it's great, but losing is the WORST
-lattice::histogram(as.factor(dat.v.b$swing.voter))
-
-## plot
-plot(dat.v.b$offer.party.type)
-## most offers come from situations where both parties attempt to buy 
-## since the dataset is relational, values across subtypes (parties and voters) are the same.
-
-## plot
-plot(dat.v.b$offer.party.type[dat.v.b$party.id.before.voter=="A"])
-plot(dat.v.b$offer.party.type[dat.v.b$party.id.before.voter=="B"])
-## for voters A and B, parties in almost the same proportion aim at buying votes,
-## most of the times, at the same time.
-
-
+### ---
 # payoff plot SAVE BY HAND
 p_load(lattice) 
 options(scipen=9999999) # turn off sci not
@@ -860,22 +831,23 @@ payoffplot = densityplot(~payoff | role,
                          rot=90),
                          data=dat.v.b, 
                          aspect = 1,
-                         xlab = " ", 
-                         ylab = "Payoffs by Role (actual currency)", 
+                         xlab = "Payoffs by Role (actual currency)", 
+                         ylab = "Density", 
                          layout = c(3, 1)
 )# columns, rows
 
 # saving plot
 png(filename="payoffplot.png", 
     type="cairo",
-    units="in", 
-    width=4, 
+    units="cm", 
+    width=1, 
     height=2, 
-    pointsize=10, 
-    res=1000)
+    pointsize=2, 
+    res=250)
 
 print(payoffplot)
 dev.off()
+### ---
 
 
 
@@ -953,11 +925,11 @@ reg.table = texreg::texreg( # screenreg texreg
   override.se = list(c(m1.clst.std.err,rep(0.0, length(unique(m1.d$participant.code))-1))),
   override.pvalues = list(c(m1.clst.p.value,rep(0.0, length(unique(m1.d$participant.code))-1))),
   custom.header = list( "OLS" = 1),
-  stars = c(0.001, 0.01, 0.05, 0.1),
+  stars = c(0.001, 0.01, 0.05),
   include.adjrs = FALSE,
   symbol = "\\cdot",
   label = "reg:t",
-  caption = "Statistical Model (OLS): Amount of Vote-Buying Offer.",
+  caption = "Statistical Model (OLS): Amount of the Vote-Buying Offers.",
   float.pos="H",
   use.packages = FALSE,
   threeparttable = TRUE,
@@ -969,7 +941,7 @@ reg.table = texreg::texreg( # screenreg texreg
 reg.table
 ## ----
 
-
+### ---
 ## MODEL 1 PLOTS
 #mientras mas pierdo ayer, mas caro compro hoy
 m1.p1.d = data.frame(ggeffects::ggpredict(
@@ -1031,7 +1003,7 @@ m1plot = xyplot(predicted ~ x | group,
                 data=m1.p.d, 
                 aspect = 1,
                 xlab = " ", 
-                ylab = "Predicted Amount of\nVote-Buying Offer (points)", 
+                ylab = "Predicted Amount of the\nVote-Buying Offers (points)", 
                 lower=m1.p.d$conf.low,
                 upper=m1.p.d$conf.high,
                 panel = panel.ci, 
@@ -1052,14 +1024,16 @@ png(filename="m1plot.png",
 
 print(m1plot)
 dev.off()
+### ---
 
 
-
- m1.p.d.1 = m1.p.d[m1.p.d$group=="Vote Share (%)",]
+### ---
+m1.p.d.1 = m1.p.d[m1.p.d$group=="Vote Share (%)",]
 m1.p.d.2 = m1.p.d[m1.p.d$group=="Points Cumul (delta)",]
 m1.p.d.3 = m1.p.d[m1.p.d$group=="Ideological Distance",]
 m1.p.d.4 = m1.p.d[m1.p.d$group=="Party's Budget",]
 m1.p.d.5 = m1.p.d[m1.p.d$group=="Pivotal Voter",]
+
 
 # m1.p.d.1
 m1.p.d.1.p = xyplot(predicted ~ x | group, 
@@ -1067,7 +1041,7 @@ m1.p.d.1.p = xyplot(predicted ~ x | group,
                     data=m1.p.d.1, 
                     aspect = 1,
                     xlab = " ", 
-                    ylab = "Amount of Vote-Buying Offer (points)", 
+                    ylab = "Amount of the Vote-Buying Offers (points)", 
                     lower=m1.p.d.1$conf.low,
                     upper=m1.p.d.1$conf.high,
                     panel = panel.ci, 
@@ -1094,7 +1068,7 @@ m1.p.d.2.p = xyplot(predicted ~ x | group,
                     data=m1.p.d.2, 
                     aspect = 1,
                     xlab = " ", 
-                    ylab = "Amount of Vote-Buying Offer (points)", 
+                    ylab = "Amount of the Vote-Buying Offers (points)", 
                     lower=m1.p.d.2$conf.low,
                     upper=m1.p.d.2$conf.high,
                     panel = panel.ci, 
@@ -1121,7 +1095,7 @@ m1.p.d.3.p = xyplot(predicted ~ x | group,
                     data=m1.p.d.3, 
                     aspect = 1,
                     xlab = " ", 
-                    ylab = "Amount of Vote-Buying Offer (points)", 
+                    ylab = "Amount of the Vote-Buying Offers (points)", 
                     lower=m1.p.d.3$conf.low,
                     upper=m1.p.d.3$conf.high,
                     panel = panel.ci, 
@@ -1148,7 +1122,7 @@ m1.p.d.4.p = xyplot(predicted ~ x | group,
                     data=m1.p.d.4, 
                     aspect = 1,
                     xlab = " ", 
-                    ylab = "Amount of Vote-Buying Offer (points)", 
+                    ylab = "Amount of the Vote-Buying Offers (points)", 
                     lower=m1.p.d.4$conf.low,
                     upper=m1.p.d.4$conf.high,
                     panel = panel.ci, 
@@ -1175,7 +1149,7 @@ m1.p.d.5.p = xyplot(predicted ~ x | group,
                     data=m1.p.d.5, 
                     aspect = 1,
                     xlab = " ", 
-                    ylab = "Amount of Vote-Buying Offer (points)", 
+                    ylab = "Amount of the Vote-Buying Offers (points)", 
                     lower=m1.p.d.5$conf.low,
                     upper=m1.p.d.5$conf.high,
                     panel = panel.ci, 
@@ -1194,95 +1168,15 @@ png(filename="m1plot_5.png",
 
 print(m1.p.d.5.p)
 dev.off()
+### ---
 
-
-
-## MODEL 2 PLOTS
-# vote.intention.party + points.cumul.delta + ideo.distance2 + budget + n.of.voters + participant.code
-m2.p1.d = data.frame(ggeffects::ggpredict(
-  model=m2,
-  terms=c("vote.intention.party [all]"), 
-  vcov.fun = "vcovHC", 
-  vcov.type = "HC0")
-); m2.p1.d$group = "Vote Share"
-
-
-m2.p2.d = data.frame(ggeffects::ggpredict(
-  model=m2,
-  terms=c("points.cumul.delta [all]"), 
-  vcov.fun = "vcovHC", 
-  vcov.type = "HC0")
-); m2.p2.d$group = "Points Cumul (delta)"
-
-
-m2.p3.d = data.frame(ggeffects::ggpredict(
-  model=m2,
-  terms=c("ideo.distance2 [all]"), 
-  vcov.fun = "vcovHC", 
-  vcov.type = "HC0")
-); m2.p3.d$group = "Spatial Distance (left-right)"
-
-
-
-m2.p4.d = data.frame(ggeffects::ggpredict(
-  model=m2,
-  terms=c("budget [all]"), 
-  vcov.fun = "vcovHC", 
-  vcov.type = "HC0")
-); m2.p4.d$group = "Party's Budget"
-
-
-m2.p5.d = data.frame(ggeffects::ggpredict(
-  model=m2,
-  terms=c("n.of.voters [all]"), 
-  vcov.fun = "vcovHC", 
-  vcov.type = "HC0")
-); m2.p5.d$group = "Pivotal Voter"
-
-
-# plot (export by hand)
-m2.p.d = as.data.frame(rbind(m2.p1.d,m2.p2.d,m2.p3.d,m2.p4.d,m2.p5.d))
-m2.p.d$group = as.factor(m2.p.d$group)
-#m2.p.d$group <- relevel(m2.p.d$group, "Points Cumul (delta)")
-
-p_load(lattice, latticeExtra, DAMisc)
-m2plot = xyplot(predicted ~ x | group, 
-                scales=list(relation="free", rot=0),
-                data=m2.p.d, 
-                aspect = 1,
-                xlab = " ", 
-                ylab = "Competitive Vote-Buying Offer", 
-                lower=m2.p.d$conf.low,
-                upper=m2.p.d$conf.high,
-                panel = panel.ci, 
-                zl=F, 
-                prepanel=prepanel.ci,
-                layout = c(5, 1) # columns, rows
-)
-
-# saving plot
-png(filename="m2plot.png", 
-    type="cairo",
-    units="in", 
-    width=8, 
-    height=5, 
-    pointsize=10, 
-    res=1000)
-
-print(m2plot)
-dev.off()
-
+### ---
 # plotting dep variable plot BY HAND
 p_load(gridExtra,lattice)
 m1.dep.var = histogram(~m1.d$offer.made.party, 
                        aspect = 1,
                        xlab = "Amount of the Vote-Buying Offers (points)"
 )
-
-# m2.dep.var = histogram(~as.factor(dat.v.b$competitive.offers.party), 
-#                       aspect = 1,
-#                       xlab = "Competitive Vote-Buying Offer"
-#                       )
 
 png(filename="depvarplot.png", 
     type="cairo",
@@ -1295,6 +1189,7 @@ png(filename="depvarplot.png",
 m1.dep.var
 #grid.arrange(m1.dep.var,m2.dep.var, ncol=2)
 dev.off()
+### ---
 
 
 ################################################ 
@@ -1309,99 +1204,44 @@ summary.stats <- dat.v.b %>%
   group_by(role) %>%
   distinct(participant.code, .keep_all = TRUE) %>% 
   get_summary_stats(type = "common")
+
+# change variable names for sum stats table
+summary.stats$variable[summary.stats$variable=="left.right"] <- "Left - Right"
+summary.stats$variable[summary.stats$variable=="male"] <- "Male"
+summary.stats$variable[summary.stats$variable=="party.id"] <- "Party identification"
+summary.stats$variable[summary.stats$variable=="party.like"] <- "Feel close to a political party"
+summary.stats$variable[summary.stats$variable=="payoff"] <- "Payoff"
+summary.stats$variable[summary.stats$variable=="salary.enough"] <- "Salary is enough"
+summary.stats$variable[summary.stats$variable=="vote.last.election"] <- "Voted in the last election"
+summary.stats$variable[summary.stats$variable=="vote.next.election"] <- "Vote in the next election"
+
+colnames(summary.stats)[colnames(summary.stats)=="role"] <- "Role"
+colnames(summary.stats)[colnames(summary.stats)=="variable"] = "Variable"
+colnames(summary.stats)[colnames(summary.stats)=="n"] <- "N"
+colnames(summary.stats)[colnames(summary.stats)=="min"] <- "Min."
+colnames(summary.stats)[colnames(summary.stats)=="max"] <- "Max."
+colnames(summary.stats)[colnames(summary.stats)=="median"] <- "Median"
+colnames(summary.stats)[colnames(summary.stats)=="iqr"] <- "Interquartile Range"
+colnames(summary.stats)[colnames(summary.stats)=="mean"] <- "Mean"
+colnames(summary.stats)[colnames(summary.stats)=="sd"] <- "Std. Dev."
+colnames(summary.stats)[colnames(summary.stats)=="se"] <- "Std. Error"
+colnames(summary.stats)[colnames(summary.stats)=="ci"] <- "Conf. Int."
 ## ----
 
 ## ---- summary:stats:t ----
 p_load(xtable)
-xtable(summary.stats[order(summary.stats$variable),], 
+print(xtable(summary.stats[order(summary.stats$Variable),], 
        caption = "Summary Statistics.", 
        digits = 0,
        label = "summary:stats:t",
-       align = rep("c",12))
+       align = rep("c",12)
+       ), 
+      size = "tiny",
+      include.rownames=FALSE
+      )
 ## ----
 
-################
-#### VOTERS
-################
 
-# for clustered std errors
-p_load(sandwich,lmtest,DAMisc,lattice,latticeExtra)
-
-# Subsetting Data
-m3.d = dat.v.b %>% select(offer.made.party, vote.intention.party.2, points.cumul.delta, ideo.distance2.a, ideo.distance2.b, participant.code, pivotal.voter) %>% drop_na()
-m3.d = as.data.frame(m3.d)
-
-m3 = glm(swing.voter ~ offer.made.voter + points.cumul.delta + pivotal.voter, data = dat.v.b, family = binomial(link = "logit"))
-coeftest(m3, vcov. = vcovCL(m3, cluster = dat.v.b$participant.code, type = "HC0"))
-
-## MODEL 3 PLOTS
-m3.p1.d = data.frame(ggeffects::ggpredict(
-  model=m3,
-  terms=c("offer.made.voter [all]"), 
-  vcov.fun = "vcovHC", 
-  vcov.type = "HC0")
-); m3.p1.d$group = "offer.made.votere"
-
-
-m3.p2.d = data.frame(ggeffects::ggpredict(
-  model=m3,
-  terms=c("points.cumul.delta [all]"), 
-  vcov.fun = "vcovHC", 
-  vcov.type = "HC0")
-); m3.p2.d$group = "points.cumul.delta"
-
-
-m3.p3.d = data.frame(ggeffects::ggpredict(
-  model=m3,
-  terms=c("ideo.distance2.a [all]"), 
-  vcov.fun = "vcovHC", 
-  vcov.type = "HC0")
-); m3.p3.d$group = "ideo.distance2.a"
-
-
-
-m3.p4.d = data.frame(ggeffects::ggpredict(
-  model=m3,
-  terms=c("ideo.distance2.b [all]"), 
-  vcov.fun = "vcovHC", 
-  vcov.type = "HC0")
-); m3.p4.d$group = "ideo.distance2.b"
-
-
-m3.p5.d = data.frame(ggeffects::ggpredict(
-  model=m3,
-  terms=c("budget [all]"), 
-  vcov.fun = "vcovHC", 
-  vcov.type = "HC0")
-); m3.p5.d$group = "budget"
-
-m3.p6.d = data.frame(ggeffects::ggpredict(
-  model=m3,
-  terms=c("pivotal.voter [all]"), 
-  vcov.fun = "vcovHC", 
-  vcov.type = "HC0")
-); m3.p6.d$group = "pivotal.voter"
-
-
-# plot (export by hand)
-m3.p.d = as.data.frame(rbind(m3.p1.d,m3.p2.d,m3.p3.d,m3.p4.d,m3.p5.d,m3.p6.d))
-m3.p.d$group = as.factor(m3.p.d$group)
-#m3.p.d$group <- relevel(m3.p.d$group, "Points Cumul (delta)")
-
-p_load(lattice, latticeExtra, DAMisc)
-xyplot(predicted ~ x | group, 
-                scales=list(relation="free", rot=0),
-                data=m3.p.d, 
-                aspect = 1,
-                xlab = " ", 
-                ylab = "Swing Voter", 
-                lower=m3.p.d$conf.low,
-                upper=m3.p.d$conf.high,
-                panel = panel.ci, 
-                zl=F, 
-                prepanel=prepanel.ci,
-                layout = c(6, 1) # columns, rows
-)
 
 ################
 #### ABSTRACT
