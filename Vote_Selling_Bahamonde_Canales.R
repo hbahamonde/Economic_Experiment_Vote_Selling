@@ -839,11 +839,11 @@ payoffplot = densityplot(~payoff | role,
 # saving plot
 png(filename="payoffplot.png", 
     type="cairo",
-    units="cm", 
-    width=1, 
-    height=2, 
-    pointsize=2, 
-    res=250)
+    units="in", 
+    width=7, 
+    height=4, 
+    pointsize=50, 
+    res=1000)
 
 print(payoffplot)
 dev.off()
