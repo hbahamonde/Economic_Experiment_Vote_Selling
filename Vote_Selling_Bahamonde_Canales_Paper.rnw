@@ -590,7 +590,7 @@ Simply put, if traditional vote-buying theories are correct, then we should expe
 
 \begin{figure}[h]
 \includegraphics[scale=.6, center]{m1plot.png}
-\caption{{\bf Predicted Values of Vote-Buying Offers.\label{m1plot}}}
+\caption{{\bf Predicted Values of the Vote-Buying Offers.\label{m1plot}}}
 \caption*{{\bf Note}: Based on the OLS estimates in \autoref{reg:t}, the figure shows the predicted values of the offer made by the party expressed in experimental points. Confidence intervals were constructed using robust standard errors (as shown in \autoref{reg:t}). Substantively, the figure shows that experimental subjects avoid losses by over-securing electoral support even in favorable contexts (Panel 1) and that they do consider sunk costs and try to recover losses in the short run by spending more on vote buying (Panel 2). Panel 3 indicates that parties spend more on vote buying for voters closer to their ideological preferences. Panel 4 shows that larger party budgets incentivize more spending on vote buying and that parties do not necessarily consider whether the targeted voter is pivotal or not (Panel 5).}\centering
 \end{figure}
 
@@ -656,6 +656,7 @@ Overall, we encourage future research, particularly by scholars in comparative p
 
 @
 
+\newpage
 % 2. reg:table:t
 <<reg:table:t, echo = FALSE, results='asis', warning = FALSE, message = F, cache=FALSE, include = TRUE>>=
 
