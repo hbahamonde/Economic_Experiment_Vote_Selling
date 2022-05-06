@@ -281,8 +281,6 @@ Vote buying is a very risky strategy.\footnote{\textcite{Gans-Morse2013} explain
 % Yet, despite these risks, vote buying is very common.
 If vote buying is risky \parencite[43]{Szwarcberg2013}, expensive \parencite[35]{Zarazaga2014}, and uncertain \parencite[164]{Rueda2016}, how do clientelist political parties allocate scarce resources efficiently? In this paper, we address two related but more specific questions about strategic vote buying related to the role of political contestation and sunk costs. First, \emph{how risk-tolerant are parties when facing contested elections?} Second, \emph{do clientelist political parties consider ``yesterday's'' spending levels when buying votes ``today''?}  These are important questions, as they directly speak about a party's decision-making process when faced with risk. Unfortunately, we find that some of the literature provides conflicting answers to these questions. This paper posits that a number of these gaps originate in a misunderstanding of a party's decision-making processes under risk.
 
-% prior levels of economic losses. 
-
 % abstract 1
 Traditional theories of clientelism assert that vote buying is more likely when parties are losing elections, while ignoring prior spending levels on vote buying. We consider this framework is limited in a number of ways. First, it assumes that losses and gains affect a party's decision-making process in comparable ways---i.e., winning an election feels just as good as losing one hurts. Second, it assumes that the decision-making process of clientelist political parties focuses only on absolute levels of utility while overlooking changes in outcomes with respect to a reference point---i.e., it does not matter whether clientelist parties have had successes or failures in the past \parencite{Kahneman1986a,Schumacher2015a}. In this paper, we contest these assumptions. %In this paper we note that these assumptions do not conform with recent empirical findings. 
 
@@ -303,27 +301,18 @@ Building on traditional theories of clientelism, we designed an economic experim
 % contribution
 We contribute to the literature in three ways. First, while prospect theory has been influential in political science among international relations scholars, the theory has not received much attention among political economists or comparative politics scholars (\cite[2]{Mercer2005}, \cite[338-339]{Vis2011}). We believe this is a serious issue that should be corrected. We intend to bridge this gap by offering an alternative theory of the political economy of vote buying, taking prospect theory as a starting point. Second, in this paper, we follow \textcite[297]{Levy1992} as we carefully try to show not only that the observed behavior of political agents is consistent with prospect theory but also that prospect theory provides a better explanation than do traditional descriptions of vote buying. Finally, our paper is especially relevant to the study of democracy and development, where experiments have been described as ``a promising research tool'' \parencite{DeLaO2011}.
 
-% Third, and from a methodological standpoint, we follow \textcite{Aldrich2011,McDermott2002} in that there is a need for implementing experiments aimed to test formal models, and such, we believe that political scientists might benefit from this process to establish empirical validation of formal models \parencite[45]{McDermott2002}. Since the formal model follows traditional theories of clientelism, it is particularly relevant to test the model in an experimental setting.
-
 % This paper proceeds as follows. 
 This paper proceeds as follows. First, we present several gaps present in the vote-buying literature. Second, we explain the basic concepts behind prospect theory while providing more details about its direct implications for the clientelism and vote-buying literatures. Third, we present our experimental design. Fourth, we analyze the experimental data. Fifth, we conclude by readdressing our results and discussing some of the limitations of our study as well as proposing some future avenues for research.
 
 
 \section{Traditional Theories of Clientelism and Expected Utility Theory}
 
-% Importantly, it is commonly assumed that agents obey the maxims of invariance, dominance, and transitivity leading to the maximization of utility (\cite[291]{McDermott2004}, \cite[719]{Quattrone1988}).
-%``The expected-utility principle asserts that individuals attempt to maximize expected utility in their choices between risky options: they weight the utilities of individual outcomes by their probabilities and choose the option with the highest weighted sum''  Levy1992a, 173
-% ``The expected-utility principle posits that actors try to maximize their expected by weighting the utility of each possible outcome of a given course of action by the probability of its occurrence, summing over all possible outcomes for each strategy, and selecting that strategy with the highest expected utility.'' Levy1997, 88
 
 % basics of EUT
 \textcite{Neumann:1947tc} introduced decision-making theory as one of the first theories of decision making under risk \parencite[15]{McDermott1998}. As its core, the theory posits that the value of an outcome is equal to its payoff times its probability, and that agents choose the option with the highest weighted sum (\cite{Quattrone1988}, \cite[173]{Levy1992a}, \cite[88]{Levy1997}, \cite[15]{McDermott1998}). Importantly, it is assumed that the carriers of utilities are levels of assets rather than gains and losses with respect to a reference point \parencite{Levy2003a}. Since expected utility theory was introduced, a specific set of behavioral assumptions has dominated political science (\cite[87]{Levy1997}, \cite[289]{McDermott2004}).% nd traditional accounts of vote buying have been no exception. 
 
-%It needs to be clarified, however, that the root of the problem is \emph{not} methodological (i.e., the use of game theory) but analytical. 
-
 % In particular, we contest the assumed decision-making process under risk embedded in most traditional accounts of vote buying.
 We contest this traditional approach focused on absolute gains by shifting the attention to losses and context-dependent decision-making processes. In particular, we find it limiting that most research on clientelism focuses on absolute levels of wealth while assuming that whether decision-makers (i.e., parties) are in a domain of gains or losses should not affect their attitudes toward risk. Put simply, our paper proposes that clientelist parties process their electoral and economic gains and losses not in a vacuum but considering how prior gains and losses affect their choices \parencite[643]{Thaler1990}. Thus, we suggest considering prospect theory as an alternative framework to study vote buying, specifically by incorporating a decision-maker's risk propensity as it shifts in response to changes in the environment \parencite[292]{McDermott2004}. 
-
-%Since these assumptions have also been integrated in most traditional vote-buying theories, our paper hopefully clarifies some empirical deviations present in the literature. 
 
 
 This paper posits that a shift in focus is a valuable exercise because strategic behavior under risk has usually been modeled according to assumptions about expected value calculations that are  ``unrealistic'' \parencite[124]{Aldrich2011}. Furthermore, a large body of experimental research finds that many behavioral expectations under risk do not comport with the assumptions present in classical decision-making theory (\cite[25]{Battalio1990}, \cite[1]{Mercer2005}). As a matter of fact, Bernoulli---the forefather of expected utility theory \parencite{Schoemaker1982a}---was the first to notice that people would not always behave according to the basis of the expected value of a game \parencite[15-16]{McDermott1998}. From a decision-making standpoint, many find that the assumptions underlying the classical theory of risky choice are ``systematically violated'' \parencite[719]{Quattrone1988} and that both variance and semivariance ideas of risk have been shown to be ``inconsistent'' with von Neumann axioms \parencite[1405]{March1987}. Furthermore, there seems to be a strong consensus that standard assumptions about strategic behavior under risk ``continually failed empirically'' \parencite[335]{Vis2011}, while experiments have shown that ``actual behavior and decisions frequently deviate from the neoclassical predictions'' \parencite[167]{Fatas2007}. 
@@ -339,32 +328,14 @@ On the one hand, some scholars explain that the more contested an election, and 
 % low
 Yet, there are recent contributions that report very large levels of vote buying in contexts of \emph{low} political contestation (like the Nicaraguan example mentioned above, see \cite{Gonzalez-Ocantos2012}). In addition to that, \textcite{Medina2002,Medina2009} explain that political parties that hold an electoral \emph{monopoly} tend to offer clientelist goods to deter the entry of political challengers. Similarly, \textcite{Magaloni:2008bq} explains that hegemonic regimes such as the PRI in Mexico have survived thanks to successful deterrence strategies and clientelism (see also \cite[146]{Hagene2015}). In fact, other notable examples include cases of authoritarian or semi-authoritarian clientelism where political contestation is outright banned---like in Russia \parencite{Saikkonen2021a}---or limited, like in Cameroon \parencite{Miscoiu2021a}.\footnote{Due to space concerns, we leave these forms of clientelism for future research.} At the end of the day, however, the question still stands: When should vote buying be higher, in contexts of high or low political contestation? We believe this lack of consensus is due in part to a misunderstanding of a party's decision-making under risk.
 
-%This literature argues that vote buying can be higher in contexts of low political contestation. 
 
-% while \textcite[146]{Hagene2015} is very categorical when she explains that ``political competition does not undermine political clientelism.'' 
-
-%We believe that if traditional theories of vote buying conformed with traditional expectations of utility maximization, clientelist political parties should buy votes only in cases of risking the election. Yet, they do when electoral risks are low, as found in \textcite{Gonzalez-Ocantos2012}.\footnote{Regarding insurance purchasing, this has also been noted by \textcite{Kahneman1979} and \textcite[620-622]{Camerer:1995}.}
-
-
-\paragraph{Sunk Costs} In other respects, our argument somewhat conforms with past research, but for different reasons. Our overall explanation is different because it considers that decision-makers weigh their options with respect to a reference point, which in turn explains higher levels of vote buying. As explained above, traditional vote-buying theories usually explain that incumbents enjoy important comparative advantages relative to political challengers. Since incumbents are in office while campaigning, they are usually able to divert public resources to vote buying \parencite{Cox1986a,Dixit1996,Dahlberg2002,Hicken2007,Grzymala-busse2008}. While incumbents' relatively higher levels of clientelist spending may be explained by their disposable public resources, we believe this is a necessary but insufficient condition to explain vote buying.%\footnote{Having more available resources has been associated with deterring likely challengers \parencite{Medina2002,Grzymala-busse2008}.}
+\paragraph{Sunk Costs} In other respects, our argument somewhat conforms with past research, but for different reasons. Our overall explanation is different because it considers that decision-makers weigh their options with respect to a reference point, which in turn explains higher levels of vote buying. As explained above, traditional vote-buying theories usually explain that incumbents enjoy important comparative advantages relative to political challengers. Since incumbents are in office while campaigning, they are usually able to divert public resources to vote buying \parencite{Cox1986a,Dixit1996,Dahlberg2002,Hicken2007,Grzymala-busse2008}. While incumbents' relatively higher levels of clientelist spending may be explained by their disposable public resources, we believe this is a necessary but insufficient condition to explain vote buying.
 
 Building on \textcite[33]{Szwarcberg2013}, we posit that having the \emph{capacity} to buy votes is a necessary but insufficient condition to explain the \emph{use} of clientelism. Thus, while incumbents might have more available resources, they will not necessarily engage more aggressively in vote buying. Taking this important insight as a starting point, we consider an additional conditional effect under which clientelist political parties spend more on vote buying. In particular, we argue that incumbents not only need to have the capacity to deliver---as traditional accounts of vote buying assert---but also must have a history of large prior investments; the larger prior spending levels are, the larger the new spendings will be. The argument does not rely on some deterministic trait of the incumbent but on the need to compensate for prior losses or ``sunk costs.''
 
 
 
 Incumbents are usually portrayed as if they were always in the domain of gains, as the ``incumbency \emph{advantage}'' concept implies. However, we tend to disagree with this view. First, the material, coordination, and political costs of maintaining a large-scale vote-buying operation are very high \parencite{Scott1969,Auyero2000,Kitschelt2009,Szwarcberg2013}. Party machines must have the capacity to not only grant public jobs to their clients \parencite{Calvo2004,Oliveros2021}, but also to organize rallies \parencite{Szwarcberg2012}, deliver benefits \parencite{Brusco2004}, ``\emph{acarrear}'' \parencite[577]{Hilgers2011}, and monitor clients to the best of the machine's abilities \parencite[317]{Stokes2005}. Second, incumbents face a number of uncertainties. Party machines cannot effectively monitor their clients \parencite{Hicken2011} or their own brokers \parencite[9]{Kitschelt2009}, and they also struggle obtaining resources to be delivered in a clientelist manner \parencite{Auyero2000,Zarazaga2014}. If vote buying is expensive and uncertain, what motivates clientelist political parties to buy such massive numbers of votes, as in the Nicaraguan example above? In this context of uncertainty and risk, we argue that clientelist political parties will ``gamble'' more money and resources to compensate for prior losses. For every additional unit incumbents spend on vote buying, they will feel the need to spend even more to ``break even'' to try to compensate for prior losses or clientelist investments.
-
-
-%Intuitively, from a portfolio-diversification standpoint, investing in both swing and core voters should be the best response: the more diversified the targeted electorate (i.e., the ``portfolio''), the less risk of losing the election (particularly in contexts of secret voting and monitoring and enforcing problems---\cite{Hicken2020}; see also \cite[58]{Auyero2000}). In fact, according to the financial market, portfolio choice and investment decision-making literatures in economics, ``[m]ost rational models of portfolio choice suggest that investors hold diversified portfolios to reduce or eliminate non-compensated risk'' \parencite{Goetzmann2008}. In the same vein, \textcite[978]{Goyal2003} ``find a significant positive relation between average stock variance and the return on the market.'' 
-
-% adds secondary question about possibility
-%Moreover, can parties even \emph{identify} either type of voters? We believe that the clientelism literature expects too much from the party's monitoring capacities. Parties operate in very uncertain environments, particularly due to vote secrecy and social stigma, making both monitoring and enforcing very hard to accomplish \parencite{Gonzalez-Ocantos2012,GonzalezOcantos2014,Gonzalez-Ocantos2015,KiewietDeJonge2015,Corstange2018,Hicken2020,Bahamonde2020a}. Hence assuming that parties can ``clinically'' discern who is a swing or a core voter, exceeds the real capacities of clientelist brokers. Ethnographic evidence for the Latin American cases seems to suggest similar ideas \parencite{Gay:1993aa,Gay1998,Auyero2000,Luna2011,Szwarcberg2013}.\footnote{Even normative scholars explain that parties have a hard time identifying voter's electoral intentions. For instance, \textcite[1147]{Dixit1996} explain that clientelist parties track ``constituents' likes and dislikes, \emph{compulsively} participating in a spectrum of events [such as] baptisms and bar mitzvahs.'' Similarly, \textcite[317]{Stokes2005} argues that parties develop skills that allow them to infer whether clients voted for their party by \emph{looking at them in the eyes} (emphasis is mine).} Thus, it is very reasonable that parties not knowing \emph{exactly} who is who, allocate clientelist resources to both types of voters. 
-
-% there are other contributions too
-% Moreover, recent contributions suggest that clientelist parties ``may simultaneously target both swing and core groups of voters'' \parencite[1083]{Albertus2012a}, while in a similar vein \textcite[148]{Diaz-Cayeros2008} explains that long-lasting hegemonic parties (such as the PRI in Mexico) seek ``to prevent core voters from defecting in the future,'' but newly elected incumbents in need of forging a new majority coalition target swing voters. In turn, and also considering the role of political contestation on vote buying, \textcite{Corstange2018} explains that parties target inexpensive core voters, but that higher levels of electoral contestation puts heavy pressures to target more expensive swing voters. Unfortunately, the role of political contestation is not clear either. 
-
-% We believe this confusion is due to the wrong understanding of decision-making under risk. While core-voter scholars argue that parties minimize the risk of wasting scarce resources by targeting known individuals, swing-voter scholars explain that parties minimize the risk of losing the election by targeting individuals who \emph{ex-ante} were not voting for the clientelist party. Unfortunately both accounts assume that 
-
 
 
 % summary
@@ -392,17 +363,6 @@ Reference dependence is the central idea in prospect theory (\cite[40]{McDermott
 % central idea in prospect theory (value-function dependence), % value-function dependence explained
 Value-function dependence is another central idea in prospect theory. Importantly, the shape of the value function is nonlinear. In the domain of gains, the concavity of the value function encourages risk aversion, while in the domain of losses, the convexity of the value function encourages risk-seeking behaviors \parencite[183-184]{Levy1992a}. Formally, the asymmetrical curvature of the value function explains why individuals exhibit risk-averse behaviors in choices among gains but risk-acceptant behaviors in choices among losses \parencite[87]{Levy1997}. A direct consequence of this is that prospect theory pays considerable attention to losses.\footnote{Losses have also been the focus in other areas of political science \parencite[298]{McDermott2004}. For instance, \textcite[132]{Lau1985} explains that ``negative information is more influential than comparable positive information.''} In fact, \textcite[171]{Levy1992a} explains that individuals ``give more weight to losses than to comparable gains,'' which translates into the famous statement \emph{losses loom larger than gains}. From an analytical point of view, we consider this to be \emph{the} feature that trumps the normative expectations contained in standard expected value theories. 
 
-% Unlike theories based on expected-value calculations, \textcite{Kahneman:2012tc} explains that the process of underweighting of likely events contributes to risk aversion, while very unlikely events are overweighted ``quite grossly or neglected altogether'' (see also \cite[32]{McDermott1998}). % \textcite[32]{McDermott1998} explains that ``prospect theory accounts for these discrepancies by noting the extreme (over)weight and attention that individuals give to small probabilities.'' 
-
-
-
-% In prospect theory, both reference dependence and the shape of the value function lead to a more accurate description of decision-making under risk. 
-% In particular, the evidence suggests that in the domain of losses, risk-seeking decision-makers take disproportionate risks to avoid certain losses \parencite[297, 299-300]{Levy1992}, 
-
-
-% In fact, experimental evidence consistently finds evidence of decision-makers distorting values of outcomes in a non-linear way \parencite[87]{Levy1997}
-
-% This is explained because decision-makers ``have difficulty with probability at extreme ranges'' \parencite[30]{McDermott1998}
  
 % implications for vote buying
 The implications for vote buying are considerable. In sharp contrast to traditional vote-buying theories, prospect theory predicts that clientelist parties will likely buy votes when they are winning an election, that is, when they are in the domain of gains. In these scenarios, parties will find intolerable the idea of potentially losing the supporter base they already have, particularly because decision-makers are more concerned with \emph{preventing} a decline than increasing gains \parencite[89]{Levy1997}. Analytically, under such circumstances of ``loss aversion'' \parencite{Kahneman1984a,Kahneman1991a,Levy1992a,McDermott2004,Mercer2005}---i.e., parties giving more weight to potential losses---the value function will encourage risk-averse behaviors, making investments in vote buying more attractive. Our argument is consistent with \textcite[297, 299-300]{Levy1992}, who explains that in the domain of gains, risk-averse decision-makers are excessively eager to \emph{secure} gains (not \emph{increase} them); and with \textcite[1042]{Schumacher2015a}, who find that ``loss aversion motivates [agents] to become risk acceptant.''
@@ -410,14 +370,11 @@ The implications for vote buying are considerable. In sharp contrast to traditio
 
 Importantly, it should be noted that the aversion is with respect to potential negative electoral outcomes (i.e., losing an already acquired supporter base). This is consistent with prospect theory, particularly with the concept of the ``endowment effect'': the very process of acquiring something (e.g., a supporter base) enhances the perceived value of the object \parencite{Thaler1980a,Kahneman1990a}. In these situations, decision-makers (parties) should tend to overvalue current possessions \parencite[175]{Levy1992a}, making the risky strategy (vote buying) seem more attractive. In fact, \textcite{Horowitz2002} find that losing something looms 2.5 times more than obtaining it, thus making agents more eager to hold on to the good.  
 
-% Hence, we expect vote buying to be higher in contexts where parties are winning the election.
 
 % summary
 In addition, our argument complements other empirical studies which confirm that ``actors perceive themselves to be in the domain of losses more often than we would normally expect,'' even if they are not (\cite[291]{Levy1992}; see also \cite{Lau1985}). Thus, the empirical consequences of both loss aversion and the endowment effect combined with the enhanced perception of losses will push winning parties to be more prone to gamble more resources on vote buying. Analytically, the idea of potentially losing something (voters) will shift the decision-maker's (party) reference point, driving them to take the risky alternative (vote buying). %Decision-makers in those situations will generally find intolerable the idea of losing acquired assets---this also applies even to ``trivial [ones, such] as candy bars or coffee mugs'' \parencite[175]{Levy1992a}.
 
 
-
-% an enhanced // enhancing then the false perception that agents might actually be in the domain of losses. 
 
 % 2 why Clientelist parties should buy votes when they have experienced important losses or spendings in the past
 Moving forward, clientelist parties can also be expected to buy more votes when they are in the domain of losses because of risk seeking. In these cases, vote buying should be higher when parties have experienced important losses or when they have had high spending levels in the past. In line with prospect theory, we argue that past losses are harder to accept, and hence when things have been bad in the past, decision-makers are more likely to make risky choices ``today'' to recover ``yesterday's'' losses \parencite[294]{McDermott2004}. Analytically, \textcite[297]{Levy1992} notes that the elasticity of this risk-seeking behavior is quite high because the magnitudes of past losses need not be large in order to induce the behavior. This means that even small losses can be expected to induce risk-seeking behaviors. %Consequently, we expect a steeper predicted effect in the data analyses. 
@@ -426,79 +383,15 @@ Moving forward, clientelist parties can also be expected to buy more votes when 
 Importantly, the risk-seeking behavior is with respect to vote buying as a strategy. By shifting the reference point of the decision-maker downward, vote buying seems more attractive because of the tendency of individuals in the domain of losses to try to ``break even''  \parencite{Thaler1990}. Unlike traditional understandings of the ``incumbency advantage,'' our argument implies that clientelist political parties should be expected to buy more votes not necessarily because they want to win the next election but because they will try to compensate for past losses or ``sunk costs.''\footnote{Due to the ``cost of governing'' \parencite{Powell1993,Nannestad2002,Bawn2012}, \textcite[1041]{Schumacher2015a} empirically find that incumbents in the domain of losses take more risks: the more often parties have been in government, the lower the fear of losing office. In terms of our argument, we also find it plausible for incumbents to constantly fear losing office, thus incentivizing investments in clientelism. Thus, our explanation complements theirs but stresses different aspects of the theory (electoral risks and sunk costs in different contexts of electoral competition). In any case, and building on \textcite{Schumacher2015a}, we encourage future experimental research to problematize the incumbent's risk of losing office. We owe this point to one of the reviewers.} Hence, we expect that clientelist parties will buy more votes when their past electoral losses or past levels of clientelist investments have been high. Clientelist parties that have a history of lost elections or that have invested considerable resources in vote buying in the past are possible examples of this mechanism. 
 
 
-
-% tendency of decision-makers to bet on long shots \parencite[286-287]{Kahneman1979}   
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% role of Experiments 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-    % GROUPS
-
-        % ``Current models of prospect theory lack the ability to confront game theoretic models on their own grounds because of their inability to deal with strategic interaction and aggregation of choice across individuals.'' McDermott2004, 305
-
-        % ``work that attempts to expand the applicability of prospect theory to dyadic and group interactions will constitute an enormous contribution to the field.'' McDermott2004, 308
-
-% ``Experiments permit the creation of a specialized setting in which a model's premises can be emulated, with the test being whether the experiment's subjects behave as the model predicts.'' Aldrich2011
-
-% ``more direct comparisons between game theoretic rational choice models and prospect theory can be conducted on a larger scale.'' McDermott2004, 306
-
-
-% ``Even though considerable laboratory evidence in favor of prospect theory has accumulated, some economists believe the endowment effect is merely the result of a mistake made by inexperienced consumers and through'' List2004, 615
-
-    %%% EXPERTS
-
-    % ``prospect theory adequately organizes behavior among inexperienced consumers, but consumers with intense market experience behave largely in accordance with neoclassical predictions'' List2004, 615
-
-    % ``Researchers find that `experts' are as likely as `novices' to allow the framing of a problem to influence their decisions'' Mercer2005, 13
-
-    % ``financial professionals behaved according to prospect theory and violated expected utility maximization.'' Abdellaoui2013, 411
-
-    % ``politicians' deviate from expected utility theory in the direction predicted by prospect theory but that these deviations are somewhat smaller than those of other people'' Linde2017, 101 THIS SPEAKS WELL ABOUT MY RESEARCH QUESTION IN TERMS OF EXTERNAL VALIDITY
-
-    % ``expert subjects do not seem to be immune to framing'' Fatas2007, 191
-
-    % ``results with inexperienced subjects support prospect theory much less than those of Quattrone1988.''
-
-
-
-% ``Technically, in order to explain a choice in terms of prospect theory one would have to identify how the actor (1) defines the reference point, (2) identifies the available options, and assesses the (3) value and (4) probability of each outcome. The analyst would then have to (5) modify the subjective probabilities by an appropriate probability-weighting function, and, finally, (6) show that the resulting of the preferred prospect or option exceeds the value of alternative.'' Levy1992, 296
-
-%% INCENTIVE EFFECTS
-% ``The implication, that low laboratory incentives may be somewhat unrealistic and therefore not useful in measuring attitudes toward "real-world" risks, is echoed by Kahneman1979, 265 '' Harrison2005, 1644-1645
-
-% ``With real payoffs, risk aversion increases sharply when payoffs are scaled up by factors of 20, 50, and 90 [...] In contrast, behavior is largely unaffected when hypothetical payoffs are scaled up.'' Harrison2005, 1653
-
-
-% ``But the application of the theory also raises dif tual and methodological issues'' Levy1992, 292
-
-% ``challenges to the external validity of prospect theory-based hypotheses for international behavior are much more serious than challenges to their internal validity'' Levy1997, 87
-
-% ``The experimental literature focuses primarily on choices involving either the domain of losses or the domain of gains but not a combination of the two.'' Levy1992, 295
-
-% ``the experimental designs are such that expected-utility theory and prospect theory give different predictions as to likely choices. This facilitates a test of the hypothesis that the combination of the value function and probability-weighting function lead individuals to prefer a prospect in spite of its lower value than the alternative.'' Levy1992, 293
-
-% ``Tversky1981 themselves recognize that their theory was developed for one-shot gambles [...] As Hirshleifer2001 1577 notes, translating evidence from psychology experiments to financial decision-making is not at all obvious.'' Ackert2006, 6 
-
-
-
-% ``In this paper we provide experimental evidence on behavior in a market setting as a guide for future theoretical work'' Ackert2006, 6 
-
-
-
 \section{Experimental Design: Buying Votes in the Lab}
 
-% formal model
-%Formal models can help experimentalists to determine which theoretical settings and equilibria are most relevant to a particular causal hypothesis (\cite{McDermott2002}, \cite{Aldrich2011} and \cite[174]{Barberis2013}). Thus, in \autoref{formal:model} we developed a vote-buying game within the Downsian paradigm \parencite{Downs:1957vg,Enelow:1990aa}. The idea was to test the descriptive accuracy of the game-theory model in an experimental context (\cite[559]{Bassi2011}, \cite{Dickson2011}, \cite{Aldrich2012}, \cite[361]{Tyszler2016}, \cite[1]{Vieider2019}). 
-
-We designed an economic experiment based on traditional theories of voting and vote buying. This feature is particularly relevant for our identification strategy because most traditional or ``spatial'' theories of vote buying are based on expected utility assumptions. This section empirically tests those assumptions. Epistemologically, an economic experiment based on classic utility-maximization principles becomes a ``crucial case'' if the goal is to test hypotheses in the context of prospect theory. Thus, the ``least likely'' design approach presented in this paper should improve the inferential leverage of our results \parencite[12]{Levy2008}, if any exists.% As \parencite[12]{Levy2008} explains, ``[i]nferential leverage from a least likely case is enhanced if our theoretical priors for the leading alternative explanation make it a most likely case for that theory.''
 
 
-%The model tried to account for several alternative causal explanations of vote buying. While there are a number of important issues that have been studied, the model paid attention to three of what we consider are the main ones. 
+We designed an economic experiment based on traditional theories of voting and vote buying. This feature is particularly relevant for our identification strategy because most traditional or ``spatial'' theories of vote buying are based on expected utility assumptions. This section empirically tests those assumptions. Epistemologically, an economic experiment based on classic utility-maximization principles becomes a ``crucial case'' if the goal is to test hypotheses in the context of prospect theory. Thus, the ``least likely'' design approach presented in this paper should improve the inferential leverage of our results \parencite[12]{Levy2008}, if any exists.
+
+
 
 % role
-%Building on the formal model, we designed a lab economic experiment. 
 As \autoref{experimental:design:fig} shows, at the beginning of every game, participants received a role at random. Following \textcite{Dickson2011}, roles were presented using neutral terminology to maximize experimental control. The design incorporated the following roles: \emph{party A}, \emph{party B}, or \emph{voter}. Every game was played among three players (one \emph{party A}, one \emph{party B}, and one \emph{voter}).
 
 \begin{figure}[h]
@@ -534,10 +427,6 @@ The substantive idea was to reflect the fact that some parties are wealthier tha
 % vote share
 Moving forward, both parties received at random an initial vote share, that is, a \emph{certain} number of (fictional) voters that were going to cast their votes for each party. Overall, this experimental condition mimics the degree to which an election is contested. This portion of the design accomplishes two goals. First, it puts parties in different environments of electoral contestation. In other words, it introduces the element of risk (of losing the election) to the game. Since voters win or lose points when their parties win or lose elections, this risk is also relevant for players acting in the ``voter'' role. Second, it gives (or does not give) voters a certain amount of electoral leverage. Since \textcite{Downs:1957vg}, traditional spatial theories of voting have considered that pivotal voters have more weight in an election. For instance, votes have more value in close electoral races. Thus, given that their votes are more decisive, voters might have incentives to sell them at higher prices. It is key in our experimental design that all of these pieces of information are public.
 
-% pivotal
-%Third, it allows to consider whether pivotal voters where targeted by clientelist parties more often than non-pivotal voters. Since \textcite{Downs:1957vg}, traditional spatial theories of voting have considered pivotal voters as more decisive. %Hence, in the model we accounted for such electoral scenarios. All in all, the formal model tries to incorporate these factors that might explain different vote-buying dynamics. 
-
-
 
 During the second stage, parties decide whether to buy votes and make offers to the voter. Experimental subjects acting in the ``party'' role that want to buy votes enter a number of points, which ranged from zero to the maximum assigned budget in that round.\footnote{Participants acting in the ``party'' role are told that offering a zero amount means that they do not want to buy votes at that time.} The design allows for simultaneous offers (i.e., offers from both parties), one offer, or zero offers. In the third stage, voters evaluate offers (if any). If the party(s) decided that it (they) did not want to make an offer at that time, the voter is told that the party(s) did not make an offer.\footnote{Voters are told that accepting the offer necessarily implies voting for that party. For simplicity, we did not include the possibility of defecting. We discuss the shortcomings of this limitation in the final portion of the paper. We encourage future designs to consider this feature.} 
 
@@ -552,7 +441,7 @@ Finally, the experiment was conducted in Chile by the \emph{Centre for Experimen
 All transactions were performed by exchanging experimental ``points.'' Again, we endeavored to employ neutral terminology to maximize experimental control \parencite{Dickson2011}. Thus, throughout all three games, participants bought and sold votes (if any) and accumulated and lost wealth expressed purely in experimental points. Every experimental point was equivalent to \$\Sexpr{as.numeric(unique(dat$session.config.real_world_currency_per_point))} CLP ($\approx$ \texteuro0.00045). Participants learned about the conversion rate when reading the initial instructions. Final payoffs were converted to actual currency at the end of the study.
 
 % external validity
-Finally, from an external validity standpoint, we believe that voters in real elections can estimate, with some degree of success, actual vote shares (for instance, by looking at electoral polls). Voters can also identify parties' ideological positions. For example, \textcite{Luna2005} identify a number of conditions that are associated with higher levels of elite-mass congruence in Latin America.\footnote{However, see \textcite{Visconti2021}.} Voters can also make inferences about a party's endowments and how those endowments could be redistributed in a clientelist fashion \parencite{Auyero2000}. In turn, the literature is consistent in that brokers also provide necessary information about available resources and how to gain access to them \parencite{Murillo2021a}. %In sum, we believe our design appropriately captures the decision-making process of political parties under risk.
+Finally, from an external validity standpoint, we believe that voters in real elections can estimate, with some degree of success, actual vote shares (for instance, by looking at electoral polls). Voters can also identify parties' ideological positions. For example, \textcite{Luna2005} identify a number of conditions that are associated with higher levels of elite-mass congruence in Latin America.\footnote{However, see \textcite{Visconti2021}.} Voters can also make inferences about a party's endowments and how those endowments could be redistributed in a clientelist fashion \parencite{Auyero2000}. In turn, the literature is consistent in that brokers also provide necessary information about available resources and how to gain access to them \parencite{Murillo2021a}. 
 
 
 
@@ -603,10 +492,6 @@ Second, Panel 2 in \autoref{m1plot} suggests that parties will consider sunk cos
 As per \autoref{eq:ols}, these main estimated treatment effects were calculated considering the contribution of other possible rival explanations of vote buying---i.e., core/swing voter, party resources, and pivotal voters. In Panel 3 of \autoref{m1plot}, we find that the smaller the party-voter distance, the more frequent the vote-buying offer is. In other words, we find some support for the core voter hypothesis: political parties buy more votes from voters that are ideologically \emph{closer} to them (not farther away). However, and counter to traditional core voter expectations, we also find that political parties buy these votes at relatively \emph{higher} prices (not lower). While we leave a more thorough explanation of this particular finding for future research, these results seem to suggest that, in fact, parties find unacceptable the idea of losing their \emph{own} supporters, so they buy them off more aggressively by overspending on vote buying, i.e., by offering more money for those votes. Substantively, we read this result as in line with the concepts of the ``endowment effect'' and ``loss aversion'' addressed above. That is, it seems to be bad to lose voters, but it seems to be even more painful for parties to lose their \emph{closest} supporters.
 
 In Panel 4, our results show that parties with larger budgets buy votes at higher prices. These results somewhat conform with \textcite[52]{Bahamonde2018}, who argues that clientelist parties in Brazil buy votes from the wealthy at higher prices. This form of costly clientelism is possible due to wealthier districts not only having higher personal incomes but also shifting the broker's vote-buying capacities upwards (see also \cite[55]{Hicken2007}). Thus, in such cases, parties with higher endowments will effectively be able to buy votes more expensively. Finally, in Panel 5 we find no support for the pivotal voter argument. That is, contested electoral scenarios and tight electoral races do not necessarily raise the market price of votes during campaigns. We believe this finding also supports our alternative framework of risky decision-making in the context of vote buying: parties do not treat clientelism in the typical ``insurance'' sense, that is, as an attractive strategy for cases when the expected electoral outcome is a loss. In fact, we find that parties find clientelism appealing depending on whether they are in the domain of losses or gains, and always considering a reference point. 
-
-
-
-% On the one hand, \textcite[12]{Weitz-shapiro} explains that researchers ``[a]lmost universally'' have studied the relationship between poverty and vote buying. In fact, \textcite{Brusco2004,Nazareno2008a,Stokes:2013cj} have explained that since the poor derive more utility from immediate transfers than the uncertain returns associated with future policy packages, clientelist political parties mostly target the poor. On the other, however, 
 
 
 
@@ -732,343 +617,3 @@ count <- comma(as.numeric(count)) # add comma
 \end{document}
 
 
-% ``[managers] believe that fewer risks should, and would, be taken when things are going well. They expect riskier choices to be made when an organization is `failing'.'' March1987, 1409
-
-% ``In classical decision theory, risk is most commonly conceived as reflecting variation in the distribution of possible outcomes.'' March1987, 1404
-
-% Scholars mostly agree on the positive correlation between poverty and clientelism \parencite{Calvo2004,Weitz-shapiro,Kitschelt2000,Kitschelt2015}.\footnote{Following \textcite[316]{Nichter2014}, clientelist vote-buying is defined as ``the distribution of rewards to individuals or small groups during elections in contingent exchange for vote choices.''} Since the poor derive more utility from immediate transfers than the uncertain returns associated with future policy packages, clientelist political parties mostly target the poor (\textcite{Brusco2004,Stokes:2013cj}). Indeed, \textcite[12]{Weitz-Shapiro:2014aa} explained that ``[a]lmost universally, scholars of clientelism treat and analyze [this] practice as an exchange between politicians and their poor clients.'' 
-
-% challenge: income
-% This agreement has recently been challenged \parencite[55]{Hicken2007}. \textcite{Gonzalez-Ocantos2012} and \textcite[]{Holland2015} found that income had little or no effect on vote-buying. For instance, \textcite[32]{Szwarcberg2013} ``challenges the assumption [that brokers] with access to material benefits will always distribute goods to low-income voters in exchange for electoral support.'' In fact, \textcite{Bahamonde2018} explains that non-poor individuals can be targeted when they are sufficiently noticeable, increasing compliance. He explains that wealthy houses in very poor neighborhoods in Brazil can be targeted too.
-
-
-% ``Expected-utility theory has dominated the analysis of decision-making under risk, both as a normative model of rational choice and a descriptive model of how people actually behave. But not all of its predictors appear to be fully consistent with observed behavior'' Levy1992a, 173
-
-% ``Recent years have witnessed increasing dLssatisfaction with expected utility (EU) theory as a descriptive model of choice under uncertainty.'' Battalio1990, 25
-
-
-% Risk is a central feature of political decision making
-% ``Risk is a central feature of political decision making'' \parencite[334]{Vis2011}. 
-
-% For instance, governments might risk political support when pursuing unpopular reforms \parencite{Vis2007,Vis2009,Weyland2002}.\todo{add more} 
-
-% Yet, vote buying is still a very common practice \parencite[F356]{Vicente2014}. For instance, in some countries vote buying is so deeply embedded in electoral politics that \textcite{Gonzalez-Ocantos2012} report that 24\% of registered voters in Nicaragua were offered a clientelist gift. 
-
-% Why do parties keep buying votes? 
-% \emph{Why do political parties buy votes?} The core of the answer rests on the idea that clientelist political parties resort to vote buying when anticipating electoral losses \parencite{Diaz-Cayeros2008}. But then, considering that resources aimed at buying votes are scarce, 
-
-% ``The expected-utility principle asserts that individuals attempt to maximize expected utility in their choices between risky options: they weight the utilities of individual outcomes by their probabilities and choose the option with the highest weighted sum''  Levy1992a, 173
-
-% ``The expected-utility principle posits that actors try to maximize their expected by weighting the utility of each possible outcome of a given course of action by the probability of its occurrence, summing over all possible outcomes for each strategy, and selecting that strategy with the highest expected utility.'' Levy1997, 88
-
-% is that parties anticipating electoral losses resort to alternative methods other than delivering policy packages \parencite{Kitschelt2000,Calvo2012a}. 
-
-% Since clientelist political parties operate in uncertain scenarios, the literature has described a few decision-making strategies parties employ, particularly, under contexts of risk. Overall, vote buying requires parties to sustain close relationships over time with their clients in a personal and individualized way \parencite{Auyero2000,Szwarcberg2013,Bahamonde2018}. Unfortunately, parties are left with no more than guesses about whether their clientelistic investments are effective or not. 
-
-
-% multiplicidad de approaches.
-% Instead, the clientelism literature has seen a proliferation of tangential answers. While all of them are contributions, they do not really tackle the afore mentioned question. \textcite{Dixit1996} explain that parties both swing and core voters, but that depends on a number of factors. \todo{add something}. \textcite{Nichter2008} (turnout-buying) is another very important contribution. Unfortunately, it deviates from the question by increasing the complexity on the varieties of clientelism. Similarly
-
-
-% this paper's contribution
-% The paper seeks to contribute to this issue by incorporating both structural and individual factors that foster clientelism in the same theory.
-
-% ``Since its formulation by Kahneman1979, prospect theory has emerged as a leading alternative to expected utility as a theory under risk.'' Levy1992a, 171
-
-% ``Kahneman1979 prospect theory, which provides a descriptive model of decision-making under risk.'' Ackert2006, 5
-
- % ``In theoretical terms, the S-shaped curve means that people tend to be risk averse in the domain of gains and risk seeking in the domain of losses; this is the crux of prospect theory. In short, prospect theory predicts that domain affects risk propensity. The third aspect of the value function is the asymmetric nature of the value curve; it is steeper in the domain of losses than in that of gains.'' McDermott1998, 29
-
-% ``[prospect theory] focuses attention on the context of a situation, which helps illuminate other important areas of research, including framing, uncertainty, accountability, escalation and commitment, sunk costs, and momentum effects.'' McDermott2004, 290
-
-
-% ``In most rational choice models [...] preferences themselves are assumed not to shift. This is not the case in prospect theory, where a decision- maker's risk propensity is expected to shift in response to changes in the environment.'' McDermott2004, 292
-
-% ``Empirical studies of risk taking [...] indicate that risk preference varies with context.'' March1987, 1412
-
-% ``The reference point is a critical concept in assessing gains and losses; thus, it is central to the notions of domain and risk.'' McDermott1998, 40
-
-% ``In prospect theory, value is a function of this change, in a positive or negative direction, rather than a result of absolute welfare, as is the case with subjective expected utility theory.'' McDermott1998, 28
-
-% ``reference point which is not equivalent to the status quo'' Levy1992a, 174
-
-% ``While normative theory implores decision makers to only consider incremental outcomes, real decision makers are influenced by prior outcomes.'' Thaler1990, 643
-
-
-% ``While students of economics and decision theory are implored to concentrate only on incremental costs, it is well established that real decision makers are often influenced by historical or sunk costs''  Thaler1990, 643
-
-% ``We begin by recognizing that most decision makers are influenced by prior outcomes. Our goal then is to investigate how prior gains and losses affect choices.'' Thaler1990, 643
-
-% ``we find that under some circumstances a prior gain can increase subjects' willingness to accept gambles. This finding is labeled the \emph{house money effect'}. In contrast, prior losses can decrease the willingness to take risks. We also find that when decision makers have prior losses, outcomes which offer the opportunity to `break even' are especially attractive.''\footnote{Italics in original.} Thaler1990, 643-644
-
-% ``Our experimental results provide support for a house money effect. Traders' bids, price predictions, and market prices are influenced by the amount of money that is provided prior to trading.'' Ackert2006, 5
-
-% ``An initial loss can cause an increase in risk aversion such that prior losses reduce risk-taking behavior'' Ackert2006, 6
-
-% ``At first consideration Thaler1990's evidence may appear to contradict prospect theory because it suggests risk-seeking behavior after a windfall, whereas prospect theory suggests risk aversion in the domain of gains. However, a house money effect is not inconsistent with prospect theory because prospect theory was developed for one-shot gambles.'' Ackert2006, 6
-
-% ``Our results suggest that applying aspects of prospect theory to model dynamic financial market behavior is problematic [:] Our results can be interpreted as evidence that risk aversion decreases with found money.'' %% THIS IS OPPOSITE WITH WHAT I'VE GOT Ackert2006, 7
-
-% ``People appear to be less risk averse after a windfall of money'' Ackert2006, 15
-
- % ``negative information is more influential than comparable positive information'' Lau1985, 132
-
- % ``This attention to losses speaks to a wide variety of literature in political science'' McDermott2004, 298
-
-% ``the `adjustment and anchoring' heuristic. Once people have an initial assessment of a problem---even if the assessment is arbitrary---they will use it to anchor subsequent judgments and thus inadequately revise their beliefs to accommodate new information.'' Mercer2005, 7-8
-
- % ``The situation in a large sense determines the domain of action.'' McDermott2004, 294
-
-
-% ``How is risk-taking behavior affected by prior gains and losses? The question is quite general since decisions are rarely made in temporal isolation. Current'' Thaler1990, 643
-
- % ``Prospect theory is based on psychophysical models, such as those that originally inspired Bernoulli's expected value proposition.'' McDermott1998, 18
-
-% ``Prospect theory posits that individuals evaluate outcomes to deviations from a reference point rather than with respect to net that their identification of this reference point is a critical variable, that they give more weight to losses than to comparable gains, and that they are generally averse with respect to gains and risk-acceptant with respect to losses''  Levy1992a, 171
-
-% ``In the domain of gains [...] the underweighting of probabilities works together with the concavity of the value function to undervalue the gamble relative to the certain outcome, and thus to encourage risk aversion. In the the domain of losses, the underweighting of probabilities [...] reduces the weights given to risky negative prospects [making] them less unattractive, and thus encouraging risk-seeking.'' Levy1992a, 183
-
-% ``Thus the over overweighting (and perhaps the exaggeration) of small probabilities is one possible explanation for the appeal of long-shot gambling, and it also might reinforce the tendency for risk averse individuals to insure against rare but catastrophic losses'' Levy1992a, 184
-
- % ``prospect theory accounts for these discrepancies by noting the extreme (over)weight and attention that individuals give to small probabilities that potentially involve either huge gains (winning the lottery) or huge losses (losing your house in a fire). This phenomenon helps account for worst-case scenario planning.'' McDermott1998, 32
-
- % ``Risk-seeking in the domain of losses should led decision-makers to take \emph{disproportionate risks} to avoid certain losses, and risk aversion in the domain of gains should led decision-makers to be \emph{excessively eager} to secure certain gains.''\footnote{My emphases.} Levy1992, 299-300
-
-    % ``people have difficulty with probability at extreme ranges: sometimes people may treat highly likely but uncertain events as certain; on other occasions, people may treat highly unlikely events as impossible.'' McDermott1998, 30
-
- %``individuals are often willing to tolerate a prospect which is significantly lower in expected value than an alternative in order to avoid a certain loss or secure a certain gain.''  Levy1992, 297
-
-
-% ``Experimental evidence suggests that people tend to evaluate choices with respect to a reference point, overweight losses relative to comparable gains, engage in risk-averse behavior in choices among gains but risk-acceptant behavior in choices among losses, and respond to probabilities in a nonlinear manner.'' Levy1997, 87
-
-
-% ``We should say, for example, not that an actor pursued a risky policy because she was in the domain of losses, but that because of risk-seeking with respect to loses she adopted a more risky alternative than predicted by a standard expected-value calculations.'' Levy1992, 298
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Prospect theory and EU incosistencies
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% ``It is not certain, however, that managers believe that risk and retum are positively correlated.'' March1987, 1405
-
-% ``argue here that the central task of asset pricing is to examine how expected returns are related to risk and to investor misvaluation.'' Hirshleifer2001, 1534
-
-% ``No single alternative consistently organizes choices. Among the more important inconsistencies, we identify conditions generating systematic fanning in of indifference curves in the unit probability triangle, and find risk-loving over a number of gambles with all positive payoffs, in cases where prospect theory predicts risk aversion.'' Battalio1990, 25
-
-
-% ``Our overall conclusion is that none of the alternatives to expected utility theory considered here consistently organize the data, so we have a long way to go before having a complete descriptive model of choice under uncertainty.'' Battalio1990, 46
-
-
-
-% ``there are a number of conceptual and methodological problems which must be overcome before hypotheses based on prospect theory can be constructed and tested against the empirical evidence'' Levy1992, 283-284
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% PROBLEMS OF PROSPECT THEORY
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% ``Risk is an even more difficult variable to operationalize than domain. The central concern is fear of tautological definition; risk cannot be determined by domain, on the one hand, or by outcome, on the other.'' McDermott1998, 38
-
-%``Prospect theory may appear to be less precise than rational choice theories claim to be, but, in reality, prospect theory proves to be more analytically maleable. This is because, with rational choice theories, utilities are notoriously difficult to assess, and basic supporting axioms are frequently violated in individual behavior.'' McDermott1998, 36
-
-% ``This model failed in predicting outcomes in many instances because it was obvious that the value that a particular payoff held for someone was not always directly related to its precise monetary worth.'' McDermott1998, 15
-
-
-% ``Prospect theory implies that the magnitudes of the losses need not be that large in order to induce risk-seeking behavior [...] even small losses appear to have significant consequences'' Levy1992, 297
-
-% ``Prospect theory suggests another hypothesis as well: actors perceive themselves to be in the domain of losses more often than we would normally expect'' Levy1992 291  (HERE CITE LAU)
-
- % ``Loss aversion also helps to explain why states are more concerned to prevent a decline in their reputation or credibility than to increase it by a comparable amount'' Levy1992, 285
-
-% ``One implication of loss aversion is that people tend to value what they have more than comparable things they do not have, and that the disutility of relinquishing a good is greater than the utility of acquiring it.'' Levy1997, 89
-
-
-% ``the very fact of a loss is often more important than the magnitude of the loss and that large losses may not be that much worse than smaller losses'' Levy1992, 287
-
-% ``A change of reference point alters the preference order for prospects. In particular, the present theory implies that a negative translation of a choice problem, such as arises from imcomplete adaptation to recent losses, increases risk seeking in some situations [...] the tendency to bet on long shots increases in the course of the betting day provides some support for the hypothesis that a failure to adapt to losses or to attain an expected gain induces risk seeking'' \parencite[286-287]{Kahneman1979}
-
- % As \parencite[297]{Levy1992} explains, the magnitudes of the losses need not be that large in order to induce risk-seeking behavior, even small losses should induce the risk-seeking behavior. 
-
-% ``prospect theory's limited influence in political science'' Mercer2005, 2
-
-% ``Prospect theory is influential in political science only among international relations (IR) theorists.'' Mercer2005, 2
-
-% ``Although international relations theorists who study security have used prospect theory extensively, Americanists, comparativists, and political economists have shown little interest in it.'' Mercer2005, 1
-
-% Fanis2004  
-% ``Expected utility theory explains collective action as an attempt by individuals to maximize their gains. In contrast, my application of prospect theory to collective action suggests that people are motivated to participate in collective action by a fear of loss.'' Fanis2004, 363
-
-% ``Weyland extends loss aversion to comparative politics. He challenges the view that dictatorships engage in radical economic reform more easily than democracies by emphasizing the importance of loss aversion for both leaders and citizens in Latin American democracies.'' Mercer2005, 12
-
-% welfare state
-    % Vis2009,Vis:2010tq ``it shows that an improving political position (a gain) is the necessary condition for not-unpopular reform while for unpopular reform it is a deteriorating socio-economic situation (a loss)'' (Vis2009, 395)
-
-% issue salience
-% ``Depending on the initial baseline's position relative to the optimal outcome, that same outcome could be reached by either a negative externality change (if the base is lower than the optimal outcome) or a positive externality change (if the base is higher than the optimal outcome).'' Steinacker2006, 474
-
-
-
-% party platform change
-% ``due to loss aversion evoked by the expectation of losing office, government parties, on average, change their platform more than opposition parties do.'' Schumacher2015a, 1051
-
-
-% advances in economics 
-
-
-% Koszegi2007: focuses on ``delayed consequences, to study preferences over monetary risk.''
-
-% ``First---and second---generation prospect theory have a common limitation: the reference points from which prospects are evaluated are assumed to be certainties [so they extend PT]  by allowing reference points to be uncertain.'' Schmidt2008
-
-%%% In Comparative Politics:
-
-% ``the bias toward experiments focused primarily on American topics is reflected in the predominance of voting behavior as a primary concern of experimental work.'' McDermott2002, 44
-
-    
-% personality
-
-%``prospect theory works at the individual level of analysis. But prospect theory is not a traditional personality theory; that is, an analyst need not know much about the individual character or history of a particular leader in order to explain or predict behavior. Rather, it is a theory concerned with the importance and impact of the environment on the person.'' McDermott2004, 293
-
-% ``Attitudes toward risk are usually pictured as stable properties of individuals, perhaps related to aspects of personality development or culture.'' March1987, 1406
-
-% ``This means that the propensity to take risks is thus not a stable personality trait, with some individuals being prone to take risks while others always steer away from them'' Vis2011, 335
-
-%%%% "instant endowment effect"
-% ``after a series of gains an individual will treat the possibility of a subsequent setback as a loss rather than as a foregone gain, overweight it, and engage in risk-seeking behavior to maintain her cumulative gains against that loss'' Levy1997, 91
-
-%%%% Formal Models
-
-% Aldrich2011 gives an extensive review about the use of experiments and formal models.
-
-% ``formal models can help experimentalists determine which settings are most critical to a particular causal hypothesis and experimenters can inform formal modelers by evaluating their theoretical predictions' performance in relevant environs.'' Aldrich2011
-
-% ``Formal models present hypotheses, which are then tested under experimental conditions. The experimental findings are used to refine and develop hypotheses to produce new theoretical models and predictions, which can then be experimentally tested in turn. Political scientists might benefit from this process as well in order to both establish empirical validation of formal models and speed the cumulation of knowledge'' McDermott2002, 45
-
-% ``research agendas that integrate experimental and formal modeling pursuits provide a portal for more effective interdisciplinary work and can improve the applicability and relevance of formal models to a wide range of important substantive questions in political science.'' Aldrich2011
-
-% ``paying subjects for their participation as a means of aligning their incentives with those of analogous actors in the formal models.'' Aldrich2011
-
-% ``A significant body of theoretical work now incorporates the ideas in prospect theory into more traditional models of economic behavior, and a growing body of empirical work tests the predictions of these new theories.'' Barberis2013, 174
-
-
-
-% \parencite{Downs:1957vg} the value of voting decreases as the size of the electorate increases.
-
-% Downsian/Spatial
-
-% they do a ``strategic voting in a controlled (laboratory) environment. Our aim is to carefully isolate important determinants of the strategic vote. In particular, we are interested in the effect on strategic voting of information about others' preferences'' Tyszler2016, 361
-
-% McDermott2002 provides a good summary of Experimental Methods in Political Science, with an emphasis on EXPERIMENTAL VOTING AND ELECTIONS Since
-
-
-% ``allow us to learn about individuals' intrinsic motivations by observing deviations from game-theoretic predictions''  Dickson2011
-
-% ``A growing body of work has used laboratory voting games to evaluate theories of voting where subjects are given monetary incentives to induce them to have preferences over outcomes as in the evaluated theory.'' Bassi2011, 559
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Experiments invalidating EUT
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% ``According to prospect theory, we make a decision dependent on our perception of whether the decision involves making a gain or a loss. This is at odds with the consistency or invariance assumptions of rational theory.'' Fatas2007, 168
-
-
-
-% ``Thus expected-utility theory is more parsimonious than prospect theory.'' Levy1992, 296
-
-
-% ``These alternatives to EU theory often hold quite different views of the behavioral processes underlying choice under uncertainty, and make a number of new predictions that have yet to be subject to thorough experimental investigation.'' Battalio1990, 25
-
-% % ``Prospect theory has received little attention in the fields of American politics and comparative politics, with a few exceptions (e.g., Hansen 1985, Pierson 1994, Weyland2002). Most surprising, political economists have shown no interest in prospect theory.'' Mercer2005, 2
-
-% ``Comparative Politics (CP) have been particularly slow on incorporating prospect theory in their work'' Vis2011, 338-339
-
-% ``experiments are a promising research tool that have the potential to make substantial contributions to the study of democracy and development.'' DeLaO2011
-
-% ``formal models can help experimentalists determine which settings are most critical to a particular causal hypothesis and experimenters can inform formal modelers by evaluating their theoretical predictions' performance in relevant environs.'' Aldrich2011
-
-% ``Formal models present hypotheses, which are then tested under experimental conditions. The experimental findings are used to refine and develop hypotheses to produce new theoretical models and predictions, which can then be experimentally tested in turn. Political scientists might benefit from this process as well in order to both establish empirical validation of formal models and speed the cumulation of knowledge'' McDermott2002, 45
-
-% ``research agendas that integrate experimental and formal modeling pursuits provide a portal for more effective interdisciplinary work and can improve the applicability and relevance of formal models to a wide range of important substantive questions in political science.'' Aldrich2011
-
-% ``prospect theory does not depend on assumptions of individual behavior that are rooted in economic models that presume that individual actors naturally incorporate invariance, dominance, and transitivity into their decision-making. Rather, prospect theory develops its assumptions empirically, through experimentation.'' McDermott2004, 291
-
-% Aldrich2012 develop game-theoretical expectations and designed an experiment.
-
-
-% ``In between-subjects designs, different groups of subjects are randomly assigned to various experimental or control conditions.'' McDermott2002, 33
-
-% ``this paper uses the `between-sample' (between individual) variation in loss aversion.'' Hwang2021, 11
-
-% ``All variations were made across subjects'', Tyszler2016, 371
-
-% ``Every individual is informed about his or her own preferences before each election. All this is common knowledge.'' Tyszler2016, 371
-
-% ``No other methodology can offer the strong support for the causal inferences that experiments allow'' McDermott2002, 38
-
-% ``Another approach to the problem of creating meaningful monetary incentives involves conducting the research in poorer societies where the ratio of monetary reward to normal income is relatively high.'' Levy1997, 95
-
-% ``We need experiments because they help to reduce the bias that can exist in less rigorous forms ofobservation'' McDermott2002, 33
-
-
-% this is NOT my design
-% In within-subject de- signs, otherwise known as the A-B-A experimental design strategy, each person serves as his or her own control by participating across time in both control and treatment conditions. Subjects begin with a baseline (A), are then administered a treatment or manipulation condition (B), and are measured again at baseline (A) once the treatment ends McDermott2002, 33
-
-
-% ``In most economics experiments, subjects receive cash payments that depend on their own choices in the laboratory and, in the case of game-theoretic experiments, on the choices of other people.'' Dickson2011
-
-% ``By controlling for preferences using monetary incentives, experimental economists attempt to focus on testing other aspects of their theoretical models, such as whether actors make choices that are consistent with a model's equilibrium predictions, or the extent to which actors' cognitive skills enable them to make the optimal choices predicted by theory.'' Dickson2011
-
-% ``Morton:2010ly summarize existing norms by estimating that payments are typically structured to average around 50 to 100 percent above the minimum wage for the time spent in the lab. Such considerations aside, resource constraints give experimentalists a natural incentive to minimize the scale of payoffs in order to maximize the amount of data that can be selected---as long as the payments that subjects receive are sufficient to motivate them in the necessary way.'' Dickson2011
-
-
-% ``Bassi2011 suggest that the scale of financial incentives can affect experimental results [...] The fit between subjects' behavior and game-theoretic predictions became monotonically stronger as incentives increased'' Dickson2011
-
-% party a and b
-% ``The roles assumed by subjects, and the alternatives that subjects face, are generally described using neutral terminology with a minimum of moral or emotional connotations'' Dickson2011
-
-% ``The abstract experimental tasks associated with this form of stylization are used in part because of a desire to maintain experimental control.'' Dickson2011
-
-
-%As \textcite[1405]{March1987} explain, rational agents in the EUT framework, ``when faced with one alternative having a given outcome with certainty, and a second alternative which is a gamble but has the same expected value as the first, [agents] will choose the certain outcome rather than the gamble.''% \footnote{This implies that decision makers should be compensated for taking risky decisions \parencite[1405]{March1987}. Note that the gamble has the \emph{same} expected value (mean) but differs with the certain outcome in its risk (variance).}
-
-% For instance, electoral explanations based on the EUT contend that voters see elections as ``investments'' \parencite{Downs:1957vg,Bassi2011}, a notion that also holds for clientelist political parties under risk \parencite{Diaz-Cayeros2008}. 
-
-% Importantly, it should not matter whether the voter is a swing or a core voter. 
-% Importantly, it should not matter whether the voter is a swing or a core voter. Besides risking electoral support from the wealthy \parencite{Weitz-shapiro} or from society in general \parencite{GonzalezOcantos2014}, when clientelist political parties are probable winners, they incur in the additional risk of buying votes from unlikely voters, irregardless of where that voter is in the swing-core continuum. Given the impossibility of accurate monitoring \parencite{Nichter2008,Hicken2020}, in risky contexts parties avoid the (small) probability of losing the election by diversifying their electoral portfolio. 
-
-
-% 
-\subsection{A Formal Model of Vote Buying}\label{formal:model}
-
-We consider an electorate of $n$ voters. Voters cast votes for a leader to implement a common policy $\gamma$ from the set $\Gamma=\{1,2,...,100\}$. Each citizen $i$ has an ideal point $x_i$, which is an \emph{iid} draw from an uniform distribution over $\Gamma$. When policy $\gamma$ is implemented, payoffs of citizen $i$ are given by $u(x_i,\gamma)=D-\vert x_i-\gamma \vert$, where $D$ represents the utility of implementing any given policy. This payoff can be incremented by transferences from both parties to voter $i$.
-
-In this election, there are two candidates. One ``left-wing'' party and one ``right-wing'' party. The left-wing (right-wing) candidate represents a policy $\gamma_L$ ($\gamma_R$), which is an \emph{iid} draw from an uniform distribution over $\{1,...,50\}$ ($\{51,...,100\}$). The location of these policies ($\gamma_L$ and $\gamma_R$) give us the number of voters $n_L$ leaning towards the left-wing candidate, while the number of voters leaning towards the right-wing party is given by $n_L+n_R=n$. While we consider that voters are attached to an ideological continuum, we do so with the sole purpose of modeling preferences---both formally and experimentally.\footnote{Ultimately, experimental subjects are not told anything about ideology. They only observe that there are a number of ``points'' associated with the victory of party A or party B. In this sense, voters lean (``ideologically'') towards the party that gives them more points.}
-
-Both parties negotiate with only one of these $n$ voters. That voter is randomly selected from the total population $n$. Observe that the higher the $n$, the lower the representation in the election of this voter. That is, a larger $n$ necessarily implies that every individual electoral choice matters less. However, if $n$ is small, negotiating with this voter may be more attractive to political parties. This is because negotiating with a large number of voters is costly. We assume that each party has a budget ($B$) that they can use to buy votes. If a party decides not to negotiate with the voter (or the voter does not accept the offer), the party keeps this budget. The profits of party $i$ is given by,
-
-\begin{equation}
-\begin{aligned}
-  \pi_i(s_i,a_j)=W\cdot e_i+(1-s_i\cdot a_j )\cdot B
-\end{aligned}
-\end{equation}
-
-where $W$ ($W\geq B$) is a constant that represents how much each party values winning the election, $e_i=1$ if party $i$ wins the election, 0 otherwise, and $s_i$ is the fraction of $B$ that the party offers to voter $j$ who can accept the offer ($a_j=1$) or not ($a_j=0$). We study one version of this party-voter interaction, namely, when both parties make simultaneous offers to the voter, and voters decide whether to accept the offer or not. 
-
-%We study two versions of this party-voter interaction. One is where both parties make simultaneous offers to the voter, and she decides whether to accept the offer (vote-buying case). Another one is where the voter can make private offers to both parties, and then the party decides if to pay or not for that voter's vote (vote-selling case).
-
-The timing of the game is as follows: at the beginning of the game, $n$ voters and two political parties are randomly located on their respective ideal points: voters along $\Gamma$, the ``left-wing'' candidate along $\{1,...,50\}$, and the ``right-wing'' candidate on $\{51,...,100\}$. All locations are public information, as well as every party's budget $B$, the total number of voters ($n$), and the number of supporters of each party ($n_L$ and $n_R$). In this game, each party simultaneously decides whether to make a vote-buying offer to the voter. If a party decides to negotiate with the voter, the party privately offers the voter to buy his vote. Then the voter decides whether or not to take the offer, or which one to accept if he receives two offers. If he accepts an offer, he should vote for that candidate.\footnote{It is important to consider that to simplify the game (and the experiment), accepting the offer necessarily implies compliance. That is, accepting the offer means voting for the party the voter accepted the offer from. We leave for future research the case where the voter may defect.} %On the vote-selling case, the voter may privately propose a certain amount to each party in exchange for her vote. Then the parties decide if to pay or not the offer. The voter then decides which one to accept, if any. In this case, the voter offers to one or both parties, and each proposed amount might be different.
-
-\paragraph{Equilibrium} In this case, both parties can offer certain amounts in exchange for electoral support. Note that parties only have incentive to negotiate with a voter if he is the pivotal voter. That means that $\vert n_L -n_R \vert \leq 1$, and that voter $i$ supports the ex-ante winner of the election ($i\in max\{n_L,n_R\}$). The voter prefers the party closer to her ideal point. If both parties are located at the same distance, the voter is indifferent. Denote by $i^*\in \{L,R\}$ the preferred party of the voter, and $-i^*$ the other party. 
- 
-Note that, naturally, both parties will want to make different offers. If the voter is pivotal, the less preferred party has incentive to offer him a certain amount $m_{-i^*}$, such that he perceives more utility voting for that party rather than voting for the opposite party, expressed as follows:
-
-\begin{equation}
-\begin{aligned}
-    m_{-i^*} &\geq \left( D-\vert x_{i^*}-\gamma_{i^*} \vert \right) - \left( D-\vert x_{i^*}-\gamma_{-i^*} \vert \right)\\
-     &=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert . 
-\end{aligned}
-\end{equation}
-
-Parties expect winning the election but have limited budgets. Hence, they want to win the election at a minimum cost. Given that $\vert x_{i^*}-\gamma_{-i^*} \vert >\vert x_{i^*}-\gamma_{i^*} \vert$, it is more difficult for the opposite party to incentivize the voter to change votes. If the opposite party offers to the voter all its budget $m_{-i^*}=B$, the party $i^*$ may offer him $m_{i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert+B$ and the voter will end up indifferent to both parties. Therefore, in equilibrium, the preferred party offers $m_{i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert+B$, the opposite party offers $m_{-i^*}=B$, and the voter accepts the offer of party $i^*$.
-
-
-%If party $-i^*$ offers the voter $m_{-i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$, he will be indifferent between voting for party $i^*$ or party $-i^*$. Both offers $m_{i^*}=0$ and $m_{-i^*}=\vert x_{i^*}-\gamma_{-i^*} \vert- \vert x_{i^*}-\gamma_{i^*} \vert$ are the minimum amount, but enough to make the pivotal voter indifferent between both political parties. Indifference gives the party some electoral advantage of winning of the election. Voter indifference gives two possible Nash equilibria. In one equilibrium the voter rejects the offer and votes for $i^*$. In the other equilibrium, the voter accepts the offer and the elected party is $-i^*$. If individuals are utility maximizers, they should be indifferent between these two equilibria. %However, if we frequently observe that voters reject offers, this would give us some light that the players have other motivations. For example, more politicized players may be more likely to reject offers from the less preferred party.
