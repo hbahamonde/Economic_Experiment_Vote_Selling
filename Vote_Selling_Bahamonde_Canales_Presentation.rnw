@@ -327,12 +327,24 @@ options(scipen = 99999999999)
 
 \miniframeson
 \begin{frame}[c]{Argument}
-   \huge {\bf Vote-buying will be higher when parties},
-   \centering
+
+\centering {\bf Vote-buying will be higher when parties}...\vspace{1cm}
+
     \begin{itemize}
-      \item[\checkmark] {\color{blue} Are probable winners}---{\color{gray}risk-averse in the domain of gains}.\pause
-      \item[\checkmark] {\color{blue} Have experienced losses in the past} ({\color{blue}sunk costs})---{\color{gray}risk-seeking in the domain of losses}.
+      
+      \item Risk-aversion in the domain of {\color{dkgreen}{\bf gains}}:
+        \begin{itemize}
+          \item[\checkmark] Are {\color{dkgreen}wining} the election.
+          \item[\checkmark] Deal with their own supporters (parties would hate to lose already {\color{dkgreen}acquired assets})\pause
+        \end{itemize}
+
+          \item Risk-seeking in the domain of {\color{red}{\bf losses}}.
+            \begin{itemize}
+              \item[\checkmark] Have experienced {\color{red}losses} in the past (sunk costs).
+            \end{itemize}
+    
     \end{itemize}
+
 \end{frame}
 
 
@@ -344,7 +356,7 @@ options(scipen = 99999999999)
 \begin{frame}[c]{Clientelism and the Expected Utility Theory}
   \begin{itemize}
     \item EUT was one of the first theories of decision making under risk.\pause
-    \item Since its introduction, it has \emph{dominated} political science as a field (including the vote-buying lit.).\pause
+    \item Since its introduction, it has \emph{dominated} political science.\pause
     \item {\bf The problem}: most of the literature assumes that in the party's decision-making process:\pause
               \begin{enumerate}
                   \item {\color{blue}Losses and gains affect in a {\bf comparable} way}.\\
@@ -371,7 +383,8 @@ options(scipen = 99999999999)
     {\tiny\color{gray} Dixit and Londregan (1996) and Stokes (2005).}\pause
     %\item Some state ``that our knowledge of who parties target remains incomplete.''\\
     %{\tiny\color{gray} Carlin and Moseley (2015).}\pause
-    \item {\color{blue}We contend that this is a \emph{very} important question, yet one that the literature has failed to clarify}.
+    \item {\color{blue}This is a \emph{very} important question, yet the literature has failed to answer it}.\\
+    {\tiny\color{gray} Carlin and Moseley (2015).}
   \end{itemize}
 \end{frame}
 
@@ -408,7 +421,7 @@ options(scipen = 99999999999)
 
 
     \begin{itemize} 
-      \item[] {\color{white}\underline{To Prospect Theory} {\color{white}\tiny{(Kahneman and Tversky, 1979)}}:}
+      \item[] {\color{white}\underline{To Prospect Theory}:}\\{\color{white}\tiny{Kahneman and Tversky (1979)}}
         \begin{itemize}
           \item[] {\color{white}{\bf Reference dependence}.}
           \item[] {\color{white}{\bf Value function}.}
@@ -445,7 +458,7 @@ options(scipen = 99999999999)
 
 
     \begin{itemize} 
-      \item[] \underline{To Prospect Theory} {\color{gray}\tiny{(Kahneman and Tversky, 1979)}}:
+      \item[] \underline{To Prospect Theory}:\\{\color{gray}\tiny{Kahneman and Tversky (1979)}}
         \begin{itemize}
           \item[1.] {\bf Reference dependence}.
           \item[2.] {\bf Value function}.
@@ -532,12 +545,20 @@ options(scipen = 99999999999)
 \miniframeson
 \begin{frame}{Prospect Theory: Implications for Vote-Buying}
 
-\underline{Vote-buying will be higher when parties},
-
-\begin{enumerate}[<+->]
-      \item {\bf Are probable winners}: due to {\bf loss aversion}, parties will find {\bf intolerable} the idea of {\bf losing the supporter base they already have} ({\color{blue} decision-makers are more concerned with preventing a decline than increasing gains}; risk-aversion).
-      \item {\bf Have experienced losses in the past} (sunk costs): alter the  reference point, making vote-buying an attractive strategy ({\color{blue}risk-seeking}).
+%\underline{Vote-buying will be higher when parties},
+% ({\color{blue} decision-makers are more concerned with preventing a decline than increasing gains}; risk-aversion)
+\begin{enumerate}%[<+->]
+      \item Due to {\bf loss aversion} parties will find {\bf intolerable} the idea of {\bf losing the supporter base they already have}.
+        \begin{itemize}
+          \item[\checkmark] {\bf Are probable winners}.
+          \item[\checkmark] {\bf When dealing with own supporters}.
+        \end{itemize}
+      \item Since past loses alter the reference point, incumbents will buy more votes when they've spent/lost a lot in the past.
+        \begin{itemize}
+          \item[\checkmark] {\bf Sunk costs are high}. \pause
+        \end{itemize}
       %\item in the domain of gains, risk-averted decision-makers are excessively eager to secure gains, while risk-seeking decision-makers take disproportionate risks to avoid certain losses.
+      \item [] {\color{blue}Decision-makers are more concerned with preventing a decline than increasing gains}.
 \end{enumerate}
 
 \end{frame}
@@ -617,7 +638,7 @@ options(scipen = 99999999999)
 \begin{column}{.48\textwidth}
 
 
-\includegraphics[scale=0.028, center]{payoffplot.png}
+\includegraphics[scale=0.45, center]{payoffplot.png}
 
   \end{column}
   \end{columns}
