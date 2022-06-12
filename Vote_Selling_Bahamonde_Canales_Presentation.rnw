@@ -486,7 +486,7 @@ options(scipen = 99999999999)
   \begin{column}{.48\textwidth}
 
 \begin{itemize}[<+->]
-      \item[1.] {\bf Reference dependence}. Elements that influence decisions,
+      \item[1.] {\bf Reference dependence}. Elements that influence decisions:
           \begin{itemize}
             \item[\checkmark] {\color{blue}context} in which the decision-making processes take place.
             \item[\checkmark] {\color{blue}changes of wealth}, rather than final asset positions.
@@ -515,7 +515,7 @@ options(scipen = 99999999999)
   \begin{column}{.48\textwidth}
 
 \begin{itemize}[<+->]
-      \item[2.] {\bf Value function}. The asymmetrical curvature of the value function does influence decisions,
+      \item[2.] {\bf Value function}. The asymmetrical curvature of the value function does influence decisions:
           \begin{itemize}
             \item[\checkmark] Individuals are {\color{blue}risk-averse} in the domain of {\color{blue}gains}.
             \item[\checkmark] Individuals are {\color{blue}risk-acceptant} in the domain of {\color{blue}losses}. 
@@ -551,14 +551,13 @@ options(scipen = 99999999999)
       \item Due to {\bf loss aversion} parties will find {\bf intolerable} the idea of {\bf losing the supporter base they already have}.
         \begin{itemize}
           \item[\checkmark] {\bf Are probable winners}.
-          \item[\checkmark] {\bf When dealing with own supporters}.
+          \item[\checkmark] {\bf When dealing with own supporters}.\pause
         \end{itemize}
       \item Since past loses alter the reference point, incumbents will buy more votes when they've spent/lost a lot in the past.
         \begin{itemize}
           \item[\checkmark] {\bf Sunk costs are high}. \pause
         \end{itemize}
       %\item in the domain of gains, risk-averted decision-makers are excessively eager to secure gains, while risk-seeking decision-makers take disproportionate risks to avoid certain losses.
-      \item [] {\color{blue}Decision-makers are more concerned with preventing a decline than increasing gains}.
 \end{enumerate}
 
 \end{frame}
@@ -570,12 +569,11 @@ options(scipen = 99999999999)
 \begin{frame}[c]%{Experimental Design: Setup}
   \begin{itemize}
     \item The experiment was conducted in Chile {\tiny\color{gray}(April/May 2021).} 
-    \item \texttt{O-tree} (\texttt{Z-tree}). {\tiny\color{gray}Fischbacher 2007.}
+    \item \texttt{O-tree} (\texttt{Z-tree}). {\tiny\color{gray}Fischbacher (2007).}
     \item All participants were required to successfully complete two practice rounds.
     \item Show-up fee of \$2,000 CLP ($\approx$ 2.1\texteuro).
     \item Every game was played between three people: two parties and one voter.
-    \item All transactions were performed exchanging experimental ``points.''\\
-    {\tiny\color{gray}(1 point = \$\Sexpr{as.numeric(unique(dat$session.config.real_world_currency_per_point))}).}
+    \item All transactions were performed exchanging experimental ``points.'' {\tiny\color{gray}1 point = \$\Sexpr{as.numeric(unique(dat$session.config.real_world_currency_per_point))}.}
     \item \Sexpr{as.numeric(length(unique(v.buying.dat$participant.code)))} subjects were recruited. 
     \item Each subject played the game three times (N = \Sexpr{as.numeric(nrow(dat.v.b))}).
     \item In-between subjects experimental design.
@@ -598,7 +596,7 @@ options(scipen = 99999999999)
     \item[3.] {\bf Parties}: {\color{blue}endowments} (points to buy votes, if any).\\
     {\tiny\color{gray}But both parties receive the same endowment in the same game.}
 
-    \item[4.] {\bf Parties}: {\color{blue}vote shares} (number of votes each party \emph{will} receive---excluding the ``voter'' participant.
+    \item[4.] {\bf Parties}: {\color{blue}vote shares} (number of votes each party \emph{will} receive, excluding the ``voter'' participant.
 
     \item Every randomization was common knowledge.
     
@@ -648,7 +646,7 @@ options(scipen = 99999999999)
 
 \section{Statistical Analyses}
 
-\subsection{Dependent Variable and Predictions}
+\subsection{Dependent Variable and Hypotheses}
 
 \miniframeson
 \begin{frame}%{Payoffs}
@@ -885,7 +883,7 @@ options(scipen = 99999999999)
 
 % 0
 \miniframeson
-\begin{frame}[c]
+\begin{frame}[c]\vspace{-1.5cm}
         \begin{center}
           \includegraphics[scale=.5, center]{m1plot.png}
           \end{center}
@@ -920,7 +918,7 @@ options(scipen = 99999999999)
       \begin{itemize}
         \item {\bf Parties are risk-seeking in the domain of losses}: unlike EUT, parties do consider sunk costs, buying more votes to compensate for past losses.
 
-        \item[] Decision-makers try to break-even.
+        %\item[] Decision-makers try to break-even.
       \end{itemize}
 \end{column}
 \hfill%
@@ -939,7 +937,7 @@ options(scipen = 99999999999)
       \begin{itemize}
         \item {\bf Core/swing voters}: Parties buy more votes at higher (not lower) prices from closest supporters.
 
-        \item[] {\color{blue}Unlike spatial theories of voting, core voters cost more (not less)}.
+        \item[] {\color{blue}Risk aversion: It hurts more to lose {\bf closest} supporters}.
       \end{itemize}
 \end{column}
 \hfill%
@@ -972,8 +970,6 @@ options(scipen = 99999999999)
   \begin{column}{.48\textwidth}
       \begin{itemize}
         \item {\bf Pivotal voters}: don't cost more (against most of spatial theories of voting).
-
-        \item[] This implies that parties don't see vote buying in the typical ``insurance'' sense: they don't buy more votes in tighter electoral races.
       \end{itemize}
 \end{column}
 \hfill%
@@ -986,9 +982,21 @@ options(scipen = 99999999999)
 
 \section{Discussion}
 
-\subsection{In sum}
+\subsection{Wrapping Up}
 
 \miniframeson
+\begin{frame}{Main Takeaway}
+
+  \begin{itemize}
+
+    \item Parties don't see vote buying in the typical ``{\bf insurance}'' sense: {\color{blue}parties don't buy more votes in {\bf tighter electoral races}}.
+
+    \item {\color{blue}Decision-makers are more concerned with {\bf preventing} a decline than {\bf increasing} gains}.
+  \end{itemize}
+
+\end{frame}
+
+\miniframesoff
 \begin{frame}%{Payoffs}
     \begin{itemize}
     \item This paper identified {\bf three main gaps} in the literature. We don't know,
