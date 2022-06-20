@@ -286,7 +286,7 @@ options(scipen = 99999999999)
 \begin{frame}[c]{Vote-Buying Literature Builds on the Wrong Framework}
 
 \begin{itemize}
-    \item {\bf Say you're a \underline{clientelist} political party campaigning}\pause:
+    \item {\bf Say you're a \underline{clientelist} political party}\pause:
         \begin{enumerate}
             \item When do you buy votes? {\scriptsize\color{gray} Winning/losing the election?}\pause
             \item Who do you target? {\scriptsize\color{gray} Your own supporters (``core'') or the ones who are more likely to flip (``swing'')?}\pause
@@ -296,7 +296,7 @@ options(scipen = 99999999999)
         \begin{enumerate}
             \item[\checkmark] Usually, when losing the elections.\pause
             \item[\checkmark] Core \emph{or} swing voters.\pause
-            \item[\checkmark] It shouldn't: {\bf ``sunk costs''} should not affect current decisions.\pause
+            \item[\checkmark] It shouldn't: {\bf ``sunk costs''} should \emph{not} affect current decisions.\pause
         \end{enumerate}
      \item {\bf And yet...}:
         \begin{enumerate}
@@ -335,7 +335,7 @@ options(scipen = 99999999999)
       \item Risk-aversion in the domain of {\color{dkgreen}{\bf gains}}:
         \begin{itemize}
           \item[\checkmark] Are {\color{dkgreen}wining} the election.
-          \item[\checkmark] Deal with their own supporters (parties would hate to lose already {\color{dkgreen}acquired assets})\pause
+          \item[\checkmark] Deal with core voters (parties would hate to lose already {\color{dkgreen}acquired assets})\pause
         \end{itemize}
 
           \item Risk-seeking in the domain of {\color{red}{\bf losses}}.
@@ -357,12 +357,13 @@ options(scipen = 99999999999)
   \begin{itemize}
     \item EUT was one of the first theories of decision making under risk.\pause
     \item Since its introduction, it has \emph{dominated} political science.\pause
-    \item {\bf The problem}: most of the literature assumes that in the party's decision-making process:\pause
+    \item {\bf The problem}. The literature assumes:\pause
               \begin{enumerate}
                   \item {\color{blue}Losses and gains affect in a {\bf comparable} way}.\\
                   {\scriptsize\color{gray}Winning elections {\bf feels just as good as} losing one hurts.}\pause
-                  \item {\color{blue}Parties focus only on {\bf absolute} levels of utilities}.\\
-                  {\scriptsize\color{gray}Overlooking {\bf changes} in outcomes respect to a reference point (``sunk costs'').}\pause
+                  \item {\color{blue}Parties focus on {\bf absolute} levels of utilities}.\\
+                  %{\scriptsize\color{gray}Overlooking {\bf changes} in outcomes respect to a reference point (``sunk costs'').}\pause
+                  {\scriptsize\color{gray}Overlooking ``sunk costs.''}\pause
               \end{enumerate}
         \item These assumptions have led to several empirical inconsistencies.\pause
           \begin{enumerate}
@@ -379,7 +380,7 @@ options(scipen = 99999999999)
   \begin{itemize}
     \item Since constituencies are well known to clientelist parties, they allocate resources to {\bf core voters}.\\
     {\tiny\color{gray}Cox and Mccubbins (1986).}\pause
-    \item Since allocating resources to individuals who ex-ante vote for the party is a waste, parties target {\bf swing voters}.\\
+    \item Since allocating resources to individuals who ex-ante vote for the party is a waste, parties should target {\bf swing voters}.\\
     {\tiny\color{gray} Dixit and Londregan (1996) and Stokes (2005).}\pause
     %\item Some state ``that our knowledge of who parties target remains incomplete.''\\
     %{\tiny\color{gray} Carlin and Moseley (2015).}\pause
@@ -515,11 +516,11 @@ options(scipen = 99999999999)
   \begin{column}{.48\textwidth}
 
 \begin{itemize}[<+->]
-      \item[2.] {\bf Value function}. The asymmetrical curvature of the value function does influence decisions:
+      \item[2.] {\bf Value function}. The asymmetrical curvature of the value function influences decisions:
           \begin{itemize}
             \item[\checkmark] Individuals are {\color{blue}risk-averse} in the domain of {\color{blue}gains}.
             \item[\checkmark] Individuals are {\color{blue}risk-acceptant} in the domain of {\color{blue}losses}. 
-            \item[\checkmark] In simple, {\bf loses loom larger than gains}.
+            \item[\checkmark] In simple, ``{\bf loses loom larger than gains}.''
           \end{itemize}
 \end{itemize}
 
@@ -543,7 +544,7 @@ options(scipen = 99999999999)
 \subsection{Theoretical Expectations}
 
 \miniframeson
-\begin{frame}{Prospect Theory: Implications for Vote-Buying}
+\begin{frame}{Prospect Theory: Implications for Vote Buying}
 
 %\underline{Vote-buying will be higher when parties},
 % ({\color{blue} decision-makers are more concerned with preventing a decline than increasing gains}; risk-aversion)
@@ -555,7 +556,7 @@ options(scipen = 99999999999)
         \end{itemize}
       \item Since past loses alter the reference point, incumbents will buy more votes when they've spent/lost a lot in the past.
         \begin{itemize}
-          \item[\checkmark] {\bf Sunk costs are high}. \pause
+          \item[\checkmark] {\bf Sunk costs are high}.
         \end{itemize}
       %\item in the domain of gains, risk-averted decision-makers are excessively eager to secure gains, while risk-seeking decision-makers take disproportionate risks to avoid certain losses.
 \end{enumerate}
@@ -570,10 +571,10 @@ options(scipen = 99999999999)
   \begin{itemize}
     \item The experiment was conducted in Chile {\tiny\color{gray}(April/May 2021).} 
     \item \texttt{O-tree} (\texttt{Z-tree}). {\tiny\color{gray}Fischbacher (2007).}
-    \item All participants were required to successfully complete two practice rounds.
+    \item All participants were required to successfully complete two {\bf practice rounds}.
     %\item Show-up fee of \$2,000 CLP ($\approx$ 2.1\texteuro).
-    \item Every game was played between three people: two parties and one voter.
-    \item All transactions were performed exchanging experimental ``points.'' {\tiny\color{gray}1 point = \$\Sexpr{as.numeric(unique(dat$session.config.real_world_currency_per_point))}.}
+    \item Every game was played between {\bf three people}: two parties and one voter.
+    \item All transactions were performed exchanging {\bf experimental} ``{\bf points}.'' {\tiny\color{gray}1 point = \$\Sexpr{as.numeric(unique(dat$session.config.real_world_currency_per_point))}.}
     \item \Sexpr{as.numeric(length(unique(v.buying.dat$participant.code)))} subjects were recruited. 
     \item Each subject played the game three times (N = \Sexpr{as.numeric(nrow(dat.v.b))}).
     \item In-between subjects experimental design.
@@ -662,7 +663,7 @@ options(scipen = 99999999999)
 %\item {\bf Predictions}:
   %\begin{%}
 
-    \item EUT: offers go up when parties are {\bf losing the election} ({\color{blue}parties focus on {\bf wins}}).
+    %\item EUT: offers go up when parties are {\bf losing the election} ({\color{blue}parties focus on {\bf wins}}).
 
     \item PT: parties focus on {\bf loses} {\color{blue}(hold on to what they ``own'')}.
       \begin{enumerate}
