@@ -289,8 +289,8 @@ options(scipen = 99999999999)
     \item {\bf Say you're a \underline{clientelist} political party}\pause:
         \begin{enumerate}
             \item When do you buy votes? {\scriptsize\color{gray} Winning/losing the election?}\pause
-            \item Who do you target? {\scriptsize\color{gray} Your own supporters (``core'') or the ones who are more likely to flip (``swing'')?}\pause
-            \item Should your past ``haunt'' you? {\scriptsize\color{gray} Do prior electoral losses matter?}\pause
+            \item Who do you target? {\scriptsize\color{gray} Your own supporters or the ones who are more likely to flip?}\pause
+            \item Do prior electoral losses matter?\pause
         \end{enumerate}
     \item {\bf If we follow what the literature says...the answers are mixed}:\pause
         \begin{enumerate}
@@ -334,13 +334,13 @@ options(scipen = 99999999999)
       
       \item Risk-aversion in the domain of {\color{dkgreen}{\bf gains}}:
         \begin{itemize}
-          \item[\checkmark] Are {\color{dkgreen}wining} the election.
-          \item[\checkmark] Deal with core voters (parties would hate to lose already {\color{dkgreen}acquired assets})\pause
+          \item[\checkmark] \alert<+(1)>{Are {\color{dkgreen}wining} the election}.
+          \item[\checkmark] \alert<+(2)>{Deal with core voters (parties would hate to lose already {\color{dkgreen}acquired assets})}
         \end{itemize}
 
           \item Risk-seeking in the domain of {\color{red}{\bf losses}}.
             \begin{itemize}
-              \item[\checkmark] Have experienced {\color{red}losses} in the past (sunk costs).
+              \item[\checkmark] \alert<+(3)>{Have experienced {\color{red}losses} in the past (sunk costs)}.
             \end{itemize}
     
     \end{itemize}
