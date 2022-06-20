@@ -302,7 +302,7 @@ options(scipen = 99999999999)
         \begin{enumerate}
             \item[?] Incumbents also buy votes when they're {\bf winning} the election {\scriptsize{\color{gray}(Gonzalez-Ocantos, 2012)}}.\pause
             \item[?] It's not clear why targeting core voters is not a {\bf waste}.\pause
-            \item[?] The role of past losses has been completely overlooked (``sunk cost {\bf fallacy}'').
+            \item[?] The role of past losses has been completely overlooked (``sunk cost {\bf \emph{fallacy}}'').
         \end{enumerate}
    \end{itemize}
 \end{frame}
@@ -355,9 +355,8 @@ options(scipen = 99999999999)
 \miniframeson
 \begin{frame}[c]{Clientelism and the Expected Utility Theory}
   \begin{itemize}
-    \item EUT was one of the first theories of decision making under risk.\pause
-    \item Since its introduction, it has \emph{dominated} political science.\pause
-    \item {\bf The problem}. The literature assumes:\pause
+    \item EUT has \emph{dominated} political science as a way to explain decision making under risk.\pause
+    \item {\bf The problem}. This approach assumes:\pause
               \begin{enumerate}
                   \item {\color{blue}Losses and gains affect in a {\bf comparable} way}.\\
                   {\scriptsize\color{gray}Winning elections {\bf feels just as good as} losing one hurts.}\pause
@@ -365,7 +364,7 @@ options(scipen = 99999999999)
                   %{\scriptsize\color{gray}Overlooking {\bf changes} in outcomes respect to a reference point (``sunk costs'').}\pause
                   {\scriptsize\color{gray}Overlooking ``sunk costs.''}\pause
               \end{enumerate}
-        \item These assumptions have led to several empirical inconsistencies.\pause
+        \item These assumptions lead to several inconsistencies.\pause
           \begin{enumerate}
             \item Clientelist Targeting.
             \item Political Contestation.
@@ -380,11 +379,11 @@ options(scipen = 99999999999)
   \begin{itemize}
     \item Since constituencies are well known to clientelist parties, they allocate resources to {\bf core voters}.\\
     {\tiny\color{gray}Cox and Mccubbins (1986).}\pause
-    \item Since allocating resources to individuals who ex-ante vote for the party is a waste, parties should target {\bf swing voters}.\\
+    \item Since allocating resources to individuals who are already voting for the party is a waste, parties should target {\bf swing voters}.\\
     {\tiny\color{gray} Dixit and Londregan (1996) and Stokes (2005).}\pause
     %\item Some state ``that our knowledge of who parties target remains incomplete.''\\
     %{\tiny\color{gray} Carlin and Moseley (2015).}\pause
-    \item {\color{blue}This is a \emph{very} important question, yet the literature has failed to answer it}.\\
+    \item {\color{blue}Thus, the literature unfortunately does not provide a clear answer to this question}.\\
     {\tiny\color{gray} Carlin and Moseley (2015).}
   \end{itemize}
 \end{frame}
@@ -577,7 +576,7 @@ options(scipen = 99999999999)
     \item All transactions were performed exchanging {\bf experimental} ``{\bf points}.'' {\tiny\color{gray}1 point = \$\Sexpr{as.numeric(unique(dat$session.config.real_world_currency_per_point))}.}
     \item \Sexpr{as.numeric(length(unique(v.buying.dat$participant.code)))} subjects were recruited. 
     \item Each subject played the game three times (N = \Sexpr{as.numeric(nrow(dat.v.b))}).
-    \item In-between subjects experimental design.
+    \item We follow a between-subjects experimental design.
  
   \end{itemize}
 \end{frame}
@@ -668,8 +667,8 @@ options(scipen = 99999999999)
     \item PT: parties focus on {\bf loses} {\color{blue}(hold on to what they ``own'')}.
       \begin{enumerate}
         \item Buy more votes when parties are {\bf wining} the election.
-        \item Buy more votes from {\bf core} supporters (\emph{hurts more to lose} \emph{\bf closest} \emph{voters}).
-        \item Buy more votes when yesterday's costs are high (need to spend  more to ``\emph{break even}''). 
+        \item Buy more votes from {\bf core} supporters. %(\emph{hurts more to lose} \emph{\bf closest} \emph{voters}).
+        \item Buy more votes when {\bf sunk costs} are high. %(need to spend  more to ``\emph{break even}'') 
       \end{enumerate}
   \end{itemize}
 %\end{itemize}
@@ -779,7 +778,7 @@ options(scipen = 99999999999)
 
 
         \begin{itemize}
-            \item[{\color{red}$\bullet$}] Change in points respect to $t-1$ (prior round).
+            \item[{\color{red}$\bullet$}] Change in points respect to $t-1$ {\color{gray}(prior round)}.
         \end{itemize}
 \end{frame}
 
@@ -803,7 +802,7 @@ options(scipen = 99999999999)
 
 
         \begin{itemize}
-            \item[{\color{red}$\bullet$}] Distance from the voter (points).
+            \item[{\color{red}$\bullet$}] Distance between the party and the voter {\color{gray}(points)}.
         \end{itemize}
 \end{frame}
 
@@ -827,7 +826,7 @@ options(scipen = 99999999999)
 
 
         \begin{itemize}
-            \item[{\color{red}$\bullet$}] Party's budget (points).
+            \item[{\color{red}$\bullet$}] Party's budget {\color{gray}(points)}.
         \end{itemize}
 \end{frame}
 
@@ -898,7 +897,7 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
       \begin{itemize}
-        \item {\bf Parties are risk-averse in the domain of gains}: due to loss aversion, parties buy more votes when they're likely winners (not losers).
+        \item Due to {\bf loss aversion}, parties buy more votes when they're likely winners (not losers).
 
         \item[] {\color{blue}Incumbents buy more votes to prevent a decline than to increasing gains}.
       \end{itemize}
@@ -917,7 +916,7 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
       \begin{itemize}
-        \item {\bf Parties are risk-seeking in the domain of losses}: unlike EUT, parties do consider sunk costs, buying more votes to compensate for past losses.
+        \item Unlike EUT, parties do consider sunk costs, buying more votes to compensate for past losses.
 
         %\item[] Decision-makers try to break-even.
       \end{itemize}
@@ -936,9 +935,9 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
       \begin{itemize}
-        \item {\bf Core/swing voters}: Parties buy more votes at higher (not lower) prices from closest supporters.
+        \item Parties buy votes---at higher, not lower prices---from core voters.
 
-        \item[] {\color{blue}Risk aversion: It hurts more to lose {\bf closest} supporters}.
+        \item[] {\color{blue}It hurts more to lose {\bf closest} supporters}.
       \end{itemize}
 \end{column}
 \hfill%
@@ -954,7 +953,7 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
       \begin{itemize}
-        \item {\bf Party budgets}: Parties with larger budgets spend more on vote buying.
+        \item Parties with larger budgets spend more on vote buying.
       \end{itemize}
 \end{column}
 \hfill%
@@ -970,7 +969,7 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
       \begin{itemize}
-        \item {\bf Pivotal voters}: don't cost more (against most of spatial theories of voting).
+        \item {\bf Pivotal voters} don't cost more (against most of spatial theories of voting).
       \end{itemize}
 \end{column}
 \hfill%
@@ -990,9 +989,13 @@ options(scipen = 99999999999)
 
   \begin{itemize}
 
-    \item Parties don't see vote buying in the typical ``{\bf insurance}'' sense: {\color{blue}parties don't buy more votes in {\bf tighter electoral races}}.
+    \item Parties don't see vote buying in the typical ``{\bf insurance}'' sense:
+      \begin{enumerate}
+        \item {\color{blue}Parties buy votes when they're {\bf winning} the election}, 
+        \item {\color{blue}and from {\bf core voters}}.
+      \end{enumerate}
 
-    \item {\color{blue}Decision-makers are more concerned with {\bf preventing} a decline than {\bf increasing} gains}.
+    \item[\ding{51}] {\color{blue}Decision-makers are more concerned with {\bf preventing} a decline than {\bf increasing} gains}.
   \end{itemize}
 
 \end{frame}
@@ -1000,14 +1003,13 @@ options(scipen = 99999999999)
 \miniframesoff
 \begin{frame}%{Payoffs}
     \begin{itemize}
-    \item This paper identified {\bf three main gaps} in the literature. We don't know,
+    \item This paper identified {\bf three main gaps} in the literature:
       \begin{enumerate}
-        \item {\color{blue}the rationale of clientelist targeting}.
-        \item {\color{blue}the role of electoral contestation}.
-        \item {\color{blue}the \underline{unstudied} role of sunk costs}.\pause
+        \item {\color{blue}clientelist targeting}.
+        \item {\color{blue}electoral contestation}.
+        \item {\color{blue}sunk costs}.\pause
       \end{enumerate}
-    \item We {\bf attribute this confusion} to the the fact that the literature takes the {\bf EUT as a starting point}.\pause
-    \item We introduced {\bf Prospect Theory} in the vote-buying literature as an {\bf alternative way to understand decision-making under risk}.\pause
+    \item We think these gaps can be explained changing the focus from {\bf EUT} to {\bf prospect theory}.\pause
     \item To test this theory we designed an economic experiment of vote buying.\pause
     \item PT explains better the gaps in the literature.
   \end{itemize}
