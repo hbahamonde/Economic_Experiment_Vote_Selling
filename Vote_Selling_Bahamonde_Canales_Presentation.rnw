@@ -335,7 +335,7 @@ options(scipen = 99999999999)
       \item Risk-aversion in the domain of {\color{dkgreen}{\bf gains}}:
         \begin{itemize}
           \item[\checkmark] \alert<+(1)>{Are {\color{dkgreen}wining} the election}.
-          \item[\checkmark] \alert<+(2)>{Deal with core voters (parties would hate to lose already {\color{dkgreen}acquired assets})}
+          \item[\checkmark] \alert<+(2)>{Deal with core voters}. % (parties would hate to lose already {\color{dkgreen}acquired assets})
         \end{itemize}
 
           \item Risk-seeking in the domain of {\color{red}{\bf losses}}.
@@ -383,7 +383,7 @@ options(scipen = 99999999999)
     {\tiny\color{gray} Dixit and Londregan (1996) and Stokes (2005).}\pause
     %\item Some state ``that our knowledge of who parties target remains incomplete.''\\
     %{\tiny\color{gray} Carlin and Moseley (2015).}\pause
-    \item {\color{blue}Thus, the literature unfortunately does not provide a clear answer to this question}.\\
+    \item {\color{blue}All in all, the literature---unfortunately---does \emph{not} provide a straight answer}.\\
     {\tiny\color{gray} Carlin and Moseley (2015).}
   \end{itemize}
 \end{frame}
@@ -397,7 +397,7 @@ options(scipen = 99999999999)
     {\tiny\color{gray} Scott (1972), Shefter (1977), Diaz-Cayeros (2008), Corstange (2018).}\pause
     \item However, some find very high levels of vote-buying in {\bf uncontested} elections.\\
     {\tiny\color{gray} Gonzalez-Ocantos, Jonge, et al. (2012).} \pause
-    \item {\color{blue}Why would a party buy such a massive amount of votes in a safe and uncontested election?}
+    \item {\color{blue}Again, the literature does \emph{not} provide a straight answer}.
   \end{itemize}
 \end{frame}
 
@@ -490,7 +490,7 @@ options(scipen = 99999999999)
           \begin{itemize}
             \item[\checkmark] {\color{blue}context} in which the decision-making processes take place.
             \item[\checkmark] {\color{blue}changes of wealth}, rather than final asset positions.
-            \item[\checkmark] {\color{blue}sunk costs} do matter: loses are harder to accept.
+            %\item[\checkmark] {\color{blue}sunk costs} do matter: loses are harder to accept.
           \end{itemize}
 \end{itemize}
 
@@ -515,11 +515,12 @@ options(scipen = 99999999999)
   \begin{column}{.48\textwidth}
 
 \begin{itemize}[<+->]
-      \item[2.] {\bf Value function}. The asymmetrical curvature of the value function influences decisions:
+      \item[2.] {\bf Value function}. {\scriptsize\color{gray}The asymmetrical curvature of the value function influences decisions}.
           \begin{itemize}
             \item[\checkmark] Individuals are {\color{blue}risk-averse} in the domain of {\color{blue}gains}.
             \item[\checkmark] Individuals are {\color{blue}risk-acceptant} in the domain of {\color{blue}losses}. 
-            \item[\checkmark] In simple, ``{\bf loses loom larger than gains}.''
+            \item[{\color{dkgreen}\ding{51}}] In simple, ``{\bf loses loom larger than gains}.''
+
           \end{itemize}
 \end{itemize}
 
@@ -548,12 +549,12 @@ options(scipen = 99999999999)
 %\underline{Vote-buying will be higher when parties},
 % ({\color{blue} decision-makers are more concerned with preventing a decline than increasing gains}; risk-aversion)
 \begin{enumerate}%[<+->]
-      \item Due to {\bf loss aversion} parties will find {\bf intolerable} the idea of {\bf losing the supporter base they already have}.
+      \item Parties will feel huge {\color{blue}aversion to lose what they} ``{\color{blue}{\bf own}}.''
         \begin{itemize}
           \item[\checkmark] {\bf Are probable winners}.
           \item[\checkmark] {\bf When dealing with own supporters}.\pause
         \end{itemize}
-      \item Since past loses alter the reference point, incumbents will buy more votes when they've spent/lost a lot in the past.
+      \item Past loses alter the reference point.
         \begin{itemize}
           \item[\checkmark] {\bf Sunk costs are high}.
         \end{itemize}
@@ -568,8 +569,8 @@ options(scipen = 99999999999)
 \subsection{Setup}
 \begin{frame}[c]%{Experimental Design: Setup}
   \begin{itemize}
-    \item The experiment was conducted in Chile {\tiny\color{gray}(April/May 2021).} 
-    \item \texttt{O-tree} (\texttt{Z-tree}). {\tiny\color{gray}Fischbacher (2007).}
+    %\item The experiment was conducted in Chile {\tiny\color{gray}(April/May 2021).} 
+    \item Designed an experiment in \texttt{O-tree} (\texttt{Z-tree}). {\tiny\color{gray}Fischbacher (2007).}
     \item All participants were required to successfully complete two {\bf practice rounds}.
     %\item Show-up fee of \$2,000 CLP ($\approx$ 2.1\texteuro).
     \item Every game was played between {\bf three people}: two parties and one voter.
@@ -664,11 +665,11 @@ options(scipen = 99999999999)
 
     %\item EUT: offers go up when parties are {\bf losing the election} ({\color{blue}parties focus on {\bf wins}}).
 
-    \item PT: parties focus on {\bf loses} {\color{blue}(hold on to what they ``own'')}.
+    \item Parties want to avoid {\bf loses}, not maximize wins. {\scriptsize\color{gray}``\emph{Hold on to what they own.}''}
       \begin{enumerate}
-        \item Buy more votes when parties are {\bf wining} the election.
-        \item Buy more votes from {\bf core} supporters. %(\emph{hurts more to lose} \emph{\bf closest} \emph{voters}).
-        \item Buy more votes when {\bf sunk costs} are high. %(need to spend  more to ``\emph{break even}'') 
+        \item {\bf Wining} the election.
+        \item From {\bf core} supporters. %(\emph{hurts more to lose} \emph{\bf closest} \emph{voters}).
+        \item When {\bf sunk costs} are high. %(need to spend  more to ``\emph{break even}'') 
       \end{enumerate}
   \end{itemize}
 %\end{itemize}
@@ -899,7 +900,7 @@ options(scipen = 99999999999)
       \begin{itemize}
         \item Due to {\bf loss aversion}, parties buy more votes when they're likely winners (not losers).
 
-        \item[] {\color{blue}Incumbents buy more votes to prevent a decline than to increasing gains}.
+        %\item[] {\color{blue}Incumbents buy more votes to prevent a decline than to increasing gains}.
       \end{itemize}
 \end{column}
 \hfill%
@@ -937,7 +938,7 @@ options(scipen = 99999999999)
       \begin{itemize}
         \item Parties buy votes---at higher, not lower prices---from core voters.
 
-        \item[] {\color{blue}It hurts more to lose {\bf closest} supporters}.
+        %\item[] {\color{blue}It hurts more to lose {\bf closest} supporters}.
       \end{itemize}
 \end{column}
 \hfill%
