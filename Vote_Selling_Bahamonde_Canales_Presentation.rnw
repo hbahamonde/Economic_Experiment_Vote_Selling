@@ -274,7 +274,7 @@ options(scipen = 99999999999)
 
 \begin{frame}[c]{}
 
-{\bf Vote buying}: distribution of private rewards to individuals during elections in exchange for electoral support {\scriptsize(Nichter, 2014)}.
+{\bf Vote buying}: distribution of private rewards to individuals during elections in exchange for electoral support {\scriptsize{\color{gray}(Nichter, 2014)}}.
 \vspace{1cm}
 
   \includegraphics[scale=0.3, center]{Resources_Presentation/vote_buying.jpg}
@@ -300,9 +300,9 @@ options(scipen = 99999999999)
         \end{enumerate}
      \item {\bf And yet...}:
         \begin{enumerate}
-            \item[?] Incumbents also buy votes when they're {\bf winning} the election.\pause
-            \item[?] It's not clear why targeting core voters is not a {\bf waste}\pause
-            \item[?] The role of past losses has been completely overlooked (``sunk cost {\bf fallacy}'')
+            \item[?] Incumbents also buy votes when they're {\bf winning} the election {\scriptsize{\color{gray}(Gonzalez-Ocantos, 2012)}}.\pause
+            \item[?] It's not clear why targeting core voters is not a {\bf waste}.\pause
+            \item[?] The role of past losses has been completely overlooked (``sunk cost {\bf fallacy}'').
         \end{enumerate}
    \end{itemize}
 \end{frame}
@@ -312,7 +312,7 @@ options(scipen = 99999999999)
 \miniframesoff
 \begin{frame}[c]{This Talk}
     \begin{itemize}
-      \item {\bf Motivate the problem}: vote buying literature is mostly based on the Expected Utility Theory (EUT) {\tiny (von Neumann and Morgenstern)}.
+      \item {\bf Motivate the problem}: vote buying literature is mostly based on the Expected Utility Theory (EUT) {\scriptsize{\color{gray}(von Neumann and Morgenstern)}}.
       \\
       \vspace{0.3cm}
       As a consequence, there are too many important loose ends.\pause
@@ -571,7 +571,7 @@ options(scipen = 99999999999)
     \item The experiment was conducted in Chile {\tiny\color{gray}(April/May 2021).} 
     \item \texttt{O-tree} (\texttt{Z-tree}). {\tiny\color{gray}Fischbacher (2007).}
     \item All participants were required to successfully complete two practice rounds.
-    \item Show-up fee of \$2,000 CLP ($\approx$ 2.1\texteuro).
+    %\item Show-up fee of \$2,000 CLP ($\approx$ 2.1\texteuro).
     \item Every game was played between three people: two parties and one voter.
     \item All transactions were performed exchanging experimental ``points.'' {\tiny\color{gray}1 point = \$\Sexpr{as.numeric(unique(dat$session.config.real_world_currency_per_point))}.}
     \item \Sexpr{as.numeric(length(unique(v.buying.dat$participant.code)))} subjects were recruited. 
@@ -666,8 +666,8 @@ options(scipen = 99999999999)
 
     \item PT: parties focus on {\bf loses} {\color{blue}(hold on to what they ``own'')}.
       \begin{enumerate}
-        \item Buy more votes when the parties are {\bf wining} the election.
-        \item Buy more votes from {\bf core} supporters (hurts more to lose \emph{\bf closest} voters).
+        \item Buy more votes when parties are {\bf wining} the election.
+        \item Buy more votes from {\bf core} supporters (\emph{hurts more to lose} \emph{\bf closest} \emph{voters}).
         \item Buy more votes when yesterday's costs are high (need to spend  more to ``\emph{break even}''). 
       \end{enumerate}
   \end{itemize}
