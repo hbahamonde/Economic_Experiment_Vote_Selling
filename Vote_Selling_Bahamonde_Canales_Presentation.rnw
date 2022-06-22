@@ -898,7 +898,7 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
       \begin{itemize}
-        \item Due to {\bf loss aversion}, parties buy more votes when they're likely winners (not losers).
+        \item Due to {\bf loss aversion}, parties buy more votes when they're {\color{blue}winning}---\emph{not} losing---the election.
 
         %\item[] {\color{blue}Incumbents buy more votes to prevent a decline than to increasing gains}.
       \end{itemize}
@@ -917,7 +917,7 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
       \begin{itemize}
-        \item Unlike EUT, parties do consider sunk costs, buying more votes to compensate for past losses.
+        \item Unlike EUT, parties \emph{do} consider sunk costs, and {\color{blue}buy more votes to compensate for past losses}.
 
         %\item[] Decision-makers try to break-even.
       \end{itemize}
@@ -936,7 +936,7 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
       \begin{itemize}
-        \item Parties buy votes---at higher, not lower prices---from core voters.
+        \item Parties buy votes---at higher, \emph{not} lower prices---from {\color{blue}core voters}.
 
         %\item[] {\color{blue}It hurts more to lose {\bf closest} supporters}.
       \end{itemize}
@@ -954,7 +954,7 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
       \begin{itemize}
-        \item Parties with larger budgets spend more on vote buying.
+        \item {\color{blue}Larger party budgets} lead to more on vote buying.
       \end{itemize}
 \end{column}
 \hfill%
@@ -970,7 +970,7 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
       \begin{itemize}
-        \item {\bf Pivotal voters} don't cost more (against most of spatial theories of voting).
+        \item {\color{blue}Pivotal voters} \emph{don't} cost more (against most of spatial theories of voting).
       \end{itemize}
 \end{column}
 \hfill%
@@ -993,7 +993,7 @@ options(scipen = 99999999999)
     \item Parties don't see vote buying in the typical ``{\bf insurance}'' sense:
       \begin{enumerate}
         \item {\color{blue}Parties buy votes when they're {\bf winning} the election}, 
-        \item {\color{blue}and from {\bf core voters}}.
+        \item {\color{blue}... and from {\bf core voters}}.
       \end{enumerate}
 
     \item[\ding{51}] {\color{blue}Decision-makers are more concerned with {\bf preventing} a decline than {\bf increasing} gains}.
@@ -1006,13 +1006,13 @@ options(scipen = 99999999999)
     \begin{itemize}
     \item This paper identified {\bf three main gaps} in the literature:
       \begin{enumerate}
-        \item {\color{blue}clientelist targeting}.
-        \item {\color{blue}electoral contestation}.
-        \item {\color{blue}sunk costs}.\pause
+        \item The mechanics of {\color{blue}clientelist targeting}.
+        \item The role of {\color{blue}electoral contestation} on vote buying.
+        \item The literature has overlooked the role of {\color{blue}sunk costs}.\pause
       \end{enumerate}
     \item We think these gaps can be explained changing the focus from {\bf EUT} to {\bf prospect theory}.\pause
     \item To test this theory we designed an economic experiment of vote buying.\pause
-    \item PT explains better the gaps in the literature.
+    \item PT explained better the gaps in the literature.
   \end{itemize}
 \end{frame}%{Payoffs}
 
@@ -1029,7 +1029,7 @@ options(scipen = 99999999999)
 
 
         \begin{itemize}
-            \item Paper (draft) available at {\color{blue}www.HectorBahamonde.com}.
+            \item Abstract available: {\color{blue}www.HectorBahamonde.com}.
             \item All feedback is welcomed!
         \end{itemize}
 \end{frame}
