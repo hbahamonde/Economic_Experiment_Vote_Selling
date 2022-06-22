@@ -290,19 +290,19 @@ options(scipen = 99999999999)
         \begin{enumerate}
             \item When do you buy votes? {\scriptsize\color{gray} Winning/losing the election?}\pause
             \item Who do you target? {\scriptsize\color{gray} Your own supporters or the ones who are more likely to flip?}\pause
-            \item Do prior electoral losses matter?\pause
+            \item When making these decisions, do prior losses matter?\pause
         \end{enumerate}
     \item {\bf If we follow what the literature says...the answers are mixed}:\pause
         \begin{enumerate}
-            \item[\checkmark] Usually, when losing the elections.\pause
+            \item[\checkmark] When losing the elections.\pause
             \item[\checkmark] Core \emph{or} swing voters.\pause
-            \item[\checkmark] It shouldn't: {\bf ``sunk costs''} should \emph{not} affect current decisions.\pause
+            \item[\checkmark] They shouldn't: {\bf ``sunk costs''} should \emph{not} affect current decisions.\pause
         \end{enumerate}
      \item {\bf And yet...}:
         \begin{enumerate}
-            \item[?] Incumbents also buy votes when they're {\bf winning} the election {\scriptsize{\color{gray}(Gonzalez-Ocantos, 2012)}}.\pause
-            \item[?] It's not clear why targeting core voters is not a {\bf waste}.\pause
-            \item[?] The role of past losses has been completely overlooked (``sunk cost {\bf \emph{fallacy}}'').
+            \item[?] Incumbents buy votes when they're {\bf winning} {\scriptsize{\color{gray}(Gonzalez-Ocantos, 2012)}}.\pause
+            \item[?] Why targeting core voters isn't a {\bf waste}?\pause
+            \item[?] Past losses completely overlooked (``sunk cost {\bf \emph{fallacy}}'').
         \end{enumerate}
    \end{itemize}
 \end{frame}
@@ -334,13 +334,13 @@ options(scipen = 99999999999)
       
       \item Risk-aversion in the domain of {\color{dkgreen}{\bf gains}}:
         \begin{itemize}
-          \item[\checkmark] \alert<+(1)>{Are {\color{dkgreen}wining} the election}.
-          \item[\checkmark] \alert<+(2)>{Deal with core voters}. % (parties would hate to lose already {\color{dkgreen}acquired assets})
+          \item[\checkmark] \alert<+(1)>{Are {\bf wining} the election}.
+          \item[\checkmark] \alert<+(2)>{Deal with {\bf core voters}}. % (parties would hate to lose already {\color{dkgreen}acquired assets})
         \end{itemize}
 
           \item Risk-seeking in the domain of {\color{red}{\bf losses}}.
             \begin{itemize}
-              \item[\checkmark] \alert<+(3)>{Have experienced {\color{red}losses} in the past (sunk costs)}.
+              \item[\checkmark] \alert<+(3)>{Have experienced {\bf losses} in the past (sunk costs)}.
             \end{itemize}
     
     \end{itemize}
@@ -358,7 +358,7 @@ options(scipen = 99999999999)
     \item EUT has \emph{dominated} political science as a way to explain decision making under risk.\pause
     \item {\bf The problem}. This approach assumes:\pause
               \begin{enumerate}
-                  \item {\color{blue}Losses and gains affect in a {\bf comparable} way}.\\
+                  \item {\color{blue}Losses and gains affect a party's decision-making process in a {\bf comparable} way}.\\
                   {\scriptsize\color{gray}Winning elections {\bf feels just as good as} losing one hurts.}\pause
                   \item {\color{blue}Parties focus on {\bf absolute} levels of utilities}.\\
                   %{\scriptsize\color{gray}Overlooking {\bf changes} in outcomes respect to a reference point (``sunk costs'').}\pause
@@ -366,8 +366,8 @@ options(scipen = 99999999999)
               \end{enumerate}
         \item These assumptions lead to several inconsistencies.\pause
           \begin{enumerate}
-            \item Clientelist Targeting.
-            \item Political Contestation.
+            \item The mechanics of {\bf clientelist targeting}.
+            \item The role of {\bf political contestation} on vote buying.
           \end{enumerate}
   \end{itemize}
 \end{frame}
@@ -377,13 +377,13 @@ options(scipen = 99999999999)
 \miniframeson
 \begin{frame}{Not Clear Who Clientelist Parties Target}
   \begin{itemize}
-    \item Since constituencies are well known to clientelist parties, they allocate resources to {\bf core voters}.\\
+    \item Since constituencies are well known to clientelist parties, they target {\bf core voters}.\\
     {\tiny\color{gray}Cox and Mccubbins (1986).}\pause
-    \item Since allocating resources to individuals who are already voting for the party is a waste, parties should target {\bf swing voters}.\\
+    \item Since targeting voters who are already voting for the party is a waste, parties should target {\bf swing voters} instead.\\
     {\tiny\color{gray} Dixit and Londregan (1996) and Stokes (2005).}\pause
     %\item Some state ``that our knowledge of who parties target remains incomplete.''\\
     %{\tiny\color{gray} Carlin and Moseley (2015).}\pause
-    \item {\color{blue}All in all, the literature---unfortunately---does \emph{not} provide a straight answer}.\\
+    \item {\color{blue}All in all, the literature---\emph{unfortunately}---does \emph{not} provide a straight answer}.\\
     {\tiny\color{gray} Carlin and Moseley (2015).}
   \end{itemize}
 \end{frame}
@@ -488,8 +488,8 @@ options(scipen = 99999999999)
 \begin{itemize}[<+->]
       \item[1.] {\bf Reference dependence}. Elements that influence decisions:
           \begin{itemize}
-            \item[\checkmark] {\color{blue}context} in which the decision-making processes take place.
-            \item[\checkmark] {\color{blue}changes of wealth}, rather than final asset positions.
+            \item[\checkmark] {\color{blue}\emph{context}} in which the decision-making processes take place.
+            \item[\checkmark] {\color{blue}\emph{changes} of wealth}, rather than \emph{final} asset positions.
             %\item[\checkmark] {\color{blue}sunk costs} do matter: loses are harder to accept.
           \end{itemize}
 \end{itemize}
@@ -519,7 +519,7 @@ options(scipen = 99999999999)
           \begin{itemize}
             \item[\checkmark] Individuals are {\color{blue}risk-averse} in the domain of {\color{blue}gains}.
             \item[\checkmark] Individuals are {\color{blue}risk-acceptant} in the domain of {\color{blue}losses}. 
-            \item[{\color{dkgreen}\ding{51}}] In simple, ``{\bf loses loom larger than gains}.''
+            %\item[{\color{dkgreen}\ding{51}}] In simple, ``{\bf loses loom larger than gains}.''
 
           \end{itemize}
 \end{itemize}
@@ -551,12 +551,12 @@ options(scipen = 99999999999)
 \begin{enumerate}%[<+->]
       \item Parties will feel huge {\color{blue}aversion to lose what they} ``{\color{blue}{\bf own}}.''
         \begin{itemize}
-          \item[\checkmark] {\bf Are probable winners}.
-          \item[\checkmark] {\bf When dealing with own supporters}.\pause
+          \item[\checkmark] {\bf Are probable {\color{blue}winners}}.
+          \item[\checkmark] {\bf When dealing with {\color{blue}own supporters}}.\pause
         \end{itemize}
       \item Past loses alter the reference point.
         \begin{itemize}
-          \item[\checkmark] {\bf Sunk costs are high}.
+          \item[\checkmark] {\bf {\color{blue}Sunk costs} are high}.
         \end{itemize}
       %\item in the domain of gains, risk-averted decision-makers are excessively eager to secure gains, while risk-seeking decision-makers take disproportionate risks to avoid certain losses.
 \end{enumerate}
