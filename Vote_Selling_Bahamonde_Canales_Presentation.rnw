@@ -288,13 +288,13 @@ options(scipen = 99999999999)
 \begin{itemize}
     \item {\bf Say you're a \underline{clientelist} political party}\pause:
         \begin{enumerate}
-            \item When do you buy votes? {\scriptsize\color{gray} Winning/losing the election?}\pause
+            \item When do you buy votes? {\scriptsize\color{gray} Winning/losing an election?}\pause
             \item Who do you target? {\scriptsize\color{gray} Your own supporters or the ones who are more likely to flip?}\pause
             \item When making these decisions, do prior losses matter?\pause
         \end{enumerate}
     \item {\bf If we follow what the literature says...the answers are mixed}:\pause
         \begin{enumerate}
-            \item[\checkmark] When losing the elections.\pause
+            \item[\checkmark] When losing an election.\pause
             \item[\checkmark] Core \emph{or} swing voters.\pause
             \item[\checkmark] They shouldn't: {\bf ``sunk costs''} should \emph{not} affect current decisions.\pause
         \end{enumerate}
@@ -366,8 +366,8 @@ options(scipen = 99999999999)
               \end{enumerate}
         \item These assumptions lead to several inconsistencies.\pause
           \begin{enumerate}
-            \item The mechanics of {\bf clientelist targeting}.
-            \item The role of {\bf political contestation} on vote buying.
+            \item The conflicting mechanics of {\bf clientelist targeting}.
+            \item The unclear role of {\bf political contestation} on vote buying.
           \end{enumerate}
   \end{itemize}
 \end{frame}
@@ -393,7 +393,7 @@ options(scipen = 99999999999)
 \miniframeson
 \begin{frame}{Not Clear The Role of Political Contestation on Vote Buying}
   \begin{itemize}
-    \item The more contested an election, the more risks of losing the election, the more vote buying.\\
+    \item The more contested an election, the more risks of losing that election, the more vote buying.\\
     {\tiny\color{gray} Scott (1972), Shefter (1977), Diaz-Cayeros (2008), Corstange (2018).}\pause
     \item However, some find very high levels of vote-buying in {\bf uncontested} elections.\\
     {\tiny\color{gray} Gonzalez-Ocantos, Jonge, et al. (2012).} \pause
@@ -485,7 +485,7 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
 
-\begin{itemize}[<+->]
+\begin{itemize}
       \item[1.] {\bf Reference dependence}. Elements that influence decisions:
           \begin{itemize}
             \item[\checkmark] {\color{blue}\emph{context}} in which the decision-making processes take place.
@@ -514,7 +514,7 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
 
-\begin{itemize}[<+->]
+\begin{itemize}
       \item[2.] {\bf Value function}. {\scriptsize\color{gray}The asymmetrical curvature of the value function influences decisions}.
           \begin{itemize}
             \item[\checkmark] Individuals are {\color{blue}risk-averse} in the domain of {\color{blue}gains}.
