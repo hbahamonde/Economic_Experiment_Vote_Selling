@@ -599,7 +599,7 @@ options(scipen = 99999999999)
 
     \item[4.] {\bf Parties}: {\color{blue}vote shares} (number of votes each party \emph{will} receive, excluding the ``voter'' participant.
 
-    \item Every randomization was common knowledge.
+    \item[{\color{dkgreen}\ding{51}}] Every randomization was common knowledge.
     
     %\item Our design mimics an electoral market where we can observe under which conditions different clientelist dynamics develop.
   \end{itemize}
