@@ -1020,8 +1020,7 @@ options(scipen = 99999999999)
 
 
 % end
-\subsection{End}
-\miniframeson
+\miniframesoff
 \begin{frame}[c]{Thank you}
         \begin{center}
           \vspace{-0.7cm}\includegraphics[scale=.05, center]{Resources_Presentation/qr-code.pdf}
