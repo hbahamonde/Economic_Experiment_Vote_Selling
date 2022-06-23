@@ -334,13 +334,13 @@ options(scipen = 99999999999)
       
       \item Risk-aversion in the domain of {\color{dkgreen}{\bf gains}}:
         \begin{itemize}
-          \item[\checkmark] \alert<+(1)>{Are {\bf wining} the election}.
-          \item[\checkmark] \alert<+(2)>{Deal with {\bf core voters}}. % (parties would hate to lose already {\color{dkgreen}acquired assets})
+          \item[\checkmark] Are {\bf wining} the election.
+          \item[\checkmark] Deal with {\bf core voters}. % (parties would hate to lose already {\color{dkgreen}acquired assets})
         \end{itemize}
 
           \item Risk-seeking in the domain of {\color{red}{\bf losses}}.
             \begin{itemize}
-              \item[\checkmark] \alert<+(3)>{Have experienced {\bf losses} in the past (sunk costs)}.
+              \item[\checkmark] Have experienced {\bf losses} in the past (sunk costs).
             \end{itemize}
     
     \end{itemize}
