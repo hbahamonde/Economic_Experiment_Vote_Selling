@@ -1199,15 +1199,15 @@ dev.off()
 ## ---- summary:stats:d ----
 p_load(ggpubr)
 summary.stats <- dat.v.b %>%  
-  mutate(male =  if_else(gender == "Hombre", 1, 0)) %>%
-  select(names(dat.v.b.ID), role, male, payoff) %>% 
+  #mutate(male =  if_else(gender == "Hombre", 1, 0)) %>%
+  select(names(dat.v.b.ID), role, payoff) %>% # male
   group_by(role) %>%
   distinct(participant.code, .keep_all = TRUE) %>% 
   get_summary_stats(type = "common")
 
 # change variable names for sum stats table
 summary.stats$variable[summary.stats$variable=="left.right"] <- "Left - Right"
-summary.stats$variable[summary.stats$variable=="male"] <- "Male"
+#summary.stats$variable[summary.stats$variable=="male"] <- "Male"
 summary.stats$variable[summary.stats$variable=="party.id"] <- "Party identification"
 summary.stats$variable[summary.stats$variable=="party.like"] <- "Feel close to a political party"
 summary.stats$variable[summary.stats$variable=="payoff"] <- "Payoff"
