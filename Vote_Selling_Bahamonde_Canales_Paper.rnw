@@ -256,7 +256,7 @@ options(scipen = 99999999999)
 %\centerline{\bf Please consider downloading the latest version of the paper \href{https://github.com/hbahamonde/Economic_Experiment_Vote_Selling/raw/master/Vote_Selling_Bahamonde_Canales_Paper.pdf}{\texttt{{\color{red}here}}}.}
 
 \vspace*{0.3cm}
-\centerline{\bf {\input{status.txt}\unskip}.}
+\centerline{{\color{blue}\bf {\input{status.txt}\unskip}}.}
 
 \vspace*{3.5cm}
 \centerline{\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1} % keywords.  
