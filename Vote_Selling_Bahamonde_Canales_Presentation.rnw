@@ -288,20 +288,20 @@ options(scipen = 99999999999)
 \begin{itemize}
     \item {\bf Say you're a \underline{clientelist} political party}\pause:
         \begin{enumerate}
-            \item When do you buy votes? {\scriptsize\color{gray} Winning/losing an election?}\pause
-            \item Who do you target? {\scriptsize\color{gray} Your own supporters or the ones who are more likely to flip?}\pause
+            \item When do you buy votes? {\scriptsize\color{gray} Winning/losing an election?}
+            \item Who do you target? {\scriptsize\color{gray} Your own supporters or the ones who are more likely to flip?}
             \item When making these decisions, do prior losses matter?\pause
         \end{enumerate}
-    \item {\bf If we follow what the literature says...the answers are mixed}:\pause
+    \item {\bf If we follow what the literature says...the answers are mixed}:
         \begin{enumerate}
-            \item[\checkmark] When losing an election.\pause
-            \item[\checkmark] Core \emph{or} swing voters.\pause
+            \item[\checkmark] When losing an election.
+            \item[\checkmark] Core \emph{or} swing voters.
             \item[\checkmark] They shouldn't: {\bf ``sunk costs''} should \emph{not} affect current decisions.\pause
         \end{enumerate}
      \item {\bf And yet...}:
         \begin{enumerate}
-            \item[?] Incumbents buy votes when they're {\bf winning} {\scriptsize{\color{gray}(Gonzalez-Ocantos, 2012)}}.\pause
-            \item[?] Why targeting core voters isn't a {\bf waste}?\pause
+            \item[?] Incumbents buy votes when they're {\bf winning} {\scriptsize{\color{gray}(Gonzalez-Ocantos, 2012)}}.
+            \item[?] Why targeting core voters isn't a {\bf waste}?
             \item[?] Past losses completely overlooked (``sunk cost {\bf \emph{fallacy}}'').
         \end{enumerate}
    \end{itemize}
