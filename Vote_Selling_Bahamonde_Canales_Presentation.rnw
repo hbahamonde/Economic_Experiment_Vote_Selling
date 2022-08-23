@@ -220,7 +220,7 @@
                       \inst{2} O$'$Higgins University, Chile
                       }
 
-\date{\today}
+\date{August 25th., 2022}
 
 %to to see shadows of previous blocks
 %\setbeamercovered{dynamic}
@@ -328,7 +328,7 @@ options(scipen = 99999999999)
 \miniframeson
 \begin{frame}[c]{Argument}
 
-\centering {\bf Vote-buying will be higher when parties}...\vspace{1cm}
+\centering {\bf Vote buying will be higher when}...\vspace{1cm}
 
     \begin{itemize}
       
@@ -395,7 +395,7 @@ options(scipen = 99999999999)
   \begin{itemize}
     \item The more contested an election, the more risks of losing that election, the more vote buying.\\
     {\tiny\color{gray} Scott (1972), Shefter (1977), Diaz-Cayeros (2008), Corstange (2018).}\pause
-    \item However, some find very high levels of vote-buying in {\bf uncontested} elections.\\
+    \item However, some find very high levels of vote buying in {\bf uncontested} elections.\\
     {\tiny\color{gray} Gonzalez-Ocantos, Jonge, et al. (2012).} \pause
     \item {\color{blue}Again, the literature does \emph{not} provide a straight answer}.
   \end{itemize}
@@ -755,7 +755,7 @@ options(scipen = 99999999999)
 
 
         \begin{itemize}
-            \item[{\color{red}$\bullet$}] Number of certain votes each party.
+            \item[{\color{red}$\bullet$}] Number of votes each party received.
         \end{itemize}
 \end{frame}
 
