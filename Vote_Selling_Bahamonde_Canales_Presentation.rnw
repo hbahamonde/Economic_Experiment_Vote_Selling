@@ -286,7 +286,7 @@ options(scipen = 99999999999)
 \begin{frame}[c]{Vote-Buying Literature Builds on the Wrong Framework}
 
 \begin{itemize}
-    \item {\bf Say you're a \underline{clientelist} political party}\pause:
+    \item {\bf Lets say you're a \underline{clientelist} political party}\pause:
         \begin{enumerate}
             \item When do you buy votes? {\scriptsize\color{gray} Winning/losing an election?}
             \item Who do you target? {\scriptsize\color{gray} Your own supporters or the ones who are more likely to flip?}
@@ -954,7 +954,7 @@ options(scipen = 99999999999)
   \begin{columns}[c]
   \begin{column}{.48\textwidth}
       \begin{itemize}
-        \item {\color{blue}Larger party budgets} lead to more on vote buying.
+        \item {\color{blue}Larger party budgets} cause more vote buying.
       \end{itemize}
 \end{column}
 \hfill%
