@@ -136,7 +136,7 @@ headpunct=:
 %%% bib begin
 \usepackage[american]{babel}
 \usepackage{csquotes}
-\usepackage[backend=biber,style=authoryear,date=year,dashed=false,doi=false,isbn=false,url=false,arxiv=false]{biblatex} %authoryear
+\usepackage[backend=bibtex,style=authoryear,date=year,dashed=false,doi=false,isbn=false,url=false,arxiv=false]{biblatex} %authoryear
 \renewbibmacro{in:}{} % this should go immediately below calling biblatex package to avoid "In: <journal>" every time.
 %\DeclareLanguageMapping{american}{american-apa}
 \addbibresource{Vote_Selling_Bahamonde_Canales.bib} 
