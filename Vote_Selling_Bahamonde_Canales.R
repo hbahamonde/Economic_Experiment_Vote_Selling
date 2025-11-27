@@ -805,6 +805,9 @@ dat.v.b = dat.v.b %>% mutate(role=recode(role,
 # vote.intention.party.2
 dat.v.b$vote.intention.party.2 = round((dat.v.b$vote.intention.party*100)/dat.v.b$n.of.voters,0)
 
+dat.v.b$offer.made.party.p = (dat.v.b$offer.made.party*100)/dat.v.b$budget
+
+
 save(dat.v.b,
      file = "/Users/hectorbahamonde/research/Exp_Vote_Selling/vote_buying_df.RData")
 
